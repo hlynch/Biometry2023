@@ -30,7 +30,7 @@ Another way to do it is to use the 'readr' package, as I demonstrate here for th
 
 ```r
 library(readr)
-clouds <- read_csv("https://raw.githubusercontent.com/hlynch/Biometry2021/master/_data/clouds.csv")
+clouds <- read_csv("https://raw.githubusercontent.com/hlynch/Biometry2023/master/_data/clouds.csv")
 ```
 
 * `clouds` (csv): [link](https://github.com/hlynch/Biometry2023/tree/master/_data/clouds.csv) [1]
