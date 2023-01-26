@@ -1,7 +1,7 @@
 --- 
 title: "Biometry Lecture and Lab Notes"
 author: "Heather Lynch"
-date: "2023-01-25"
+date: "2023-01-26"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
@@ -99,25 +99,27 @@ In an effort to provide as much transparency as possible on the scope and style 
 
 *Midterms*
 
-* Spring 2012 Midterm: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Midterm_exam_Spring2012.pdf)
-* Spring 2013 Midterm: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Midterm_exam_Spring2013.pdf)
-* Spring 2014 Midterm: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Midterm_exam_Spring2014.pdf)
-* Spring 2015 Midterm: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Midterm_exam_Spring2015.pdf)
-* Spring 2016 Midterm: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Midterm_exam_Spring2016.pdf)
-* Spring 2017 Midterm: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Midterm_exam_Spring2017.pdf)
-* Spring 2018 Midterm: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Midterm_exam_Spring2018.pdf)
-* Spring 2020 Midterm: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Midterm_exam_Spring2020.pdf)
-* Spring 2021 Midterm: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Midterm_exam_Spring2021.pdf)
+* Spring 2012 Midterm: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Midterm_exam_Spring2012.pdf)
+* Spring 2013 Midterm: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Midterm_exam_Spring2013.pdf)
+* Spring 2014 Midterm: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Midterm_exam_Spring2014.pdf)
+* Spring 2015 Midterm: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Midterm_exam_Spring2015.pdf)
+* Spring 2016 Midterm: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Midterm_exam_Spring2016.pdf)
+* Spring 2017 Midterm: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Midterm_exam_Spring2017.pdf)
+* Spring 2018 Midterm: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Midterm_exam_Spring2018.pdf)
+* Spring 2020 Midterm: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Midterm_exam_Spring2020.pdf)
+* Spring 2021 Midterm: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Midterm_exam_Spring2021.pdf)
+* Spring 2022 Midterm: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Midterm_exam_Spring2022.pdf)
 
 *Finals*
 
-* Spring 2012 Final: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Final_exam_Spring2012.pdf)
-* Spring 2013 Final: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Final_exam_Spring2013.pdf)
-* Spring 2014 Final: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Final_exam_Spring2014.pdf)
-* Spring 2015 Final: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Final_exam_Spring2015.pdf)
-* Spring 2016 Final: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Final_exam_Spring2016.pdf)
-* Spring 2017 Final: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Final_exam_Spring2017.pdf)
-* Spring 2018 Final: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Final_exam_Spring2018.pdf)
-* Spring 2020 Final: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Final_exam_Spring2020.pdf)
-* Spring 2021 Final: [link](https://github.com/hlynch/Biometry2022/tree/master/_data/Final_exam_Spring2021.pdf)
+* Spring 2012 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2012.pdf)
+* Spring 2013 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2013.pdf)
+* Spring 2014 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2014.pdf)
+* Spring 2015 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2015.pdf)
+* Spring 2016 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2016.pdf)
+* Spring 2017 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2017.pdf)
+* Spring 2018 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2018.pdf)
+* Spring 2020 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2020.pdf)
+* Spring 2021 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2021.pdf)
+* Spring 2022 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2022.pdf)
 

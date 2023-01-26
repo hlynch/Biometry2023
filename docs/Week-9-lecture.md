@@ -92,13 +92,13 @@ Let's look at a few examples...
 <img src="Week-9-lecture_files/figure-html/unnamed-chunk-4-1.png" width="240" />
 
 ```
-## [1] 0.04033907
+## [1] 0.1765697
 ```
 
 <img src="Week-9-lecture_files/figure-html/unnamed-chunk-4-2.png" width="240" />
 
 ```
-## [1] 0.9283388
+## [1] 0.9013394
 ```
 
 ## Hypothesis testing - Pearson's *r*
@@ -192,7 +192,7 @@ cor(df$A, df$B)
 ```
 
 ```
-## [1] 0.0479188
+## [1] -0.2730345
 ```
 
 Even though *A* and *B* clearly have a strong relationship, correlation is only effective if the relationship is **linear**.
@@ -226,7 +226,7 @@ paste("The 95% confidence interval for the estimated correlation coefficient, ",
 ```
 
 ```
-## [1] "The 95% confidence interval for the estimated correlation coefficient, 0.897 is (0.854, 0.932)"
+## [1] "The 95% confidence interval for the estimated correlation coefficient, 0.848 is (0.786, 0.899)"
 ```
 </span>
 </details> 
@@ -272,7 +272,7 @@ pnorm(q = z.obs, mean = 0, sd = sqrt(1 / (100 - 3)), lower.tail = FALSE)
 ```
 
 ```
-## [1] 5.584933e-43
+## [1] 2.094633e-56
 ```
 
 ```r
@@ -282,7 +282,7 @@ pnorm(q = test.stat, lower.tail = FALSE)
 ```
 
 ```
-## [1] 5.584933e-43
+## [1] 2.094633e-56
 ```
 
 To simply the notation, let us define

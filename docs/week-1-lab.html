@@ -24,7 +24,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-01-25" />
+<meta name="date" content="2023-01-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -164,7 +164,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3" data-path="week-1-lab.html"><a href="week-1-lab.html#writing-functions-in-r"><i class="fa fa-check"></i><b>2.3</b> Writing functions in R</a></li>
 <li class="chapter" data-level="2.4" data-path="week-1-lab.html"><a href="week-1-lab.html#writing-loops-and-ifelse"><i class="fa fa-check"></i><b>2.4</b> Writing loops and if/else</a></li>
 <li class="chapter" data-level="2.5" data-path="week-1-lab.html"><a href="week-1-lab.html#a-short-diversion-bias-in-estimators"><i class="fa fa-check"></i><b>2.5</b> (A short diversion) Bias in estimators</a></li>
-<li class="chapter" data-level="2.6" data-path="week-1-lab.html"><a href="week-1-lab.html#lesson-6-some-practice-writing-r-code"><i class="fa fa-check"></i><b>2.6</b> Lesson #6: Some practice writing R code</a></li>
+<li class="chapter" data-level="2.6" data-path="week-1-lab.html"><a href="week-1-lab.html#some-practice-writing-r-code"><i class="fa fa-check"></i><b>2.6</b> Some practice writing R code</a></li>
 <li class="chapter" data-level="2.7" data-path="week-1-lab.html"><a href="week-1-lab.html#a-few-final-notes"><i class="fa fa-check"></i><b>2.7</b> A few final notes</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="week-2-lecture.html"><a href="week-2-lecture.html"><i class="fa fa-check"></i><b>3</b> Week 2 Lecture</a>
@@ -876,10 +876,10 @@ Let’s make a data frame to play around with, which we will make the ranking of
 <p>What is the ratio of the sample variance to the population variance? Are either close to what we know the true variance to be? What happens if we change n.iter to 1000? Do the values get closer to the correct value? What happens to the ratio of the sample variance to the population variance?</p>
 <p>What does the R function var() give you?</p>
 </div>
-<div id="lesson-6-some-practice-writing-r-code" class="section level2" number="2.6">
-<h2><span class="header-section-number">2.6</span> Lesson #6: Some practice writing R code</h2>
+<div id="some-practice-writing-r-code" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> Some practice writing R code</h2>
 <p>We will be using a cloud-seeding dataset from: Simpson, Alsen, and Eden. (1975). A Bayesian analysis of a multiplicative treatment effect in weather modification. Technometrics 17, 161-166. The data consist of data on the amount of rainfall (in acre-feet) from unseeded clouds vs. those seeded with silver nitrate.</p>
-<p>Here and throughout I have assumed the data resides in a folder called Biometry on a thumb drive called TEACHING drive but you will have to change the code according to your own file structure. (I am using a Mac, but getting the pathname correct I have included a .txt file and a .csv file to show you the differences in inputting your data:</p>
+<p>Here and throughout I have assumed the data resides in a local folder and the code below has my pathnames but you will have to change the code according to your own file structure. (I am using a Mac, but getting the pathname correct I have included a .txt file and a .csv file to show you the differences in inputting your data:</p>
 <p>Method 1:</p>
 <div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="week-1-lab.html#cb104-1" aria-hidden="true" tabindex="-1"></a>cloud.data<span class="ot">&lt;-</span><span class="fu">read.table</span>(<span class="st">&quot;~/Documents/Projects/Biometry2023/_data/clouds.txt&quot;</span>)</span></code></pre></div>
 <p>Notice that that doesn’t work because the headers have become part of the data.</p>

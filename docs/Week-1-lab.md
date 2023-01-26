@@ -867,12 +867,12 @@ What is the ratio of the sample variance to the population variance? Are either 
 
 What does the R function var() give you?
 
-Lesson #6: Some practice writing R code
+Some practice writing R code
 -----------------------------------
   
 We will be using a cloud-seeding dataset from: Simpson, Alsen, and Eden. (1975). A Bayesian analysis of a multiplicative treatment effect in weather modification. Technometrics 17, 161-166. The data consist of data on the amount of rainfall (in acre-feet) from unseeded clouds vs. those seeded with silver nitrate.
 
-Here and throughout I have assumed the data resides in a folder called Biometry on a thumb drive called TEACHING drive but you will have to change the code according to your own file structure. (I am using a Mac, but getting the pathname correct I have included a .txt file and a .csv file to show you the differences in inputting your data:
+Here and throughout I have assumed the data resides in a local folder and the code below has my pathnames but you will have to change the code according to your own file structure. (I am using a Mac, but getting the pathname correct I have included a .txt file and a .csv file to show you the differences in inputting your data:
   
 Method 1:
   
