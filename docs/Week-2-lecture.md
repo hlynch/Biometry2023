@@ -449,7 +449,7 @@ $$
 \hat{se}_{jack}=\sqrt{\frac{n-1}{n}\sum_{i=1}^{n}(\hat{\theta}_{(i)}-\hat{\theta}_{(.)})^{2}}
 $$
 
-With the pennies example, we had 10 pennies and we have only 10 possible jackknifed samples. Do you see why? Note that while bootstrapping can involve simulating an arbitrarily large number of pseudosamples (k), there are only n possible jackknife replicates for a dataset of size n.
+With the pennies example we will do in lab, we have 5 pennies and we have only 5 possible jackknifed samples. Do you see why? Note that while bootstrapping can involve simulating an arbitrarily large number of pseudosamples (k), there are only n possible jackknife replicates for a dataset of size n.
 
 **Exercise**: Use your pennies to calculate $\widehat{Bias}_{jack}$ and $\widehat{se}_{jack}$.
 

@@ -14,9 +14,9 @@ A 95th percentile confidence interval say “If I repeat this procedure 100 time
 
 Do not let Week 2 pass by without fundamentally understanding the interpretation of a confidence interval. 
 
-So now we know the general idea behind confidence intervals but we don't yet know how to calculate them. To do that, we'll actually walk through an example of bootstrap using pennies. Each of you should have gathered the ages of ten pennies. (If a penny was made in 2021, that penny would be 1 year old, etc.)
+So now we know the general idea behind confidence intervals but we don't yet know how to calculate them. To do that, we'll actually walk through an example of bootstrap using pennies. Each of you should have gathered the ages of five pennies. (If a penny was made in 2021, that penny would be 1 year old, etc.)
 
-*Data*: 10 pennies that the students have
+*Data*: 5 pennies that the students have
 
 *Test statistic*: Median
 

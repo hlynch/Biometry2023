@@ -24,7 +24,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-01-26" />
+<meta name="date" content="2023-02-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -747,7 +747,7 @@ where</p>
 <p><span class="math display">\[
 \hat{se}_{jack}=\sqrt{\frac{n-1}{n}\sum_{i=1}^{n}(\hat{\theta}_{(i)}-\hat{\theta}_{(.)})^{2}}
 \]</span></p>
-<p>With the pennies example, we had 10 pennies and we have only 10 possible jackknifed samples. Do you see why? Note that while bootstrapping can involve simulating an arbitrarily large number of pseudosamples (k), there are only n possible jackknife replicates for a dataset of size n.</p>
+<p>With the pennies example we will do in lab, we have 5 pennies and we have only 5 possible jackknifed samples. Do you see why? Note that while bootstrapping can involve simulating an arbitrarily large number of pseudosamples (k), there are only n possible jackknife replicates for a dataset of size n.</p>
 <p><strong>Exercise</strong>: Use your pennies to calculate <span class="math inline">\(\widehat{Bias}_{jack}\)</span> and <span class="math inline">\(\widehat{se}_{jack}\)</span>.</p>
 <p>Both bootstrap and jackknife can estimate the standard error of a statistic, and in this way, their use can often be interchangeable. However, the jackknife can ONLY compute the bias and standard error whereas the bootstrap calculates the entire distribution of the statistic from which the standard error can be inferred. Bootstrapping is often more computer intensive, but with modern computers this is hardly a drawback.</p>
 </div>
