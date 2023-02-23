@@ -49,7 +49,9 @@ H_{0}:\mu_{1}=\mu_{2},
 H_{A}:\mu_{1}\neq\mu_{2}
 $$
 
-Alternatively, you can force R to do a one-sided test, either
+The lower limit of the two-sided 95th percentile CI represents the quantile below which 2.5$\%$ of the probability falls and vice versa. However, when we are thinking about a one-tailed test, we would put all 5$\%$ in one tail and then we would reject all test statistics that fall inside this one tail. If we are estimating effect sizes and their confidence intervals, the confidence intervals are no longer bounded on both sides. In fact, for a one-tailed test where we are only interested in the "greater" alternative hypothesis (for example, $X_{A}>X_{B}$), there is only a lower bound (the upper bound is infinity) because the question then becomes whether the smallest value of the test statistic consistent with the data is below zero (in which case you cannot reject the null hypothesis and the difference is not significant) or above zero (in which case the values consistent with the data are *all* above zero and therefore you can reject the null hypothesis). In other words, when you are only interested in the alternative hypotheses $X_{A}>X_{B}$, you don't care *how* much bigger $X_{A}$ is than $X_{B}$, you just want to know whether *at its smallest* the difference is still larger than zero.
+
+You can force R to do a one-sided test, either
 
 $$
 H_{A}:\mu_{1}>\mu_{2}
@@ -139,13 +141,13 @@ $$
 s_{B}^{2} > s_{A}^{2}
 $$
 
-than we would chalk that up to random chance and we would NOT interpret that as
+then we would chalk that up to random chance and we would NOT interpret that as
 
 $$
 \sigma_{B}^{2} > \sigma_{A}^{2}.
 $$
 
-If we are doing a one-tailed F-test where we are only interested in $\sigma_{A}^{2} > \sigma_{B}^{2}$, then our test statistic is $\frac{s_{A}^{2}}{s_{B}^{2}}$ (regardless of which is bigger), and we would set our critical value so that $\alpha$ of the distribution of the test statistic would fall into the right-hand tail of the F-distribution. We would then compare our test statistic $T^{*}$ to the value of the (1-$\alpha$) quantile of the F-distribution, and the question becomes
+If we are doing a one-tailed F-test where we are *only* interested in $\sigma_{A}^{2} > \sigma_{B}^{2}$, then our test statistic is $\frac{s_{A}^{2}}{s_{B}^{2}}$ (regardless of which is bigger), and we would set our critical value so that $\alpha$ of the distribution of the test statistic would fall into the right-hand tail of the F-distribution. We would then compare our test statistic $T^{*}$ to the value of the (1-$\alpha$) quantile of the F-distribution, and the question becomes
 
 $$
 \frac{s_{A}^{2}}{s_{B}^{2}} > F_{[1-\alpha](n-1,m-1)}?
