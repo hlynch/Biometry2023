@@ -7,7 +7,7 @@ First we will read in [some data](https://github.com/hlynch/Biometry2021/tree/ma
 
 
 ```r
-data<-read.table("~/Documents/Projects/Biometry2022/_data/fish.txt",header=T)
+data<-read.table("_data/fish.txt",header=T)
 head(data)
 ```
 

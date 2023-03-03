@@ -254,7 +254,7 @@ Note that the definition of residuals for GLMs is a bit different. Residuals can
 We can use different types of residuals for model criticism of GLMs. We can look at the residuals on the scale of the fitted values or response (using the inverse link function): `residuals.glm(crab.glm, type = "response")`, or residuals that are scaled by the variance inherent to the GLM: deviance residuals `type = "deviance"` or Pearson residuals `type = "pearson"` (see 9.20.7.1 in Aho for details). R provides these in diagnostic plots.
 
 ```{r fig.height=3, fig.width=4}
-crabs <- read.csv(file = "~/Dropbox/Biometry/Week 13 Model selection and criticism/Week 13 Lecture/crabs.csv")
+crabs <- read.csv(file = "_data/crabs.csv")
 crab.glm <- glm(satell ~ width,  family = "poisson", data = crabs)
 plot(crab.glm, which = 1)
 ```

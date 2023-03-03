@@ -24,7 +24,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-02-23" />
+<meta name="date" content="2023-03-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -155,7 +155,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.9.2" data-path="week-1-lecture.html"><a href="week-1-lecture.html#discrete-case"><i class="fa fa-check"></i><b>1.9.2</b> Discrete Case</a></li>
 <li class="chapter" data-level="1.9.3" data-path="week-1-lecture.html"><a href="week-1-lecture.html#continuous-case"><i class="fa fa-check"></i><b>1.9.3</b> Continuous Case</a></li>
 </ul></li>
-<li class="chapter" data-level="1.10" data-path="week-1-lecture.html"><a href="week-1-lecture.html#a-brief-introduction-to-scientific-method"><i class="fa fa-check"></i><b>1.10</b> A Brief Introduction to Scientific Method</a></li>
+<li class="chapter" data-level="1.10" data-path="week-1-lecture.html"><a href="week-1-lecture.html#a-brief-introduction-to-inference-logic-and-reasoning"><i class="fa fa-check"></i><b>1.10</b> A brief introduction to inference, logic, and reasoning</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="week-1-lab.html"><a href="week-1-lab.html"><i class="fa fa-check"></i><b>2</b> Week 1 Lab</a>
 <ul>
@@ -483,32 +483,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb335-7"><a href="week-6-lab.html#cb335-7" aria-hidden="true" tabindex="-1"></a>      }</span>
 <span id="cb335-8"><a href="week-6-lab.html#cb335-8" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb335-9"><a href="week-6-lab.html#cb335-9" aria-hidden="true" tabindex="-1"></a>p.values</span></code></pre></div>
-<pre><code>##       [,1]       [,2]      [,3]      [,4]      [,5]       [,6]      [,7]
-##  [1,]   NA 0.05585522 0.2779571 0.0409094 0.1921348 0.06402685 0.2542907
-##  [2,]   NA         NA 0.2210817 0.8878596 0.4704949 0.81402514 0.3559999
-##  [3,]   NA         NA        NA 0.1648196 0.6639654 0.21520562 0.8319045
-##  [4,]   NA         NA        NA        NA 0.3854228 0.90691020 0.2841267
-##  [5,]   NA         NA        NA        NA        NA 0.39835167 0.8408554
-##  [6,]   NA         NA        NA        NA        NA         NA 0.3116927
-##  [7,]   NA         NA        NA        NA        NA         NA        NA
-##  [8,]   NA         NA        NA        NA        NA         NA        NA
-##  [9,]   NA         NA        NA        NA        NA         NA        NA
-## [10,]   NA         NA        NA        NA        NA         NA        NA
-##             [,8]      [,9]     [,10]
-##  [1,] 0.02053329 0.1846535 0.1612245
-##  [2,] 0.35283986 0.8424781 0.3908812
-##  [3,] 0.06832168 0.4956193 0.6519322
-##  [4,] 0.40850137 0.7579677 0.3065098
-##  [5,] 0.14189379 0.7220628 0.9570124
-##  [6,] 0.51655317 0.7092860 0.3421931
-##  [7,] 0.10629675 0.6122529 0.8627741
-##  [8,]         NA 0.3407210 0.1134243
-##  [9,]         NA        NA 0.6773034
-## [10,]         NA        NA        NA</code></pre>
+<pre><code>##       [,1]      [,2]      [,3]      [,4]      [,5]      [,6]      [,7]
+##  [1,]   NA 0.2798209 0.3834703 0.8840747 0.2512322 0.1140967 0.5661587
+##  [2,]   NA        NA 0.6782168 0.2750237 0.9530202 0.7466866 0.4246193
+##  [3,]   NA        NA        NA 0.3761592 0.6717949 0.3045498 0.6197069
+##  [4,]   NA        NA        NA        NA 0.2279127 0.0715276 0.6009348
+##  [5,]   NA        NA        NA        NA        NA 0.6311841 0.3662078
+##  [6,]   NA        NA        NA        NA        NA        NA 0.0908442
+##  [7,]   NA        NA        NA        NA        NA        NA        NA
+##  [8,]   NA        NA        NA        NA        NA        NA        NA
+##  [9,]   NA        NA        NA        NA        NA        NA        NA
+## [10,]   NA        NA        NA        NA        NA        NA        NA
+##            [,8]      [,9]     [,10]
+##  [1,] 0.9120767 0.2150677 0.2419644
+##  [2,] 0.2942842 0.9290980 0.9312079
+##  [3,] 0.4062852 0.5658866 0.6704815
+##  [4,] 0.9753860 0.1935775 0.2102515
+##  [5,] 0.2576743 0.8663071 0.9764247
+##  [6,] 0.1021278 0.8008135 0.5734957
+##  [7,] 0.6181512 0.3065172 0.3392364
+##  [8,]        NA 0.2192885 0.2448454
+##  [9,]        NA        NA 0.8367462
+## [10,]        NA        NA        NA</code></pre>
 <p>Now we can see how many of these p.values are “significant.” We know these are false positives, because all the data were generated from the same distribution.</p>
 <div class="sourceCode" id="cb337"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb337-1"><a href="week-6-lab.html#cb337-1" aria-hidden="true" tabindex="-1"></a>false.positives<span class="ot">&lt;-</span><span class="fu">sum</span>(p.values<span class="sc">&lt;</span><span class="fl">0.05</span>,<span class="at">na.rm=</span>T)</span>
 <span id="cb337-2"><a href="week-6-lab.html#cb337-2" aria-hidden="true" tabindex="-1"></a>false.positives</span></code></pre></div>
-<pre><code>## [1] 2</code></pre>
+<pre><code>## [1] 0</code></pre>
 <p>We could correct this using the Bonferonni method:</p>
 <div class="sourceCode" id="cb339"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb339-1"><a href="week-6-lab.html#cb339-1" aria-hidden="true" tabindex="-1"></a>k<span class="ot">&lt;-</span><span class="dv">45</span></span>
 <span id="cb339-2"><a href="week-6-lab.html#cb339-2" aria-hidden="true" tabindex="-1"></a>new.threshold.B<span class="ot">&lt;-</span><span class="fl">0.05</span><span class="sc">/</span>k</span>
@@ -548,8 +548,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb347-20"><a href="week-6-lab.html#cb347-20" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb347-21"><a href="week-6-lab.html#cb347-21" aria-hidden="true" tabindex="-1"></a>new.threshold.R<span class="ot">&lt;-</span><span class="fu">quantile</span>(min.p.values.all,<span class="at">probs=</span><span class="fu">c</span>(<span class="fl">0.05</span>))</span>
 <span id="cb347-22"><a href="week-6-lab.html#cb347-22" aria-hidden="true" tabindex="-1"></a>new.threshold.R</span></code></pre></div>
-<pre><code>##         5% 
-## 0.00198341</code></pre>
+<pre><code>##          5% 
+## 0.002533227</code></pre>
 <div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb349-1"><a href="week-6-lab.html#cb349-1" aria-hidden="true" tabindex="-1"></a>false.positives.R<span class="ot">&lt;-</span><span class="fu">sum</span>(p.values<span class="sc">&lt;</span>new.threshold.R,<span class="at">na.rm=</span>T)</span>
 <span id="cb349-2"><a href="week-6-lab.html#cb349-2" aria-hidden="true" tabindex="-1"></a>false.positives.R</span></code></pre></div>
 <pre><code>## [1] 0</code></pre>

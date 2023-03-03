@@ -158,7 +158,7 @@ durbinWatsonTest(web.fit)
 
 ```
 ##  lag Autocorrelation D-W Statistic p-value
-##    1     -0.03369874      2.059546   0.954
+##    1     -0.03369874      2.059546   0.918
 ##  Alternative hypothesis: rho != 0
 ```
 
@@ -244,7 +244,7 @@ We can use different types of residuals for model criticism of GLMs. We can look
 
 
 ```r
-crabs <- read.csv(file = "~/Dropbox/Biometry/Week 13 Model selection and criticism/Week 13 Lecture/crabs.csv")
+crabs <- read.csv(file = "_data/crabs.csv")
 crab.glm <- glm(satell ~ width,  family = "poisson", data = crabs)
 plot(crab.glm, which = 1)
 ```

@@ -30,7 +30,7 @@ Review: ANOVA with one factor
 With single factor ANOVA, we compared multiple levels of a factor. Another way to say this is that we only had one categorical covariate in our linear model (e.g., the effect of zinc concentration on diatom diversity).
 
 ```{r echo=FALSE, fig.height=4, fig.width=4}
-medley <- read.csv("~/Dropbox/Biometry/Week 11 Single factor ANOVA/Week 11 Lab/medley.csv", header = TRUE)
+medley <- read.csv("_data/medley.csv", header = TRUE)
 medley$ZINC <- factor(medley$ZINC, levels = c("HIGH", "MED", "LOW", "BACK"))
 ggplot(data = medley, aes(x = ZINC, y = DIVERSITY)) + geom_boxplot() +
   labs(x = "Zinc level", y = "Diatom diversity") + theme_classic() + 
@@ -44,7 +44,7 @@ With two-way (and higher) ANOVA, we look at more than one factor at a time (e.g.
 In this example below, the factors are crossed (two-way factorial design).
 
 ```{r echo=FALSE, fig.height=4, fig.width=5.5}
-quinn <- read.csv("~/Dropbox/Biometry/Week 11 Single factor ANOVA/Week 11 Lab/quinn.csv", header = TRUE)
+quinn <- read.csv("_data/quinn.csv", header = TRUE)
 quinn$DENSITY <- factor(as.character(quinn$DENSITY), levels = c("8", "15", "30", "45"))
 ggplot(data = quinn, aes(x = DENSITY, y = EGGS)) + 
   facet_grid(. ~ SEASON) + geom_boxplot() +

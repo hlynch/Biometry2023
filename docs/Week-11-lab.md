@@ -63,7 +63,7 @@ We will start by doing a simple one-way ANOVA. You should already have downloade
 
 
 ```r
-salaries<-read.csv("~/Dropbox/Biometry/Week 11 Single factor ANOVA/Week 11 Lab/TwoWayANOVAdata_balanced.csv", header=T)
+salaries<-read.csv("_data/TwoWayANOVAdata_balanced.csv", header=T)
 head(salaries)
 ```
 
@@ -538,7 +538,7 @@ Step 1: Import the data
 
 
 ```r
-medley<-read.table("~/Dropbox/Biometry/Week 11 Single factor ANOVA/Week 11 Lab/medley.csv",header=T,sep=",")
+medley<-read.table("_data/medley.csv",header=T,sep=",")
 ```
 
 Step 2: Reorganize the levels of the categorical variable into a more logical order

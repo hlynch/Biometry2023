@@ -209,9 +209,19 @@ $$
 
 Some examples of data that are best modelled as either Bernoulli or Binomial are:
 
-![](JointDamage.png)
+Evidence for joint damage in a rocket (this is a dataset we will tackle in the lab):
 
-![](TurtleEggs.png)
+```{r fig.height=5, fig.width=7}
+Challenger_data <- read.csv("_data/Challenger_data.csv")
+plot(Challenger_data$Temp,Challenger_data$O.ring.failure,pch=16,cex=2,col=rgb(0,0.55,0.4,0.6),xlab="Temperature",ylab="Presence of at least one failed O-ring")
+```
+
+or the presence/absence of a species (in this case, a newt) plotted as a function of habitat suitability (data from [this website](https://www.dataanalytics.org.uk/publications/statistics-book-for-ecologists/support/data/)):
+
+```{r fig.height=5, fig.width=7}
+Newt_HSI <- read.csv("_data/Newt HSI.csv")
+plot(Newt_HSI$HSI,Newt_HSI$presence,pch=16,cex=2,col=rgb(0,0.55,0.4,0.3),xlab="Habitat Suitability Index",ylab="Species presence (1)/Absence (0)")
+```
 
 By modeling our data as it exists, we have solved four problems
 

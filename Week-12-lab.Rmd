@@ -21,7 +21,7 @@ Example #1: Two-way factorial ANOVA in R
 Two-way ANOVA in R is a lot like one-way ANOVA in R, except now we have a second covariate in the model equation. We will go through a two-way example using the same data on income and education that we used last week. 
 
 ```{r}
-salaries<-read.csv("~/Dropbox/Biometry/Week 12 Nested and factorial ANOVA/Week 12 Lab/TwoWayANOVAdata.csv")
+salaries<-read.csv("_data/TwoWayANOVAdata.csv")
 par(mfrow=c(2,1))
 boxplot(salaries$Salary~salaries$Gender,ylab="Salary")
 boxplot(salaries$Salary~salaries$Education,ylab="Salary")
@@ -148,7 +148,7 @@ knitr::include_graphics('RatDesign.png')
 ```
 
 ```{r}
-rats<-read.csv("~/Dropbox/Biometry/Week 12 Nested and factorial ANOVA/Week 12 Lab/rats.txt",header=T)
+rats<-read.csv("_data/rats.txt",header=T)
 attach(rats)
 Treatment<-factor(TREAT)
 Rat<-factor(RAT)
@@ -183,7 +183,7 @@ Case study taken from Logan (see Figure 2): "In an unusually detailed preparatio
 Why is this a nested design and not a factorial (crossed) design? Because the sites chosen in each season are not the same sites, they are randomly selected in each season depending on logistical constraints.
 
 ```{r}
-worms<-read.csv("~/Dropbox/Biometry/Week 12 Nested and factorial ANOVA/Week 12 Lab/flatworms.csv",header=T)
+worms<-read.csv("_data/flatworms.csv",header=T)
 worms$Site<-factor(worms$Site)
 ```
 
@@ -254,7 +254,7 @@ A randomized block design, with Leaf as the "blocking factor".
 So in this case, the leaves are considered the "blocks" and each treatment is represented once in each block. A completely randomized design would have had 16 leaves, with 8 whole leaves randomly allocated to each treatment.
 
 ```{r}
-tobacco<-read.csv("~/Dropbox/Biometry/Week 12 Nested and factorial ANOVA/Week 12 Lab/tobacco.csv")
+tobacco<-read.csv("_data/tobacco.csv")
 head(tobacco)
 ```
 
@@ -324,7 +324,7 @@ Example #5: Nested design
 In an experiment on eye color, each male fly is mated with four different female flies. Two offspring are born from each mating, and the intensity of eye color among these offspring are measured. The question is, how much variation in eye color is due to differences between females and how much is due to differences between males?
 
 ```{r}
-flies<-read.table("~/Dropbox/Biometry/Week 12 Nested and factorial ANOVA/Week 12 Lab/flies.txt",header=T)
+flies<-read.table("_data/flies.txt",header=T)
 flies$male<-factor(flies$male)
 flies$female<-factor(flies$female)
 model6<-aov(eye~male/female+Error(male/female),data=flies)

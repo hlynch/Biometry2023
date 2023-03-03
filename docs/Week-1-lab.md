@@ -338,7 +338,7 @@ Load the data
 
 
 ```r
-Prestige<-read.csv("~/Documents/Projects/Biometry2023/_data/Prestige.csv")
+Prestige<-read.csv("_data/Prestige.csv")
 ```
 
 We can look at the entire data set by typing the name at the command prompt, but we can also just look at the first few lines using the 'head' function
@@ -878,14 +878,14 @@ Method 1:
   
 
 ```r
-cloud.data<-read.table("~/Documents/Projects/Biometry2023/_data/clouds.txt")
+cloud.data<-read.table("_data/clouds.txt")
 ```
 
 Notice that that doesn't work because the headers have become part of the data.
 
 
 ```r
-cloud.data<-read.table("~/Documents/Projects/Biometry2023/_data/clouds.txt", header=T)
+cloud.data<-read.table("_data/clouds.txt", header=T)
 ```
 
 Remember that we need to add the "header=T" or it will assume the headers are actually the first line of data.
@@ -894,21 +894,21 @@ Method 2:
 
 
 ```r
-cloud.data<-read.table("~/Documents/Projects/Biometry2023/_data/clouds.csv", header=T)
+cloud.data<-read.table("_data/clouds.csv", header=T)
 ```
 
 This doesn't work because R does know what the delimiter is. You have to specify the delimiter:
 
 
 ```r
-cloud.data<-read.table("~/Documents/Projects/Biometry2023/_data/clouds.csv", header=T,sep=",")
+cloud.data<-read.table("_data/clouds.csv", header=T,sep=",")
 ```
 
 or use the command 'read.csv' which automatically assumes its comma delimited.
 
 
 ```r
-cloud.data<-read.csv("~/Documents/Projects/Biometry2023/_data/clouds.csv", header=T)
+cloud.data<-read.csv("_data/clouds.csv", header=T)
 ```
 
 There are two ways to refer to the first column of data. Because we have column headers, we can refer to them by name using the "$" as follows:

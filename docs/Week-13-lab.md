@@ -18,7 +18,7 @@ There is a frog dataset on the distribution of the Southern Corroboree frog that
 
 
 ```r
-frogs<-read.csv("~/Documents/Projects/Biometry2021/_data/frogs.csv",header=T)
+frogs<-read.csv("_data/frogs.csv",header=T)
 head(frogs)
 ```
 
@@ -1249,7 +1249,7 @@ First, we will load the data and the 'car' package, and use 'names' to see what 
 
 
 ```r
-data<-read.csv("~/Documents/Projects/Biometry2021/_data/MammalLifeHistory.csv")
+data<-read.csv("_data/MammalLifeHistory.csv")
 attach(data)
 names(data)
 ```

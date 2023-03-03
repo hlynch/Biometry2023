@@ -223,9 +223,25 @@ $$
 
 Some examples of data that are best modelled as either Bernoulli or Binomial are:
 
-![](JointDamage.png)
+Evidence for joint damage in a rocket (this is a dataset we will tackle in the lab):
 
-![](TurtleEggs.png)
+
+```r
+Challenger_data <- read.csv("_data/Challenger_data.csv")
+plot(Challenger_data$Temp,Challenger_data$O.ring.failure,pch=16,cex=2,col=rgb(0,0.55,0.4,0.6),xlab="Temperature",ylab="Presence of at least one failed O-ring")
+```
+
+<img src="Week-10-lecture_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+
+or the presence/absence of a species (in this case, a newt) plotted as a function of habitat suitability (data from [this website](https://www.dataanalytics.org.uk/publications/statistics-book-for-ecologists/support/data/)):
+
+
+```r
+Newt_HSI <- read.csv("_data/Newt HSI.csv")
+plot(Newt_HSI$HSI,Newt_HSI$presence,pch=16,cex=2,col=rgb(0,0.55,0.4,0.3),xlab="Habitat Suitability Index",ylab="Species presence (1)/Absence (0)")
+```
+
+<img src="Week-10-lecture_files/figure-html/unnamed-chunk-8-1.png" width="672" />
 
 By modeling our data as it exists, we have solved four problems
 
@@ -250,7 +266,7 @@ ggplot(data = beetle, aes(x = Wood.density, y = ANAT)) + geom_point(col = "gray5
   theme_classic() + theme(text = element_text(size = text.size))
 ```
 
-<img src="Week-10-lecture_files/figure-html/unnamed-chunk-7-1.png" width="480" />
+<img src="Week-10-lecture_files/figure-html/unnamed-chunk-9-1.png" width="480" />
 
 **Question: How do we interpret this GLM?**
 
@@ -315,7 +331,7 @@ The log odds (logit) of the event occurring: $\text{log odds} = \ln \frac{0.3}{0
 
 The probability of the event (which we already knew) can be obtained using the logit using the inverse logit: $\frac{\exp(\text{log odds})}{1 + \exp(\text{log odds})}$
 
-<img src="Week-10-lecture_files/figure-html/unnamed-chunk-10-1.png" width="384" />
+<img src="Week-10-lecture_files/figure-html/unnamed-chunk-12-1.png" width="384" />
 
 Adapted from [this website](http://www.montana.edu/rotella/documents/502/Prob_odds_log-odds.pdf). 
 
@@ -600,7 +616,7 @@ ggplot(data = bomregions2012, aes(x = Year, y = northRain)) + geom_point() + geo
 ## `geom_smooth()` using formula 'y ~ x'
 ```
 
-<img src="Week-10-lecture_files/figure-html/unnamed-chunk-14-1.png" width="384" />
+<img src="Week-10-lecture_files/figure-html/unnamed-chunk-16-1.png" width="384" />
 
 \subsection{Splines}
 
@@ -618,7 +634,7 @@ ggplot(data = bomregions2012, aes(x = Year, y = northRain)) + geom_point() +
   theme(text = element_text(size = text.size)) + theme_classic()
 ```
 
-<img src="Week-10-lecture_files/figure-html/unnamed-chunk-15-1.png" width="384" />
+<img src="Week-10-lecture_files/figure-html/unnamed-chunk-17-1.png" width="384" />
 
 \subsection{GAMs}
 
@@ -636,7 +652,7 @@ ggplot(data = bomregions2012, aes(x = Year, y = northRain)) + geom_point() +
   theme(text = element_text(size = text.size)) + theme_classic()
 ```
 
-<img src="Week-10-lecture_files/figure-html/unnamed-chunk-16-1.png" width="384" />
+<img src="Week-10-lecture_files/figure-html/unnamed-chunk-18-1.png" width="384" />
 
 Personally, I really dislike GAMs and would discourage their use. GAMs rarely if ever provide information that you couldn't see with the naked eye, and their use lends an air of statistical rigor to an analysis that is usually unjustified. I often see GAMs used as a crutch to avoid thinking seriously about the statistical model, and it tends to produce features that are artifacts of the data rather than meaningful information about the underlying process.
 

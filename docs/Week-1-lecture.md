@@ -326,7 +326,7 @@ $$ E[X] = \int_{-\infty}^{\infty}{X \cdot f(X)dX}$$
 
 Note that the function $f(x)$ in the above equation is the probability density function.
 
-## A Brief Introduction to Scientific Method 
+## A brief introduction to inference, logic, and reasoning
 
 INDUCTIVE reasoning:
 

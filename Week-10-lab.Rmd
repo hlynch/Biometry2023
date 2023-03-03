@@ -134,7 +134,7 @@ Predictor Variable: Temperature at lift-off (degrees Fahrenheit)
 Sample size: 23 shuttle lift-offs prior to Challenger
 
 ```{r}
-challenger<-read.csv("~/Dropbox/Biometry/Week 10 Multiple regression and GLMs/Week 10 Lab/Challenger_data.csv",head=T)
+challenger<-read.csv("_data/Challenger_data.csv",head=T)
 challenger
 attach(challenger)
 plot(Temp,O.ring.failure,xlab="Temperature",ylab="Damage",main="O-ring damage vs. Temperature")

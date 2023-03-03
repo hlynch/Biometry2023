@@ -24,7 +24,7 @@ Part 1: Model selection / model comparison
 There is a frog dataset on the distribution of the Southern Corroboree frog that we are going to attach. More information on the definition of the covariates in this dataset can be found [here](https://www.key2stats.com/data-set/view/235).
 
 ```{r}
-frogs<-read.csv("~/Documents/Projects/Biometry2021/_data/frogs.csv",header=T)
+frogs<-read.csv("_data/frogs.csv",header=T)
 head(frogs)
 attach(frogs)
 plot(northing ~ easting, pch=c(1,16)[frogs$pres.abs+1],xlab="Meters east", ylab="Meters north")
@@ -273,7 +273,7 @@ Litters/year
 First, we will load the data and the 'car' package, and use 'names' to see what the columns are named
 
 ```{r}
-data<-read.csv("~/Documents/Projects/Biometry2021/_data/MammalLifeHistory.csv")
+data<-read.csv("_data/MammalLifeHistory.csv")
 attach(data)
 names(data)
 ```

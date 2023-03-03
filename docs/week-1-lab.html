@@ -24,7 +24,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-02-23" />
+<meta name="date" content="2023-03-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -155,7 +155,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.9.2" data-path="week-1-lecture.html"><a href="week-1-lecture.html#discrete-case"><i class="fa fa-check"></i><b>1.9.2</b> Discrete Case</a></li>
 <li class="chapter" data-level="1.9.3" data-path="week-1-lecture.html"><a href="week-1-lecture.html#continuous-case"><i class="fa fa-check"></i><b>1.9.3</b> Continuous Case</a></li>
 </ul></li>
-<li class="chapter" data-level="1.10" data-path="week-1-lecture.html"><a href="week-1-lecture.html#a-brief-introduction-to-scientific-method"><i class="fa fa-check"></i><b>1.10</b> A Brief Introduction to Scientific Method</a></li>
+<li class="chapter" data-level="1.10" data-path="week-1-lecture.html"><a href="week-1-lecture.html#a-brief-introduction-to-inference-logic-and-reasoning"><i class="fa fa-check"></i><b>1.10</b> A brief introduction to inference, logic, and reasoning</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="week-1-lab.html"><a href="week-1-lab.html"><i class="fa fa-check"></i><b>2</b> Week 1 Lab</a>
 <ul>
@@ -576,7 +576,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Factors:</p>
 <p>To explore factors, we will use the dataset Prestige.csv. To simplify everything that follows, I will set the working directory to my own folder for this week’s lab. This will allow me to reference files within this folder without the entire file name.</p>
 <p>Load the data</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="week-1-lab.html#cb53-1" aria-hidden="true" tabindex="-1"></a>Prestige<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">&quot;~/Documents/Projects/Biometry2023/_data/Prestige.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="week-1-lab.html#cb53-1" aria-hidden="true" tabindex="-1"></a>Prestige<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">&quot;_data/Prestige.csv&quot;</span>)</span></code></pre></div>
 <p>We can look at the entire data set by typing the name at the command prompt, but we can also just look at the first few lines using the ‘head’ function</p>
 <div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="week-1-lab.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(Prestige)</span></code></pre></div>
 <pre><code>##                     X education income women prestige census type
@@ -881,16 +881,16 @@ Let’s make a data frame to play around with, which we will make the ranking of
 <p>We will be using a cloud-seeding dataset from: Simpson, Alsen, and Eden. (1975). A Bayesian analysis of a multiplicative treatment effect in weather modification. Technometrics 17, 161-166. The data consist of data on the amount of rainfall (in acre-feet) from unseeded clouds vs. those seeded with silver nitrate.</p>
 <p>Here and throughout I have assumed the data resides in a local folder and the code below has my pathnames but you will have to change the code according to your own file structure. (I am using a Mac, but getting the pathname correct I have included a .txt file and a .csv file to show you the differences in inputting your data:</p>
 <p>Method 1:</p>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="week-1-lab.html#cb104-1" aria-hidden="true" tabindex="-1"></a>cloud.data<span class="ot">&lt;-</span><span class="fu">read.table</span>(<span class="st">&quot;~/Documents/Projects/Biometry2023/_data/clouds.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="week-1-lab.html#cb104-1" aria-hidden="true" tabindex="-1"></a>cloud.data<span class="ot">&lt;-</span><span class="fu">read.table</span>(<span class="st">&quot;_data/clouds.txt&quot;</span>)</span></code></pre></div>
 <p>Notice that that doesn’t work because the headers have become part of the data.</p>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="week-1-lab.html#cb105-1" aria-hidden="true" tabindex="-1"></a>cloud.data<span class="ot">&lt;-</span><span class="fu">read.table</span>(<span class="st">&quot;~/Documents/Projects/Biometry2023/_data/clouds.txt&quot;</span>, <span class="at">header=</span>T)</span></code></pre></div>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="week-1-lab.html#cb105-1" aria-hidden="true" tabindex="-1"></a>cloud.data<span class="ot">&lt;-</span><span class="fu">read.table</span>(<span class="st">&quot;_data/clouds.txt&quot;</span>, <span class="at">header=</span>T)</span></code></pre></div>
 <p>Remember that we need to add the “header=T” or it will assume the headers are actually the first line of data.</p>
 <p>Method 2:</p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="week-1-lab.html#cb106-1" aria-hidden="true" tabindex="-1"></a>cloud.data<span class="ot">&lt;-</span><span class="fu">read.table</span>(<span class="st">&quot;~/Documents/Projects/Biometry2023/_data/clouds.csv&quot;</span>, <span class="at">header=</span>T)</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="week-1-lab.html#cb106-1" aria-hidden="true" tabindex="-1"></a>cloud.data<span class="ot">&lt;-</span><span class="fu">read.table</span>(<span class="st">&quot;_data/clouds.csv&quot;</span>, <span class="at">header=</span>T)</span></code></pre></div>
 <p>This doesn’t work because R does know what the delimiter is. You have to specify the delimiter:</p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="week-1-lab.html#cb107-1" aria-hidden="true" tabindex="-1"></a>cloud.data<span class="ot">&lt;-</span><span class="fu">read.table</span>(<span class="st">&quot;~/Documents/Projects/Biometry2023/_data/clouds.csv&quot;</span>, <span class="at">header=</span>T,<span class="at">sep=</span><span class="st">&quot;,&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="week-1-lab.html#cb107-1" aria-hidden="true" tabindex="-1"></a>cloud.data<span class="ot">&lt;-</span><span class="fu">read.table</span>(<span class="st">&quot;_data/clouds.csv&quot;</span>, <span class="at">header=</span>T,<span class="at">sep=</span><span class="st">&quot;,&quot;</span>)</span></code></pre></div>
 <p>or use the command ‘read.csv’ which automatically assumes its comma delimited.</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="week-1-lab.html#cb108-1" aria-hidden="true" tabindex="-1"></a>cloud.data<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">&quot;~/Documents/Projects/Biometry2023/_data/clouds.csv&quot;</span>, <span class="at">header=</span>T)</span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="week-1-lab.html#cb108-1" aria-hidden="true" tabindex="-1"></a>cloud.data<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">&quot;_data/clouds.csv&quot;</span>, <span class="at">header=</span>T)</span></code></pre></div>
 <p>There are two ways to refer to the first column of data. Because we have column headers, we can refer to them by name using the “$” as follows:</p>
 <div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="week-1-lab.html#cb109-1" aria-hidden="true" tabindex="-1"></a>cloud.data<span class="sc">$</span>Unseeded_Clouds</span></code></pre></div>
 <pre><code>##  [1] 1202.6  830.1  372.4  345.5  321.2  244.3  163.0  147.8   95.0   87.0

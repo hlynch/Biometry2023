@@ -20,7 +20,7 @@ Two-way ANOVA in R is a lot like one-way ANOVA in R, except now we have a second
 
 
 ```r
-salaries<-read.csv("~/Dropbox/Biometry/Week 12 Nested and factorial ANOVA/Week 12 Lab/TwoWayANOVAdata.csv")
+salaries<-read.csv("_data/TwoWayANOVAdata.csv")
 par(mfrow=c(2,1))
 boxplot(salaries$Salary~salaries$Gender,ylab="Salary")
 boxplot(salaries$Salary~salaries$Education,ylab="Salary")
@@ -386,7 +386,7 @@ We will work through one of the classic examples from Sokal & Rohlf in which we 
 
 
 ```r
-rats<-read.csv("~/Dropbox/Biometry/Week 12 Nested and factorial ANOVA/Week 12 Lab/rats.txt",header=T)
+rats<-read.csv("_data/rats.txt",header=T)
 attach(rats)
 Treatment<-factor(TREAT)
 Rat<-factor(RAT)
@@ -478,7 +478,7 @@ Why is this a nested design and not a factorial (crossed) design? Because the si
 
 
 ```r
-worms<-read.csv("~/Dropbox/Biometry/Week 12 Nested and factorial ANOVA/Week 12 Lab/flatworms.csv",header=T)
+worms<-read.csv("_data/flatworms.csv",header=T)
 worms$Site<-factor(worms$Site)
 ```
 
@@ -613,7 +613,7 @@ So in this case, the leaves are considered the "blocks" and each treatment is re
 
 
 ```r
-tobacco<-read.csv("~/Dropbox/Biometry/Week 12 Nested and factorial ANOVA/Week 12 Lab/tobacco.csv")
+tobacco<-read.csv("_data/tobacco.csv")
 head(tobacco)
 ```
 
@@ -747,7 +747,7 @@ In an experiment on eye color, each male fly is mated with four different female
 
 
 ```r
-flies<-read.table("~/Dropbox/Biometry/Week 12 Nested and factorial ANOVA/Week 12 Lab/flies.txt",header=T)
+flies<-read.table("_data/flies.txt",header=T)
 flies$male<-factor(flies$male)
 flies$female<-factor(flies$female)
 model6<-aov(eye~male/female+Error(male/female),data=flies)

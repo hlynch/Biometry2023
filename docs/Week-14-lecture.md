@@ -225,7 +225,7 @@ Using the example I described at the beginning of the lecture, Lovett et al. (20
 
 
 ```r
-streams.init <- read.csv("~/Dropbox/Biometry/Week 14 Multivariate analyses and Review/Week 14 Lecture/lovett2.csv")
+streams.init <- read.csv("_data/lovett2.csv")
 streams <- streams.init[, c(6:8, 16, 9, 11, 17, 13, 14, 18)]
 row.names(streams) <- streams.init[, 1]
 str(streams)
@@ -375,7 +375,7 @@ In large, multivariate data sets, you may have observations that are missing val
 
 
 ```r
-mammal <- read.csv("~/Dropbox/Biometry/Week 13 Model selection and criticism/Week 13 Lab/MammalLifeHistory.csv",header=T)
+mammal <- read.csv("_data/MammalLifeHistory.csv",header=T)
 carnivore.init <- mammal[which(mammal$Order == "Carnivora"), ]
 carnivore.init$AFR[1:12]
 ```
