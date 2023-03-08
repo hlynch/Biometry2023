@@ -390,15 +390,15 @@ model.matrix( ~ -1 + iris.sub$Species)
 
 ```
 ##    iris.sub$Speciessetosa iris.sub$Speciesversicolor iris.sub$Speciesvirginica
-## 1                       1                          0                         0
-## 2                       1                          0                         0
+## 1                       0                          1                         0
+## 2                       0                          0                         1
 ## 3                       0                          1                         0
 ## 4                       1                          0                         0
 ## 5                       0                          0                         1
-## 6                       0                          1                         0
-## 7                       1                          0                         0
-## 8                       0                          1                         0
-## 9                       0                          1                         0
+## 6                       1                          0                         0
+## 7                       0                          0                         1
+## 8                       0                          0                         1
+## 9                       1                          0                         0
 ## 10                      0                          0                         1
 ## 11                      0                          1                         0
 ## 12                      1                          0                         0
@@ -421,9 +421,9 @@ dummy$coefficients
 
 ```
 ##                            Estimate Std. Error  t value     Pr(>|t|)
-## iris.sub$Speciessetosa         5.28  0.1825742 28.91975 3.444308e-10
-## iris.sub$Speciesversicolor     5.94  0.1825742 32.53472 1.204215e-10
-## iris.sub$Speciesvirginica      7.50  0.2886751 25.98076 8.942716e-10
+## iris.sub$Speciessetosa        5.075  0.3605359 14.07627 1.956760e-07
+## iris.sub$Speciesversicolor    5.700  0.4163110 13.69169 2.485523e-07
+## iris.sub$Speciesvirginica     6.460  0.3224731 20.03268 8.949710e-09
 ```
 
 ```r
@@ -702,15 +702,15 @@ model.matrix(~ iris.sub$Species)
 
 ```
 ##    (Intercept) iris.sub$Speciesversicolor iris.sub$Speciesvirginica
-## 1            1                          0                         0
-## 2            1                          0                         0
+## 1            1                          1                         0
+## 2            1                          0                         1
 ## 3            1                          1                         0
 ## 4            1                          0                         0
 ## 5            1                          0                         1
-## 6            1                          1                         0
-## 7            1                          0                         0
-## 8            1                          1                         0
-## 9            1                          1                         0
+## 6            1                          0                         0
+## 7            1                          0                         1
+## 8            1                          0                         1
+## 9            1                          0                         0
 ## 10           1                          0                         1
 ## 11           1                          1                         0
 ## 12           1                          0                         0
@@ -729,9 +729,9 @@ treatment$coefficients
 
 ```
 ##                            Estimate Std. Error   t value     Pr(>|t|)
-## (Intercept)                    5.28  0.1825742 28.919751 3.444308e-10
-## iris.sub$Speciesversicolor     0.66  0.2581989  2.556169 3.088061e-02
-## iris.sub$Speciesvirginica      2.22  0.3415650  6.499494 1.115163e-04
+## (Intercept)                   5.075  0.3605359 14.076269 1.956760e-07
+## iris.sub$Speciesversicolor    0.625  0.5507276  1.134862 2.857527e-01
+## iris.sub$Speciesvirginica     1.385  0.4837096  2.863288 1.867998e-02
 ```
 
 In this case, you can see that the model is estimating the mean of the first group (setosa) and then the difference between the second and first group and the difference between the third and first groups. This allows you to test hypotheses about the differences, which is often more meaningful than testing hypotheses about the group means themselves.
@@ -788,15 +788,15 @@ model.matrix(~ iris.sub$Species)
 
 ```
 ##    (Intercept) iris.sub$Species1 iris.sub$Species2
-## 1            1                -1                -1
-## 2            1                -1                -1
+## 1            1                 1                -1
+## 2            1                 0                 2
 ## 3            1                 1                -1
 ## 4            1                -1                -1
 ## 5            1                 0                 2
-## 6            1                 1                -1
-## 7            1                -1                -1
-## 8            1                 1                -1
-## 9            1                 1                -1
+## 6            1                -1                -1
+## 7            1                 0                 2
+## 8            1                 0                 2
+## 9            1                -1                -1
 ## 10           1                 0                 2
 ## 11           1                 1                -1
 ## 12           1                -1                -1
@@ -815,9 +815,9 @@ helmert$coefficients
 
 ```
 ##                   Estimate Std. Error   t value     Pr(>|t|)
-## (Intercept)           6.24  0.1290994 48.334832 3.480949e-12
-## iris.sub$Species1     0.33  0.1290994  2.556169 3.088061e-02
-## iris.sub$Species2     0.63  0.1054093  5.976705 2.083754e-04
+## (Intercept)         5.7450  0.2127309 27.005953 6.337867e-10
+## iris.sub$Species1   0.3125  0.2753638  1.134862 2.857527e-01
+## iris.sub$Species2   0.3575  0.1413483  2.529213 3.227702e-02
 ```
 
 Sum-to-zero contrasts
@@ -875,15 +875,15 @@ model.matrix(~ iris.sub$Species)
 
 ```
 ##    (Intercept) iris.sub$Species1 iris.sub$Species2
-## 1            1                 1                 0
-## 2            1                 1                 0
+## 1            1                 0                 1
+## 2            1                -1                -1
 ## 3            1                 0                 1
 ## 4            1                 1                 0
 ## 5            1                -1                -1
-## 6            1                 0                 1
-## 7            1                 1                 0
-## 8            1                 0                 1
-## 9            1                 0                 1
+## 6            1                 1                 0
+## 7            1                -1                -1
+## 8            1                -1                -1
+## 9            1                 1                 0
 ## 10           1                -1                -1
 ## 11           1                 0                 1
 ## 12           1                 1                 0
@@ -901,10 +901,10 @@ sumtozero$coefficients
 ```
 
 ```
-##                   Estimate Std. Error  t value     Pr(>|t|)
-## (Intercept)           6.24  0.1290994 48.33483 3.480949e-12
-## iris.sub$Species1    -0.96  0.1666667 -5.76000 2.728397e-04
-## iris.sub$Species2    -0.30  0.1666667 -1.80000 1.053907e-01
+##                   Estimate Std. Error    t value     Pr(>|t|)
+## (Intercept)          5.745  0.2127309 27.0059533 6.337867e-10
+## iris.sub$Species1   -0.670  0.2976292 -2.2511234 5.090973e-02
+## iris.sub$Species2   -0.045  0.3209767 -0.1401971 8.915917e-01
 ```
 
 There is one final "off-the-shelf" contrast that we will learn, and that is polynomial contrasts.
@@ -996,6 +996,20 @@ Orthogonal vs. Non-orthogonal contrasts
 In a broad sense, orthogonal refers to things that are perpendicular. For some cases, that's easy to think about. But what does it mean with respect to categorical comparisons in linear models? 
 
 In a simple model with one categorical predictor with five different groups (a, b, c, d, and e): $Y_i = \alpha_{j(i)} + \epsilon_i \text{, where } \epsilon_i \sim N(0, \sigma^2)$, we may be interested in comparing a vs. b, a vs. c, or even a, b, and c vs. d and e. There are many ways in which we might want to interpret differences among the groups, and each comparison is called a **contrast**. There are a large number of contrasts, but few *orthogonal* contrasts. For example, if we compare a vs. b and a vs. c, then a third comparison, b vs. c is not orthogonal because it is implicity included in the first two contrasts. Note that treatment contrasts are not orthogonal.
+
+Mathematically, contrasts are orthogonal if their dot product is equal to zero or, equivalently, if the product of the pairwise coefficients sums to zero. In other words, let's say we have three groups (three "levels of our factor"). Two possible contrasts would be
+
+| Group  | Contrast A  | Contrast B  |
+| -------- |:----------:| -------:|
+| 1 | 2  | 0 |
+| 2 | -1 | 1 |
+| 3 | -1 | 1 |
+
+Contrast A compares Group 1 against the average of Group 2 and 3. Contrast B compares Group 2 vs. Group 3. Are these two contrasts orthogonal? Yes!
+
+$$
+\sum\limits_{i=1}^{3} \alpha_{i}\beta_{i} = (2)(0)+(-1)(1)+(-1)(-1) = 0
+$$
 
 **If you have $k$ levels of a factor ($k$ numbers of groups), you only have $k - 1$ orthogonal contrasts.**
 

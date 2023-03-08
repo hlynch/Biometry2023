@@ -258,18 +258,18 @@ summary(fit)
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -18.021  -5.226  -1.212   4.750  20.953 
+## -25.120  -6.145   1.182   4.982  19.870 
 ## 
 ## Coefficients:
 ##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)   5.3463     3.2477   1.646    0.111    
-## X            -2.5742     0.1829 -14.071 3.19e-14 ***
+## (Intercept)  -6.3610     3.9960  -1.592    0.123    
+## X            -1.8126     0.2251  -8.053 9.07e-09 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 8.673 on 28 degrees of freedom
-## Multiple R-squared:  0.8761,	Adjusted R-squared:  0.8717 
-## F-statistic:   198 on 1 and 28 DF,  p-value: 3.19e-14
+## Residual standard error: 10.67 on 28 degrees of freedom
+## Multiple R-squared:  0.6984,	Adjusted R-squared:  0.6877 
+## F-statistic: 64.85 on 1 and 28 DF,  p-value: 9.07e-09
 ```
 
 Copy this script into R and r-run it several times. Notice how the estimates for slope and intercept bounce around, but they should be correct *on average* and also the scale of variation from one run to the next should make sense given the estimate of the standard error. (Their standard deviation should be the standard error.) Notice also that as you increase sigma, the R2 goes down because now you are increasing the variation that is *not* explained by the covariate. Try changing the number of samples drawn, either by extending the vector of the covariates or by drawing multiple times for each value (you will have to modify the code to make this latter change work). Notice how the standard errors on the intercept and slope coefficients gets smaller as the data set gets larger but the estimate for sigma does not. The parameter sigma is a property of the underlying population, not a property of the sample drawn, so it does not get smaller as you increase the number of samples in the dataset. (If this does not make sense, ask me!)
@@ -284,7 +284,7 @@ mean(residuals(fit)^2)
 ```
 
 ```
-## [1] 70.20345
+## [1] 106.2794
 ```
 
 while the *root mean squared error* is
@@ -295,7 +295,7 @@ sqrt(mean(residuals(fit)^2))
 ```
 
 ```
-## [1] 8.37875
+## [1] 10.30919
 ```
 
 which is just the square-root of the mean squared error above.
@@ -308,7 +308,7 @@ sum(residuals(fit)^2)
 ```
 
 ```
-## [1] 2106.103
+## [1] 3188.383
 ```
 
 and the *residual standard error* is
@@ -319,7 +319,7 @@ sqrt(sum(residuals(fit)^2)/(n-2))
 ```
 
 ```
-## [1] 8.67283
+## [1] 10.67103
 ```
 
 This last term is the most confusing at first, but the residual standard error is taking the data you have as a sample from the larger population and trying to estimate the standard error from the larger population. So it takes the residual sum of squares, divides that by the degrees of freedom (we have 30 data points, we lost 2 degrees of freedom, so we are left with 28 degrees of freedom for the estimation of the residual standard error) and then takes the square root. We can think of the mean squared error as being the total variance divided by the sample size but this underestimates the population variance (for the same reason that when calculating tghe sample variance we have to divide by n-1), so in this case
@@ -330,7 +330,7 @@ mean(residuals(fit)^2)*(n/(n-2))
 ```
 
 ```
-## [1] 75.21798
+## [1] 113.8708
 ```
 
 is our estimate of what the true variance is, which should come close to what we used to generate the data ($\sigma=10$ so $\sigma^{2}=100$). (If you go back and change the code to use a larger number of data points, the estimate will be closer.)
@@ -852,9 +852,9 @@ duncan.boot
 ## 
 ## 
 ## Bootstrap Statistics :
-##      original       bias    std. error
-## t1* 6.3002197  0.350641781  4.58977106
-## t2* 0.6615263 -0.008490157  0.07414059
+##      original      bias    std. error
+## t1* 6.3002197  0.60455832  4.76442506
+## t2* 0.6615263 -0.01066087  0.07661778
 ```
 
 **<span style="color: green;">Checkpoint #5: How would we know if the bias is significant (i.e., how would we calculate the standard error of the bias)?</span>**
