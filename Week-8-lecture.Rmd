@@ -674,12 +674,7 @@ In this case, you can see that the model is estimating the mean of the first gro
 Helmert contrasts
 ---------------
 
-Helmert contrasts include a mean treatment effect and then the remaining parameters estimate the group mean relative to the mean treatment effect of the groups before it.
-
-$$
-Y_i = \bar{\alpha}_{< j} + \alpha_{j(i)} + \epsilon_i \text{, where } \epsilon_i \sim N(0, \sigma^2)
-$$
-where $\alpha_{mean}$ is the mean treatment effect for all groups prior to group $j$, and $\alpha_{j}$ is the difference between group $j$ and $\alpha_{mean}$. This is usually only sensible when the categories have some natural order to them, and are not very common in ecology but they are the default in SPLUS (but not R fortunately). (There are many different versions, but as long as you keep the interpretation of each coefficient straight, it doesn’t matter which you use. I think this version is the clearest.)
+Helmert contrasts include a mean treatment effect and then the remaining parameters estimate the group mean relative to the mean treatment effect of the groups before it. This is usually only sensible when the categories have some natural order to them, and are not very common in ecology but they are the default in SPLUS (but not R fortunately). (There are many different versions, but as long as you keep the interpretation of each coefficient straight, it doesn’t matter which you use. I think this version is the clearest.) The equation is difficult to write compactly but the Helmert contrast can be understood using the following example involving three groups.
 
 | Parameter          | Interpretation           | Null hypothesis  |
 | ------------------ |:------------------------:| ----------------:|
