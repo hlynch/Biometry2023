@@ -257,19 +257,19 @@ summary(fit)
 ## lm(formula = value ~ X)
 ## 
 ## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -18.215  -6.048  -1.759   6.247  23.350 
+##      Min       1Q   Median       3Q      Max 
+## -22.4641  -6.7873  -0.1505   8.5100  20.5612 
 ## 
 ## Coefficients:
 ##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)  -2.6818     3.5448  -0.757    0.456    
-## X            -2.0449     0.1997 -10.241 5.67e-11 ***
+## (Intercept)  -0.3481     4.1971  -0.083    0.934    
+## X            -2.2402     0.2364  -9.476 3.12e-10 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 9.466 on 28 degrees of freedom
-## Multiple R-squared:  0.7893,	Adjusted R-squared:  0.7818 
-## F-statistic: 104.9 on 1 and 28 DF,  p-value: 5.671e-11
+## Residual standard error: 11.21 on 28 degrees of freedom
+## Multiple R-squared:  0.7623,	Adjusted R-squared:  0.7538 
+## F-statistic: 89.79 on 1 and 28 DF,  p-value: 3.117e-10
 ```
 
 Copy this script into R and r-run it several times. Notice how the estimates for slope and intercept bounce around, but they should be correct *on average* and also the scale of variation from one run to the next should make sense given the estimate of the standard error. (Their standard deviation should be the standard error.) Notice also that as you increase sigma, the R2 goes down because now you are increasing the variation that is *not* explained by the covariate. Try changing the number of samples drawn, either by extending the vector of the covariates or by drawing multiple times for each value (you will have to modify the code to make this latter change work). Notice how the standard errors on the intercept and slope coefficients gets smaller as the data set gets larger but the estimate for sigma does not. The parameter sigma is a property of the underlying population, not a property of the sample drawn, so it does not get smaller as you increase the number of samples in the dataset. (If this does not make sense, ask me!)
@@ -284,7 +284,7 @@ mean(residuals(fit)^2)
 ```
 
 ```
-## [1] 83.63309
+## [1] 117.2426
 ```
 
 while the *root mean squared error* is
@@ -295,7 +295,7 @@ sqrt(mean(residuals(fit)^2))
 ```
 
 ```
-## [1] 9.145113
+## [1] 10.82786
 ```
 
 which is just the square-root of the mean squared error above.
@@ -308,7 +308,7 @@ sum(residuals(fit)^2)
 ```
 
 ```
-## [1] 2508.993
+## [1] 3517.279
 ```
 
 and the *residual standard error* is
@@ -319,7 +319,7 @@ sqrt(sum(residuals(fit)^2)/(n-2))
 ```
 
 ```
-## [1] 9.466091
+## [1] 11.2079
 ```
 
 This last term is the most confusing at first, but the residual standard error is taking the data you have as a sample from the larger population and trying to estimate the standard error from the larger population. So it takes the residual sum of squares, divides that by the degrees of freedom (we have 30 data points, we lost 2 degrees of freedom, so we are left with 28 degrees of freedom for the estimation of the residual standard error) and then takes the square root. We can think of the mean squared error as being the total variance divided by the sample size but this underestimates the population variance (for the same reason that when calculating tghe sample variance we have to divide by n-1), so in this case
@@ -330,7 +330,7 @@ mean(residuals(fit)^2)*(n/(n-2))
 ```
 
 ```
-## [1] 89.60688
+## [1] 125.6171
 ```
 
 is our estimate of what the true variance is, which should come close to what we used to generate the data ($\sigma=10$ so $\sigma^{2}=100$). (If you go back and change the code to use a larger number of data points, the estimate will be closer.)
@@ -852,9 +852,9 @@ duncan.boot
 ## 
 ## 
 ## Bootstrap Statistics :
-##      original       bias    std. error
-## t1* 6.3002197  0.291361631  4.65120812
-## t2* 0.6615263 -0.006057084  0.07552863
+##      original      bias    std. error
+## t1* 6.3002197  0.46854781  4.73132524
+## t2* 0.6615263 -0.01069616  0.07612658
 ```
 
 **<span style="color: green;">Checkpoint #5: How would we know if the bias is significant (i.e., how would we calculate the standard error of the bias)?</span>**

@@ -24,7 +24,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-03-20" />
+<meta name="date" content="2023-03-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -275,8 +275,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="15" data-path="week-8-lab.html"><a href="week-8-lab.html"><i class="fa fa-check"></i><b>15</b> Week 8 Lab</a>
 <ul>
 <li class="chapter" data-level="15.1" data-path="week-8-lab.html"><a href="week-8-lab.html#covariate-as-number-vs.-covariate-as-factor"><i class="fa fa-check"></i><b>15.1</b> Covariate as number vs. covariate as factor</a></li>
-<li class="chapter" data-level="15.2" data-path="week-8-lecture.html"><a href="week-8-lecture.html#helmert-contrasts"><i class="fa fa-check"></i><b>15.2</b> Helmert contrasts</a></li>
-<li class="chapter" data-level="15.3" data-path="week-8-lecture.html"><a href="week-8-lecture.html#polynomial-contrasts"><i class="fa fa-check"></i><b>15.3</b> Polynomial contrasts</a></li>
+<li class="chapter" data-level="15.2" data-path="week-8-lab.html"><a href="week-8-lab.html#helmert-contrasts-in-r"><i class="fa fa-check"></i><b>15.2</b> Helmert contrasts in R</a></li>
+<li class="chapter" data-level="15.3" data-path="week-8-lab.html"><a href="week-8-lab.html#polynomial-contrasts-in-r"><i class="fa fa-check"></i><b>15.3</b> Polynomial contrasts in R</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="week-9-lecture.html"><a href="week-9-lecture.html"><i class="fa fa-check"></i><b>16</b> Week 9 Lecture</a>
 <ul>
@@ -565,7 +565,7 @@ We have insufficient evidence to reject the null hypothesis that the residuals a
 <div class="sourceCode" id="cb806"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb806-1"><a href="week-13-lecture.html#cb806-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
 <span id="cb806-2"><a href="week-13-lecture.html#cb806-2" aria-hidden="true" tabindex="-1"></a><span class="fu">durbinWatsonTest</span>(web.fit)</span></code></pre></div>
 <pre><code>##  lag Autocorrelation D-W Statistic p-value
-##    1     -0.03369874      2.059546   0.882
+##    1     -0.03369874      2.059546   0.992
 ##  Alternative hypothesis: rho != 0</code></pre>
 <p><strong>Question: How do we interpret the results of this hypothesis test?</strong></p>
 <details>

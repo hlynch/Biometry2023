@@ -395,11 +395,11 @@ sd(station0.est)
 ```
 
 ```
-## [1] 0.1498805
+## [1] 0.1504883
 ```
 
 
-Helmert contrasts
+Helmert contrasts in R
 --------
 
 In lecture on Tuesday we discussed several other contrasts. Let's start with the Helmhert contrast. 
@@ -631,7 +631,7 @@ group.means[2]-mean(group.means)
 
 and so forth. **<span style="color: green;">Checkpoint #4: Do you understand how to obtain the sum-to-zero parameter estimates and what they mean in terms of this dataset?</span>**
 
-Polynomial contrasts
+Polynomial contrasts in R
 --------
 
 Polynomial contrasts can be done using
