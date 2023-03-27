@@ -480,7 +480,7 @@ and you want to test whether the data are consistent with the null hypothesis of
 The chi-squared test statistic is
 
 $$
-X^{2} = \sum_{\mbox{cell} i}\frac{O_{i}-E_{i}}{E_{i}}
+X^{2} = \sum_{\mbox{cell} i}\frac{(O_{i}-E_{i})^2}{E_{i}}
 $$
 $$
 X^{2}|H_{0} \sim \chi^{2}_{(r \times c) -1}
