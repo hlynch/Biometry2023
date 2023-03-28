@@ -24,7 +24,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-03-27" />
+<meta name="date" content="2023-03-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -290,15 +290,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="16.8" data-path="week-9-lecture.html"><a href="week-9-lecture.html#assumptions-of-regression"><i class="fa fa-check"></i><b>16.8</b> Assumptions of regression</a></li>
 <li class="chapter" data-level="16.9" data-path="week-9-lecture.html"><a href="week-9-lecture.html#confidence-vs.-prediction-intervals"><i class="fa fa-check"></i><b>16.9</b> Confidence vs. Prediction intervals</a></li>
 <li class="chapter" data-level="16.10" data-path="week-9-lecture.html"><a href="week-9-lecture.html#how-do-we-know-if-our-model-is-any-good"><i class="fa fa-check"></i><b>16.10</b> How do we know if our model is any good?</a></li>
-<li class="chapter" data-level="16.11" data-path="week-9-lecture.html"><a href="week-9-lecture.html#type-i-and-type-ii-regression"><i class="fa fa-check"></i><b>16.11</b> Type I and Type II Regression</a></li>
-<li class="chapter" data-level="16.12" data-path="week-9-lecture.html"><a href="week-9-lecture.html#W9FAQ"><i class="fa fa-check"></i><b>16.12</b> Week 9 FAQ</a></li>
+<li class="chapter" data-level="16.11" data-path="week-9-lecture.html"><a href="week-9-lecture.html#robust-regression"><i class="fa fa-check"></i><b>16.11</b> Robust regression</a></li>
+<li class="chapter" data-level="16.12" data-path="week-9-lecture.html"><a href="week-9-lecture.html#type-i-and-type-ii-regression"><i class="fa fa-check"></i><b>16.12</b> Type I and Type II Regression</a></li>
+<li class="chapter" data-level="16.13" data-path="week-9-lecture.html"><a href="week-9-lecture.html#W9FAQ"><i class="fa fa-check"></i><b>16.13</b> Week 9 FAQ</a></li>
 </ul></li>
 <li class="chapter" data-level="17" data-path="week-9-lab.html"><a href="week-9-lab.html"><i class="fa fa-check"></i><b>17</b> Week 9 Lab</a>
 <ul>
 <li class="chapter" data-level="17.1" data-path="week-9-lecture.html"><a href="week-9-lecture.html#correlation"><i class="fa fa-check"></i><b>17.1</b> Correlation</a></li>
 <li class="chapter" data-level="17.2" data-path="week-9-lab.html"><a href="week-9-lab.html#linear-modelling"><i class="fa fa-check"></i><b>17.2</b> Linear modelling</a></li>
 <li class="chapter" data-level="17.3" data-path="week-9-lab.html"><a href="week-9-lab.html#weighted-regression"><i class="fa fa-check"></i><b>17.3</b> Weighted regression</a></li>
-<li class="chapter" data-level="17.4" data-path="week-9-lab.html"><a href="week-9-lab.html#robust-regression"><i class="fa fa-check"></i><b>17.4</b> Robust regression</a></li>
+<li class="chapter" data-level="17.4" data-path="week-9-lecture.html"><a href="week-9-lecture.html#robust-regression"><i class="fa fa-check"></i><b>17.4</b> Robust regression</a></li>
 <li class="chapter" data-level="17.5" data-path="week-9-lab.html"><a href="week-9-lab.html#bootstrapping-standard-errors-for-robust-regression"><i class="fa fa-check"></i><b>17.5</b> Bootstrapping standard errors for robust regression</a></li>
 <li class="chapter" data-level="17.6" data-path="week-9-lab.html"><a href="week-9-lab.html#type-i-vs.-type-ii-regression-the-smatr-package"><i class="fa fa-check"></i><b>17.6</b> Type I vs. Type II regression: The ‘smatr’ package</a></li>
 </ul></li>
@@ -569,7 +570,7 @@ P(tanh(z-\frac{t_{[1-\alpha/2](\infty)}}{\sqrt{n-3}})\leq \rho \leq tanh(z+\frac
 ## tau 
 ##   1</code></pre>
 <p>Does it make sense why Kendall’s tau=1.0?</p>
-<p>Now that we have some practice with correlations, let play a game! Each member of your group should visit <a href="http://guessthecorrelation.com/">this site</a> and play 10 rounds of a single player game (each game lasts until you have mis-guessed three times). (You will need to make a name to start playing.) <strong><span style="color: green;">Checkpoint #1: Who had the highest score after 10 rounds?</span></strong></p>
+<p>Now that we have some practice with correlations, let play a game! Each member of your group should visit <a href="https://www.rossmanchance.com/applets/2021/guesscorrelation/GuessCorrelation.html">this site</a> and play a few rounds. Click the “Track Performance” check box to track your performance over time. <strong><span style="color: green;">Checkpoint #1: Who in your group is doing the best?</span></strong></p>
 </div>
 <div id="linear-modelling" class="section level2" number="17.2">
 <h2><span class="header-section-number">17.2</span> Linear modelling</h2>
@@ -593,37 +594,37 @@ P(tanh(z-\frac{t_{[1-\alpha/2](\infty)}}{\sqrt{n-3}})\leq \rho \leq tanh(z+\frac
 ## lm(formula = value ~ X)
 ## 
 ## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -21.413  -6.046  -0.318   4.361  18.191 
+##      Min       1Q   Median       3Q      Max 
+## -16.9180  -3.0204   0.3539   3.5700  19.4538 
 ## 
 ## Coefficients:
 ##             Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)  -1.7247     3.3629  -0.513    0.612    
-## X            -2.1910     0.1894 -11.566 3.53e-12 ***
+## (Intercept)  -3.4311     3.3080  -1.037    0.309    
+## X            -2.1146     0.1863 -11.349 5.49e-12 ***
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
-## Residual standard error: 8.98 on 28 degrees of freedom
-## Multiple R-squared:  0.8269,	Adjusted R-squared:  0.8207 
-## F-statistic: 133.8 on 1 and 28 DF,  p-value: 3.533e-12</code></pre>
+## Residual standard error: 8.834 on 28 degrees of freedom
+## Multiple R-squared:  0.8214,	Adjusted R-squared:  0.815 
+## F-statistic: 128.8 on 1 and 28 DF,  p-value: 5.494e-12</code></pre>
 <p>Copy this script into R and r-run it several times. Notice how the estimates for slope and intercept bounce around, but they should be correct <em>on average</em> and also the scale of variation from one run to the next should make sense given the estimate of the standard error. (Their standard deviation should be the standard error.) Notice also that as you increase sigma, the R2 goes down because now you are increasing the variation that is <em>not</em> explained by the covariate. Try changing the number of samples drawn, either by extending the vector of the covariates or by drawing multiple times for each value (you will have to modify the code to make this latter change work). Notice how the standard errors on the intercept and slope coefficients gets smaller as the data set gets larger but the estimate for sigma does not. The parameter sigma is a property of the underlying population, not a property of the sample drawn, so it does not get smaller as you increase the number of samples in the dataset. (If this does not make sense, ask me!)</p>
 <p>We can use this simple model to define some common (and often confusing) terms used in regression (and later, ANOVA), which will require using the function “residuals” to pull out the difference between each point and the best-fit line.</p>
 <p>The <em>mean squared error</em> is</p>
 <div class="sourceCode" id="cb532"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb532-1"><a href="week-9-lab.html#cb532-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">residuals</span>(fit)<span class="sc">^</span><span class="dv">2</span>)</span></code></pre></div>
-<pre><code>## [1] 75.27258</code></pre>
+<pre><code>## [1] 72.83322</code></pre>
 <p>while the <em>root mean squared error</em> is</p>
 <div class="sourceCode" id="cb534"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb534-1"><a href="week-9-lab.html#cb534-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">mean</span>(<span class="fu">residuals</span>(fit)<span class="sc">^</span><span class="dv">2</span>))</span></code></pre></div>
-<pre><code>## [1] 8.675977</code></pre>
+<pre><code>## [1] 8.534238</code></pre>
 <p>which is just the square-root of the mean squared error above.</p>
 <p>The <em>residual sum of squares</em> is</p>
 <div class="sourceCode" id="cb536"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb536-1"><a href="week-9-lab.html#cb536-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">residuals</span>(fit)<span class="sc">^</span><span class="dv">2</span>)</span></code></pre></div>
-<pre><code>## [1] 2258.177</code></pre>
+<pre><code>## [1] 2184.997</code></pre>
 <p>and the <em>residual standard error</em> is</p>
 <div class="sourceCode" id="cb538"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb538-1"><a href="week-9-lab.html#cb538-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">sum</span>(<span class="fu">residuals</span>(fit)<span class="sc">^</span><span class="dv">2</span>)<span class="sc">/</span>(n<span class="dv">-2</span>))</span></code></pre></div>
-<pre><code>## [1] 8.98049</code></pre>
-<p>This last term is the most confusing at first, but the residual standard error is taking the data you have as a sample from the larger population and trying to estimate the standard error from the larger population. So it takes the residual sum of squares, divides that by the degrees of freedom (we have 30 data points, we lost 2 degrees of freedom, so we are left with 28 degrees of freedom for the estimation of the residual standard error) and then takes the square root. We can think of the mean squared error as being the total variance divided by the sample size but this underestimates the population variance (for the same reason that when calculating tghe sample variance we have to divide by n-1), so in this case</p>
+<pre><code>## [1] 8.833776</code></pre>
+<p>This last term is the most confusing at first, but the residual standard error is taking the data you have as a sample from the larger population and trying to estimate the standard error from the larger population. So it takes the residual sum of squares, divides that by the degrees of freedom (we have 30 data points, we lost 2 degrees of freedom, so we are left with 28 degrees of freedom for the estimation of the residual standard error) and then takes the square root. We can think of the mean squared error as being the total variance divided by the sample size but this underestimates the population variance (for the same reason that when calculating the sample variance we have to divide by n-1), so in this case</p>
 <div class="sourceCode" id="cb540"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb540-1"><a href="week-9-lab.html#cb540-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">residuals</span>(fit)<span class="sc">^</span><span class="dv">2</span>)<span class="sc">*</span>(n<span class="sc">/</span>(n<span class="dv">-2</span>))</span></code></pre></div>
-<pre><code>## [1] 80.64919</code></pre>
+<pre><code>## [1] 78.03559</code></pre>
 <p>is our estimate of what the true variance is, which should come close to what we used to generate the data (<span class="math inline">\(\sigma=10\)</span> so <span class="math inline">\(\sigma^{2}=100\)</span>). (If you go back and change the code to use a larger number of data points, the estimate will be closer.)</p>
 <p><strong>Fitting real data</strong></p>
 <p>Now that we’ve gained some intuition, we can dive into fitting a real dataset. The syntax of ‘lm’ is straightforward. We will run through some examples using a dataset on Old Faithful eruptions. The dataset is built into the MASS library, so we just have to load it.</p>
@@ -939,8 +940,8 @@ SSE = \sum^{n}_{i=1}w_{i}(Y_{i}-\hat{Y}_{i})^{2}
 ## 
 ## Bootstrap Statistics :
 ##      original       bias    std. error
-## t1* 6.3002197  0.418264614  4.64809604
-## t2* 0.6615263 -0.008333472  0.07767185</code></pre>
+## t1* 6.3002197  0.202735735  4.65157563
+## t2* 0.6615263 -0.005932287  0.07525782</code></pre>
 <p><strong><span style="color: green;">Checkpoint #5: How would we know if the bias is significant (i.e., how would we calculate the standard error of the bias)?</span></strong></p>
 </div>
 <div id="type-i-vs.-type-ii-regression-the-smatr-package" class="section level2" number="17.6">

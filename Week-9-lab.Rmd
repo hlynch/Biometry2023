@@ -126,7 +126,7 @@ cor.test(Temperature,Year, method="kendall")
 
 Does it make sense why Kendall's tau=1.0?
 
-Now that we have some practice with correlations, let play a game! Each member of your group should visit [this site](http://guessthecorrelation.com/) and play 10 rounds of a single player game (each game lasts until you have mis-guessed three times). (You will need to make a name to start playing.) **<span style="color: green;">Checkpoint #1: Who had the highest score after 10 rounds?</span>**
+Now that we have some practice with correlations, let play a game! Each member of your group should visit [this site](https://www.rossmanchance.com/applets/2021/guesscorrelation/GuessCorrelation.html) and play a few rounds. Click the "Track Performance" check box to track your performance over time. **<span style="color: green;">Checkpoint #1: Who in your group is doing the best?</span>**
 
 Linear modelling
 -----------------
@@ -182,7 +182,7 @@ and the *residual standard error* is
 sqrt(sum(residuals(fit)^2)/(n-2))
 ```
 
-This last term is the most confusing at first, but the residual standard error is taking the data you have as a sample from the larger population and trying to estimate the standard error from the larger population. So it takes the residual sum of squares, divides that by the degrees of freedom (we have 30 data points, we lost 2 degrees of freedom, so we are left with 28 degrees of freedom for the estimation of the residual standard error) and then takes the square root. We can think of the mean squared error as being the total variance divided by the sample size but this underestimates the population variance (for the same reason that when calculating tghe sample variance we have to divide by n-1), so in this case
+This last term is the most confusing at first, but the residual standard error is taking the data you have as a sample from the larger population and trying to estimate the standard error from the larger population. So it takes the residual sum of squares, divides that by the degrees of freedom (we have 30 data points, we lost 2 degrees of freedom, so we are left with 28 degrees of freedom for the estimation of the residual standard error) and then takes the square root. We can think of the mean squared error as being the total variance divided by the sample size but this underestimates the population variance (for the same reason that when calculating the sample variance we have to divide by n-1), so in this case
 
 ```{r}
 mean(residuals(fit)^2)*(n/(n-2))

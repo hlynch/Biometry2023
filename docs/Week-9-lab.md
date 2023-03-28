@@ -224,7 +224,7 @@ cor.test(Temperature,Year, method="kendall")
 
 Does it make sense why Kendall's tau=1.0?
 
-Now that we have some practice with correlations, let play a game! Each member of your group should visit [this site](http://guessthecorrelation.com/) and play 10 rounds of a single player game (each game lasts until you have mis-guessed three times). (You will need to make a name to start playing.) **<span style="color: green;">Checkpoint #1: Who had the highest score after 10 rounds?</span>**
+Now that we have some practice with correlations, let play a game! Each member of your group should visit [this site](https://www.rossmanchance.com/applets/2021/guesscorrelation/GuessCorrelation.html) and play a few rounds. Click the "Track Performance" check box to track your performance over time. **<span style="color: green;">Checkpoint #1: Who in your group is doing the best?</span>**
 
 Linear modelling
 -----------------
@@ -257,19 +257,19 @@ summary(fit)
 ## lm(formula = value ~ X)
 ## 
 ## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -21.413  -6.046  -0.318   4.361  18.191 
+##      Min       1Q   Median       3Q      Max 
+## -16.9180  -3.0204   0.3539   3.5700  19.4538 
 ## 
 ## Coefficients:
 ##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)  -1.7247     3.3629  -0.513    0.612    
-## X            -2.1910     0.1894 -11.566 3.53e-12 ***
+## (Intercept)  -3.4311     3.3080  -1.037    0.309    
+## X            -2.1146     0.1863 -11.349 5.49e-12 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 8.98 on 28 degrees of freedom
-## Multiple R-squared:  0.8269,	Adjusted R-squared:  0.8207 
-## F-statistic: 133.8 on 1 and 28 DF,  p-value: 3.533e-12
+## Residual standard error: 8.834 on 28 degrees of freedom
+## Multiple R-squared:  0.8214,	Adjusted R-squared:  0.815 
+## F-statistic: 128.8 on 1 and 28 DF,  p-value: 5.494e-12
 ```
 
 Copy this script into R and r-run it several times. Notice how the estimates for slope and intercept bounce around, but they should be correct *on average* and also the scale of variation from one run to the next should make sense given the estimate of the standard error. (Their standard deviation should be the standard error.) Notice also that as you increase sigma, the R2 goes down because now you are increasing the variation that is *not* explained by the covariate. Try changing the number of samples drawn, either by extending the vector of the covariates or by drawing multiple times for each value (you will have to modify the code to make this latter change work). Notice how the standard errors on the intercept and slope coefficients gets smaller as the data set gets larger but the estimate for sigma does not. The parameter sigma is a property of the underlying population, not a property of the sample drawn, so it does not get smaller as you increase the number of samples in the dataset. (If this does not make sense, ask me!)
@@ -284,7 +284,7 @@ mean(residuals(fit)^2)
 ```
 
 ```
-## [1] 75.27258
+## [1] 72.83322
 ```
 
 while the *root mean squared error* is
@@ -295,7 +295,7 @@ sqrt(mean(residuals(fit)^2))
 ```
 
 ```
-## [1] 8.675977
+## [1] 8.534238
 ```
 
 which is just the square-root of the mean squared error above.
@@ -308,7 +308,7 @@ sum(residuals(fit)^2)
 ```
 
 ```
-## [1] 2258.177
+## [1] 2184.997
 ```
 
 and the *residual standard error* is
@@ -319,10 +319,10 @@ sqrt(sum(residuals(fit)^2)/(n-2))
 ```
 
 ```
-## [1] 8.98049
+## [1] 8.833776
 ```
 
-This last term is the most confusing at first, but the residual standard error is taking the data you have as a sample from the larger population and trying to estimate the standard error from the larger population. So it takes the residual sum of squares, divides that by the degrees of freedom (we have 30 data points, we lost 2 degrees of freedom, so we are left with 28 degrees of freedom for the estimation of the residual standard error) and then takes the square root. We can think of the mean squared error as being the total variance divided by the sample size but this underestimates the population variance (for the same reason that when calculating tghe sample variance we have to divide by n-1), so in this case
+This last term is the most confusing at first, but the residual standard error is taking the data you have as a sample from the larger population and trying to estimate the standard error from the larger population. So it takes the residual sum of squares, divides that by the degrees of freedom (we have 30 data points, we lost 2 degrees of freedom, so we are left with 28 degrees of freedom for the estimation of the residual standard error) and then takes the square root. We can think of the mean squared error as being the total variance divided by the sample size but this underestimates the population variance (for the same reason that when calculating the sample variance we have to divide by n-1), so in this case
 
 
 ```r
@@ -330,7 +330,7 @@ mean(residuals(fit)^2)*(n/(n-2))
 ```
 
 ```
-## [1] 80.64919
+## [1] 78.03559
 ```
 
 is our estimate of what the true variance is, which should come close to what we used to generate the data ($\sigma=10$ so $\sigma^{2}=100$). (If you go back and change the code to use a larger number of data points, the estimate will be closer.)
@@ -853,8 +853,8 @@ duncan.boot
 ## 
 ## Bootstrap Statistics :
 ##      original       bias    std. error
-## t1* 6.3002197  0.418264614  4.64809604
-## t2* 0.6615263 -0.008333472  0.07767185
+## t1* 6.3002197  0.202735735  4.65157563
+## t2* 0.6615263 -0.005932287  0.07525782
 ```
 
 **<span style="color: green;">Checkpoint #5: How would we know if the bias is significant (i.e., how would we calculate the standard error of the bias)?</span>**
