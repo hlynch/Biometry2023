@@ -258,21 +258,21 @@ summary(fit)
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -18.290  -9.080   2.727   6.098  20.060 
+## -19.487  -5.356   1.005   6.439  15.258 
 ## 
 ## Coefficients:
 ##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)    2.221      3.764    0.59     0.56    
-## X             -2.304      0.212  -10.87 1.49e-11 ***
+## (Intercept)  -1.6056     3.1712  -0.506    0.617    
+## X            -2.1215     0.1786 -11.876  1.9e-12 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 10.05 on 28 degrees of freedom
-## Multiple R-squared:  0.8084,	Adjusted R-squared:  0.8015 
-## F-statistic: 118.1 on 1 and 28 DF,  p-value: 1.485e-11
+## Residual standard error: 8.468 on 28 degrees of freedom
+## Multiple R-squared:  0.8344,	Adjusted R-squared:  0.8284 
+## F-statistic:   141 on 1 and 28 DF,  p-value: 1.902e-12
 ```
 
-Copy this script into R and r-run it several times. Notice how the estimates for slope and intercept bounce around, but they should be correct *on average* and also the scale of variation from one run to the next should make sense given the estimate of the standard error. (Their standard deviation should be the standard error.) Notice also that as you increase sigma, the R2 goes down because now you are increasing the variation that is *not* explained by the covariate. Try changing the number of samples drawn, either by extending the vector of the covariates or by drawing multiple times for each value (you will have to modify the code to make this latter change work). Notice how the standard errors on the intercept and slope coefficients gets smaller as the data set gets larger but the estimate for sigma does not. The parameter sigma is a property of the underlying population, not a property of the sample drawn, so it does not get smaller as you increase the number of samples in the dataset. (If this does not make sense, ask me!)
+Copy this script into R and r-run it several times. Notice how the estimates for slope and intercept bounce around, but they should be correct *on average* and also the scale of variation from one run to the next should make sense given the estimate of the standard error. (Their standard deviation should be the standard error.) Notice also that as you increase sigma, the R2 goes down because now you are increasing the variation that is *not* explained by the covariate. Try changing the number of samples drawn, either by extending the vector of the covariates or by drawing multiple times for each value (you will have to modify the code to make this latter change work). Notice how the standard errors on the intercept and slope coefficients gets smaller as the data set gets larger but the estimate for sigma (which is listed as the residual standard error near the bottom) does not. The parameter sigma is a property of the underlying population, not a property of the sample drawn, so it does not get smaller as you increase the number of samples in the dataset. (If this does not make sense, ask me!)
 
 We can use this simple model to define some common (and often confusing) terms used in regression (and later, ANOVA), which will require using the function "residuals" to pull out the difference between each point and the best-fit line.
 
@@ -284,7 +284,7 @@ mean(residuals(fit)^2)
 ```
 
 ```
-## [1] 94.27506
+## [1] 66.93373
 ```
 
 while the *root mean squared error* is
@@ -295,7 +295,7 @@ sqrt(mean(residuals(fit)^2))
 ```
 
 ```
-## [1] 9.709534
+## [1] 8.181304
 ```
 
 which is just the square-root of the mean squared error above.
@@ -308,7 +308,7 @@ sum(residuals(fit)^2)
 ```
 
 ```
-## [1] 2828.252
+## [1] 2008.012
 ```
 
 and the *residual standard error* is
@@ -319,7 +319,7 @@ sqrt(sum(residuals(fit)^2)/(n-2))
 ```
 
 ```
-## [1] 10.05032
+## [1] 8.468454
 ```
 
 This last term is the most confusing at first, but the residual standard error is taking the data you have as a sample from the larger population and trying to estimate the standard error from the larger population. So it takes the residual sum of squares, divides that by the degrees of freedom (we have 30 data points, we lost 2 degrees of freedom, so we are left with 28 degrees of freedom for the estimation of the residual standard error) and then takes the square root. We can think of the mean squared error as being the population variance (i.e. the variance of the residuals if the dataset represented the entire population, see [our discussion in Week 1](#pop_vs_sample_var)) but this underestimates the variance if all we have is a sample from the larger population, so in this case we want to calculate the *sample variance* (i.e. our estimate of the population variance if all we have is a sample)
@@ -330,10 +330,43 @@ mean(residuals(fit)^2)*(n/(n-2))
 ```
 
 ```
-## [1] 101.009
+## [1] 71.71471
 ```
 
 This should come close to what we used to generate the data ($\sigma=10$ so $\sigma^{2}=100$). (If you go back and change the code to use a larger number of data points, the estimate will be closer.)
+
+There is a function called sigma() is the R package 'stats' that may be loaded by default in your workspace. sigma(fit) will grab that residual standard error value, which is helpful if you need to extract an estimate of $\sigma$ (a.k.a. $\hat{\sigma}$, which is really estimated as $\sqrt{\widehat{\sigma^2}}$ ) from the model fit.
+
+
+```r
+sigma(fit)
+```
+
+```
+## [1] 8.468454
+```
+
+Notice that this is note quite the same (and is always slightly larger) than this alternative estimate of $\sigma$.
+
+
+```r
+fitdistr(residuals(fit),"normal")$estimate[2]
+```
+
+```
+##       sd 
+## 8.181304
+```
+
+This takes your residuals, uses fitdistr to fit a Normal distribution to them, and then reports the standard deviation of the residuals. This should give you a measure of the spread of the residuals, which should be the same as the residual standard error extracted from sigma(fit).
+
+**Question: Why does this method always underestimate $\sigma$ (which you know here because you used a known value to simulate the data)?** 
+
+<details>
+  <summary>Click for Answer</summary>
+<span style="color: blueviolet;">Because fitdistr() uses MLE to estimate the parameters of the Normal fit to the residuals, and the MLE for $\sigma^2$ are **biased** estimates. Keep in mind that MLE estimates are not guaranteed to be unbiased.
+</span>
+</details> 
 
 **Fitting real data**
 
@@ -359,7 +392,7 @@ head(faithful)
 plot(waiting, eruptions,pch=16)
 ```
 
-<img src="Week-9-lab_files/figure-html/unnamed-chunk-18-1.png" width="672" />
+<img src="Week-9-lab_files/figure-html/unnamed-chunk-20-1.png" width="672" />
 
 This dataset lists the times of an Old Faithful eruption as a function of the waiting time prior to the eruption.
 
@@ -562,7 +595,7 @@ lines(newdata[,1],prediction.bands[,2],col=3)
 lines(newdata[,1],prediction.bands[,3],col=3)
 ```
 
-<img src="Week-9-lab_files/figure-html/unnamed-chunk-30-1.png" width="672" />
+<img src="Week-9-lab_files/figure-html/unnamed-chunk-32-1.png" width="672" />
 
 **<span style="color: green;">Checkpoint #3: Do you understand the difference in interpretation between a confidence interval and a prediction interval? Do you understand why the prediction interval is always wider? </span>**
 
@@ -643,7 +676,7 @@ eruption.lm.wt<-lm(eruptions~waiting,weights=rep(1,times=272)+9*as.numeric(short
 abline(a=eruption.lm.wt$coef[1],b=eruption.lm.wt$coef[2],col="purple",lwd=2)
 ```
 
-<img src="Week-9-lab_files/figure-html/unnamed-chunk-32-1.png" width="672" />
+<img src="Week-9-lab_files/figure-html/unnamed-chunk-34-1.png" width="672" />
 
 Robust regression
 ------------------
@@ -718,7 +751,7 @@ temp<-c(which(rownames(Duncan)=="RR.engineer"),which(rownames(Duncan)=="conducto
 text(x=Duncan$education[temp]-8,y=Duncan$income[temp],labels=rownames(Duncan)[temp],cex=0.5)
 ```
 
-<img src="Week-9-lab_files/figure-html/unnamed-chunk-34-1.png" width="672" />
+<img src="Week-9-lab_files/figure-html/unnamed-chunk-36-1.png" width="672" />
 
 ```r
 #identify(x=Duncan$education, y=Duncan$income, labels=rownames(Duncan))
@@ -853,8 +886,8 @@ duncan.boot
 ## 
 ## Bootstrap Statistics :
 ##      original      bias    std. error
-## t1* 6.3002197  0.56105408  4.61176180
-## t2* 0.6615263 -0.01081479  0.07530445
+## t1* 6.3002197  0.48516218  4.67080748
+## t2* 0.6615263 -0.01060074  0.07509882
 ```
 
 **<span style="color: green;">Checkpoint #5: How would we know if the bias is significant (i.e., how would we calculate the standard error of the bias)?</span>**
@@ -902,7 +935,7 @@ abline(a=coef(Duncan.model.lm)[1],b=coef(Duncan.model.lm)[2])
 abline(a=coef(Duncan.model.sma)[1],b=coef(Duncan.model.sma)[2],col="red")
 ```
 
-<img src="Week-9-lab_files/figure-html/unnamed-chunk-41-1.png" width="672" />
+<img src="Week-9-lab_files/figure-html/unnamed-chunk-43-1.png" width="672" />
 
 The SMA line is closer to what you would probably draw by eye as going through the 'cloud' of points, since our instinct is to draw a line through the principle axis of variation and not through the regression line, which has a smaller slope.
 

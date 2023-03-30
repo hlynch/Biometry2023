@@ -152,7 +152,7 @@ fit<-lm(value~X)
 summary(fit)
 ```
 
-Copy this script into R and r-run it several times. Notice how the estimates for slope and intercept bounce around, but they should be correct *on average* and also the scale of variation from one run to the next should make sense given the estimate of the standard error. (Their standard deviation should be the standard error.) Notice also that as you increase sigma, the R2 goes down because now you are increasing the variation that is *not* explained by the covariate. Try changing the number of samples drawn, either by extending the vector of the covariates or by drawing multiple times for each value (you will have to modify the code to make this latter change work). Notice how the standard errors on the intercept and slope coefficients gets smaller as the data set gets larger but the estimate for sigma does not. The parameter sigma is a property of the underlying population, not a property of the sample drawn, so it does not get smaller as you increase the number of samples in the dataset. (If this does not make sense, ask me!)
+Copy this script into R and r-run it several times. Notice how the estimates for slope and intercept bounce around, but they should be correct *on average* and also the scale of variation from one run to the next should make sense given the estimate of the standard error. (Their standard deviation should be the standard error.) Notice also that as you increase sigma, the R2 goes down because now you are increasing the variation that is *not* explained by the covariate. Try changing the number of samples drawn, either by extending the vector of the covariates or by drawing multiple times for each value (you will have to modify the code to make this latter change work). Notice how the standard errors on the intercept and slope coefficients gets smaller as the data set gets larger but the estimate for sigma (which is listed as the residual standard error near the bottom) does not. The parameter sigma is a property of the underlying population, not a property of the sample drawn, so it does not get smaller as you increase the number of samples in the dataset. (If this does not make sense, ask me!)
 
 We can use this simple model to define some common (and often confusing) terms used in regression (and later, ANOVA), which will require using the function "residuals" to pull out the difference between each point and the best-fit line.
 
@@ -189,6 +189,28 @@ mean(residuals(fit)^2)*(n/(n-2))
 ```
 
 This should come close to what we used to generate the data ($\sigma=10$ so $\sigma^{2}=100$). (If you go back and change the code to use a larger number of data points, the estimate will be closer.)
+
+There is a function called sigma() is the R package 'stats' that may be loaded by default in your workspace. sigma(fit) will grab that residual standard error value, which is helpful if you need to extract an estimate of $\sigma$ (a.k.a. $\hat{\sigma}$, which is really estimated as $\sqrt{\widehat{\sigma^2}}$ ) from the model fit.
+
+```{r}
+sigma(fit)
+```
+
+Notice that this is note quite the same (and is always slightly larger) than this alternative estimate of $\sigma$.
+
+```{r}
+fitdistr(residuals(fit),"normal")$estimate[2]
+```
+
+This takes your residuals, uses fitdistr to fit a Normal distribution to them, and then reports the standard deviation of the residuals. This should give you a measure of the spread of the residuals, which should be the same as the residual standard error extracted from sigma(fit).
+
+**Question: Why does this method always underestimate $\sigma$ (which you know here because you used a known value to simulate the data)?** 
+
+<details>
+  <summary>Click for Answer</summary>
+<span style="color: blueviolet;">Because fitdistr() uses MLE to estimate the parameters of the Normal fit to the residuals, and the MLE for $\sigma^2$ are **biased** estimates. Keep in mind that MLE estimates are not guaranteed to be unbiased.
+</span>
+</details> 
 
 **Fitting real data**
 
