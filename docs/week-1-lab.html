@@ -24,7 +24,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-03-28" />
+<meta name="date" content="2023-03-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -163,7 +163,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="week-1-lab.html"><a href="week-1-lab.html#the-basic-data-structures-in-r"><i class="fa fa-check"></i><b>2.2</b> The basic data structures in R</a></li>
 <li class="chapter" data-level="2.3" data-path="week-1-lab.html"><a href="week-1-lab.html#writing-functions-in-r"><i class="fa fa-check"></i><b>2.3</b> Writing functions in R</a></li>
 <li class="chapter" data-level="2.4" data-path="week-1-lab.html"><a href="week-1-lab.html#writing-loops-and-ifelse"><i class="fa fa-check"></i><b>2.4</b> Writing loops and if/else</a></li>
-<li class="chapter" data-level="2.5" data-path="week-1-lab.html"><a href="week-1-lab.html#a-short-diversion-bias-in-estimators"><i class="fa fa-check"></i><b>2.5</b> (A short diversion) Bias in estimators</a></li>
+<li class="chapter" data-level="2.5" data-path="week-1-lab.html"><a href="week-1-lab.html#pop_vs_sample_var"><i class="fa fa-check"></i><b>2.5</b> (A short diversion) Bias in estimators</a></li>
 <li class="chapter" data-level="2.6" data-path="week-1-lab.html"><a href="week-1-lab.html#some-practice-writing-r-code"><i class="fa fa-check"></i><b>2.6</b> Some practice writing R code</a></li>
 <li class="chapter" data-level="2.7" data-path="week-1-lab.html"><a href="week-1-lab.html#a-few-final-notes"><i class="fa fa-check"></i><b>2.7</b> A few final notes</a></li>
 </ul></li>
@@ -855,7 +855,7 @@ Let’s make a data frame to play around with, which we will make the ranking of
 <span id="cb101-3"><a href="week-1-lab.html#cb101-3" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="fu">print</span>(<span class="st">&quot;Goodbye&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;Goodbye&quot;</code></pre>
 </div>
-<div id="a-short-diversion-bias-in-estimators" class="section level2" number="2.5">
+<div id="pop_vs_sample_var" class="section level2" number="2.5">
 <h2><span class="header-section-number">2.5</span> (A short diversion) Bias in estimators</h2>
 <p>Now we will stop for a short digression about how to calculate the population variance (i.e. the variance assuming the data I have is from the entire population) and how to estimate the sample variance (i.e. the variance assuming what I have is a <em>sample</em> from the population, and I want to infer the variance of the underlying but unknown population), since we can now use R to convince ourselves that the naive estimator for variance is biased.</p>
 <p>The population variance is the variance of a population which, by definition, means that every single individual of interest has been measured. Remember, in this case there is no inference going on. When we have measured every single individual of interest, all we can do (statistically) is describe that population. The population variance describes the variation in the quantity of interest <em>for that population you have completely sampled</em>).</p>

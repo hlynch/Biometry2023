@@ -831,7 +831,7 @@ if (a > 4) {
 ## [1] "Goodbye"
 ```
 
-(A short diversion) Bias in estimators
+(A short diversion) Bias in estimators {#pop_vs_sample_var}
 -----------------------------------
 
 Now we will stop for a short digression about how to calculate the population variance (i.e. the variance assuming the data I have is from the entire population) and how to estimate the sample variance (i.e. the variance assuming what I have is a *sample* from the population, and I want to infer the variance of the underlying but unknown population), since we can now use R to convince ourselves that the naive estimator for variance is biased. 
