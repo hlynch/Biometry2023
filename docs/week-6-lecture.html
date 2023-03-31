@@ -24,7 +24,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-03-30" />
+<meta name="date" content="2023-03-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -245,6 +245,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="11.1" data-path="week-6-lecture.html"><a href="week-6-lecture.html#week-6-readings"><i class="fa fa-check"></i><b>11.1</b> Week 6 Readings</a></li>
 <li class="chapter" data-level="11.2" data-path="week-6-lecture.html"><a href="week-6-lecture.html#family-wise-error-rates"><i class="fa fa-check"></i><b>11.2</b> Family-wise error rates</a></li>
+<li class="chapter" data-level="11.3" data-path="week-6-lecture.html"><a href="week-6-lecture.html#how-do-we-sort-the-signal-from-the-noise"><i class="fa fa-check"></i><b>11.3</b> How do we sort the signal from the noise?</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="week-6-lab.html"><a href="week-6-lab.html"><i class="fa fa-check"></i><b>12</b> Week 6 Lab</a></li>
 <li class="chapter" data-level="13" data-path="week-7-lecturelab.html"><a href="week-7-lecturelab.html"><i class="fa fa-check"></i><b>13</b> Week 7 Lecture/Lab</a>
@@ -503,6 +504,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 P_{corrected} = P(min(p) \leq p-observed|H_{0})
 \]</span></p>
 <p>In other words, if you were to simulate data under the null hypothesis, what is the probability that the smallest p-value among the set of comparisons made is smaller than or equal to the p-value that you actually obtained. (In other words, the adjusted p-value asks “how extreme is my most extreme p-value when compared against the most extreme p-values I would expect under the null hypothesis?)</p>
+</div>
+<div id="how-do-we-sort-the-signal-from-the-noise" class="section level2" number="11.3">
+<h2><span class="header-section-number">11.3</span> How do we sort the signal from the noise?</h2>
+<p>One of the challenges we address this week is that almost all research programs involve multiple scientific hypotheses or exploratory analyses that are sifting through myriad potential causal drivers for observed phenomena. As a result, by the very structure of null hypothesis significance testing, we end up with a large number of false positive results from which it is often difficult to identify the ones most likely to represent real causal relationships. Though post-hoc studies can establish correlations, we know that correlation does not equal causation, and in fact only careful designed experiments can really confidently establish a causal relationship between a given variable and some observed response.</p>
+<p>That said, there are clues that we can use to help us identify what is likely to be “real” amidst a sea of significant p-values. In 1965, Sir Austin Bradford Hill established a series of criteria in the Proceedings of the Royal Society of Medicine now known as the Bradford Hill criteria (Hill 1965). These criteria are summarized as follows (the attendant commentary is my own and may not hew exactly to Hill’s original argument, which was focused on medical applications):</p>
+<p><strong>Strength</strong> or <strong>Effect Size</strong>: Covariates that have a larger effect on responses are more likely to have a causal relationship.</p>
+<p><strong>Consistency</strong>: Results that are reproducible by other researchers are more likely to be causal, and this is particularly true for results that can be reproduced in different systems and in different locations. (In other words, reproducible in this context also contains the idea of “extensibility.”)</p>
+<p><strong>Specificity</strong>: Relationships that are very specific to a system in which no other plausible explanations exist are more likely to be causal.</p>
+<p><strong>Temporality</strong>: The response has to occur after the purported causal driver, and the time scale of the response has to make biological sense.</p>
+<p><strong>Biological gradient</strong>: This captures the idea that causal drivers are usually dose-dependent, so greater exposure to the driver should result in a greater response.</p>
+<p><strong>Plausibility</strong>: There needs to be some plausible mechanism by which the driver could yield the response, though it may be that the exact mechanism involved in unknown.</p>
+<p><strong>Coherence</strong>: Findings in the field that more closely align with findings from controlled experiments are more likely to be causal.</p>
+<p><strong>Analogy</strong>: Proposed causal relationships are more likely to be causal if there are well-established analogs of similar relationships.</p>
+<p>One of the applications in which correlation and causation is particularly difficult to establish is in the investigation of possible cancer clusters. Applying Hill’s criteria to this application, we have to ask ourselves whether the hypothesized cancer causing agent 1) creates an increase in cancer incidence that is large enough to be biologically meaningful, 2) also causes an increase in cancers in other scenarios, 3) is specific to the population affected and the cancers involved have other causes, 4) the population was exposed to this hypothesized agent before the cancers were detected and that the time scale between exposure and the development of cancers is biologically reasonable, 5) people with greater exposure to the agent should have a greater risk than those with less exposure, 6) there is come mechanism by which the agent could possibly cause the cancer, 7) whether there is any experimental or laboratory findings to support the proposed mechanism, and 8) whether there are any other similar cancers that are caused by similar agents.</p>
 
 </div>
 </div>

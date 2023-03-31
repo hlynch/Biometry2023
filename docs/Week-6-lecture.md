@@ -53,3 +53,26 @@ $$
 In other words, if you were to simulate data under the null hypothesis, what is the probability that the smallest p-value among the set of comparisons made is smaller than or equal to the p-value that you actually obtained. (In other words, the adjusted p-value asks “how extreme is my most extreme p-value when compared against the most extreme p-values I would expect under the null hypothesis?)
 
 
+## How do we sort the signal from the noise?
+
+One of the challenges we address this week is that almost all research programs involve multiple scientific hypotheses or exploratory analyses that are sifting through myriad potential causal drivers for observed phenomena. As a result, by the very structure of null hypothesis significance testing, we end up with a large number of false positive results from which it is often difficult to identify the ones most likely to represent real causal relationships. Though post-hoc studies can establish correlations, we know that correlation does not equal causation, and in fact only careful designed experiments can really confidently establish a causal relationship between a given variable and some observed response.
+
+That said, there are clues that we can use to help us identify what is likely to be "real" amidst a sea of significant p-values. In 1965, Sir Austin Bradford Hill established a series of criteria in the Proceedings of the Royal Society of Medicine now known as the Bradford Hill criteria (Hill 1965). These criteria are summarized as follows (the attendant commentary is my own and may not hew exactly to Hill's original argument, which was focused on medical applications):
+
+**Strength** or **Effect Size**: Covariates that have a larger effect on responses are more likely to have a causal relationship.
+
+**Consistency**: Results that are reproducible by other researchers are more likely to be causal, and this is particularly true for results that can be reproduced in different systems and in different locations. (In other words, reproducible in this context also contains the idea of "extensibility".)
+
+**Specificity**: Relationships that are very specific to a system in which no other plausible explanations exist are more likely to be causal.
+
+**Temporality**: The response has to occur after the purported causal driver, and the time scale of the response has to make biological sense. 
+
+**Biological gradient**: This captures the idea that causal drivers are usually dose-dependent, so greater exposure to the driver should result in a greater response.
+
+**Plausibility**: There needs to be some plausible mechanism by which the driver could yield the response, though it may be that the exact mechanism involved in unknown.
+
+**Coherence**: Findings in the field that more closely align with findings from controlled experiments are more likely to be causal.
+
+**Analogy**: Proposed causal relationships are more likely to be causal if there are well-established analogs of similar relationships.
+
+One of the applications in which correlation and causation is particularly difficult to establish is in the investigation of possible cancer clusters. Applying Hill's criteria to this application, we have to ask ourselves whether the hypothesized cancer causing agent 1) creates an increase in cancer incidence that is large enough to be biologically meaningful, 2) also causes an increase in cancers in other scenarios, 3) is specific to the population affected and the cancers involved have other causes, 4) the population was exposed to this hypothesized agent before the cancers were detected and that the time scale between exposure and the development of cancers is biologically reasonable, 5) people with greater exposure to the agent should have a greater risk than those with less exposure, 6) there is come mechanism by which the agent could possibly cause the cancer, 7) whether there is any experimental or laboratory findings to support the proposed mechanism, and 8) whether there are any other similar cancers that are caused by similar agents.
