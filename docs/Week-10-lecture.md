@@ -5,7 +5,7 @@ Week 10 Lecture
 
 ## Week 10 Readings
 
-For this week, I suggest reading Aho Section 9.20, as well as Logan Chapters 9 and 16-17. You will also need to read [Siddhartha et al. (1989)](https://github.com/hlynch/Biometry2022/tree/master/_data/Siddhartha_etal_1989.pdf). This paper is another one that is quite important and should be read carefully. We will also discuss it at length in class. There are two other papers some of you will find worthwhile as well, [this paper on why not to log-transform count data](https://github.com/hlynch/Biometry2022/tree/master/_data/OHara_etal_2010.pdf) (please, don't do it, it you have count data and don't know what to do, ask me!) and [another paper laying out when to use GLM and when to use OLS regression](https://github.com/hlynch/Biometry2022/tree/master/_data/Warton_etal_2016.pdf).
+For this week, I suggest reading Aho Section 9.20, as well as Logan Chapters 9 and 16-17. You will also need to read [Siddhartha et al. (1989)](https://github.com/hlynch/Biometry2023/tree/master/_data/Siddhartha_etal_1989.pdf). This paper is another one that is quite important and should be read carefully. We will also discuss it at length in class. There are two other papers some of you will find worthwhile as well, [this paper on why not to log-transform count data](https://github.com/hlynch/Biometry2023/tree/master/_data/OHara_etal_2010.pdf) (please, don't do it, it you have count data and don't know what to do, ask me!) and [another paper laying out when to use GLM and when to use OLS regression](https://github.com/hlynch/Biometry2023/tree/master/_data/Warton_etal_2016.pdf).
 
 Week 10 outline
 -----------

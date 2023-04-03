@@ -5,7 +5,7 @@ Week 9 Lecture
 
 ## Week 9 Readings
 
-For this week, I suggest reading Aho Chapters 8 and 9 up to and including Section 9.16, as well as Logan Chapter 8. I also want to share [a classic paper on how to model "scaling-type" relationships - I'm looking at you morphometrics folks!](https://github.com/hlynch/Biometry2022/tree/master/_data/Warton_etal_2006.pdf), though this is just a recommended reading and not something we will cover in Biometry.
+For this week, I suggest reading Aho Chapters 8 and 9 up to and including Section 9.16, as well as Logan Chapter 8. I also want to share [a classic paper on how to model "scaling-type" relationships - I'm looking at you morphometrics folks!](https://github.com/hlynch/Biometry2023/tree/master/_data/Warton_etal_2006.pdf), though this is just a recommended reading and not something we will cover in Biometry.
 
 ## Correlation
 
@@ -92,13 +92,13 @@ Let's look at a few examples...
 <img src="Week-9-lecture_files/figure-html/unnamed-chunk-4-1.png" width="240" />
 
 ```
-## [1] -0.132349
+## [1] -0.05278574
 ```
 
 <img src="Week-9-lecture_files/figure-html/unnamed-chunk-4-2.png" width="240" />
 
 ```
-## [1] 0.9280854
+## [1] 0.9289784
 ```
 
 ## Hypothesis testing - Pearson's *r*
@@ -192,7 +192,7 @@ cor(df$A, df$B)
 ```
 
 ```
-## [1] -0.3226674
+## [1] -0.2788669
 ```
 
 Even though *A* and *B* clearly have a strong relationship, correlation is only effective if the relationship is **linear**.
@@ -226,7 +226,7 @@ paste("The 95% confidence interval for the estimated correlation coefficient, ",
 ```
 
 ```
-## [1] "The 95% confidence interval for the estimated correlation coefficient, 0.855 is (0.789, 0.902)"
+## [1] "The 95% confidence interval for the estimated correlation coefficient, 0.923 is (0.891, 0.95)"
 ```
 </span>
 </details> 
@@ -272,7 +272,7 @@ pnorm(q = z.obs, mean = 0, sd = sqrt(1 / (100 - 3)), lower.tail = FALSE)
 ```
 
 ```
-## [1] 1.703472e-49
+## [1] 9.144012e-47
 ```
 
 ```r
@@ -282,7 +282,7 @@ pnorm(q = test.stat, lower.tail = FALSE)
 ```
 
 ```
-## [1] 1.703472e-49
+## [1] 9.144012e-47
 ```
 
 To simply the notation, let us define

@@ -3,9 +3,9 @@ Week 7 Lecture/Lab
 
 ## Week 7 Readings
 
-For this week, I suggest reading Logan Chapter 5. There are many papers that might be helpful in the design of effective visualizations. Two that I would recommend highly are [Wainer (1984)](https://github.com/hlynch/Biometry2022/tree/master/_data/Wainer_1984.pdf) and [Rougier et al. (2014)](https://github.com/hlynch/Biometry2022/tree/master/_data/Rougier_etal_2014.pdf).
+For this week, I suggest reading Logan Chapter 5. There are many papers that might be helpful in the design of effective visualizations. Two that I would recommend highly are [Wainer (1984)](https://github.com/hlynch/Biometry2023/tree/master/_data/Wainer_1984.pdf) and [Rougier et al. (2014)](https://github.com/hlynch/Biometry2023/tree/master/_data/Rougier_etal_2014.pdf).
 
-There are a suite of additional papers you should at least open and skim, papers on: [three-dimensional visualizations](https://github.com/hlynch/Biometry2022/tree/master/_data/Gehlenborg_Wong_2012.pdf), [callouts and labels](https://github.com/hlynch/Biometry2022/tree/master/_data/Krzywinski_2013.pdf), [axes, ticks, and grids](https://github.com/hlynch/Biometry2022/tree/master/_data/Krzywinski_2014.pdf), [error bars](https://github.com/hlynch/Biometry2022/tree/master/_data/Krzywinski_Altman_2013.pdf), and [box plots](https://github.com/hlynch/Biometry2022/tree/master/_data/Krzywinski_Altman_2014a.pdf).
+There are a suite of additional papers you should at least open and skim, papers on: [three-dimensional visualizations](https://github.com/hlynch/Biometry2023/tree/master/_data/Gehlenborg_Wong_2012.pdf), [callouts and labels](https://github.com/hlynch/Biometry2023/tree/master/_data/Krzywinski_2013.pdf), [axes, ticks, and grids](https://github.com/hlynch/Biometry2023/tree/master/_data/Krzywinski_2014.pdf), [error bars](https://github.com/hlynch/Biometry2023/tree/master/_data/Krzywinski_Altman_2013.pdf), and [box plots](https://github.com/hlynch/Biometry2023/tree/master/_data/Krzywinski_Altman_2014a.pdf).
 
 ## Introduction to plotting in R
 
@@ -432,8 +432,8 @@ jitter(rep(0, 7))
 ```
 
 ```
-## [1]  0.011893174 -0.002125891  0.012396396 -0.015337901 -0.001125699
-## [6] -0.008779486  0.008875660
+## [1]  0.017404393 -0.001072094  0.008729053  0.015783314  0.009934326
+## [6]  0.003851475  0.016944038
 ```
 
 Before we launch into three-dimensional plotting, we should introduce 'ggplot2' which is quickly becoming "industry standard" for making plots in R. There is *so* much that can be done with ggplot2 that we will only scratch the surface today, but at least this introduction will illustrate some of the things that ggplot2 can do.
@@ -505,8 +505,8 @@ hist2d(x,y, same.scale=TRUE)
 ## 
 ## Number of data points:  2000 
 ## Number of grid bins:  200 x 200 
-## X range: ( -13.85202 , 11.54146 )
-## Y range: ( -13.85202 , 11.54146 )
+## X range: ( -13.83168 , 13.74204 )
+## Y range: ( -13.83168 , 13.74204 )
 ```
 
 Notice that we had to use "same.scale=T" to make sure that distances along the x and y axes were comparable.

@@ -3,7 +3,7 @@ Week 2 Lecture
 
 ## Week 2 Readings
 
-For this week, I suggest reading Aho Sections 5.4 and 6.6.1 and [Johnson (1995)](https://github.com/hlynch/Biometry2022/tree/master/_data/Johnson_1995.pdf). Those interested in a historical but still relevant perspective on how we learn from data should check out [Tukey (1969)](https://github.com/hlynch/Biometry2022/tree/master/_data/Tukey_1969.pdf).
+For this week, I suggest reading Aho Sections 5.4 and 6.6.1 and [Johnson (1995)](https://github.com/hlynch/Biometry2023/tree/master/_data/Johnson_1995.pdf). Those interested in a historical but still relevant perspective on how we learn from data should check out [Tukey (1969)](https://github.com/hlynch/Biometry2023/tree/master/_data/Tukey_1969.pdf).
 
 Today's Agenda
 --------------------

@@ -10,7 +10,7 @@ text.size <- 14
 
 ## Week 9 Readings
 
-For this week, I suggest reading Aho Chapters 8 and 9 up to and including Section 9.16, as well as Logan Chapter 8. I also want to share [a classic paper on how to model "scaling-type" relationships - I'm looking at you morphometrics folks!](https://github.com/hlynch/Biometry2022/tree/master/_data/Warton_etal_2006.pdf), though this is just a recommended reading and not something we will cover in Biometry.
+For this week, I suggest reading Aho Chapters 8 and 9 up to and including Section 9.16, as well as Logan Chapter 8. I also want to share [a classic paper on how to model "scaling-type" relationships - I'm looking at you morphometrics folks!](https://github.com/hlynch/Biometry2023/tree/master/_data/Warton_etal_2006.pdf), though this is just a recommended reading and not something we will cover in Biometry.
 
 ## Correlation
 
