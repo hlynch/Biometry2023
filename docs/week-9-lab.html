@@ -24,7 +24,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-03-31" />
+<meta name="date" content="2023-04-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -596,44 +596,44 @@ P(tanh(z-\frac{t_{[1-\alpha/2](\infty)}}{\sqrt{n-3}})\leq \rho \leq tanh(z+\frac
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -18.323  -3.235   2.611   4.659  16.164 
+## -12.364  -6.542  -1.441   5.982  26.230 
 ## 
 ## Coefficients:
 ##             Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)   3.5722     3.0078   1.188    0.245    
-## X            -2.4568     0.1694 -14.501 1.52e-14 ***
+## (Intercept)   4.9786     3.2994   1.509    0.143    
+## X            -2.3998     0.1859 -12.912  2.6e-13 ***
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
-## Residual standard error: 8.032 on 28 degrees of freedom
-## Multiple R-squared:  0.8825,	Adjusted R-squared:  0.8783 
-## F-statistic: 210.3 on 1 and 28 DF,  p-value: 1.516e-14</code></pre>
+## Residual standard error: 8.811 on 28 degrees of freedom
+## Multiple R-squared:  0.8562,	Adjusted R-squared:  0.8511 
+## F-statistic: 166.7 on 1 and 28 DF,  p-value: 2.595e-13</code></pre>
 <p>Copy this script into R and r-run it several times. Notice how the estimates for slope and intercept bounce around, but they should be correct <em>on average</em> and also the scale of variation from one run to the next should make sense given the estimate of the standard error. (Their standard deviation should be the standard error.) Notice also that as you increase sigma, the R2 goes down because now you are increasing the variation that is <em>not</em> explained by the covariate. Try changing the number of samples drawn, either by extending the vector of the covariates or by drawing multiple times for each value (you will have to modify the code to make this latter change work). Notice how the standard errors on the intercept and slope coefficients gets smaller as the data set gets larger but the estimate for sigma (which is listed as the residual standard error near the bottom) does not. The parameter sigma is a property of the underlying population, not a property of the sample drawn, so it does not get smaller as you increase the number of samples in the dataset. (If this does not make sense, ask me!)</p>
 <p>We can use this simple model to define some common (and often confusing) terms used in regression (and later, ANOVA), which will require using the function “residuals” to pull out the difference between each point and the best-fit line.</p>
 <p>The <em>mean squared error</em> is</p>
 <div class="sourceCode" id="cb534"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb534-1"><a href="week-9-lab.html#cb534-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">residuals</span>(fit)<span class="sc">^</span><span class="dv">2</span>)</span></code></pre></div>
-<pre><code>## [1] 60.21288</code></pre>
+<pre><code>## [1] 72.4558</code></pre>
 <p>while the <em>root mean squared error</em> is</p>
 <div class="sourceCode" id="cb536"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb536-1"><a href="week-9-lab.html#cb536-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">mean</span>(<span class="fu">residuals</span>(fit)<span class="sc">^</span><span class="dv">2</span>))</span></code></pre></div>
-<pre><code>## [1] 7.759696</code></pre>
+<pre><code>## [1] 8.512097</code></pre>
 <p>which is just the square-root of the mean squared error above.</p>
 <p>The <em>residual sum of squares</em> is</p>
 <div class="sourceCode" id="cb538"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb538-1"><a href="week-9-lab.html#cb538-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">residuals</span>(fit)<span class="sc">^</span><span class="dv">2</span>)</span></code></pre></div>
-<pre><code>## [1] 1806.386</code></pre>
+<pre><code>## [1] 2173.674</code></pre>
 <p>and the <em>residual standard error</em> is</p>
 <div class="sourceCode" id="cb540"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb540-1"><a href="week-9-lab.html#cb540-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">sum</span>(<span class="fu">residuals</span>(fit)<span class="sc">^</span><span class="dv">2</span>)<span class="sc">/</span>(n<span class="dv">-2</span>))</span></code></pre></div>
-<pre><code>## [1] 8.032048</code></pre>
+<pre><code>## [1] 8.810858</code></pre>
 <p>This last term is the most confusing at first, but the residual standard error is taking the data you have as a sample from the larger population and trying to estimate the standard error from the larger population. So it takes the residual sum of squares, divides that by the degrees of freedom (we have 30 data points, we lost 2 degrees of freedom, so we are left with 28 degrees of freedom for the estimation of the residual standard error) and then takes the square root. We can think of the mean squared error as being the population variance (i.e. the variance of the residuals if the dataset represented the entire population, see <a href="week-1-lab.html#pop_vs_sample_var">our discussion in Week 1</a>) but this underestimates the variance if all we have is a sample from the larger population, so in this case we want to calculate the <em>sample variance</em> (i.e. our estimate of the population variance if all we have is a sample)</p>
 <div class="sourceCode" id="cb542"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb542-1"><a href="week-9-lab.html#cb542-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">residuals</span>(fit)<span class="sc">^</span><span class="dv">2</span>)<span class="sc">*</span>(n<span class="sc">/</span>(n<span class="dv">-2</span>))</span></code></pre></div>
-<pre><code>## [1] 64.5138</code></pre>
+<pre><code>## [1] 77.63122</code></pre>
 <p>This should come close to what we used to generate the data (<span class="math inline">\(\sigma=10\)</span> so <span class="math inline">\(\sigma^{2}=100\)</span>). (If you go back and change the code to use a larger number of data points, the estimate will be closer.)</p>
 <p>There is a function called sigma() is the R package ‘stats’ that may be loaded by default in your workspace. sigma(fit) will grab that residual standard error value, which is helpful if you need to extract an estimate of <span class="math inline">\(\sigma\)</span> (a.k.a. <span class="math inline">\(\hat{\sigma}\)</span>, which is really estimated as <span class="math inline">\(\sqrt{\widehat{\sigma^2}}\)</span> ) from the model fit.</p>
 <div class="sourceCode" id="cb544"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb544-1"><a href="week-9-lab.html#cb544-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sigma</span>(fit)</span></code></pre></div>
-<pre><code>## [1] 8.032048</code></pre>
+<pre><code>## [1] 8.810858</code></pre>
 <p>Notice that this is note quite the same (and is always slightly larger) than this alternative estimate of <span class="math inline">\(\sigma\)</span>.</p>
 <div class="sourceCode" id="cb546"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb546-1"><a href="week-9-lab.html#cb546-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fitdistr</span>(<span class="fu">residuals</span>(fit),<span class="st">&quot;normal&quot;</span>)<span class="sc">$</span>estimate[<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>##       sd 
-## 7.759696</code></pre>
+## 8.512097</code></pre>
 <p>This takes your residuals, uses fitdistr to fit a Normal distribution to them, and then reports the standard deviation of the residuals. This should give you a measure of the spread of the residuals, which should be the same as the residual standard error extracted from sigma(fit).</p>
 <p><strong>Question: Why does this method always underestimate <span class="math inline">\(\sigma\)</span> (which you know here because you used a known value to simulate the data)?</strong></p>
 <details>
@@ -957,8 +957,8 @@ SSE = \sum^{n}_{i=1}w_{i}(Y_{i}-\hat{Y}_{i})^{2}
 ## 
 ## Bootstrap Statistics :
 ##      original      bias    std. error
-## t1* 6.3002197  0.53397068  4.75074664
-## t2* 0.6615263 -0.01075629  0.07809314</code></pre>
+## t1* 6.3002197  0.25801928  4.51942717
+## t2* 0.6615263 -0.00652958  0.07326876</code></pre>
 <p><strong><span style="color: green;">Checkpoint #5: How would we know if the bias is significant (i.e., how would we calculate the standard error of the bias)?</span></strong></p>
 </div>
 <div id="type-i-vs.-type-ii-regression-the-smatr-package" class="section level2" number="17.6">

@@ -5,7 +5,7 @@ Week 9 Lecture
 
 ## Week 9 Readings
 
-For this week, I suggest reading Aho Chapters 8 and 9 up to and including Section 9.16, as well as Logan Chapter 8. 
+For this week, I suggest reading Aho Chapters 8 and 9 up to and including Section 9.16, as well as Logan Chapter 8. I also want to share [a classic paper on how to model "scaling-type" relationships - I'm looking at you morphometrics folks!](https://github.com/hlynch/Biometry2022/tree/master/_data/Warton_etal_2006.pdf), though this is just a recommended reading and not something we will cover in Biometry.
 
 ## Correlation
 
@@ -92,13 +92,13 @@ Let's look at a few examples...
 <img src="Week-9-lecture_files/figure-html/unnamed-chunk-4-1.png" width="240" />
 
 ```
-## [1] 0.04897894
+## [1] -0.07432555
 ```
 
 <img src="Week-9-lecture_files/figure-html/unnamed-chunk-4-2.png" width="240" />
 
 ```
-## [1] 0.9381594
+## [1] 0.9205014
 ```
 
 ## Hypothesis testing - Pearson's *r*
@@ -192,7 +192,7 @@ cor(df$A, df$B)
 ```
 
 ```
-## [1] -0.03702109
+## [1] -0.09641011
 ```
 
 Even though *A* and *B* clearly have a strong relationship, correlation is only effective if the relationship is **linear**.
@@ -226,7 +226,7 @@ paste("The 95% confidence interval for the estimated correlation coefficient, ",
 ```
 
 ```
-## [1] "The 95% confidence interval for the estimated correlation coefficient, 0.885 is (0.835, 0.925)"
+## [1] "The 95% confidence interval for the estimated correlation coefficient, 0.92 is (0.883, 0.947)"
 ```
 </span>
 </details> 
@@ -272,7 +272,7 @@ pnorm(q = z.obs, mean = 0, sd = sqrt(1 / (100 - 3)), lower.tail = FALSE)
 ```
 
 ```
-## [1] 6.786614e-52
+## [1] 2.03152e-57
 ```
 
 ```r
@@ -282,7 +282,7 @@ pnorm(q = test.stat, lower.tail = FALSE)
 ```
 
 ```
-## [1] 6.786614e-52
+## [1] 2.03152e-57
 ```
 
 To simply the notation, let us define
