@@ -440,13 +440,42 @@ These equations cannot be solved algebraically. They must be solved numerically,
 
 How do we interpret the coefficients?
 
-If we fit a logistic model without an intercept, the best fit line must predict p=0.5 when X=0. So the intercept in this case shifts the probability for X=0 up or down relative to 0.5.
+If we fit a logistic model without an intercept, the best fit line must predict p=0.5 when X=0. So the intercept in this case shifts the probability for X=0 up or down relative to 0.5, and it does so by shifting the entire curve left and right along the x axis. This is illustrated in the figure that follows, where I have added "some amount $i$ to the intercept for $i=1$ to $i=12$ and plotted the colors using the rainbow color set.
+
+
+```r
+plot(seq(-20,20),exp(-3+1*seq(-20,20))/(1+exp(-3+1*seq(-20,20))),col="black",typ="l",xlab="X value",ylab="Logistic probability")
+for (i in 1:12)
+{
+  lines(seq(-20,20),exp(-3+i+1*seq(-20,20))/(1+exp(-3+i+1*seq(-20,20))),col=rainbow(15)[i])
+}
+abline(v=0,col="black",lty=3)
+abline(h=exp(-3)/(1+exp(-3)),col="black",lty=3)
+abline(h=exp(-3+5)/(1+exp(-3+5)),col=rainbow(15)[5],lty=3)
+```
+
+<img src="Week-10-lecture_files/figure-html/unnamed-chunk-16-1.png" width="672" />
+
+Note how the change of intercept from $\beta_{0}=-3$ to $\beta_{0}=5$ shifts the distribution to the left and as a result increases the value where the curve crosses the y-axis. (If the slope were negative, a shift to the left would have the opposite effect.)
 
 The “slope” ($\widehat{\beta_{1}}$)̂ can be interpreted as follows:
 
 $$
 e^{\widehat{\beta_{1}}}=\mbox{="change in the odds for a 1 unit change in X"}
 $$
+Another way to think about the slope term in logistic regression is that is controls how steeply the curve shifts between 0 and 1. Consider the following figure, where I reduce the slope from $\beta_{1}=1$ to $\beta_{1}=0.077$, Notice how the lines get flatter as the slope decreases (but without changing the intercept).
+
+
+```r
+plot(seq(-20,20),exp(-3+1*seq(-20,20))/(1+exp(-3+1*seq(-20,20))),col="black",typ="l",xlab="X value",ylab="Logistic probability")
+for (i in 1:12)
+{
+  lines(seq(-20,20),exp(-3+(1-(i/13))*seq(-20,20))/(1+exp(-3+(1-(i/13))*seq(-20,20))),col=rainbow(15)[i])
+}
+abline(v=0,col="black",lty=3)
+```
+
+<img src="Week-10-lecture_files/figure-html/unnamed-chunk-17-1.png" width="672" />
 
 **Important note** Note that the sampling variability is fully prescribed by the model used to describe the response 
 
@@ -616,7 +645,7 @@ ggplot(data = bomregions2012, aes(x = Year, y = northRain)) + geom_point() + geo
 ## `geom_smooth()` using formula 'y ~ x'
 ```
 
-<img src="Week-10-lecture_files/figure-html/unnamed-chunk-16-1.png" width="384" />
+<img src="Week-10-lecture_files/figure-html/unnamed-chunk-18-1.png" width="384" />
 
 \subsection{Splines}
 
@@ -634,7 +663,7 @@ ggplot(data = bomregions2012, aes(x = Year, y = northRain)) + geom_point() +
   theme(text = element_text(size = text.size)) + theme_classic()
 ```
 
-<img src="Week-10-lecture_files/figure-html/unnamed-chunk-17-1.png" width="384" />
+<img src="Week-10-lecture_files/figure-html/unnamed-chunk-19-1.png" width="384" />
 
 \subsection{GAMs}
 
@@ -652,7 +681,7 @@ ggplot(data = bomregions2012, aes(x = Year, y = northRain)) + geom_point() +
   theme(text = element_text(size = text.size)) + theme_classic()
 ```
 
-<img src="Week-10-lecture_files/figure-html/unnamed-chunk-18-1.png" width="384" />
+<img src="Week-10-lecture_files/figure-html/unnamed-chunk-20-1.png" width="384" />
 
 Personally, I really dislike GAMs and would discourage their use. GAMs rarely if ever provide information that you couldn't see with the naked eye, and their use lends an air of statistical rigor to an analysis that is usually unjustified. I often see GAMs used as a crutch to avoid thinking seriously about the statistical model, and it tends to produce features that are artifacts of the data rather than meaningful information about the underlying process.
 

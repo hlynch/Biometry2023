@@ -348,13 +348,36 @@ These equations cannot be solved algebraically. They must be solved numerically,
 
 How do we interpret the coefficients?
 
-If we fit a logistic model without an intercept, the best fit line must predict p=0.5 when X=0. So the intercept in this case shifts the probability for X=0 up or down relative to 0.5.
+If we fit a logistic model without an intercept, the best fit line must predict p=0.5 when X=0. So the intercept in this case shifts the probability for X=0 up or down relative to 0.5, and it does so by shifting the entire curve left and right along the x axis. This is illustrated in the figure that follows, where I have added "some amount $i$ to the intercept for $i=1$ to $i=12$ and plotted the colors using the rainbow color set.
+
+```{r}
+plot(seq(-20,20),exp(-3+1*seq(-20,20))/(1+exp(-3+1*seq(-20,20))),col="black",typ="l",xlab="X value",ylab="Logistic probability")
+for (i in 1:12)
+{
+  lines(seq(-20,20),exp(-3+i+1*seq(-20,20))/(1+exp(-3+i+1*seq(-20,20))),col=rainbow(15)[i])
+}
+abline(v=0,col="black",lty=3)
+abline(h=exp(-3)/(1+exp(-3)),col="black",lty=3)
+abline(h=exp(-3+5)/(1+exp(-3+5)),col=rainbow(15)[5],lty=3)
+```
+
+Note how the change of intercept from $\beta_{0}=-3$ to $\beta_{0}=5$ shifts the distribution to the left and as a result increases the value where the curve crosses the y-axis. (If the slope were negative, a shift to the left would have the opposite effect.)
 
 The “slope” ($\widehat{\beta_{1}}$)̂ can be interpreted as follows:
 
 $$
 e^{\widehat{\beta_{1}}}=\mbox{="change in the odds for a 1 unit change in X"}
 $$
+Another way to think about the slope term in logistic regression is that is controls how steeply the curve shifts between 0 and 1. Consider the following figure, where I reduce the slope from $\beta_{1}=1$ to $\beta_{1}=0.077$, Notice how the lines get flatter as the slope decreases (but without changing the intercept).
+
+```{r}
+plot(seq(-20,20),exp(-3+1*seq(-20,20))/(1+exp(-3+1*seq(-20,20))),col="black",typ="l",xlab="X value",ylab="Logistic probability")
+for (i in 1:12)
+{
+  lines(seq(-20,20),exp(-3+(1-(i/13))*seq(-20,20))/(1+exp(-3+(1-(i/13))*seq(-20,20))),col=rainbow(15)[i])
+}
+abline(v=0,col="black",lty=3)
+```
 
 **Important note** Note that the sampling variability is fully prescribed by the model used to describe the response 
 
