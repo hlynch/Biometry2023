@@ -262,7 +262,7 @@ $$
 \text{confidence interval} = [\text{LL of } (\beta_{0} + \beta_{1}X_{i}), \text{UL of } (\beta_{0} + \beta_{1}X_{i})]
 $$
 
-Therefore, in order to construct confidence intervals on the scale of the probability $p$, you need to back-transform, so the LL for $p$ is given by $logit^{-1}(\text{LL of } (\beta_{0} + \beta_{0}X_{i}))$ and the UL is given by $logit^{-1}(\text{UL of } (\beta_{0} + \beta_{1}X_{i}))$. Operationally, this looks as follows in R:
+Therefore, in order to construct confidence intervals on the scale of the probability $p$, you need to back-transform, so the LL for $p$ is given by $logit^{-1}(\text{LL of } (\beta_{0} + \beta_{1}X_{i}))$ and the UL is given by $logit^{-1}(\text{UL of } (\beta_{0} + \beta_{1}X_{i}))$. Operationally, this looks as follows in R:
 
 
 ```{r}

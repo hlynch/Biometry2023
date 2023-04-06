@@ -404,7 +404,7 @@ $$
 \text{confidence interval} = [\text{LL of } (\beta_{0} + \beta_{1}X_{i}), \text{UL of } (\beta_{0} + \beta_{1}X_{i})]
 $$
 
-Therefore, in order to construct confidence intervals on the scale of the probability $p$, you need to back-transform, so the LL for $p$ is given by $logit^{-1}(\text{LL of } (\beta_{0} + \beta_{0}X_{i}))$ and the UL is given by $logit^{-1}(\text{UL of } (\beta_{0} + \beta_{1}X_{i}))$. Operationally, this looks as follows in R:
+Therefore, in order to construct confidence intervals on the scale of the probability $p$, you need to back-transform, so the LL for $p$ is given by $logit^{-1}(\text{LL of } (\beta_{0} + \beta_{1}X_{i}))$ and the UL is given by $logit^{-1}(\text{UL of } (\beta_{0} + \beta_{1}X_{i}))$. Operationally, this looks as follows in R:
 
 
 
@@ -521,7 +521,7 @@ dev_diff
 ```
 
 ```
-## [1] 0.01810555
+## [1] 0.4350437
 ```
 
 Notice that even though the covariate that we added is just noise, it still decreases the deviance.
@@ -547,6 +547,18 @@ for (i in 1:1000){
   
   dev_diff <- c(dev_diff, dev_diff_rand)
 }
+```
+
+```
+## Warning: glm.fit: algorithm did not converge
+```
+
+```
+## Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
+```
+
+```
+## Warning: glm.fit: algorithm did not converge
 ```
 
 ```
