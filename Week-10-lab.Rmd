@@ -223,7 +223,7 @@ lines(Temp,fitted(challenger.fit1),col="red")
 lines(Temp,fitted(challenger.fit2),col="blue")
 ```
 
-The $R^{2}$ of the weighted model is higher, but the fit still has the same problems as the original fit. To properly solve this problem, we need to do logistic regression, which accurately captures the non-linear form of the relationahip and the nature of the residuals.
+The $R^{2}$ of the weighted model is higher, but the fit still has the same problems as the original fit. To properly solve this problem, we need to do logistic regression, which accurately captures the non-linear form of the relationship and the nature of the residuals.
 
 Logistic regression practice
 -------------
@@ -245,7 +245,7 @@ confidence.bands<-predict.glm(challenger.fit3,newdata,se.fit=TRUE)
 **Important note**: If we were modelling data on the number of O-rings failed as a Binomial distribution rather than the existence of failed O-rings as a Bernoulli, we would have to pass the data to glm() in a slightly different way. In particular, we would have to create a two-column object, where the first column is the number of O-rings failed, and the second column is the number of O-rings that did not fail. The glm() call would look something like:
 
 ```{r,eval=F}
-challenger.fit3<-glm(cbind(O.rings.failed, 6-O.rings.failed)~Temp, family="binomial")
+challenger.fit3<-glm(cbind(O.ring.failure, 6-O.ring.failure)~Temp, family="binomial")
 ```
 
 OK, back to the task at hand...The default is for predict.glm to give you the fit and s.e. on the scale of the predictor, so you need to use the inverse logit function to extract the fit and s.e. on the scale of the probabilities.
@@ -254,15 +254,15 @@ In other words, the model is given by:
 
 $$
 Y_{i} \sim \text{Binom}(n_{i},p_{i}) \\
-logit(p_{i}) = \beta_{0} + \beta_{0}X_{i}
+logit(p_{i}) = \beta_{0} + \beta_{1}X_{i}
 $$
 and R's function predict.glm() provides the confidence intervals on the right hand side of this latter equation, that is
 
 $$
-\text{confidence interval} = [\text{LL of } (\beta_{0} + \beta_{0}X_{i}), \text{UL of } (\beta_{0} + \beta_{0}X_{i})]
+\text{confidence interval} = [\text{LL of } (\beta_{0} + \beta_{1}X_{i}), \text{UL of } (\beta_{0} + \beta_{1}X_{i})]
 $$
 
-Therefore, in order to construct confidence intervals on the scale of the probability $p$, you need to back-transform, so the LL for $p$ is given by $logit^{-1}(\text{LL of } (\beta_{0} + \beta_{0}X_{i}))$ and the UL is given by $logit^{-1}(\text{UL of } (\beta_{0} + \beta_{0}X_{i}))$. Operationally, this looks as follows in R:
+Therefore, in order to construct confidence intervals on the scale of the probability $p$, you need to back-transform, so the LL for $p$ is given by $logit^{-1}(\text{LL of } (\beta_{0} + \beta_{0}X_{i}))$ and the UL is given by $logit^{-1}(\text{UL of } (\beta_{0} + \beta_{1}X_{i}))$. Operationally, this looks as follows in R:
 
 
 ```{r}
@@ -295,7 +295,7 @@ Poisson regression practice
 
 Since we have the data loaded already, we will use the challenger o-ring data to illustrate how a Poisson model is fit, even though a Poisson model would be inappropriate for the o-ring data. **<span style="color: green;">Checkpoint #6: Why is a Poisson model inappropriate?</span>**
 
-Note that now the link function is the $log()$ so the inverse link function needed to get a CI of the Poisson intensity $\lambda$ is now the exponential $exp()$. In other words, to construct confidence intervals on the scale of the intensity $\lambda$, you need to back-transform, so the LL for $p$ is given by $exp^{\text{LL of } (\beta_{0} + \beta_{0}X_{i})}$ and the UL is given by $exp^{\text{UL of } (\beta_{0} + \beta_{0}X_{i})}$. 
+Note that now the link function is the $log()$ so the inverse link function needed to get a CI of the Poisson intensity $\lambda$ is now the exponential $exp()$. In other words, to construct confidence intervals on the scale of the intensity $\lambda$, you need to back-transform, so the LL for $p$ is given by $exp^{\text{LL of } (\beta_{0} + \beta_{1}X_{i})}$ and the UL is given by $exp^{\text{UL of } (\beta_{0} + \beta_{1}X_{i})}$. 
 
 ```{r}
 challenger.fit4<-glm(O.ring.failure~Temp,family="poisson")

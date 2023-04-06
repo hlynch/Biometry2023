@@ -330,7 +330,7 @@ lines(Temp,fitted(challenger.fit2),col="blue")
 
 <img src="Week-10-lab_files/figure-html/unnamed-chunk-7-1.png" width="672" />
 
-The $R^{2}$ of the weighted model is higher, but the fit still has the same problems as the original fit. To properly solve this problem, we need to do logistic regression, which accurately captures the non-linear form of the relationahip and the nature of the residuals.
+The $R^{2}$ of the weighted model is higher, but the fit still has the same problems as the original fit. To properly solve this problem, we need to do logistic regression, which accurately captures the non-linear form of the relationship and the nature of the residuals.
 
 Logistic regression practice
 -------------
@@ -387,7 +387,7 @@ confidence.bands<-predict.glm(challenger.fit3,newdata,se.fit=TRUE)
 
 
 ```r
-challenger.fit3<-glm(cbind(O.rings.failed, 6-O.rings.failed)~Temp, family="binomial")
+challenger.fit3<-glm(cbind(O.ring.failure, 6-O.ring.failure)~Temp, family="binomial")
 ```
 
 OK, back to the task at hand...The default is for predict.glm to give you the fit and s.e. on the scale of the predictor, so you need to use the inverse logit function to extract the fit and s.e. on the scale of the probabilities.
@@ -396,15 +396,15 @@ In other words, the model is given by:
 
 $$
 Y_{i} \sim \text{Binom}(n_{i},p_{i}) \\
-logit(p_{i}) = \beta_{0} + \beta_{0}X_{i}
+logit(p_{i}) = \beta_{0} + \beta_{1}X_{i}
 $$
 and R's function predict.glm() provides the confidence intervals on the right hand side of this latter equation, that is
 
 $$
-\text{confidence interval} = [\text{LL of } (\beta_{0} + \beta_{0}X_{i}), \text{UL of } (\beta_{0} + \beta_{0}X_{i})]
+\text{confidence interval} = [\text{LL of } (\beta_{0} + \beta_{1}X_{i}), \text{UL of } (\beta_{0} + \beta_{1}X_{i})]
 $$
 
-Therefore, in order to construct confidence intervals on the scale of the probability $p$, you need to back-transform, so the LL for $p$ is given by $logit^{-1}(\text{LL of } (\beta_{0} + \beta_{0}X_{i}))$ and the UL is given by $logit^{-1}(\text{UL of } (\beta_{0} + \beta_{0}X_{i}))$. Operationally, this looks as follows in R:
+Therefore, in order to construct confidence intervals on the scale of the probability $p$, you need to back-transform, so the LL for $p$ is given by $logit^{-1}(\text{LL of } (\beta_{0} + \beta_{0}X_{i}))$ and the UL is given by $logit^{-1}(\text{UL of } (\beta_{0} + \beta_{1}X_{i}))$. Operationally, this looks as follows in R:
 
 
 
@@ -452,7 +452,7 @@ Poisson regression practice
 
 Since we have the data loaded already, we will use the challenger o-ring data to illustrate how a Poisson model is fit, even though a Poisson model would be inappropriate for the o-ring data. **<span style="color: green;">Checkpoint #6: Why is a Poisson model inappropriate?</span>**
 
-Note that now the link function is the $log()$ so the inverse link function needed to get a CI of the Poisson intensity $\lambda$ is now the exponential $exp()$. In other words, to construct confidence intervals on the scale of the intensity $\lambda$, you need to back-transform, so the LL for $p$ is given by $exp^{\text{LL of } (\beta_{0} + \beta_{0}X_{i})}$ and the UL is given by $exp^{\text{UL of } (\beta_{0} + \beta_{0}X_{i})}$. 
+Note that now the link function is the $log()$ so the inverse link function needed to get a CI of the Poisson intensity $\lambda$ is now the exponential $exp()$. In other words, to construct confidence intervals on the scale of the intensity $\lambda$, you need to back-transform, so the LL for $p$ is given by $exp^{\text{LL of } (\beta_{0} + \beta_{1}X_{i})}$ and the UL is given by $exp^{\text{UL of } (\beta_{0} + \beta_{1}X_{i})}$. 
 
 
 ```r
@@ -521,7 +521,7 @@ dev_diff
 ```
 
 ```
-## [1] 1.634763
+## [1] 0.01810555
 ```
 
 Notice that even though the covariate that we added is just noise, it still decreases the deviance.
@@ -547,6 +547,13 @@ for (i in 1:1000){
   
   dev_diff <- c(dev_diff, dev_diff_rand)
 }
+```
+
+```
+## Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
+```
+
+```r
 # plot the distribution and add a line for a chi-square with df=1 
 hist(dev_diff, xlab="Deviance Difference", main="Expected distribution", freq=FALSE,breaks=30)
 lines(seq(0,20,0.1), dchisq(seq(0,20,0.1),df=1), col="red",lwd=2)
