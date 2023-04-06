@@ -438,7 +438,7 @@ $$
 
 These equations cannot be solved algebraically. They must be solved numerically, for example, using iteratively weighted least squares with optimizing algorithms. When you think about the computing power needed to fit GLMs (which is no big deal today), it makes sense why it was traditional to transform your data to become normally distributed rather than model your data as it exists using GLM.
 
-How do we interpret the coefficients?
+**How do we interpret the coefficients?**
 
 If we fit a logistic model without an intercept, the best fit line must predict p=0.5 when X=0. So the intercept in this case shifts the probability for X=0 up or down relative to 0.5, and it does so by shifting the entire curve left and right along the x axis. This is illustrated in the figure that follows, where I have added "some amount $i$ to the intercept for $i=1$ to $i=12$ and plotted the colors using the rainbow color set.
 
@@ -600,7 +600,7 @@ $$
 z=\frac{\mbox{parameter estimate}}{\mbox{s.e. of parameter estimate}}
 $$
 
-The test statsitic z is approximately normal for large sample sizes.
+The test statistic z is approximately normal for large sample sizes.
 
 Other methods -- LOESS, splines, GAMs
 -------------------

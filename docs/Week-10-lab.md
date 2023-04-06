@@ -390,8 +390,6 @@ confidence.bands<-predict.glm(challenger.fit3,newdata,se.fit=TRUE)
 challenger.fit3<-glm(cbind(O.rings.failed, 6-O.rings.failed)~Temp, family="binomial")
 ```
 
-There is a bit more information on the syntax [here](https://data.princeton.edu/r/glms).
-
 OK, back to the task at hand...The default is for predict.glm to give you the fit and s.e. on the scale of the predictor, so you need to use the inverse logit function to extract the fit and s.e. on the scale of the probabilities.
 
 In other words, the model is given by:
@@ -523,7 +521,7 @@ dev_diff
 ```
 
 ```
-## [1] 0.3984111
+## [1] 1.634763
 ```
 
 Notice that even though the covariate that we added is just noise, it still decreases the deviance.
