@@ -23,11 +23,8 @@ $$
 
 The value of each data point, $Y_{ij}$ is modeled as a function of: 1) the overall mean $\mu$, 2) the modification of the mean due to membership in group $i$, $A_i$, and 3) the unexplained variability remaining after the group-level effect is $\epsilon_{ij}$. Variation **among** groups is represented by $A_i$ and variation **within** groups is represented by $\epsilon_{ij}$. The statistical question is whether or not “group” has a statistically significant effect on the overall mean $\mu$. This is identical to the linear models we have already talked about, except that now we are focusing on models in which the predictor variables are categorical factors (or groups). 
 
-**Question: What is the null hypothesis here?**
+**What is the null hypothesis here?**
 
-<details>
-  <summary>Click for Answer</summary>
-<span style="color: blueviolet;">
 Under the null hypothesis, this linear model can be written
 
 $$
@@ -35,10 +32,6 @@ Y_{ij}=\mu+\epsilon_{ij}
 $$
 
 So the null hypothesis being tested is $H_{0}$: The differences **among** groups is no larger than would be expected based on the differences **within** groups. Therefore, there are no significant differences among the groups.
-</span>
-</details> 
-
-<p>&nbsp;</p>
 
 So, do the groups all come from the same population? Based on what we know already know, we might try using pairwise t-tests. But wait! If we use pairwise *t*-tests to determine which groups were different, we would have $a(a - 1) / 2$ pairwise comparisons with $a$ group means. 
 
@@ -530,6 +523,12 @@ $$
 n\sum_{i=1}^{a}(\bar{Y_{i}}-\bar{Y})^{2}
 $$
 because the former can be used even if the ANOVA design is not balanced. (A balanced design is one in which the sample size in each cell is the same (n).) Many other texts use the latter notation, so do not let this confuse you.
+
+This figure from Logan (2010) does a nice job of summarizing the steps of one-way ANOVA:
+
+```{r echo=FALSE, fig.align='center', fig.cap='Source: Logan (2010) Biostatistical Design and Analysis Using R', out.width='80%'}
+knitr::include_graphics('One-way-ANOVA figure from Logan.png')
+```
 
 ANOVA comes with a number of assumptions. We assume that the residuals are:
 
