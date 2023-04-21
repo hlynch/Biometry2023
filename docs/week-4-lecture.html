@@ -24,7 +24,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-04-18" />
+<meta name="date" content="2023-04-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -226,14 +226,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.2" data-path="week-5-lecture.html"><a href="week-5-lecture.html#statistical-power"><i class="fa fa-check"></i><b>9.2</b> Statistical power</a></li>
 <li class="chapter" data-level="9.3" data-path="week-5-lecture.html"><a href="week-5-lecture.html#the-single-sample-t-test"><i class="fa fa-check"></i><b>9.3</b> The single sample t test</a></li>
 <li class="chapter" data-level="9.4" data-path="week-5-lecture.html"><a href="week-5-lecture.html#the-unpaired-two-sample-t-test"><i class="fa fa-check"></i><b>9.4</b> The unpaired two sample t test</a></li>
-<li class="chapter" data-level="9.5" data-path="week-5-lecture.html"><a href="week-5-lecture.html#the-paired-two-sample-t-test"><i class="fa fa-check"></i><b>9.5</b> The paired two sample t test</a></li>
-<li class="chapter" data-level="9.6" data-path="week-5-lecture.html"><a href="week-5-lecture.html#the-f-test"><i class="fa fa-check"></i><b>9.6</b> The F test</a></li>
-<li class="chapter" data-level="9.7" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-proportions"><i class="fa fa-check"></i><b>9.7</b> Comparing two proportions</a></li>
-<li class="chapter" data-level="9.8" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-distributions"><i class="fa fa-check"></i><b>9.8</b> Comparing two distributions</a></li>
-<li class="chapter" data-level="9.9" data-path="week-5-lecture.html"><a href="week-5-lecture.html#a-bit-more-detail-on-the-binomial"><i class="fa fa-check"></i><b>9.9</b> A bit more detail on the Binomial</a></li>
-<li class="chapter" data-level="9.10" data-path="week-5-lecture.html"><a href="week-5-lecture.html#side-note-about-the-wald-test"><i class="fa fa-check"></i><b>9.10</b> Side-note about the Wald test</a></li>
-<li class="chapter" data-level="9.11" data-path="week-5-lecture.html"><a href="week-5-lecture.html#chi-squared-goodness-of-fit-test"><i class="fa fa-check"></i><b>9.11</b> Chi-squared goodness-of-fit test</a></li>
-<li class="chapter" data-level="9.12" data-path="week-5-lecture.html"><a href="week-5-lecture.html#chi-squared-test-of-independence"><i class="fa fa-check"></i><b>9.12</b> Chi-squared test of independence</a></li>
+<li class="chapter" data-level="9.5" data-path="week-5-lecture.html"><a href="week-5-lecture.html#pooledvar"><i class="fa fa-check"></i><b>9.5</b> Pooling the variances</a></li>
+<li class="chapter" data-level="9.6" data-path="week-5-lecture.html"><a href="week-5-lecture.html#the-paired-two-sample-t-test"><i class="fa fa-check"></i><b>9.6</b> The paired two sample t test</a></li>
+<li class="chapter" data-level="9.7" data-path="week-5-lecture.html"><a href="week-5-lecture.html#the-f-test"><i class="fa fa-check"></i><b>9.7</b> The F test</a></li>
+<li class="chapter" data-level="9.8" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-proportions"><i class="fa fa-check"></i><b>9.8</b> Comparing two proportions</a></li>
+<li class="chapter" data-level="9.9" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-distributions"><i class="fa fa-check"></i><b>9.9</b> Comparing two distributions</a></li>
+<li class="chapter" data-level="9.10" data-path="week-5-lecture.html"><a href="week-5-lecture.html#a-bit-more-detail-on-the-binomial"><i class="fa fa-check"></i><b>9.10</b> A bit more detail on the Binomial</a></li>
+<li class="chapter" data-level="9.11" data-path="week-5-lecture.html"><a href="week-5-lecture.html#side-note-about-the-wald-test"><i class="fa fa-check"></i><b>9.11</b> Side-note about the Wald test</a></li>
+<li class="chapter" data-level="9.12" data-path="week-5-lecture.html"><a href="week-5-lecture.html#chi-squared-goodness-of-fit-test"><i class="fa fa-check"></i><b>9.12</b> Chi-squared goodness-of-fit test</a></li>
+<li class="chapter" data-level="9.13" data-path="week-5-lecture.html"><a href="week-5-lecture.html#chi-squared-test-of-independence"><i class="fa fa-check"></i><b>9.13</b> Chi-squared test of independence</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="week-5-lab.html"><a href="week-5-lab.html"><i class="fa fa-check"></i><b>10</b> Week 5 Lab</a>
 <ul>
@@ -570,17 +571,17 @@ Y = \frac{1}{\sigma^{2}}\sum_{i=1}^{n}{(X_{i}-\mu)^{2}} \sim \chi_{n}^{2}
 <ol style="list-style-type: decimal">
 <li>If <span class="math inline">\(X \sim N(0,1)\)</span>, then <span class="math inline">\(X^{2} \sim \chi_{1}^{2}\)</span>. In other words, the square of a standard normal random variable is a chi-squared random variable.</li>
 </ol>
-<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="week-4-lecture.html#cb238-1" aria-hidden="true" tabindex="-1"></a>chisqhist<span class="ot">&lt;-</span><span class="fu">hist</span>((<span class="fu">rnorm</span>(<span class="dv">1000</span>,<span class="dv">0</span>,<span class="dv">1</span>))<span class="sc">^</span><span class="dv">2</span>,<span class="at">freq=</span>F,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">main=</span><span class="st">&quot;Chi-squared with df=1&quot;</span>)</span>
-<span id="cb238-2"><a href="week-4-lecture.html#cb238-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(chisqhist<span class="sc">$</span>mids,<span class="fu">dchisq</span>(chisqhist<span class="sc">$</span>mids,<span class="dv">1</span>),<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">lwd=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="week-4-lecture.html#cb236-1" aria-hidden="true" tabindex="-1"></a>chisqhist<span class="ot">&lt;-</span><span class="fu">hist</span>((<span class="fu">rnorm</span>(<span class="dv">1000</span>,<span class="dv">0</span>,<span class="dv">1</span>))<span class="sc">^</span><span class="dv">2</span>,<span class="at">freq=</span>F,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">main=</span><span class="st">&quot;Chi-squared with df=1&quot;</span>)</span>
+<span id="cb236-2"><a href="week-4-lecture.html#cb236-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(chisqhist<span class="sc">$</span>mids,<span class="fu">dchisq</span>(chisqhist<span class="sc">$</span>mids,<span class="dv">1</span>),<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">lwd=</span><span class="dv">2</span>)</span></code></pre></div>
 <p><img src="Week-4-lecture_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li>If <span class="math inline">\(X_{p1},X_{p2},X_{p3}... \sim \chi^{2}\)</span> distribution, then <span class="math inline">\(\sum_{i}{X_{pi}} \sim \chi^{2}_{\sum{p_{i}}}\)</span>. In other words, independent chi-squared random variables sum to a chi-squared random variable, and the degrees of freedom also add.</li>
 </ol>
-<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="week-4-lecture.html#cb239-1" aria-hidden="true" tabindex="-1"></a>df1<span class="ot">&lt;-</span><span class="dv">5</span> </span>
-<span id="cb239-2"><a href="week-4-lecture.html#cb239-2" aria-hidden="true" tabindex="-1"></a>df2<span class="ot">&lt;-</span><span class="dv">2</span></span>
-<span id="cb239-3"><a href="week-4-lecture.html#cb239-3" aria-hidden="true" tabindex="-1"></a>df3<span class="ot">&lt;-</span><span class="dv">3</span></span>
-<span id="cb239-4"><a href="week-4-lecture.html#cb239-4" aria-hidden="true" tabindex="-1"></a>chisqhist2<span class="ot">&lt;-</span><span class="fu">hist</span>(<span class="fu">rchisq</span>(<span class="dv">1000</span>,df1)<span class="sc">+</span><span class="fu">rchisq</span>(<span class="dv">1000</span>,df2)<span class="sc">+</span><span class="fu">rchisq</span>(<span class="dv">1000</span>,df3),<span class="at">freq=</span>F,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">main=</span><span class="st">&quot;Sum of chi-squared distributions&quot;</span>)</span>
-<span id="cb239-5"><a href="week-4-lecture.html#cb239-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(chisqhist2<span class="sc">$</span>mids,<span class="fu">dchisq</span>(chisqhist2<span class="sc">$</span>mids,df1<span class="sc">+</span>df2<span class="sc">+</span>df3),<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">lwd=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="week-4-lecture.html#cb237-1" aria-hidden="true" tabindex="-1"></a>df1<span class="ot">&lt;-</span><span class="dv">5</span> </span>
+<span id="cb237-2"><a href="week-4-lecture.html#cb237-2" aria-hidden="true" tabindex="-1"></a>df2<span class="ot">&lt;-</span><span class="dv">2</span></span>
+<span id="cb237-3"><a href="week-4-lecture.html#cb237-3" aria-hidden="true" tabindex="-1"></a>df3<span class="ot">&lt;-</span><span class="dv">3</span></span>
+<span id="cb237-4"><a href="week-4-lecture.html#cb237-4" aria-hidden="true" tabindex="-1"></a>chisqhist2<span class="ot">&lt;-</span><span class="fu">hist</span>(<span class="fu">rchisq</span>(<span class="dv">1000</span>,df1)<span class="sc">+</span><span class="fu">rchisq</span>(<span class="dv">1000</span>,df2)<span class="sc">+</span><span class="fu">rchisq</span>(<span class="dv">1000</span>,df3),<span class="at">freq=</span>F,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">main=</span><span class="st">&quot;Sum of chi-squared distributions&quot;</span>)</span>
+<span id="cb237-5"><a href="week-4-lecture.html#cb237-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(chisqhist2<span class="sc">$</span>mids,<span class="fu">dchisq</span>(chisqhist2<span class="sc">$</span>mids,df1<span class="sc">+</span>df2<span class="sc">+</span>df3),<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">lwd=</span><span class="dv">2</span>)</span></code></pre></div>
 <p><img src="Week-4-lecture_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>While above I used the symbol “n” to designate the parameter of the <span class="math inline">\(\chi^{2}\)</span> distribution because it is intuitive how that parameter is equal to the number of (squared) random variables are being summed, here I will switch to the letter <span class="math inline">\(\nu\)</span>, which is slightly more traditional. The chi-squared distribution has an ugly pdf, which I include here for completeness.</p>
 <p><span class="math display">\[ 

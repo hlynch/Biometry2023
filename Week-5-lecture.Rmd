@@ -241,7 +241,11 @@ $$
 
 Note that there are some simpler formulas that apply if you assume equal sample size and/or equal variances. In the case of equal variances, you can pool the data to find a pooled estimate of the common variance $s^{2}$, but I will not go into the details here. Note that the default for R is to assume unequal sample sizes and unequal variances.
 
-If the variances are assumed equal, this simplifies somewhat
+
+Pooling the variances {#pooledvar}
+---------------
+
+If the variances are assumed equal, this simplifies somewhat 
 
 $$
 T = \frac{\bar{X_{A}}-\bar{X_{B}}}{SE_{diff}} = \frac{\bar{X_{A}}-\bar{X_{B}}}{\sqrt{s^{2}_{pooled}\left(\frac{1}{n_{A}}+\frac{1}{n_{B}}\right)}}
@@ -255,9 +259,9 @@ $$
 
 where $SS_{A}$ is the sums-of-squares for dataset A and $SS_{B}$ is the sums-of-squares for dataset B.
 
-Why bother assuming the variances are equal? By combining the data in the estimate of their pooled variance, we get a better estimate of $s_{pooled}^{2}$ than either $s_{A}^{2}$  or $s_{B}^{2}$.
+Why bother assuming the variances are equal? By combining the data in the estimate of their pooled variance, we get a better estimate of $s_{pooled}^{2}$ than either $s_{A}^{2}$  or $s_{B}^{2}$. 
 
-The paired two sample t test
+The paired two sample t test 
 -----------------
 
 Paired data occurs when each datapoint in set A corresponds to a datapoint in set B. Examples might be the strength of the left vs. right leg in a sample of individuals, or the blood sugar of husbands vs. wifes in a sample of married couples. In these cases, the question at hand is whether the difference between the two datasets is equal to some value or not. In other words, the null hypothesis is $H_{0}: X_{A}-X_{B} = c$. The test statistic is the same as with the unpaired test

@@ -577,13 +577,22 @@ In our hypothestical example of having four groups in our analysis (a=4), we can
 $$
 q^* = \frac{\bar{X}_B - \bar{X}_C}{\sqrt{\text{MS}_{\text{within}} \frac{\frac{1}{n_B} + \frac{1}{n_C}}{2}}} \sim q_{a, \text{DOF_within}}
 $$
+where $MS_{within}$ is the mean squares within groups and is directly analogous to the pooled variance when we were doing two-sample t-tests. (Note that in comparing this equation to [the expression for a pooled t test](#pooledvar) there is a factor of 2 difference; this is absorbed into the definition the q distribution.)
 
-Note that $n_{B}$ and $n_{C}$ are the number of data points in each group, and because we are assuming a balenced design, we can simplify this a bit to
+Note that $n_{B}$ and $n_{C}$ are the number of data points in each group, and because we are assuming a balanced design, we can simplify this a bit to
 
 $$
 q^* = \frac{\bar{X}_B - \bar{X}_C}{\sqrt{\frac{\text{MS}_{\text{within}}}{n}}} \sim q_{a, \text{DOF_within=an-a}}
 $$
 
-$MS_{within}$ is the mean squares within groups and is directly analogous to the pooled variance when we were doing two-sample t-tests.
+
+We can re-arrange this to define the Minimum Significant Range (MSR)
+
+$$
+\bar{X}_B - \bar{X}_C = MSR = \sqrt{\frac{\text{MS}_{\text{within}}}{n}} q_{(0.05)[a, \text{DOF_within=an-a}]}
+$$
+where now $q_{(0.05)[a, \text{DOF_within=an-a}]}$ is the quantile of the q-distribution.
+
+
 
 After comparing the largest mean to the smallest, you compare the second largest mean to the smallest, and so on, until you find nonsignificant differences.
