@@ -437,7 +437,16 @@ We have the second column to fill in our ANOVA table:
 | Within groups | $\sum^a_{i = 1} \sum^n_{j = 1} (Y_{ij} - \bar{Y}_i)^2$ | $(a \times n) - a = 9$ | | | |
 | Total | $\sum^a_{i = 1} \sum^n_{j = 1} (Y_{ij} - \bar{Y})^2$ | $(a \times n) - 1 = 11$ | | | |
 
-Mean squares are calculated by dividing the sums of squares by the degrees of freedom for each row of the table. **Mean squares are estimates of variance for components of the model**. Relating this idea back to our first example of tumor diameters:
+Mean squares are calculated by dividing the sums of squares by the degrees of freedom for each row of the table. **Mean squares are estimates of variance for components of the model**. 
+
+Because doing this in R (especially when we get to multi-way ANOVA next week) can be tricky, I show you here how this can be done in Excel so the underlying logic is clear
+
+```{r echo=FALSE, fig.align='center', fig.cap='Example of how Excel can be used to work out the sums-of-squares for one way ANOVA', out.width='100%'}
+knitr::include_graphics('One-way_ANOVA_example_in_Excel.png')
+```
+
+
+Relating this idea back to our first example of tumor diameters:
 
 $$
 \text{MS}_{\text{among groups}} = \text{Among group variance (group + error)}

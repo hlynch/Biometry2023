@@ -383,7 +383,17 @@ We have the second column to fill in our ANOVA table:
 | Within groups | $\sum^a_{i = 1} \sum^n_{j = 1} (Y_{ij} - \bar{Y}_i)^2$ | $(a \times n) - a = 9$ | | | |
 | Total | $\sum^a_{i = 1} \sum^n_{j = 1} (Y_{ij} - \bar{Y})^2$ | $(a \times n) - 1 = 11$ | | | |
 
-Mean squares are calculated by dividing the sums of squares by the degrees of freedom for each row of the table. **Mean squares are estimates of variance for components of the model**. Relating this idea back to our first example of tumor diameters:
+Mean squares are calculated by dividing the sums of squares by the degrees of freedom for each row of the table. **Mean squares are estimates of variance for components of the model**. 
+
+Because doing this in R (especially when we get to multi-way ANOVA next week) can be tricky, I show you here how this can be done in Excel so the underlying logic is clear
+
+<div class="figure" style="text-align: center">
+<img src="One-way_ANOVA_example_in_Excel.png" alt="Example of how Excel can be used to work out the sums-of-squares for one way ANOVA" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-8)Example of how Excel can be used to work out the sums-of-squares for one way ANOVA</p>
+</div>
+
+
+Relating this idea back to our first example of tumor diameters:
 
 $$
 \text{MS}_{\text{among groups}} = \text{Among group variance (group + error)}
@@ -438,7 +448,7 @@ ggplot(dat, aes(x = FStatistic, y = Density)) + geom_line() +
     theme_classic() + theme(text = element_text(size = text.size))
 ```
 
-<img src="Week-11-lecture_files/figure-html/unnamed-chunk-8-1.png" width="384" />
+<img src="Week-11-lecture_files/figure-html/unnamed-chunk-9-1.png" width="384" />
 
 Note that the F distribution has a different shape when `df1` has higher values.
 
@@ -489,7 +499,7 @@ This figure from Logan (2010) does a nice job of summarizing the steps of one-wa
 
 <div class="figure" style="text-align: center">
 <img src="One-way-ANOVA figure from Logan.png" alt="Source: Logan (2010) Biostatistical Design and Analysis Using R" width="80%" />
-<p class="caption">(\#fig:unnamed-chunk-10)Source: Logan (2010) Biostatistical Design and Analysis Using R</p>
+<p class="caption">(\#fig:unnamed-chunk-11)Source: Logan (2010) Biostatistical Design and Analysis Using R</p>
 </div>
 
 ANOVA comes with a number of assumptions. We assume that the residuals are:
