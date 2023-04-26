@@ -439,13 +439,6 @@ We have the second column to fill in our ANOVA table:
 
 Mean squares are calculated by dividing the sums of squares by the degrees of freedom for each row of the table. **Mean squares are estimates of variance for components of the model**. 
 
-Because doing this in R (especially when we get to multi-way ANOVA next week) can be tricky, I show you here how this can be done in Excel so the underlying logic is clear
-
-```{r echo=FALSE, fig.align='center', fig.cap='Example of how Excel can be used to work out the sums-of-squares for one way ANOVA', out.width='100%'}
-knitr::include_graphics('One-way_ANOVA_example_in_Excel.png')
-```
-
-
 Relating this idea back to our first example of tumor diameters:
 
 $$
@@ -485,6 +478,12 @@ And the third and fourth columns of our ANOVA table can be filled in:
 | Among groups | $\sum^a_{i = 1} \sum^n_{j = 1} (\bar{Y}_{i} - \bar{Y})^2 = 22.17$ | $a - 1 = 2$ | $\frac{\text{SS}_{\text{among groups}}}{\text{DOF}_{\text{among groups}}} = 11.08$ | $\frac{\text{MS}_{\text{among groups}}}{\text{MS}_{\text{within groups}}} = 5.11$ | |
 | Within groups | $\sum^a_{i = 1} \sum^n_{j = 1} (Y_{ij} - \bar{Y}_i)^2 = 19.50$ | $(a \times n) - a = 9$ | $\frac{\text{SS}_{\text{within groups}}}{\text{DOF}_{\text{within groups}}} = 2.17$ | | |
 | Total | $\sum^a_{i = 1} \sum^n_{j = 1} (Y_{ij} - \bar{Y})^2 = 41.67$ | $a \times n - 1 = 11$ | | | |
+
+Because doing this in R (especially when we get to multi-way ANOVA next week) can be tricky, I show you here how this can be done in Excel so the underlying logic is clear
+
+```{r echo=FALSE, fig.align='center', fig.cap='Example of how Excel can be used to work out the sums-of-squares for one way ANOVA', out.width='100%'}
+knitr::include_graphics('One-way_ANOVA_example_in_Excel.png')
+```
 
 We now test whether the F ratio (our test statistic) is significant given its distribution under the null hypothesis. The distribution of test statistic $F$ under the null hypothesis is $F | H_0 \sim F_{\text{DOF}_{\text{among}}, \text{DOF}_{\text{within}}}$.
 
