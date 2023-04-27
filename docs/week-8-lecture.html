@@ -24,7 +24,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-04-26" />
+<meta name="date" content="2023-04-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -769,17 +769,17 @@ Y_5 = \alpha_{2(5)} + \epsilon_5 \text{, where } \epsilon_5 \sim N(0, \sigma^2)
 <span id="cb391-2"><a href="week-8-lecture.html#cb391-2" aria-hidden="true" tabindex="-1"></a><span class="fu">model.matrix</span>( <span class="sc">~</span> <span class="sc">-</span><span class="dv">1</span> <span class="sc">+</span> iris.sub<span class="sc">$</span>Species)</span></code></pre></div>
 <pre><code>##    iris.sub$Speciessetosa iris.sub$Speciesversicolor iris.sub$Speciesvirginica
 ## 1                       1                          0                         0
-## 2                       1                          0                         0
+## 2                       0                          1                         0
 ## 3                       0                          1                         0
-## 4                       0                          1                         0
+## 4                       0                          0                         1
 ## 5                       0                          0                         1
 ## 6                       0                          0                         1
 ## 7                       1                          0                         0
 ## 8                       0                          1                         0
-## 9                       0                          0                         1
-## 10                      0                          0                         1
-## 11                      0                          0                         1
-## 12                      0                          1                         0
+## 9                       0                          1                         0
+## 10                      1                          0                         0
+## 11                      0                          1                         0
+## 12                      0                          0                         1
 ## attr(,&quot;assign&quot;)
 ## [1] 1 1 1
 ## attr(,&quot;contrasts&quot;)
@@ -789,9 +789,9 @@ Y_5 = \alpha_{2(5)} + \epsilon_5 \text{, where } \epsilon_5 \sim N(0, \sigma^2)
 <div class="sourceCode" id="cb394"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb394-1"><a href="week-8-lecture.html#cb394-1" aria-hidden="true" tabindex="-1"></a>dummy <span class="ot">&lt;-</span> <span class="fu">summary</span>(<span class="fu">lm</span>(iris.sub<span class="sc">$</span>Sepal.Length <span class="sc">~</span> <span class="sc">-</span><span class="dv">1</span> <span class="sc">+</span> iris.sub<span class="sc">$</span>Species))</span>
 <span id="cb394-2"><a href="week-8-lecture.html#cb394-2" aria-hidden="true" tabindex="-1"></a>dummy<span class="sc">$</span>coefficients</span></code></pre></div>
 <pre><code>##                            Estimate Std. Error  t value     Pr(&gt;|t|)
-## iris.sub$Speciessetosa     5.333333  0.2405370 22.17262 3.649924e-09
-## iris.sub$Speciesversicolor 5.625000  0.2083111 27.00288 6.344289e-10
-## iris.sub$Speciesvirginica  6.780000  0.1863191 36.38918 4.426753e-11</code></pre>
+## iris.sub$Speciessetosa     5.233333  0.3577019 14.63043 1.400750e-07
+## iris.sub$Speciesversicolor 6.020000  0.2770747 21.72700 4.368332e-09
+## iris.sub$Speciesvirginica  7.100000  0.3097789 22.91957 2.721618e-09</code></pre>
 <div class="sourceCode" id="cb396"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb396-1"><a href="week-8-lecture.html#cb396-1" aria-hidden="true" tabindex="-1"></a>iris.fig <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(iris.sub, <span class="fu">aes</span>(<span class="at">x =</span> Species, <span class="at">y =</span> Sepal.Length)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb396-2"><a href="week-8-lecture.html#cb396-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> iris.means, <span class="fu">aes</span>(<span class="at">x =</span> Species, <span class="at">y =</span> Sepal.Length, <span class="at">col =</span> Species), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span> </span>
 <span id="cb396-3"><a href="week-8-lecture.html#cb396-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;Sepal length&quot;</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> font.size))</span>
@@ -1198,17 +1198,17 @@ Y_i = \alpha_{\text{control}} + \alpha_{j(i)} + \epsilon_i \text{, where } \epsi
 <span id="cb397-2"><a href="week-8-lecture.html#cb397-2" aria-hidden="true" tabindex="-1"></a><span class="fu">model.matrix</span>(<span class="sc">~</span> iris.sub<span class="sc">$</span>Species)</span></code></pre></div>
 <pre><code>##    (Intercept) iris.sub$Speciesversicolor iris.sub$Speciesvirginica
 ## 1            1                          0                         0
-## 2            1                          0                         0
+## 2            1                          1                         0
 ## 3            1                          1                         0
-## 4            1                          1                         0
+## 4            1                          0                         1
 ## 5            1                          0                         1
 ## 6            1                          0                         1
 ## 7            1                          0                         0
 ## 8            1                          1                         0
-## 9            1                          0                         1
-## 10           1                          0                         1
-## 11           1                          0                         1
-## 12           1                          1                         0
+## 9            1                          1                         0
+## 10           1                          0                         0
+## 11           1                          1                         0
+## 12           1                          0                         1
 ## attr(,&quot;assign&quot;)
 ## [1] 0 1 1
 ## attr(,&quot;contrasts&quot;)
@@ -1216,10 +1216,10 @@ Y_i = \alpha_{\text{control}} + \alpha_{j(i)} + \epsilon_i \text{, where } \epsi
 ## [1] &quot;contr.treatment&quot;</code></pre>
 <div class="sourceCode" id="cb399"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb399-1"><a href="week-8-lecture.html#cb399-1" aria-hidden="true" tabindex="-1"></a>treatment <span class="ot">&lt;-</span> <span class="fu">summary</span>(<span class="fu">lm</span>(iris.sub<span class="sc">$</span>Sepal.Length <span class="sc">~</span> iris.sub<span class="sc">$</span>Species))</span>
 <span id="cb399-2"><a href="week-8-lecture.html#cb399-2" aria-hidden="true" tabindex="-1"></a>treatment<span class="sc">$</span>coefficients</span></code></pre></div>
-<pre><code>##                             Estimate Std. Error    t value     Pr(&gt;|t|)
-## (Intercept)                5.3333333  0.2405370 22.1726155 3.649924e-09
-## iris.sub$Speciesversicolor 0.2916667  0.3182005  0.9166129 3.832497e-01
-## iris.sub$Speciesvirginica  1.4466667  0.3042579  4.7547390 1.037283e-03</code></pre>
+<pre><code>##                             Estimate Std. Error   t value     Pr(&gt;|t|)
+## (Intercept)                5.2333333  0.3577019 14.630434 1.400750e-07
+## iris.sub$Speciesversicolor 0.7866667  0.4524610  1.738640 1.160991e-01
+## iris.sub$Speciesvirginica  1.8666667  0.4731951  3.944814 3.381186e-03</code></pre>
 <p>In this case, you can see that the model is estimating the mean of the first group (setosa) and then the difference between the second and first group and the difference between the third and first groups. This allows you to test hypotheses about the differences, which is often more meaningful than testing hypotheses about the group means themselves.</p>
 </div>
 <div id="helmert-contrasts" class="section level2" number="14.8">
@@ -1285,17 +1285,17 @@ Y_i = \alpha_{\text{control}} + \alpha_{j(i)} + \epsilon_i \text{, where } \epsi
 <span id="cb401-2"><a href="week-8-lecture.html#cb401-2" aria-hidden="true" tabindex="-1"></a><span class="fu">model.matrix</span>(<span class="sc">~</span> iris.sub<span class="sc">$</span>Species)</span></code></pre></div>
 <pre><code>##    (Intercept) iris.sub$Species1 iris.sub$Species2
 ## 1            1                -1                -1
-## 2            1                -1                -1
+## 2            1                 1                -1
 ## 3            1                 1                -1
-## 4            1                 1                -1
+## 4            1                 0                 2
 ## 5            1                 0                 2
 ## 6            1                 0                 2
 ## 7            1                -1                -1
 ## 8            1                 1                -1
-## 9            1                 0                 2
-## 10           1                 0                 2
-## 11           1                 0                 2
-## 12           1                 1                -1
+## 9            1                 1                -1
+## 10           1                -1                -1
+## 11           1                 1                -1
+## 12           1                 0                 2
 ## attr(,&quot;assign&quot;)
 ## [1] 0 1 1
 ## attr(,&quot;contrasts&quot;)
@@ -1303,10 +1303,10 @@ Y_i = \alpha_{\text{control}} + \alpha_{j(i)} + \epsilon_i \text{, where } \epsi
 ## [1] &quot;contr.helmert&quot;</code></pre>
 <div class="sourceCode" id="cb403"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb403-1"><a href="week-8-lecture.html#cb403-1" aria-hidden="true" tabindex="-1"></a>helmert <span class="ot">&lt;-</span> <span class="fu">summary</span>(<span class="fu">lm</span>(iris.sub<span class="sc">$</span>Sepal.Length <span class="sc">~</span> iris.sub<span class="sc">$</span>Species))</span>
 <span id="cb403-2"><a href="week-8-lecture.html#cb403-2" aria-hidden="true" tabindex="-1"></a>helmert<span class="sc">$</span>coefficients</span></code></pre></div>
-<pre><code>##                    Estimate Std. Error    t value     Pr(&gt;|t|)
-## (Intercept)       5.9127778  0.1229121 48.1057599 3.632459e-12
-## iris.sub$Species1 0.1458333  0.1591002  0.9166129 3.832497e-01
-## iris.sub$Species2 0.4336111  0.0816685  5.3094044 4.877584e-04</code></pre>
+<pre><code>##                    Estimate Std. Error   t value     Pr(&gt;|t|)
+## (Intercept)       6.1177778  0.1827822 33.470317 9.347925e-11
+## iris.sub$Species1 0.3933333  0.2262305  1.738640 1.160991e-01
+## iris.sub$Species2 0.4911111  0.1278642  3.840881 3.961182e-03</code></pre>
 </div>
 <div id="sum-to-zero-contrasts" class="section level2" number="14.9">
 <h2><span class="header-section-number">14.9</span> Sum-to-zero contrasts</h2>
@@ -1376,17 +1376,17 @@ Y_i = \bar{\alpha} + \alpha_{j(i)} + \epsilon_i \text{, where } \epsilon_i \sim 
 <span id="cb405-2"><a href="week-8-lecture.html#cb405-2" aria-hidden="true" tabindex="-1"></a><span class="fu">model.matrix</span>(<span class="sc">~</span> iris.sub<span class="sc">$</span>Species)</span></code></pre></div>
 <pre><code>##    (Intercept) iris.sub$Species1 iris.sub$Species2
 ## 1            1                 1                 0
-## 2            1                 1                 0
+## 2            1                 0                 1
 ## 3            1                 0                 1
-## 4            1                 0                 1
+## 4            1                -1                -1
 ## 5            1                -1                -1
 ## 6            1                -1                -1
 ## 7            1                 1                 0
 ## 8            1                 0                 1
-## 9            1                -1                -1
-## 10           1                -1                -1
-## 11           1                -1                -1
-## 12           1                 0                 1
+## 9            1                 0                 1
+## 10           1                 1                 0
+## 11           1                 0                 1
+## 12           1                -1                -1
 ## attr(,&quot;assign&quot;)
 ## [1] 0 1 1
 ## attr(,&quot;contrasts&quot;)
@@ -1394,10 +1394,10 @@ Y_i = \bar{\alpha} + \alpha_{j(i)} + \epsilon_i \text{, where } \epsilon_i \sim 
 ## [1] &quot;contr.sum&quot;</code></pre>
 <div class="sourceCode" id="cb407"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb407-1"><a href="week-8-lecture.html#cb407-1" aria-hidden="true" tabindex="-1"></a>sumtozero <span class="ot">&lt;-</span> <span class="fu">summary</span>(<span class="fu">lm</span>(iris.sub<span class="sc">$</span>Sepal.Length <span class="sc">~</span> iris.sub<span class="sc">$</span>Species))</span>
 <span id="cb407-2"><a href="week-8-lecture.html#cb407-2" aria-hidden="true" tabindex="-1"></a>sumtozero<span class="sc">$</span>coefficients</span></code></pre></div>
-<pre><code>##                     Estimate Std. Error   t value     Pr(&gt;|t|)
-## (Intercept)        5.9127778  0.1229121 48.105760 3.632459e-12
-## iris.sub$Species1 -0.5794444  0.1854545 -3.124456 1.223048e-02
-## iris.sub$Species2 -0.2877778  0.1719648 -1.673469 1.285619e-01</code></pre>
+<pre><code>##                      Estimate Std. Error    t value     Pr(&gt;|t|)
+## (Intercept)        6.11777778  0.1827822 33.4703172 9.347925e-11
+## iris.sub$Species1 -0.88444444  0.2757889 -3.2069614 1.071100e-02
+## iris.sub$Species2 -0.09777778  0.2428980 -0.4025466 6.966754e-01</code></pre>
 <p>There is one final “off-the-shelf” contrast that we will learn, and that is polynomial contrasts.</p>
 </div>
 <div id="polynomial-contrasts" class="section level2" number="14.10">

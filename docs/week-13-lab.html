@@ -24,7 +24,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-04-26" />
+<meta name="date" content="2023-04-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -476,7 +476,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Model selection / model comparison</p></li>
 <li><p>Model criticism</p></li>
 </ol>
-<p>We will need a series of packages for today’s lab, some of which we have not used before: MASS, lmtest, MuMIn, car, and gvlma.</p>
+<p><strong>We will need a series of packages for today’s lab, some of which we have not used before: MASS, lmtest, MuMIn, car, and gvlma.</strong></p>
 <div id="part-1-model-selection-model-comparison" class="section level2" number="25.1">
 <h2><span class="header-section-number">25.1</span> Part 1: Model selection / model comparison</h2>
 <p>There is a frog dataset on the distribution of the Southern Corroboree frog that we are going to attach. More information on the definition of the covariates in this dataset can be found <a href="https://www.key2stats.com/data-set/view/235">here</a>.</p>
@@ -503,6 +503,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb849"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb849-1"><a href="week-13-lab.html#cb849-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(<span class="fu">cbind</span>(altitude,distance,NoOfPools,NoOfSites,avrain,meanmin,meanmax))</span></code></pre></div>
 <p><img src="Week-13-lab_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>Looking at the data in this way, are there any covariates that might benefit from transformation?</p>
+<p><strong>Question: Why bother transforming a covariate?</strong></p>
+<details>
+<summary>
+Click for Answer
+</summary>
+<span style="color: blueviolet;">
+As you can see from the scatterplots, some covariates have points with large leverage, and these point may (but don’t always) have high influence on model fit. Often we want all the points to have roughly equal influence on the model fit so we will apply a transformation like the log() to spread out small values all bunched together and to pull in large values that are much larger than the others. These transformations (e.hg., log, square root) are often referred to as “variance stabilizing” transformations.
+</span>
+</details>
+<p>
+ 
+</p>
 <p>Let’s try log-transforming “distance” and “Number of Pools.”</p>
 <div class="sourceCode" id="cb850"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb850-1"><a href="week-13-lab.html#cb850-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(<span class="fu">cbind</span>(altitude,<span class="fu">log</span>(distance),<span class="fu">log</span>(NoOfPools),NoOfSites,avrain,meanmin,meanmax))</span></code></pre></div>
 <p><img src="Week-13-lab_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>

@@ -9,7 +9,7 @@ In lab we'll go through
 
 2. Model criticism
 
-We will need a series of packages for today's lab, some of which we have not used before: MASS, lmtest, MuMIn, car, and gvlma.
+**We will need a series of packages for today's lab, some of which we have not used before: MASS, lmtest, MuMIn, car, and gvlma.**
 
 Part 1: Model selection / model comparison
 ------------------------
@@ -56,6 +56,17 @@ pairs(cbind(altitude,distance,NoOfPools,NoOfSites,avrain,meanmin,meanmax))
 <img src="Week-13-lab_files/figure-html/unnamed-chunk-3-1.png" width="672" />
 
 Looking at the data in this way, are there any covariates that might benefit from transformation?
+
+**Question: Why bother transforming a covariate?**
+
+<details>
+  <summary>Click for Answer</summary>
+<span style="color: blueviolet;">
+As you can see from the scatterplots, some covariates have points with large leverage, and these point may (but don't always) have high influence on model fit. Often we want all the points to have roughly equal influence on the model fit so we will apply a transformation like the log() to spread out small values all bunched together and to pull in large values that are much larger than the others. These transformations (e.hg., log, square root) are often referred to as "variance stabilizing" transformations.
+</span>
+</details> 
+
+<p>&nbsp;</p>
 
 Let's try log-transforming "distance" and "Number of Pools".
 
