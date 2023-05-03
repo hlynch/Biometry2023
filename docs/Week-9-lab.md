@@ -257,19 +257,19 @@ summary(fit)
 ## lm(formula = value ~ X)
 ## 
 ## Residuals:
-##      Min       1Q   Median       3Q      Max 
-## -24.7441  -6.7730   0.5249   6.7365  17.3109 
+##     Min      1Q  Median      3Q     Max 
+## -20.930  -5.812   2.083   3.900  22.679 
 ## 
 ## Coefficients:
 ##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)  -0.7076     3.6998  -0.191     0.85    
-## X            -2.0166     0.2084  -9.676 1.98e-10 ***
+## (Intercept)   1.3823     4.0699    0.34    0.737    
+## X            -2.3551     0.2293  -10.27 5.29e-11 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 9.88 on 28 degrees of freedom
-## Multiple R-squared:  0.7698,	Adjusted R-squared:  0.7616 
-## F-statistic: 93.63 on 1 and 28 DF,  p-value: 1.98e-10
+## Residual standard error: 10.87 on 28 degrees of freedom
+## Multiple R-squared:  0.7903,	Adjusted R-squared:  0.7828 
+## F-statistic: 105.5 on 1 and 28 DF,  p-value: 5.294e-11
 ```
 
 Copy this script into R and r-run it several times. Notice how the estimates for slope and intercept bounce around, but they should be correct *on average* and also the scale of variation from one run to the next should make sense given the estimate of the standard error. (Their standard deviation should be the standard error.) Notice also that as you increase sigma, the R2 goes down because now you are increasing the variation that is *not* explained by the covariate. Try changing the number of samples drawn, either by extending the vector of the covariates or by drawing multiple times for each value (you will have to modify the code to make this latter change work). Notice how the standard errors on the intercept and slope coefficients gets smaller as the data set gets larger but the estimate for sigma (which is listed as the residual standard error near the bottom) does not. The parameter sigma is a property of the underlying population, not a property of the sample drawn, so it does not get smaller as you increase the number of samples in the dataset. (If this does not make sense, ask me!)
@@ -284,7 +284,7 @@ mean(residuals(fit)^2)
 ```
 
 ```
-## [1] 91.10964
+## [1] 110.2481
 ```
 
 while the *root mean squared error* is
@@ -295,7 +295,7 @@ sqrt(mean(residuals(fit)^2))
 ```
 
 ```
-## [1] 9.545137
+## [1] 10.49991
 ```
 
 which is just the square-root of the mean squared error above.
@@ -308,7 +308,7 @@ sum(residuals(fit)^2)
 ```
 
 ```
-## [1] 2733.289
+## [1] 3307.443
 ```
 
 and the *residual standard error* is
@@ -319,7 +319,7 @@ sqrt(sum(residuals(fit)^2)/(n-2))
 ```
 
 ```
-## [1] 9.880156
+## [1] 10.86844
 ```
 
 This last term is the most confusing at first, but the residual standard error is taking the data you have as a sample from the larger population and trying to estimate the standard error from the larger population. So it takes the residual sum of squares, divides that by the degrees of freedom (we have 30 data points, we lost 2 degrees of freedom, so we are left with 28 degrees of freedom for the estimation of the residual standard error) and then takes the square root. We can think of the mean squared error as being the population variance (i.e. the variance of the residuals if the dataset represented the entire population, see [our discussion in Week 1](#pop_vs_sample_var)) but this underestimates the variance if all we have is a sample from the larger population, so in this case we want to calculate the *sample variance* (i.e. our estimate of the population variance if all we have is a sample)
@@ -330,7 +330,7 @@ mean(residuals(fit)^2)*(n/(n-2))
 ```
 
 ```
-## [1] 97.61747
+## [1] 118.123
 ```
 
 This should come close to what we used to generate the data ($\sigma=10$ so $\sigma^{2}=100$). (If you go back and change the code to use a larger number of data points, the estimate will be closer.)
@@ -343,7 +343,7 @@ sigma(fit)
 ```
 
 ```
-## [1] 9.880156
+## [1] 10.86844
 ```
 
 Notice that this is note quite the same (and is always slightly larger) than this alternative estimate of $\sigma$.
@@ -355,7 +355,7 @@ fitdistr(residuals(fit),"normal")$estimate[2]
 
 ```
 ##       sd 
-## 9.545137
+## 10.49991
 ```
 
 This takes your residuals, uses fitdistr to fit a Normal distribution to them, and then reports the standard deviation of the residuals. This should give you a measure of the spread of the residuals, which should be the same as the residual standard error extracted from sigma(fit).
@@ -886,8 +886,8 @@ duncan.boot
 ## 
 ## Bootstrap Statistics :
 ##      original       bias    std. error
-## t1* 6.3002197  0.155091092  4.62469646
-## t2* 0.6615263 -0.004096508  0.07523557
+## t1* 6.3002197  0.408297362  4.63573013
+## t2* 0.6615263 -0.007892112  0.07414871
 ```
 
 **<span style="color: green;">Checkpoint #5: How would we know if the bias is significant (i.e., how would we calculate the standard error of the bias)?</span>**

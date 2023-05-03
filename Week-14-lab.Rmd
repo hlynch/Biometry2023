@@ -11,7 +11,7 @@ There are a number of functions you could use in R to do principal components an
 
 
 ```{r}
-readings<-read.csv("~/Dropbox/Biometry/Week 14 Multivariate analyses and Review/Week 14 Lab/Readings 2022.csv",header=T)
+readings<-read.csv("~/Dropbox/Biometry/Week 14 Multivariate analyses and Review/Week 14 Lab/Readings 2023.csv",header=T)
 
 missing<-is.na(readings$Useful)|is.na(readings$Difficult)|is.na(readings$Interesting)
 Useful<-aggregate(readings$Useful[!missing], by=list(Index=readings$Index[!missing]),FUN=mean)$x
@@ -33,13 +33,13 @@ To print out a summary of the PCA, we use
 summary(pca.result)
 ```
 
-We see that PCA1 is associated with over 57% of the variation in responses. So, what is PCA1?
+We see that PCA1 is associated with over 73% of the variation in responses. So, what is PCA1?
 
 ```{r}
 pca.result$rotation
 ```
 
-PCA1 is an axis which describes papers that are more Interesting and less Difficult, with a very small weight towards papers that are Useful. In other words, a large positive PCA1 score would be associated with an interesting paper that was easy to read. Note that the principal components denote an axis, but the direction is arbitrary. Since no direction is implied by the sign, we do not interpret this as saying that most papers were interesting and easy. Instead we would say that the papers largely fall along a common axis in which Interesting/Easy to read papers are at one end, and Boring/Difficult to read papers are at the other end. (For now I am ignoring the small influence of Useful on PCA1.)
+PCA1 is an axis which describes papers that are more Interesting and less Difficult, with a very small weight towards papers that are Useful. In other words, a large positive PCA1 score would be associated with an interesting paper that was easy to read. Note that the principal components denote an axis, but the direction is arbitrary. Since no direction is implied by the sign, we do not interpret this as saying that most papers were interesting and easy. Instead we would say that the papers largely fall along a common axis in which Interesting/Easy to read papers are at one end, and Boring/Difficult to read papers are at the other end. (For now I am ignoring the smaller influence of Useful on PCA1.)
 
 We can visualize this using the function 'biplot'
 
@@ -47,34 +47,42 @@ We can visualize this using the function 'biplot'
 biplot(pca.result)
 ```
 
-Biplots take some getting used to, and when they have many more dimensions, they become increasingly difficult to interpret. However, papers high on PC1 are generally Interesting and Easy to read and papers low on PC1 are generally Boring and more Difficult to read. Papers high on PC2 are generally more Interesting and Difficult and Useful and papers low on PC2 are generally less Interesting but Easy to read and less Useful.
+Biplots take some getting used to, and when they have many more dimensions, they become increasingly difficult to interpret. However, papers high on PC1 are generally Interesting and Easy to read and papers low on PC1 are generally Boring and more Difficult to read. Papers high on PC2 are generally more Useful and slightly more Difficult and papers low on PC2 are generally less Useful but less Difficult to read. It's worth noting that there is a nice spread of papers in this bi-plot, so at least along these two axes, there were no real outliers. Also, keep in mind that since the PCA is picking up relative differences, it is not possible for all papers to end up in one corner of the plot. While of course we would want all papers to be highly Interesting and highly Useful, even if all papers ranked high on both measures overall, the PCA will identify axes of *differences* so there will always be some that show up as "relatively less Interesting" - does this make sense?
 
-Which papers were highly positive on PC2? These are papers that were both Useful and Interesting.
+Which papers were highly positive on PC2 and also positive on PC1? These are papers that were Useful and also more Interesting than the average.
 
 ```{r}
 readings[readings$Index==15,1][1]
+readings[readings$Index==21,1][1]
+readings[readings$Index==4,1][1]
 readings[readings$Index==25,1][1]
 ```
 
-I totally agree on the Siddhartha paper!
+I totally agree on the Siddhartha paper! Johnson's paper's also fall in this qudrant as well.
 
 You can play around with this yourself and see why I added the [1] at the end. When I pull out the rows with the Index identified by the PCA, I get the list of all entries (since we had >1 team rating the papers) and so I only print the first one.
 
 Which paper fell out along the Difficult axis?
 
 ```{r}
-readings[readings$Index==18,1][1]
+readings[readings$Index==22,1][1]
 ```
 
-Indeed, Hurlbert has a lot of information. Also, 
+Burnham's AIC model selection paper. Also, 
 
 ```{r}
-readings[readings$Index==2,1][1]
+readings[readings$Index==6,1][1]
 ```
 
-Alas, poor Bolker! Bolker is often rated as difficult. I keep this chapter around because his thinking is so "spot on" and the material in his book will serve you well if you continue on doing quantitative modelling.
+Usually Bolker holds this honor! Bolker is often rated as difficult. I keep this chapter around because his thinking is so "spot on" and the material in his book will serve you well if you continue on doing quantitative modelling. I'm a little surprised to see Bender and Lange here, but every year is different.
 
-These papers are the only stand outs this year. The other readings cluster together.
+The real quadrant that I investigate closely are papers that are considered Difficult but not all that Useful. Through this PCA exeercise, I have eliminated papers consistently falling into this corner. Let's see what 16 is...
+
+```{r}
+readings[readings$Index==16,1][1]
+```
+
+I'm surprised to see Altman here, as the Points of Significance papers are so short and I think quite well written. I think this probably means we just need to spend a bit of time going over this one next year.
 
 One thing to keep in mind is that a PCA identifies *variation* in the dataset. It's worth putting these numbers in context of the overall means.
 
@@ -84,15 +92,46 @@ mean(Difficult)
 mean(Interesting)
 ```
 
-So the average reading scored pretty high for being Useful and Interesting and was rated of medium Difficulty.
+So the average reading scored pretty high for being Useful and Interesting and was rated below average for Difficulty, so on the whole, I'm fairly pleased with these ratings.
 
-You might be interested in how these ratings have changed over time (I was!):
+You might be interested in how these ratings have changed over time (I was!). Let's start with the readings.
 
-```{r echo=FALSE, fig.align='center', fig.cap='Readings ratings through the years', out.width='100%'}
-knitr::include_graphics('Readings time series.png')
+```{r}
+library(readxl)
+Biometry_change <- read_excel("_data/Biometry_change.xlsx")
+fitR_U<-summary(lm(Biometry_change$R_U_mean~Biometry_change$Year))
+fitR_U
+
+plot(Biometry_change$Year,Biometry_change$R_U_mean,pch=15,xlab="Year",ylab="Mean Response (out of 5)",cex=2,ylim=c(1.5,4.5),main="Useful (black), Difficult (red), Interesting (green)")
+
+for (i in 1:8)
+{
+  segments(x0=Biometry_change$Year[i], x1=Biometry_change$Year[i], y0=Biometry_change$R_U_mean[i]-2*Biometry_change$R_U_se[i],y1=Biometry_change$R_U_mean[i]+2*Biometry_change$R_U_se[i])
+}
+
+fitR_D<-summary(lm(Biometry_change$R_D_mean~Biometry_change$Year))
+fitR_D
+
+points(Biometry_change$Year,Biometry_change$R_D_mean,pch=15,xlab="Year",ylab="Mean Difficult",cex=2,col=2)
+for (i in 1:8)
+{
+  segments(x0=Biometry_change$Year[i], x1=Biometry_change$Year[i], y0=Biometry_change$R_D_mean[i]-2*Biometry_change$R_D_se[i],y1=Biometry_change$R_D_mean[i]+2*Biometry_change$R_D_se[i],col=2)
+}
+
+fitR_I<-summary(lm(Biometry_change$R_I_mean~Biometry_change$Year))
+fitR_I
+
+points(Biometry_change$Year,Biometry_change$R_I_mean,pch=15,xlab="Year",ylab="Mean Difficult",cex=2,col=3)
+for (i in 1:8)
+{
+  segments(x0=Biometry_change$Year[i], x1=Biometry_change$Year[i], y0=Biometry_change$R_I_mean[i]-2*Biometry_change$R_I_se[i],y1=Biometry_change$R_I_mean[i]+2*Biometry_change$R_I_se[i],col=3)
+}
+
 ```
 
-We can do the same for the problem sets:
+So it looks like while the overall trend is towards readings that are more Interesting, more Difficult, and more Useful, the only one of these that is statistically significant is the trend towards more Interesting.
+
+The problem sets show exactly the same trends, with no significant changes in Useful or Difficult but a significant trend towards ore Interesting problem sets.
 
 ```{r}
 PS<-read.csv("~/Dropbox/Biometry/Week 14 Multivariate analyses and Review/Week 14 Lab/ProblemSets 2022.csv",header=T)
@@ -116,19 +155,19 @@ To print out a summary of the PCA, we use
 summary(pca.result)
 ```
 
-We see that for the problem sets, PC1 is even more dominant (85% of the variation). So, what is PCA1?
+We see that for the problem sets, PC1 is less dominant (56% of the variation). So, what is PCA1?
 
 ```{r}
 pca.result$rotation
 ```
 
-PC1 almost evenly combines all three factors, and the axis divides problem sets judged Useless/Boring/Difficult and those that are Useful/Interesting/Easy. (Reminder: the signs of the PCs is arbitrary, so the signs on the rotation could have all be flipped.) Looking across all the PC axes, we want papers that are low (negative) on PC1 and low (negative) on PC2. PC3 is a toss up, because that axis represents a trade-off between Useful and Interesting.
+PC1 combines all three factors with the largest component being focused on "Useful", and the axis divides problem sets judged Useless/Boring/Difficult and those that are Useful/Interesting/Easy. (Reminder: the signs of the PCs is *arbitrary*, so the signs on the rotation could have all be flipped.) Looking across all the PC axes, we want papers that are low (negative) on PC1 and low (negative) on PC2 (though these are also slightly less Useful). PC3 is a toss up, because that axis represents a trade-off between Useful and Interesting.
 
 ```{r}
 biplot(pca.result)
 ```
 
-We can see that problem set 6 is the one that is really driving variation here! If we were to eliminate week 6, the others are all varying primarily on PC2.
+We can see that problem set 6 is the one that is really driving variation here! (As always) If we were to eliminate week 6, the others are all varying primarily on PC2.
 
 Again, looking at the means:
 
@@ -140,20 +179,48 @@ mean(Interesting.means.PS)
 
 The problem sets overall rated as being very Useful and Interesting but also sort of Difficult. 
 
-The changes through time show a significant trend (not shown) in Interesting, but generally problem sets are becoming more interesting over time and are becoming slightly more Useful but also a hair more Difficult as well.
+How have things changed over time?
 
-```{r echo=FALSE, fig.align='center', fig.cap='Problem set ratings through the years', out.width='100%'}
-knitr::include_graphics('Problem set time series.png')
+```{r}
+fitPS_U<-summary(lm(Biometry_change$PS_U_mean~Biometry_change$Year))
+fitPS_U
+
+plot(Biometry_change$Year,Biometry_change$PS_U_mean,pch=15,xlab="Year",ylab="Mean Response (out of 5)",cex=2,ylim=c(2,5),main="Useful (black), Difficult (red), Interesting (green)")
+
+for (i in 1:8)
+{
+segments(x0=Biometry_change$Year[i], x1=Biometry_change$Year[i], y0=Biometry_change$PS_U_mean[i]-2*Biometry_change$PS_U_se[i],y1=Biometry_change$PS_U_mean[i]+2*Biometry_change$PS_U_se[i])
+}
+
+fitPS_D<-summary(lm(Biometry_change$PS_D_mean~Biometry_change$Year))
+fitPS_D
+
+points(Biometry_change$Year,Biometry_change$PS_D_mean,pch=15,xlab="Year",ylab="Mean Difficult",cex=2,col=2)
+for (i in 1:8)
+{
+  segments(x0=Biometry_change$Year[i], x1=Biometry_change$Year[i], y0=Biometry_change$PS_D_mean[i]-2*Biometry_change$PS_D_se[i],y1=Biometry_change$PS_D_mean[i]+2*Biometry_change$PS_D_se[i],col=2)
+}
+
+
+fitPS_I<-summary(lm(Biometry_change$PS_I_mean~Biometry_change$Year))
+fitPS_I
+
+points(Biometry_change$Year,Biometry_change$PS_I_mean,pch=15,xlab="Year",ylab="Mean Difficult",cex=2,col=3)
+for (i in 1:8)
+{
+  segments(x0=Biometry_change$Year[i], x1=Biometry_change$Year[i], y0=Biometry_change$PS_I_mean[i]-2*Biometry_change$PS_I_se[i],y1=Biometry_change$PS_I_mean[i]+2*Biometry_change$PS_I_se[i],col=3)
+}
+
 ```
 
+Interestingly, this is the same pattern seen for the Readings, with everything getting slightly (but not significantly) more Useful and Difficult over time but statistically significantly more Interesting.
 
 Missing at random - practice with GLMs
 --------------------------------------
 
-This year, we had no missing data! Usually, there are missing data for some of the readings, so for the purposes of the rest of the lab, I will use last year's data. 
+One of the things we can do with this dataset is to ask whether data were missing at random, since not all readings were given ratings.
 
 ```{r}
-readings<-read.csv("~/Dropbox/Biometry/Week 14 Multivariate analyses and Review/Week 14 Lab/Readings 2021.csv",header=T)
 missing<-is.na(readings$Useful)|is.na(readings$Difficult)|is.na(readings$Interesting)
 Useful<-aggregate(readings$Useful[!missing], by=list(Index=readings$Index[!missing]),FUN=mean)$x
 
@@ -182,18 +249,18 @@ for (i in 1:max(readings$Index))
 
 For simplicity, I am considering "evaluated" as evaluated for all three categories (Useful, Difficult, and Interesting).
 
-Now I use a Binomial GLM to model the probability of being evaluated as a function of Useful, Interesting, and Difficult (as rated by the other groups). Note that there were 5 groups total, so n=5.
+Now I use a Binomial GLM to model the probability of being evaluated as a function of Useful, Interesting, and Difficult (as rated by the other groups). Note that there were 11 groups total, so n=11.
 
 ```{r}
-fit<-glm(cbind(5-num.missing,num.missing)~Useful+Difficult+Interesting,family="binomial")
+fit<-glm(cbind(11-num.missing,num.missing)~Useful+Difficult+Interesting,family="binomial")
 summary(fit)
 ```
 
-None of the covariates are significant, which isn't a surprise. Because I (accidentally) didn't pass out the Week 14 readings until Monday night, it was only the Week 14 readings that had many NAs, so we would not expect (except possibly by chance) any association with the factors of Useful, Difficult, or Interesting. 
+None of the covariates are significant. 
 
 We might suspect a high degree of multicollinearity among the predictors. We can use PCA to create new orthogonal covariates which (more efficiently) capture the variability in the survey results. 
 
-I will rerun the PCA for the readings. (Keep in mind that we are now looking at last year's data.)
+I will rerun the PCA for the readings. 
 
 ```{r}
 pca.result<-prcomp(~Useful+Interesting+Difficult,retx=T)
@@ -201,18 +268,20 @@ summary(pca.result)
 pca.result$rotation
 ```
 
-PCA1 captures about 91% of the variability, so we try using just PCA1 in our GLM. 
+PCA1 captures about 73% of the variability, so we try using just PCA1 in our GLM. 
 
 ```{r}
-fit<-glm(cbind(5-num.missing,num.missing)~pca.result$x[,1],family="binomial")
+fit<-glm(cbind(11-num.missing,num.missing)~pca.result$x[,1],family="binomial")
 summary(fit)
 ```
 
-Still not significant.
+Aha! So none of the individual covariates are statistically significant, but in part this is because they are co-linear and so the variances are inflated. When we use the first PCA axis, the model does show a statistically significant trend between papers that are Useful, Interesting, and Easy and the probability that the paper was read.
+
+Is there an effect of paper length to consider? After all, that's probably the most salient feature of a paper when you first download it.
 
 ```{r}
-fit<-glm(cbind(5-num.missing,num.missing)~Length.means.readings,family="binomial")
+fit<-glm(cbind(11-num.missing,num.missing)~Length.means.readings,family="binomial")
 summary(fit)
 ```
 
-Length is not statistically correlated with whether a paper was rated, which is not surprising in this case because we know that the only papers not rated were the ones for the last week.
+Yes, but not in the direction we would anticipate. Longer papers are more likely to be read than shorter papers. Digging into the data a bit, the papers that were not rated and presumably not read were the very short Points of Significance papers, so this is certainly driving this unanticipated response. We have assumed throughout that these readings are all independent data points, but can you see why that might not be the case here? If students decide not to read the Points of Significance papers, that will impact all of those papers, and it might be that independent decisions are not being made for each one individually. (They were also assigned in the same week, so perhaps that plays a role as well.)
