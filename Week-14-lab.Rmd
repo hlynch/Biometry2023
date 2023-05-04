@@ -285,3 +285,23 @@ summary(fit)
 ```
 
 Yes, but not in the direction we would anticipate. Longer papers are more likely to be read than shorter papers. Digging into the data a bit, the papers that were not rated and presumably not read were the very short Points of Significance papers, so this is certainly driving this unanticipated response. We have assumed throughout that these readings are all independent data points, but can you see why that might not be the case here? If students decide not to read the Points of Significance papers, that will impact all of those papers, and it might be that independent decisions are not being made for each one individually. (They were also assigned in the same week, so perhaps that plays a role as well.)
+
+Finally, a word about grades
+--------------------------------------
+
+
+The question came up as to how grades have changed over time. Behold, the grade distribution over time (A=4, A-=3.67, B+=3.33, B=3, etc.).
+
+```{r}
+year<-c(2012,2013,2014,2015,2016,2017,2018,2020,2021,2022)
+mean.grade<-c(3.37,2.88,2.62,3.45,3.11,3.22,3.00,3.25,2.45,2.47)
+sem.grade<-c(0.15,0.21,0.26,0.13,0.18,0.19,0.23,0.20,0.33,0.32)
+plot(year,mean.grade,pch=15,xlab="Year",ylab="Mean grade",cex=2,col=1,ylim=c(1.5,4))
+points(year[c(8,9)],mean.grade[c(8,9)],pch=15,cex=2,col=2,ylim=c(1.5,4))
+for (i in 1:length(mean.grade))
+{
+segments(x0=year[i], x1=year[i], y0=mean.grade[i]-2*sem.grade[i],y1=mean.grade[i]+2*sem.grade[i],col=1)
+}
+segments(x0=year[8], x1=year[8], y0=mean.grade[8]-2*sem.grade[8],y1=mean.grade[8]+2*sem.grade[8],col=2)
+segments(x0=year[9], x1=year[9], y0=mean.grade[9]-2*sem.grade[9],y1=mean.grade[9]+2*sem.grade[9],col=2)
+```

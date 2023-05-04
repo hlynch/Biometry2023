@@ -24,7 +24,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-05-03" />
+<meta name="date" content="2023-05-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -448,6 +448,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="27" data-path="week-14-lab.html"><a href="week-14-lab.html"><i class="fa fa-check"></i><b>27</b> Week 14 Lab</a>
 <ul>
 <li class="chapter" data-level="27.1" data-path="week-14-lab.html"><a href="week-14-lab.html#missing-at-random---practice-with-glms"><i class="fa fa-check"></i><b>27.1</b> Missing at random - practice with GLMs</a></li>
+<li class="chapter" data-level="27.2" data-path="week-14-lab.html"><a href="week-14-lab.html#finally-a-word-about-grades"><i class="fa fa-check"></i><b>27.2</b> Finally, a word about grades</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -783,8 +784,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="Week-7-lecture_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <p>Be aware of overplotting (points that overlap) especially when data are discrete or rounded. One strategy for overcoming this is jittering the points so the density of points can be displayed without overly distorting the underlying relationships. You can use the ‘jitter’ command in the base package.</p>
 <div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb372-1"><a href="week-7-lecturelab.html#cb372-1" aria-hidden="true" tabindex="-1"></a><span class="fu">jitter</span>(<span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">7</span>))</span></code></pre></div>
-<pre><code>## [1] -0.008628078 -0.007498151  0.004101799 -0.019228984 -0.005860681
-## [6]  0.009614069  0.004447007</code></pre>
+<pre><code>## [1]  0.0172665417 -0.0166325803 -0.0006175367  0.0185427539  0.0027913994
+## [6] -0.0131840448 -0.0026686650</code></pre>
 <p>Before we launch into three-dimensional plotting, we should introduce ‘ggplot2’ which is quickly becoming “industry standard” for making plots in R. There is <em>so</em> much that can be done with ggplot2 that we will only scratch the surface today, but at least this introduction will illustrate some of the things that ggplot2 can do.</p>
 <p>The basic function to make plots using ggplot2 is ‘qplot.’ We can recreate the scatterplot of the mtcars data using ggplot2 as follows</p>
 <div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="week-7-lecturelab.html#cb374-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
@@ -825,8 +826,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 
 ## Number of data points:  2000 
 ## Number of grid bins:  200 x 200 
-## X range: ( -13.6942 , 12.33781 )
-## Y range: ( -13.6942 , 12.33781 )</code></pre>
+## X range: ( -14.96416 , 14.95667 )
+## Y range: ( -14.96416 , 14.95667 )</code></pre>
 <p>Notice that we had to use “same.scale=T” to make sure that distances along the x and y axes were comparable.</p>
 <p>Now we will use the hisr2d function to create inputs for a three-dimensional perspective plot.</p>
 <div class="sourceCode" id="cb379"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb379-1"><a href="week-7-lecturelab.html#cb379-1" aria-hidden="true" tabindex="-1"></a>h2d <span class="ot">&lt;-</span> <span class="fu">hist2d</span>(x,y,<span class="at">show=</span><span class="cn">FALSE</span>, <span class="at">same.scale=</span><span class="cn">TRUE</span>, <span class="at">nbins=</span><span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">30</span>))</span>

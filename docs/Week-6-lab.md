@@ -30,28 +30,28 @@ p.values
 ```
 
 ```
-##       [,1]      [,2]        [,3]       [,4]        [,5]       [,6]       [,7]
-##  [1,]   NA 0.9683769 0.002333992 0.22826961 0.834078364 0.02178405 0.03024542
-##  [2,]   NA        NA 0.001625628 0.20326531 0.859527511 0.01735018 0.02419194
-##  [3,]   NA        NA          NA 0.03382694 0.002950486 0.36637158 0.24846836
-##  [4,]   NA        NA          NA         NA 0.186529798 0.21354900 0.28548451
-##  [5,]   NA        NA          NA         NA          NA 0.02070400 0.02830301
-##  [6,]   NA        NA          NA         NA          NA         NA 0.82754874
-##  [7,]   NA        NA          NA         NA          NA         NA         NA
-##  [8,]   NA        NA          NA         NA          NA         NA         NA
-##  [9,]   NA        NA          NA         NA          NA         NA         NA
-## [10,]   NA        NA          NA         NA          NA         NA         NA
-##             [,8]        [,9]     [,10]
-##  [1,] 0.35259562 0.629116516 0.2155975
-##  [2,] 0.32833206 0.588848445 0.1947444
-##  [3,] 0.06933555 0.002568683 0.0782807
-##  [4,] 0.92635522 0.392919100 0.8799439
-##  [5,] 0.28921875 0.504413731 0.1765550
-##  [6,] 0.26179677 0.035056104 0.3272493
-##  [7,] 0.33166071 0.049505017 0.4174426
-##  [8,]         NA 0.549154912 0.8294466
-##  [9,]         NA          NA 0.3590867
-## [10,]         NA          NA        NA
+##       [,1]      [,2]      [,3]       [,4]       [,5]       [,6]       [,7]
+##  [1,]   NA 0.9928933 0.6831507 0.05559490 0.92053364 0.86043025 0.92957321
+##  [2,]   NA        NA 0.6826683 0.06166043 0.92862785 0.85591950 0.93805583
+##  [3,]   NA        NA        NA 0.01248092 0.62006790 0.82631954 0.60798801
+##  [4,]   NA        NA        NA         NA 0.08279686 0.03581214 0.06264818
+##  [5,]   NA        NA        NA         NA         NA 0.78799210 0.98683490
+##  [6,]   NA        NA        NA         NA         NA         NA 0.78892841
+##  [7,]   NA        NA        NA         NA         NA         NA         NA
+##  [8,]   NA        NA        NA         NA         NA         NA         NA
+##  [9,]   NA        NA        NA         NA         NA         NA         NA
+## [10,]   NA        NA        NA         NA         NA         NA         NA
+##             [,8]        [,9]      [,10]
+##  [1,] 0.92995401 0.636898746 0.89831004
+##  [2,] 0.92347662 0.638089504 0.89266473
+##  [3,] 0.69016223 0.965640204 0.72746984
+##  [4,] 0.01971137 0.007243207 0.01861311
+##  [5,] 0.84339470 0.576083107 0.81455201
+##  [6,] 0.90672538 0.785497080 0.93998949
+##  [7,] 0.84662121 0.558099676 0.81549030
+##  [8,]         NA 0.624620476 0.95937110
+##  [9,]         NA          NA 0.66541800
+## [10,]         NA          NA         NA
 ```
 
 Now we can see how many of these p.values are "significant". We know these are false positives, because all the data were generated from the same distribution.
@@ -63,7 +63,7 @@ false.positives
 ```
 
 ```
-## [1] 13
+## [1] 5
 ```
 
 We could correct this using the Bonferonni method:
@@ -141,7 +141,7 @@ new.threshold.R
 
 ```
 ##          5% 
-## 0.001786721
+## 0.001843239
 ```
 
 ```r
@@ -150,7 +150,7 @@ false.positives.R
 ```
 
 ```
-## [1] 1
+## [1] 0
 ```
 
 If you were to do this experiment (all of the code in the preceding clock) 100 times, you should get at least 1 false positive 5 times, since we have set the threshold such that we have a 5% chance that the smallest p-value in that set of 45 comparisons will be smaller than the threshold we set.
