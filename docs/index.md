@@ -1,7 +1,7 @@
 --- 
 title: "Biometry Lecture and Lab Notes"
 author: "Heather Lynch"
-date: "2023-05-04"
+date: "2023-05-12"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
@@ -123,3 +123,12 @@ In an effort to provide as much transparency as possible on the scope and style 
 * Spring 2021 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2021.pdf)
 * Spring 2022 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2022.pdf)
 
+
+**Helpful RMarkdown resources**
+
+Biometry students throughout the years have discovered various helpful tools, which I share here. No endorsement of these tools is implied, and their functionality and existence on the web is subject to change at any time.
+
+* Making pretty tables*
+
+*[TableConvert](https://tableconvert.com/markdown-generator)
+*[How to make beautiful tables in R (blog post)](https://rfortherestofus.com/2019/11/how-to-make-beautiful-tables-in-r/)

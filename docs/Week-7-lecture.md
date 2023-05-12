@@ -432,8 +432,8 @@ jitter(rep(0, 7))
 ```
 
 ```
-## [1]  0.0172665417 -0.0166325803 -0.0006175367  0.0185427539  0.0027913994
-## [6] -0.0131840448 -0.0026686650
+## [1] -0.00748121  0.01286341  0.01682073  0.01682271 -0.01438614  0.01092603
+## [7]  0.01302466
 ```
 
 Before we launch into three-dimensional plotting, we should introduce 'ggplot2' which is quickly becoming "industry standard" for making plots in R. There is *so* much that can be done with ggplot2 that we will only scratch the surface today, but at least this introduction will illustrate some of the things that ggplot2 can do.
@@ -505,8 +505,8 @@ hist2d(x,y, same.scale=TRUE)
 ## 
 ## Number of data points:  2000 
 ## Number of grid bins:  200 x 200 
-## X range: ( -14.96416 , 14.95667 )
-## Y range: ( -14.96416 , 14.95667 )
+## X range: ( -16.63644 , 14.37063 )
+## Y range: ( -16.63644 , 14.37063 )
 ```
 
 Notice that we had to use "same.scale=T" to make sure that distances along the x and y axes were comparable.

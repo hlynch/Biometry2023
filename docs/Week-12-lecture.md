@@ -28,7 +28,7 @@ With single factor ANOVA, we compared multiple levels of a factor. Another way t
 
 <img src="Week-12-lecture_files/figure-html/unnamed-chunk-2-1.png" width="384" />
 
-### ANOVA with more than one factor
+## ANOVA with more than one factor
 
 With two-way (and higher) ANOVA, we look at more than one factor at a time (e.g., the effect of density and season on limpet egg production). There are different ways in which multiple factors can be modeled, and this depends on the design of your study. We will focus our discussion primarily on two ways in which multiple factors can be applied in an experimental design: Nested vs Factorial. Note that in some complicated experiments, there may be elements that are nested and others that are factorial. This will become clear as we work through some examples.
 
@@ -40,7 +40,7 @@ The two factors are fully crossed, or all combinations of factors are included i
 
 We will start with factorial designs because these are the most logical extension of the one-way analyses we discussed last week.
 
-### Two-way ANOVA factorial designs
+## Two-way ANOVA factorial designs
 
 In the previous example, the number of egg masses per limpet was measured at different densities (factor A) and in different seasons (factor B). Two-way factorial designs can be represented in a table, where each cell is a combination of factor A and factor B. Each cell has multiple replicates.
 
