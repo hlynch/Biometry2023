@@ -92,13 +92,13 @@ Let's look at a few examples...
 <img src="Week-9-lecture_files/figure-html/unnamed-chunk-4-1.png" width="240" />
 
 ```
-## [1] -0.07772527
+## [1] 0.009008814
 ```
 
 <img src="Week-9-lecture_files/figure-html/unnamed-chunk-4-2.png" width="240" />
 
 ```
-## [1] 0.9478451
+## [1] 0.9467794
 ```
 
 ## Hypothesis testing - Pearson's *r*
@@ -192,7 +192,7 @@ cor(df$A, df$B)
 ```
 
 ```
-## [1] 0.3194736
+## [1] -0.2016109
 ```
 
 Even though *A* and *B* clearly have a strong relationship, correlation is only effective if the relationship is **linear**.
@@ -226,7 +226,7 @@ paste("The 95% confidence interval for the estimated correlation coefficient, ",
 ```
 
 ```
-## [1] "The 95% confidence interval for the estimated correlation coefficient, 0.897 is (0.855, 0.928)"
+## [1] "The 95% confidence interval for the estimated correlation coefficient, 0.899 is (0.847, 0.933)"
 ```
 </span>
 </details> 
@@ -272,7 +272,7 @@ pnorm(q = z.obs, mean = 0, sd = sqrt(1 / (100 - 3)), lower.tail = FALSE)
 ```
 
 ```
-## [1] 2.930982e-51
+## [1] 1.74538e-50
 ```
 
 ```r
@@ -282,7 +282,7 @@ pnorm(q = test.stat, lower.tail = FALSE)
 ```
 
 ```
-## [1] 2.930982e-51
+## [1] 1.74538e-50
 ```
 
 To simply the notation, let us define
@@ -453,7 +453,7 @@ $$
 s_\epsilon^2 = \frac{1}{n - p} \sum_{i = 1}^n (Y_i - \hat{Y_i})^2
 $$
 
-We substitute $s_\epsilon^2$ for $\sigma_\epsilon^2$. This is an unbiased and maximally efficient estimator for $\sigma_\epsilon^2$. $p$ is the number of parameters required to estimate $\sigma_\epsilon^2$. Note that Aho calls this mean squared error (MSE) but most sources reserve that term for the actual mean of the squared errors, whereas here we want an unbiased estimate of the variance from the large pool of residuals our own sample of residuals are drawn from. (In other words, we have $n$ data points and so our model yields $n$ residuals; these $n$ values are just a sample from a larger population of residuals and **that's** the variance we want to estimate here, so we have to devide by the degrees of freedom, which is $n-p$. There is a bit more discussion of this terminology in the lab.)
+We substitute $s_\epsilon^2$ for $\sigma_\epsilon^2$. This is an unbiased and maximally efficient estimator for $\sigma_\epsilon^2$. $p$ is the number of parameters required to estimate $\sigma_\epsilon^2$. Note that Aho calls this mean squared error (MSE) but most sources reserve that term for the actual mean of the squared errors, whereas here we want an unbiased estimate of the variance from the large pool of residuals our own sample of residuals are drawn from. (In other words, we have $n$ data points and so our model yields $n$ residuals; these $n$ values are just a sample from a larger population of residuals and **that's** the variance we want to estimate here, so we have to divide by the degrees of freedom, which is $n-p$. There is a bit more discussion of this terminology in the lab.)
 
 **Question: How many degrees of freedom do we have for $s_\epsilon^2$ in a simple linear regression?**
 

@@ -156,10 +156,16 @@ Copy this script into R and r-run it several times. Notice how the estimates for
 
 We can use this simple model to define some common (and often confusing) terms used in regression (and later, ANOVA), which will require using the function "residuals" to pull out the difference between each point and the best-fit line.
 
-The *mean squared error* is 
+The *mean squared error* is usually defined as
 
 ```{r}
 mean(residuals(fit)^2)
+```
+
+which is the same as 
+
+```{r}
+sqrt(sum(residuals(fit)^2)/n)
 ```
 
 while the *root mean squared error* is
@@ -168,9 +174,9 @@ while the *root mean squared error* is
 sqrt(mean(residuals(fit)^2))
 ```
 
-which is just the square-root of the mean squared error above.
+which is just the square-root of the mean squared error above. Note that some authors (like Aho) will divide by the degrees of freedom to get an unbiased estimate of the population variance $\sigma^{2}_{\epsilon}$ and call that the mean squared error (or MSE). Just be careful with these terms to know whether the calculation is a description of the residuals observed (in which case the denominator is $n$) or whether the calculation is being used as an unbiased estimate of the larger population of residuals (in which case the denominator should be the degrees of freedom).
 
-The *residual sum of squares* is
+The *residual sum of squares* is actually better thought of as the "sum of residuals squared", i.e.
 
 ```{r}
 sum(residuals(fit)^2)
@@ -182,7 +188,7 @@ and the *residual standard error* is
 sqrt(sum(residuals(fit)^2)/(n-2))
 ```
 
-This last term is the most confusing at first, but the residual standard error is taking the data you have as a sample from the larger population and trying to estimate the standard error from the larger population. So it takes the residual sum of squares, divides that by the degrees of freedom (we have 30 data points, we lost 2 degrees of freedom, so we are left with 28 degrees of freedom for the estimation of the residual standard error) and then takes the square root. We can think of the mean squared error as being the population variance (i.e. the variance of the residuals if the dataset represented the entire population, see [our discussion in Week 1](#pop_vs_sample_var)) but this underestimates the variance if all we have is a sample from the larger population, so in this case we want to calculate the *sample variance* (i.e. our estimate of the population variance if all we have is a sample)
+Note that this last term uses the degrees of freedom in the numerator. The residual standard error is taking the data you have as a sample from the larger population and trying to estimate the standard error from the larger population. So it takes the residual sum of squares, divides that by the degrees of freedom (we have 30 data points, we lost 2 degrees of freedom, so we are left with 28 degrees of freedom for the estimation of the residual standard error) and then takes the square root. We can think of the mean squared error as being the population variance (i.e. the variance of the residuals if the dataset represented the entire population, see [our discussion in Week 1](#pop_vs_sample_var)) but this underestimates the variance if all we have is a sample from the larger population, so in this case we want to calculate the *sample variance* (i.e. our estimate of the population variance if all we have is a sample)
 
 ```{r}
 mean(residuals(fit)^2)*(n/(n-2))
