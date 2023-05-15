@@ -165,7 +165,7 @@ mean(residuals(fit)^2)
 which is the same as 
 
 ```{r}
-sqrt(sum(residuals(fit)^2)/n)
+sum(residuals(fit)^2)/n
 ```
 
 while the *root mean squared error* is
