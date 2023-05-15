@@ -116,11 +116,20 @@ In an effort to provide as much transparency as possible on the scope and style 
 * Spring 2015 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2015.pdf)
 * Spring 2016 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2016.pdf)
 * Spring 2017 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2017.pdf)
-* Spring 2018 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2018.pdf)
+* Spring 2018 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2018.pdf) [See note below]
 * Spring 2020 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2020.pdf)
 * Spring 2021 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2021.pdf)
-* Spring 2022 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2022.pdf)
+* Spring 2022 Final: [link](https://github.com/hlynch/Biometry2023/tree/master/_data/Final_exam_Spring2022.pdf) [See note below]
 
+Note that there are some questions that are poorly worded or confusing. 
+
+Spring 2018 Final 10c and 10d are ill posed and should be ignored.
+
+Spring 2022 Final question 5 should have been written as
+
+$$
+Y_{i}~N(\beta_{0}+\beta_{1}SST_{i}+\beta_{1}SST_{i}+\beta_{2}PreyDensity_{i}+\beta_{3}StartingLength_{i}+\beta_{4}I[Group_{i}==\mbox{Adult Female}]++\beta_{5}I[Group_{i}==\mbox{Juvenile Male}]+\beta_{6}I[Group_{i}==\mbox{Juvenile Female}],\sigma^{2})
+$$
 
 **Helpful RMarkdown resources**
 
