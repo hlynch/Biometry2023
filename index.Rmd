@@ -128,8 +128,8 @@ Spring 2018 Final 10c and 10d are ill posed and should be ignored.
 Spring 2022 Final question 5 should have been written as
 
 $$
-Y_{i} \sim N(\beta_{0}+\beta_{1}SST_{i}+\beta_{1}SST_{i}+\beta_{2}PreyDensity_{i}+ \\
-\beta_{3}StartingLength_{i}+\beta_{4}I[Group_{i}==\mbox{Adult Female}]++\beta_{5}I[Group_{i}==\mbox{Juvenile Male}]+\\
+Y_{i} \sim N(\beta_{0}+\beta_{1}SST_{i}+\beta_{2}PreyDensity_{i}+ \\
+\beta_{3}StartingLength_{i}+\beta_{4}I[Group_{i}==\mbox{Adult Female}]+\beta_{5}I[Group_{i}==\mbox{Juvenile Male}]+\\
 \beta_{6}I[Group_{i}==\mbox{Juvenile Female}],\sigma^{2})
 $$
 
