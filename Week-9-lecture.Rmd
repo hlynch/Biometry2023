@@ -378,7 +378,7 @@ $$
 s_\epsilon^2 = \frac{1}{n - p} \sum_{i = 1}^n (Y_i - \hat{Y_i})^2
 $$
 
-We substitute $s_\epsilon^2$ for $\sigma_\epsilon^2$. This is an unbiased and maximally efficient estimator for $\sigma_\epsilon^2$. $p$ is the number of parameters required to estimate $\sigma_\epsilon^2$. This is sometimes called **mean squared error (MSE)** (as it is in Aho).
+We substitute $s_\epsilon^2$ for $\sigma_\epsilon^2$. This is an unbiased and maximally efficient estimator for $\sigma_\epsilon^2$. $p$ is the number of parameters required to estimate $\sigma_\epsilon^2$. Note that Aho calls this mean squared error (MSE) but most sources reserve that term for the actual mean of the squared errors, whereas here we want an unbiased estimate of the variance from the large pool of residuals our own sample of residuals are drawn from. (In other words, we have $n$ data points and so our model yields $n$ residuals; these $n$ values are just a sample from a larger population of residuals and **that's** the variance we want to estimate here, so we have to devide by the degrees of freedom, which is $n-p$. There is a bit more discussion of this terminology in the lab.)
 
 **Question: How many degrees of freedom do we have for $s_\epsilon^2$ in a simple linear regression?**
 
