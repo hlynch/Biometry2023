@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>26 Week 14 Lecture | Biometry Lecture and Lab Notes</title>
   <meta name="description" content="26 Week 14 Lecture | Biometry Lecture and Lab Notes" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="26 Week 14 Lecture | Biometry Lecture and Lab Notes" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-05-15" />
+<meta name="date" content="2024-01-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="week-13-lab.html"/>
 <link rel="next" href="week-14-lab.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -91,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -104,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -116,6 +117,11 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -170,7 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="week-2-lecture.html"><a href="week-2-lecture.html"><i class="fa fa-check"></i><b>3</b> Week 2 Lecture</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="week-2-lecture.html"><a href="week-2-lecture.html#week-2-readings"><i class="fa fa-check"></i><b>3.1</b> Week 2 Readings</a></li>
-<li class="chapter" data-level="3.2" data-path="week-1-lecture.html"><a href="week-1-lecture.html#todays-agenda"><i class="fa fa-check"></i><b>3.2</b> Today’s Agenda</a></li>
+<li class="chapter" data-level="3.2" data-path="week-2-lecture.html"><a href="week-2-lecture.html#todays-agenda-1"><i class="fa fa-check"></i><b>3.2</b> Today’s Agenda</a></li>
 <li class="chapter" data-level="3.3" data-path="week-2-lecture.html"><a href="week-2-lecture.html#hypothesis-testing"><i class="fa fa-check"></i><b>3.3</b> Hypothesis testing</a></li>
 <li class="chapter" data-level="3.4" data-path="week-2-lecture.html"><a href="week-2-lecture.html#permutation-tests"><i class="fa fa-check"></i><b>3.4</b> Permutation tests</a></li>
 <li class="chapter" data-level="3.5" data-path="week-2-lecture.html"><a href="week-2-lecture.html#parameter-estimation"><i class="fa fa-check"></i><b>3.5</b> Parameter estimation</a></li>
@@ -186,7 +192,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2" data-path="week-2-lab.html"><a href="week-2-lab.html#testing-hypotheses-through-permutation"><i class="fa fa-check"></i><b>4.2</b> Testing hypotheses through permutation</a></li>
 <li class="chapter" data-level="4.3" data-path="week-2-lab.html"><a href="week-2-lab.html#basics-of-bootstrap-and-jackknife"><i class="fa fa-check"></i><b>4.3</b> Basics of bootstrap and jackknife</a></li>
 <li class="chapter" data-level="4.4" data-path="week-2-lab.html"><a href="week-2-lab.html#calculating-bias-and-standard-error"><i class="fa fa-check"></i><b>4.4</b> Calculating bias and standard error</a></li>
-<li class="chapter" data-level="4.5" data-path="week-2-lecture.html"><a href="week-2-lecture.html#parametric-bootstrap"><i class="fa fa-check"></i><b>4.5</b> Parametric bootstrap</a></li>
+<li class="chapter" data-level="4.5" data-path="week-2-lab.html"><a href="week-2-lab.html#parametric-bootstrap-1"><i class="fa fa-check"></i><b>4.5</b> Parametric bootstrap</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="week-3-lecture.html"><a href="week-3-lecture.html"><i class="fa fa-check"></i><b>5</b> Week 3 Lecture</a>
 <ul>
@@ -239,8 +245,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10" data-path="week-5-lab.html"><a href="week-5-lab.html"><i class="fa fa-check"></i><b>10</b> Week 5 Lab</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="week-5-lab.html"><a href="week-5-lab.html#f-test"><i class="fa fa-check"></i><b>10.1</b> F-test</a></li>
-<li class="chapter" data-level="10.2" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-proportions"><i class="fa fa-check"></i><b>10.2</b> Comparing two proportions</a></li>
-<li class="chapter" data-level="10.3" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-distributions"><i class="fa fa-check"></i><b>10.3</b> Comparing two distributions</a></li>
+<li class="chapter" data-level="10.2" data-path="week-5-lab.html"><a href="week-5-lab.html#comparing-two-proportions-1"><i class="fa fa-check"></i><b>10.2</b> Comparing two proportions</a></li>
+<li class="chapter" data-level="10.3" data-path="week-5-lab.html"><a href="week-5-lab.html#comparing-two-distributions-1"><i class="fa fa-check"></i><b>10.3</b> Comparing two distributions</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="week-6-lecture.html"><a href="week-6-lecture.html"><i class="fa fa-check"></i><b>11</b> Week 6 Lecture</a>
 <ul>
@@ -298,10 +304,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="17" data-path="week-9-lab.html"><a href="week-9-lab.html"><i class="fa fa-check"></i><b>17</b> Week 9 Lab</a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="week-9-lecture.html"><a href="week-9-lecture.html#correlation"><i class="fa fa-check"></i><b>17.1</b> Correlation</a></li>
+<li class="chapter" data-level="17.1" data-path="week-9-lab.html"><a href="week-9-lab.html#correlation-1"><i class="fa fa-check"></i><b>17.1</b> Correlation</a></li>
 <li class="chapter" data-level="17.2" data-path="week-9-lab.html"><a href="week-9-lab.html#linear-modelling"><i class="fa fa-check"></i><b>17.2</b> Linear modelling</a></li>
 <li class="chapter" data-level="17.3" data-path="week-9-lab.html"><a href="week-9-lab.html#weighted-regression"><i class="fa fa-check"></i><b>17.3</b> Weighted regression</a></li>
-<li class="chapter" data-level="17.4" data-path="week-9-lecture.html"><a href="week-9-lecture.html#robust-regression"><i class="fa fa-check"></i><b>17.4</b> Robust regression</a></li>
+<li class="chapter" data-level="17.4" data-path="week-9-lab.html"><a href="week-9-lab.html#robust-regression-1"><i class="fa fa-check"></i><b>17.4</b> Robust regression</a></li>
 <li class="chapter" data-level="17.5" data-path="week-9-lab.html"><a href="week-9-lab.html#bootstrapping-standard-errors-for-robust-regression"><i class="fa fa-check"></i><b>17.5</b> Bootstrapping standard errors for robust regression</a></li>
 <li class="chapter" data-level="17.6" data-path="week-9-lab.html"><a href="week-9-lab.html#type-i-vs.-type-ii-regression-the-smatr-package"><i class="fa fa-check"></i><b>17.6</b> Type I vs. Type II regression: The ‘smatr’ package</a></li>
 </ul></li>
@@ -468,20 +474,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-14-lecture" class="section level1" number="26">
-<h1><span class="header-section-number">26</span> Week 14 Lecture</h1>
-<div id="week-14-readings" class="section level2" number="26.1">
-<h2><span class="header-section-number">26.1</span> Week 14 Readings</h2>
+<div id="week-14-lecture" class="section level1 hasAnchor" number="26">
+<h1><span class="header-section-number">26</span> Week 14 Lecture<a href="week-14-lecture.html#week-14-lecture" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="week-14-readings" class="section level2 hasAnchor" number="26.1">
+<h2><span class="header-section-number">26.1</span> Week 14 Readings<a href="week-14-lecture.html#week-14-readings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For this week, I suggest reading Aho Sections 9.17.</p>
 <p>There are also a suite of papers we will discuss as part of our end-of-semester review for the final exam. I suggest reading them all but I will assign you one to focus on (and present) before class: <a href="https://github.com/hlynch/Biometry2022/tree/master/_data/Anderson_etal_2001.pdf">Anderson et al. (2001)</a>, <a href="https://github.com/hlynch/Biometry2022/tree/master/_data/Beninger_etal_2012.pdf">Beninger et al. (2012)</a>, <a href="https://github.com/hlynch/Biometry2022/tree/master/_data/Borer_etal_2009.pdf">Borer et al. (2009)</a>, <a href="https://github.com/hlynch/Biometry2022/tree/master/_data/Gelman_2011.pdf">Gelman (2011)</a>, <a href="https://github.com/hlynch/Biometry2022/tree/master/_data/Guthery_etal_2001.pdf">Guthery et al. (2001)</a>, <a href="https://github.com/hlynch/Biometry2022/tree/master/_data/Makin_Xivry_2019.pdf">Makin and Xivry (2019)</a>, and <a href="https://github.com/hlynch/Biometry2022/tree/master/_data/Murtaugh_2007.pdf">Murtaugh (2007)</a>.</p>
 </div>
-<div id="what-does-multivariate-mean" class="section level2" number="26.2">
-<h2><span class="header-section-number">26.2</span> What does ‘multivariate’ mean?</h2>
+<div id="what-does-multivariate-mean" class="section level2 hasAnchor" number="26.2">
+<h2><span class="header-section-number">26.2</span> What does ‘multivariate’ mean?<a href="week-14-lecture.html#what-does-multivariate-mean" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Multivariate data includes more than one variable recorded from each experimental unit (replicate). For example, Lovett et al. (2000) measured many water chemistry variables (e.g., concentration of nitrate, ammonia, organic N) in each of 39 streams in the Catskill Mountains.</p>
 <p>We’ve already worked with multivariate data when we fit multiple regressions or ANOVA models with more than one factors. We will be looking into some other commonly used multivariate analyses.</p>
 </div>
-<div id="multivariate-associations" class="section level2" number="26.3">
-<h2><span class="header-section-number">26.3</span> Multivariate associations</h2>
+<div id="multivariate-associations" class="section level2 hasAnchor" number="26.3">
+<h2><span class="header-section-number">26.3</span> Multivariate associations<a href="week-14-lecture.html#multivariate-associations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We are familiar with the process of measuring <strong>variation within a variable</strong> in linear regression using sums of squares and variances (which are equivalent to scaled sums of squares). For covariate 1, <span class="math inline">\(X_1\)</span>:</p>
 <p><span class="math display">\[
 \text{SS} (X_1) = \sum_{i = 1}^n ( X_{1i} - \bar{X}_{1} ) ^2
@@ -510,11 +516,11 @@ With multivariate data, we also look at the <strong>covariation between variable
 <p>If we have data that can be grouped, we can estimate the components in order to maximize between-group differences relative to within-group differences. This is what we get out of multivariate ANOVA (MANOVA) or discriminant function analysis.</p>
 <p>Note that if you are working with species abundances, species presence-absences, or genetic data, we might calculate the dissimilarity between observations using a dissimilarity matrix.</p>
 <p>For example, we might have the species abundances of aquatic invertebrates sampled from 30 ponds. Each pond has different species and abundances of species. We can calculate the dissimilarity of each pond to every other pond based on the species composition of each (for example, using Bray-Curtis distance, or another metric of distance). Then, we can use a multivariate analysis to summarize the variation among all ponds. Ponds that share species and have similar abundances will be closer together in multivariate space.</p>
-<div class="sourceCode" id="cb982"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb982-1"><a href="week-14-lecture.html#cb982-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vegan)</span>
-<span id="cb982-2"><a href="week-14-lecture.html#cb982-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
-<span id="cb982-3"><a href="week-14-lecture.html#cb982-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(varespec)  <span class="co"># % cover of lichen spp. in 24 sites</span></span>
-<span id="cb982-4"><a href="week-14-lecture.html#cb982-4" aria-hidden="true" tabindex="-1"></a>vare.dis <span class="ot">&lt;-</span> <span class="fu">vegdist</span>(varespec)</span>
-<span id="cb982-5"><a href="week-14-lecture.html#cb982-5" aria-hidden="true" tabindex="-1"></a>vare.dis</span></code></pre></div>
+<div class="sourceCode" id="cb984"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb984-1"><a href="week-14-lecture.html#cb984-1" tabindex="-1"></a><span class="fu">library</span>(vegan)</span>
+<span id="cb984-2"><a href="week-14-lecture.html#cb984-2" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
+<span id="cb984-3"><a href="week-14-lecture.html#cb984-3" tabindex="-1"></a><span class="fu">data</span>(varespec)  <span class="co"># % cover of lichen spp. in 24 sites</span></span>
+<span id="cb984-4"><a href="week-14-lecture.html#cb984-4" tabindex="-1"></a>vare.dis <span class="ot">&lt;-</span> <span class="fu">vegdist</span>(varespec)</span>
+<span id="cb984-5"><a href="week-14-lecture.html#cb984-5" tabindex="-1"></a>vare.dis</span></code></pre></div>
 <pre><code>##           18        15        24        27        23        19        22
 ## 15 0.5310021                                                            
 ## 24 0.6680661 0.3597783                                                  
@@ -612,53 +618,53 @@ With multivariate data, we also look at the <strong>covariation between variable
 ## 11 0.5043578          
 ## 21 0.6147874 0.6713363</code></pre>
 </div>
-<div id="model-criticism-for-multivariate-analyses" class="section level2" number="26.4">
-<h2><span class="header-section-number">26.4</span> Model criticism for multivariate analyses</h2>
-<div id="transforming-your-data" class="section level3" number="26.4.1">
-<h3><span class="header-section-number">26.4.1</span> Transforming your data</h3>
+<div id="model-criticism-for-multivariate-analyses" class="section level2 hasAnchor" number="26.4">
+<h2><span class="header-section-number">26.4</span> Model criticism for multivariate analyses<a href="week-14-lecture.html#model-criticism-for-multivariate-analyses" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="transforming-your-data" class="section level3 hasAnchor" number="26.4.1">
+<h3><span class="header-section-number">26.4.1</span> Transforming your data<a href="week-14-lecture.html#transforming-your-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Just like last week, we are still looking at the linear relationships. The only difference is that now we are looking at the relationships among covariates (last week, we looked for a linear relationship between the response and the covariate). This means that we may need to transform covariates that do not have linear relationships with one another.</p>
 </div>
 </div>
-<div id="standardizing-your-data" class="section level2" number="26.5">
-<h2><span class="header-section-number">26.5</span> Standardizing your data</h2>
+<div id="standardizing-your-data" class="section level2 hasAnchor" number="26.5">
+<h2><span class="header-section-number">26.5</span> Standardizing your data<a href="week-14-lecture.html#standardizing-your-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You may want to standardize your data (divide by the standard deviation) if the covariates are on different scales from one another, or have very different variances.</p>
 <p>However, if the scales are comparable, leaving the data unstandardized can be informative. You may want to conduct your multivariate analyses on both standardized and unstandardized data. The default behavior in R packages is not obvious, be sure to check the help files.</p>
 </div>
-<div id="multivariate-outliers" class="section level2" number="26.6">
-<h2><span class="header-section-number">26.6</span> Multivariate outliers</h2>
+<div id="multivariate-outliers" class="section level2 hasAnchor" number="26.6">
+<h2><span class="header-section-number">26.6</span> Multivariate outliers<a href="week-14-lecture.html#multivariate-outliers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Outliers can have a lot of influence in multivariate analyses too. You can look for outliers in multivariate space (values far away from most of the density of the dataset) by calculating the Mahalanobis distances of each observation and comparing it to the null distribution (chi-square distribution with <em>p</em> degrees of freedom).</p>
 <p>Other than using a different criterion to determine what points are outliers, the procedures for dealing with outliers are the same.</p>
 </div>
-<div id="brief-overview-of-multivariate-analyses" class="section level2" number="26.7">
-<h2><span class="header-section-number">26.7</span> Brief overview of multivariate analyses</h2>
+<div id="brief-overview-of-multivariate-analyses" class="section level2 hasAnchor" number="26.7">
+<h2><span class="header-section-number">26.7</span> Brief overview of multivariate analyses<a href="week-14-lecture.html#brief-overview-of-multivariate-analyses" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If you plan on using multivariate analyses in your work, I recommend chapters 15 through 18 in Quinn and Keough 2002 (the previous textbook for this course, available for free online through the SBU library). Multivariate analyses are much easier to implement in R than they are to understand, and Quinn and Keough give a detailed but readable overview of these methods. The goal in lecture today is to make sure that you are aware of these methods.</p>
 </div>
-<div id="manova-and-dfa" class="section level2" number="26.8">
-<h2><span class="header-section-number">26.8</span> MANOVA and DFA</h2>
+<div id="manova-and-dfa" class="section level2 hasAnchor" number="26.8">
+<h2><span class="header-section-number">26.8</span> MANOVA and DFA<a href="week-14-lecture.html#manova-and-dfa" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If you have two or more response variables and one or more categorical covariates, you may be tempted to fit multiple ANOVAs. Though a single ANOVA is an omnibus test that controls for Type I error, fitting multiple ANOVAs risks inflating Type I error. You could account for this using a correction for familywise error rate. However, this reduces power.</p>
 <p>Instead, you could fit a multivariate analysis of variance (MANOVA), which fits a linear combination of the response variables in a way that maximizes the between-group to within-group variances. Discriminant function analysis uses the same methods, but the goal is instead to predict group membership.</p>
 </div>
-<div id="scaling-or-ordination-techniques" class="section level2" number="26.9">
-<h2><span class="header-section-number">26.9</span> Scaling or ordination techniques</h2>
+<div id="scaling-or-ordination-techniques" class="section level2 hasAnchor" number="26.9">
+<h2><span class="header-section-number">26.9</span> Scaling or ordination techniques<a href="week-14-lecture.html#scaling-or-ordination-techniques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The goals of these types of analyses (principal components analysis, correspondence analysis, canonical correspondence analysis, multidimensional scaling) are (1) to reduce a large set of covariates to a smaller number of derived covariates, and (2) to reveal patterns in the data in multidimensional space. We will only be able to go over PCA today, but the other methods are covered in Quinn and Keough (2002).</p>
-<div class="sourceCode" id="cb984"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb984-1"><a href="week-14-lecture.html#cb984-1" aria-hidden="true" tabindex="-1"></a><span class="co"># example of MDS using lichen data by site</span></span>
-<span id="cb984-2"><a href="week-14-lecture.html#cb984-2" aria-hidden="true" tabindex="-1"></a>vare.mds0 <span class="ot">&lt;-</span> <span class="fu">isoMDS</span>(vare.dis, <span class="at">trace =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb984-3"><a href="week-14-lecture.html#cb984-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ordiplot</span>(vare.mds0, <span class="at">type =</span> <span class="st">&quot;t&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb986"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb986-1"><a href="week-14-lecture.html#cb986-1" tabindex="-1"></a><span class="co"># example of MDS using lichen data by site</span></span>
+<span id="cb986-2"><a href="week-14-lecture.html#cb986-2" tabindex="-1"></a>vare.mds0 <span class="ot">&lt;-</span> <span class="fu">isoMDS</span>(vare.dis, <span class="at">trace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb986-3"><a href="week-14-lecture.html#cb986-3" tabindex="-1"></a><span class="fu">ordiplot</span>(vare.mds0, <span class="at">type =</span> <span class="st">&quot;t&quot;</span>)</span></code></pre></div>
 <p><img src="Week-14-lecture_files/figure-html/unnamed-chunk-3-1.png" width="384" /></p>
 </div>
-<div id="principal-components-analysis-pca" class="section level2" number="26.10">
-<h2><span class="header-section-number">26.10</span> Principal components analysis (PCA)</h2>
+<div id="principal-components-analysis-pca" class="section level2 hasAnchor" number="26.10">
+<h2><span class="header-section-number">26.10</span> Principal components analysis (PCA)<a href="week-14-lecture.html#principal-components-analysis-pca" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The goal of PCA is to reduce a set of variables to a smaller set that captures most of the variability in your data. Mathematically, PCA represents a transformation of your original axes to a new set of <strong>orthogonal</strong> axes which are ordered in terms of how much variation they explain (the <span class="math inline">\(z\)</span> components from before). Each axis is called a principal component (PC). You will have as many PCs as you have covariates.</p>
 <p>The first principal component (PC1) is the axis which explains the most variation in the data. PC2 is the axis which is orthogonal (perpendicular) to PC1 and explains the next greatest amount of remaining variation. PC3 the axis orthogonal to both PC1 and PC2 and explains the next greatest amount of remaining variation, etc.</p>
 </div>
-<div id="principal-components-analysis-pca-1" class="section level2" number="26.11">
-<h2><span class="header-section-number">26.11</span> Principal components analysis (PCA)</h2>
+<div id="principal-components-analysis-pca-1" class="section level2 hasAnchor" number="26.11">
+<h2><span class="header-section-number">26.11</span> Principal components analysis (PCA)<a href="week-14-lecture.html#principal-components-analysis-pca-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Using the example I described at the beginning of the lecture, Lovett et al. (2000) measured water chemistry variables in each of 39 streams in the Catskill Mountains. Lovett and colleagues looked at each covariate and decided to log transform dissolved organic C, Cl, and H.</p>
-<div class="sourceCode" id="cb985"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb985-1"><a href="week-14-lecture.html#cb985-1" aria-hidden="true" tabindex="-1"></a>streams.init <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;_data/lovett2.csv&quot;</span>)</span>
-<span id="cb985-2"><a href="week-14-lecture.html#cb985-2" aria-hidden="true" tabindex="-1"></a>streams <span class="ot">&lt;-</span> streams.init[, <span class="fu">c</span>(<span class="dv">6</span><span class="sc">:</span><span class="dv">8</span>, <span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">17</span>, <span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">18</span>)]</span>
-<span id="cb985-3"><a href="week-14-lecture.html#cb985-3" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(streams) <span class="ot">&lt;-</span> streams.init[, <span class="dv">1</span>]</span>
-<span id="cb985-4"><a href="week-14-lecture.html#cb985-4" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(streams)</span></code></pre></div>
-<pre><code>## &#39;data.frame&#39;:	38 obs. of  10 variables:
+<div class="sourceCode" id="cb987"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb987-1"><a href="week-14-lecture.html#cb987-1" tabindex="-1"></a>streams.init <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;_data/lovett2.csv&quot;</span>)</span>
+<span id="cb987-2"><a href="week-14-lecture.html#cb987-2" tabindex="-1"></a>streams <span class="ot">&lt;-</span> streams.init[, <span class="fu">c</span>(<span class="dv">6</span><span class="sc">:</span><span class="dv">8</span>, <span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">17</span>, <span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">18</span>)]</span>
+<span id="cb987-3"><a href="week-14-lecture.html#cb987-3" tabindex="-1"></a><span class="fu">row.names</span>(streams) <span class="ot">&lt;-</span> streams.init[, <span class="dv">1</span>]</span>
+<span id="cb987-4"><a href="week-14-lecture.html#cb987-4" tabindex="-1"></a><span class="fu">str</span>(streams)</span></code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    38 obs. of  10 variables:
 ##  $ NO3 : num  24.2 25.4 29.7 22.1 13.1 27.5 28.1 31.2 22.6 35.9 ...
 ##  $ TON : num  5.6 4.9 4.4 6.1 5.7 3 4.7 5.4 3.1 4.9 ...
 ##  $ TN  : num  29.9 30.3 33 28.3 17.6 30.8 32.8 37.1 26 39.8 ...
@@ -670,21 +676,21 @@ With multivariate data, we also look at the <strong>covariation between variable
 ##  $ MG  : num  14.4 17 19.6 19.5 21.9 22.4 26.2 25.4 21.8 22.2 ...
 ##  $ LH  : num  -0.319 -0.62 -0.328 -0.638 -0.432 ...</code></pre>
 <p>Some of the covariates are correlated, and would be collinear in a regression. The components from a PCA are orthogonal, removing multicollinearity.</p>
-<div class="sourceCode" id="cb987"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb987-1"><a href="week-14-lecture.html#cb987-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(streams)</span></code></pre></div>
+<div class="sourceCode" id="cb989"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb989-1"><a href="week-14-lecture.html#cb989-1" tabindex="-1"></a><span class="fu">pairs</span>(streams)</span></code></pre></div>
 <p><img src="Week-14-lecture_files/figure-html/unnamed-chunk-5-1.png" width="576" /></p>
 </div>
-<div id="pca-in-r" class="section level2" number="26.12">
-<h2><span class="header-section-number">26.12</span> PCA in R</h2>
+<div id="pca-in-r" class="section level2 hasAnchor" number="26.12">
+<h2><span class="header-section-number">26.12</span> PCA in R<a href="week-14-lecture.html#pca-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We can fit a PCA using <code>prcomp()</code>. There are a lot of functions for PCAs, carefully read the help files to understand how the function is fitting the PCA before using in your own analyses.</p>
 <p>The variances of the water chemistry covariates are very variable. It is probably best if we scale our data with the argument <code>scale = TRUE</code> (note this is not the default in R!).</p>
-<div class="sourceCode" id="cb988"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb988-1"><a href="week-14-lecture.html#cb988-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(<span class="at">X =</span> streams, <span class="at">MARGIN =</span> <span class="dv">2</span>, var)  <span class="co"># variance of each covariate</span></span></code></pre></div>
+<div class="sourceCode" id="cb990"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb990-1"><a href="week-14-lecture.html#cb990-1" tabindex="-1"></a><span class="fu">apply</span>(<span class="at">X =</span> streams, <span class="at">MARGIN =</span> <span class="dv">2</span>, var)  <span class="co"># variance of each covariate</span></span></code></pre></div>
 <pre><code>##          NO3          TON           TN         LDOC          NH4          SO4 
 ##  74.18850640   1.63670697  65.60399004   0.02144044   0.53607397  27.24332859 
 ##          LCL           CA           MG           LH 
 ##   0.02407754 194.74177098  26.24953058   0.08566604</code></pre>
-<div class="sourceCode" id="cb990"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb990-1"><a href="week-14-lecture.html#cb990-1" aria-hidden="true" tabindex="-1"></a>pca.streams <span class="ot">&lt;-</span> <span class="fu">prcomp</span>(streams, <span class="at">scale =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb992"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb992-1"><a href="week-14-lecture.html#cb992-1" tabindex="-1"></a>pca.streams <span class="ot">&lt;-</span> <span class="fu">prcomp</span>(streams, <span class="at">scale =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <p>We can look at our eigenvalues in R using <code>summary()</code>. The square root of the eigenvalue is labeled <code>Standard deviation</code>. We can also see the proportion of variation explained in each component (labeled <code>Proportion of Variance</code>).</p>
-<div class="sourceCode" id="cb991"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb991-1"><a href="week-14-lecture.html#cb991-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(pca.streams)</span></code></pre></div>
+<div class="sourceCode" id="cb993"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb993-1"><a href="week-14-lecture.html#cb993-1" tabindex="-1"></a><span class="fu">summary</span>(pca.streams)</span></code></pre></div>
 <pre><code>## Importance of components:
 ##                           PC1    PC2    PC3     PC4     PC5     PC6     PC7
 ## Standard deviation     1.8504 1.5725 1.0822 0.96516 0.86381 0.80397 0.61930
@@ -699,18 +705,18 @@ With multivariate data, we also look at the <strong>covariation between variable
 <p><span class="math display">\[z_j = c_1 (\text{NO}_3)_j + c_2 (\text{total organic N})_j + c_3 (\text{total N})_j + \\
 c_4 (\text{NH}_4)_j + c_5 (\text{log dis. organic C})_j + c_6 (\text{SO}_4)_j \\
 c_7 (\text{log Cl})_j + c_8 (\text{Ca})_j + c_9 (\text{Mg})_j + c_{10} (\text{log H})_j\]</span></p>
-<div class="sourceCode" id="cb993"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb993-1"><a href="week-14-lecture.html#cb993-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(pca.streams<span class="sc">$</span>rotation[, <span class="dv">1</span>], <span class="at">digits =</span> <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb995"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb995-1"><a href="week-14-lecture.html#cb995-1" tabindex="-1"></a><span class="fu">round</span>(pca.streams<span class="sc">$</span>rotation[, <span class="dv">1</span>], <span class="at">digits =</span> <span class="dv">2</span>)</span></code></pre></div>
 <pre><code>##   NO3   TON    TN  LDOC   NH4   SO4   LCL    CA    MG    LH 
 ## -0.26  0.15 -0.23 -0.29  0.23  0.37  0.36  0.28  0.47 -0.40</code></pre>
 <p>Large values of PC1 are associated with having higher Mg, higher log Cl, higher S04, and lower log H.</p>
 <p>We can visualize our PCA using either the <code>biplot()</code> function in base R or <code>fviz_pca_biplot()</code> in the package <code>factoextra</code>.</p>
-<div class="sourceCode" id="cb995"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb995-1"><a href="week-14-lecture.html#cb995-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(factoextra)</span>
-<span id="cb995-2"><a href="week-14-lecture.html#cb995-2" aria-hidden="true" tabindex="-1"></a><span class="fu">fviz_pca_biplot</span>(pca.streams, <span class="at">axes =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="at">repel =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb995-3"><a href="week-14-lecture.html#cb995-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">col.var =</span> <span class="st">&quot;dodgerblue3&quot;</span>, <span class="at">col.ind =</span> <span class="st">&quot;gray60&quot;</span>, <span class="at">title =</span> <span class="cn">NULL</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb997"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb997-1"><a href="week-14-lecture.html#cb997-1" tabindex="-1"></a><span class="fu">library</span>(factoextra)</span>
+<span id="cb997-2"><a href="week-14-lecture.html#cb997-2" tabindex="-1"></a><span class="fu">fviz_pca_biplot</span>(pca.streams, <span class="at">axes =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="at">repel =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb997-3"><a href="week-14-lecture.html#cb997-3" tabindex="-1"></a>                <span class="at">col.var =</span> <span class="st">&quot;dodgerblue3&quot;</span>, <span class="at">col.ind =</span> <span class="st">&quot;gray60&quot;</span>, <span class="at">title =</span> <span class="cn">NULL</span>)</span></code></pre></div>
 <p><img src="Week-14-lecture_files/figure-html/unnamed-chunk-9-1.png" width="576" /></p>
 <p>The coordinates of each stream <span class="math inline">\(j\)</span> are equal to the scores <span class="math inline">\(z_j\)</span> for PC1 and PC2 (<span class="math inline">\(z_{1j}, z_{2j}\)</span>).</p>
-<div class="sourceCode" id="cb996"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb996-1"><a href="week-14-lecture.html#cb996-1" aria-hidden="true" tabindex="-1"></a><span class="co"># PCA scores for PC1 and PC2 of the first five streams</span></span>
-<span id="cb996-2"><a href="week-14-lecture.html#cb996-2" aria-hidden="true" tabindex="-1"></a>pca.streams<span class="sc">$</span>x[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb998"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb998-1"><a href="week-14-lecture.html#cb998-1" tabindex="-1"></a><span class="co"># PCA scores for PC1 and PC2 of the first five streams</span></span>
+<span id="cb998-2"><a href="week-14-lecture.html#cb998-2" tabindex="-1"></a>pca.streams<span class="sc">$</span>x[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code></pre></div>
 <pre><code>##                     PC1        PC2
 ## Santa Cruz   -3.7157577 -1.3260985
 ## Colgate      -2.1068761 -0.3092199
@@ -718,8 +724,8 @@ c_7 (\text{log Cl})_j + c_8 (\text{Ca})_j + c_9 (\text{Mg})_j + c_{10} (\text{lo
 ## Batavia Hill -1.1467251 -0.6644800
 ## Windham Ridg -0.8618198 -2.0450124</code></pre>
 <p>The vectors are proportional to the eigenvectors, or the contribution of each covariate to the component.</p>
-<div class="sourceCode" id="cb998"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb998-1"><a href="week-14-lecture.html#cb998-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Eigenvectors for PC1 and PC2</span></span>
-<span id="cb998-2"><a href="week-14-lecture.html#cb998-2" aria-hidden="true" tabindex="-1"></a>pca.streams<span class="sc">$</span>rotation[, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb1000"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1000-1"><a href="week-14-lecture.html#cb1000-1" tabindex="-1"></a><span class="co"># Eigenvectors for PC1 and PC2</span></span>
+<span id="cb1000-2"><a href="week-14-lecture.html#cb1000-2" tabindex="-1"></a>pca.streams<span class="sc">$</span>rotation[, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code></pre></div>
 <pre><code>##             PC1         PC2
 ## NO3  -0.2608012  0.51882617
 ## TON   0.1470633 -0.29927264
@@ -734,35 +740,35 @@ c_7 (\text{log Cl})_j + c_8 (\text{Ca})_j + c_9 (\text{Mg})_j + c_{10} (\text{lo
 <p>It is possible to fit linear regression in which the covariates are principal components from a PCA. This way, the covariates are not collinear. The problem is that the regression coefficients are particularly difficult to interpret. However, if you have a PCA with easily interpretable eigenvectors, this might be a useful method.</p>
 <p>Additionally, be aware that the components that explain most of the variance in the covariates may not explain the variation in the response variable.</p>
 </div>
-<div id="missing-data" class="section level2" number="26.13">
-<h2><span class="header-section-number">26.13</span> Missing data</h2>
+<div id="missing-data" class="section level2 hasAnchor" number="26.13">
+<h2><span class="header-section-number">26.13</span> Missing data<a href="week-14-lecture.html#missing-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In large, multivariate data sets, you may have observations that are missing values for some of the covariates. We saw this in lab last week.</p>
-<div class="sourceCode" id="cb1000"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1000-1"><a href="week-14-lecture.html#cb1000-1" aria-hidden="true" tabindex="-1"></a>mammal <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;_data/MammalLifeHistory.csv&quot;</span>,<span class="at">header=</span>T)</span>
-<span id="cb1000-2"><a href="week-14-lecture.html#cb1000-2" aria-hidden="true" tabindex="-1"></a>carnivore.init <span class="ot">&lt;-</span> mammal[<span class="fu">which</span>(mammal<span class="sc">$</span>Order <span class="sc">==</span> <span class="st">&quot;Carnivora&quot;</span>), ]</span>
-<span id="cb1000-3"><a href="week-14-lecture.html#cb1000-3" aria-hidden="true" tabindex="-1"></a>carnivore.init<span class="sc">$</span>AFR[<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb1002"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1002-1"><a href="week-14-lecture.html#cb1002-1" tabindex="-1"></a>mammal <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;_data/MammalLifeHistory.csv&quot;</span>,<span class="at">header=</span>T)</span>
+<span id="cb1002-2"><a href="week-14-lecture.html#cb1002-2" tabindex="-1"></a>carnivore.init <span class="ot">&lt;-</span> mammal[<span class="fu">which</span>(mammal<span class="sc">$</span>Order <span class="sc">==</span> <span class="st">&quot;Carnivora&quot;</span>), ]</span>
+<span id="cb1002-3"><a href="week-14-lecture.html#cb1002-3" tabindex="-1"></a>carnivore.init<span class="sc">$</span>AFR[<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>]</span></code></pre></div>
 <pre><code>##  [1] 24.00    NA 12.00 10.50 12.00 10.50    NA 12.00    NA    NA    NA 16.81</code></pre>
 <p>Last week, we removed the entire row for observations with one or more missing values for covariates. This is the default behavior in R, for example, when fitting multiple regressions with <code>lm()</code>. However, this is throwing away all of the information we do have for the observation.</p>
 </div>
-<div id="imputing-missing-data" class="section level2" number="26.14">
-<h2><span class="header-section-number">26.14</span> Imputing missing data</h2>
+<div id="imputing-missing-data" class="section level2 hasAnchor" number="26.14">
+<h2><span class="header-section-number">26.14</span> Imputing missing data<a href="week-14-lecture.html#imputing-missing-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In problem set 13, you were asked to impute missing data by sampling with replacement from the nonmissing data. There are other ways of dealing with missing data too.</p>
 <p>You could replace the missing data with the mean value for that covariate. This means that the missing point won’t contribute to the estimate of the partial slope for the missing covariate. However, it will lead to an underestimate of the variance for the estimate (doesn’t add to SSE). For the regression:</p>
 <p><span class="math display">\[
 \text{Maximum lifespan} \sim \text{Intercept} + \text{AFR}
 \]</span></p>
 <p>We could impute missing values of AFR with the mean value of AFR.</p>
-<div class="sourceCode" id="cb1002"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1002-1"><a href="week-14-lecture.html#cb1002-1" aria-hidden="true" tabindex="-1"></a>carnivore <span class="ot">&lt;-</span> carnivore.init</span>
-<span id="cb1002-2"><a href="week-14-lecture.html#cb1002-2" aria-hidden="true" tabindex="-1"></a>missing.AFR <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="fu">is.na</span>(carnivore.init<span class="sc">$</span>AFR))</span>
-<span id="cb1002-3"><a href="week-14-lecture.html#cb1002-3" aria-hidden="true" tabindex="-1"></a>mean.AFR <span class="ot">&lt;-</span> <span class="fu">mean</span>(carnivore.init<span class="sc">$</span>AFR, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1002-4"><a href="week-14-lecture.html#cb1002-4" aria-hidden="true" tabindex="-1"></a>carnivore<span class="sc">$</span>AFR[missing.AFR] <span class="ot">&lt;-</span> mean.AFR</span></code></pre></div>
+<div class="sourceCode" id="cb1004"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1004-1"><a href="week-14-lecture.html#cb1004-1" tabindex="-1"></a>carnivore <span class="ot">&lt;-</span> carnivore.init</span>
+<span id="cb1004-2"><a href="week-14-lecture.html#cb1004-2" tabindex="-1"></a>missing.AFR <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="fu">is.na</span>(carnivore.init<span class="sc">$</span>AFR))</span>
+<span id="cb1004-3"><a href="week-14-lecture.html#cb1004-3" tabindex="-1"></a>mean.AFR <span class="ot">&lt;-</span> <span class="fu">mean</span>(carnivore.init<span class="sc">$</span>AFR, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1004-4"><a href="week-14-lecture.html#cb1004-4" tabindex="-1"></a>carnivore<span class="sc">$</span>AFR[missing.AFR] <span class="ot">&lt;-</span> mean.AFR</span></code></pre></div>
 <p>You could also use a regression to predict the missing value for one covariate given the other covariates in the data. Using the same example, we could impute missing values of AFR using the coefficients estimated from a regression where AFR is the response variable with one or more other covariates as the predictors. For example:</p>
 <p><span class="math display">\[
 \text{AFR} \sim \text{Intercept} + \text{Litter size}
 \]</span></p>
-<div class="sourceCode" id="cb1003"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1003-1"><a href="week-14-lecture.html#cb1003-1" aria-hidden="true" tabindex="-1"></a>imputation.lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="at">formula =</span> AFR <span class="sc">~</span> LitterSize, <span class="at">data =</span> carnivore.init)</span>
-<span id="cb1003-2"><a href="week-14-lecture.html#cb1003-2" aria-hidden="true" tabindex="-1"></a>predicted.AFR <span class="ot">&lt;-</span> imputation.lm<span class="sc">$</span>coefficients[<span class="dv">1</span>] <span class="sc">+</span> imputation.lm<span class="sc">$</span>coefficients[<span class="dv">2</span>] <span class="sc">*</span> </span>
-<span id="cb1003-3"><a href="week-14-lecture.html#cb1003-3" aria-hidden="true" tabindex="-1"></a>  carnivore.init<span class="sc">$</span>LitterSize[missing.AFR] </span>
-<span id="cb1003-4"><a href="week-14-lecture.html#cb1003-4" aria-hidden="true" tabindex="-1"></a>carnivore<span class="sc">$</span>AFR[missing.AFR] <span class="ot">&lt;-</span> predicted.AFR</span></code></pre></div>
+<div class="sourceCode" id="cb1005"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1005-1"><a href="week-14-lecture.html#cb1005-1" tabindex="-1"></a>imputation.lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="at">formula =</span> AFR <span class="sc">~</span> LitterSize, <span class="at">data =</span> carnivore.init)</span>
+<span id="cb1005-2"><a href="week-14-lecture.html#cb1005-2" tabindex="-1"></a>predicted.AFR <span class="ot">&lt;-</span> imputation.lm<span class="sc">$</span>coefficients[<span class="dv">1</span>] <span class="sc">+</span> imputation.lm<span class="sc">$</span>coefficients[<span class="dv">2</span>] <span class="sc">*</span> </span>
+<span id="cb1005-3"><a href="week-14-lecture.html#cb1005-3" tabindex="-1"></a>  carnivore.init<span class="sc">$</span>LitterSize[missing.AFR] </span>
+<span id="cb1005-4"><a href="week-14-lecture.html#cb1005-4" tabindex="-1"></a>carnivore<span class="sc">$</span>AFR[missing.AFR] <span class="ot">&lt;-</span> predicted.AFR</span></code></pre></div>
 
 </div>
 </div>
@@ -776,7 +782,6 @@ c_7 (\text{log Cl})_j + c_8 (\text{Ca})_j + c_9 (\text{Mg})_j + c_{10} (\text{lo
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -795,6 +800,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -815,6 +821,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -828,7 +838,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

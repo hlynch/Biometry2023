@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>18 Week 10 Lecture | Biometry Lecture and Lab Notes</title>
   <meta name="description" content="18 Week 10 Lecture | Biometry Lecture and Lab Notes" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="18 Week 10 Lecture | Biometry Lecture and Lab Notes" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-05-15" />
+<meta name="date" content="2024-01-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="week-9-lab.html"/>
 <link rel="next" href="week-10-lab.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -91,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -104,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -116,6 +117,11 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -170,7 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="week-2-lecture.html"><a href="week-2-lecture.html"><i class="fa fa-check"></i><b>3</b> Week 2 Lecture</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="week-2-lecture.html"><a href="week-2-lecture.html#week-2-readings"><i class="fa fa-check"></i><b>3.1</b> Week 2 Readings</a></li>
-<li class="chapter" data-level="3.2" data-path="week-1-lecture.html"><a href="week-1-lecture.html#todays-agenda"><i class="fa fa-check"></i><b>3.2</b> Today’s Agenda</a></li>
+<li class="chapter" data-level="3.2" data-path="week-2-lecture.html"><a href="week-2-lecture.html#todays-agenda-1"><i class="fa fa-check"></i><b>3.2</b> Today’s Agenda</a></li>
 <li class="chapter" data-level="3.3" data-path="week-2-lecture.html"><a href="week-2-lecture.html#hypothesis-testing"><i class="fa fa-check"></i><b>3.3</b> Hypothesis testing</a></li>
 <li class="chapter" data-level="3.4" data-path="week-2-lecture.html"><a href="week-2-lecture.html#permutation-tests"><i class="fa fa-check"></i><b>3.4</b> Permutation tests</a></li>
 <li class="chapter" data-level="3.5" data-path="week-2-lecture.html"><a href="week-2-lecture.html#parameter-estimation"><i class="fa fa-check"></i><b>3.5</b> Parameter estimation</a></li>
@@ -186,7 +192,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2" data-path="week-2-lab.html"><a href="week-2-lab.html#testing-hypotheses-through-permutation"><i class="fa fa-check"></i><b>4.2</b> Testing hypotheses through permutation</a></li>
 <li class="chapter" data-level="4.3" data-path="week-2-lab.html"><a href="week-2-lab.html#basics-of-bootstrap-and-jackknife"><i class="fa fa-check"></i><b>4.3</b> Basics of bootstrap and jackknife</a></li>
 <li class="chapter" data-level="4.4" data-path="week-2-lab.html"><a href="week-2-lab.html#calculating-bias-and-standard-error"><i class="fa fa-check"></i><b>4.4</b> Calculating bias and standard error</a></li>
-<li class="chapter" data-level="4.5" data-path="week-2-lecture.html"><a href="week-2-lecture.html#parametric-bootstrap"><i class="fa fa-check"></i><b>4.5</b> Parametric bootstrap</a></li>
+<li class="chapter" data-level="4.5" data-path="week-2-lab.html"><a href="week-2-lab.html#parametric-bootstrap-1"><i class="fa fa-check"></i><b>4.5</b> Parametric bootstrap</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="week-3-lecture.html"><a href="week-3-lecture.html"><i class="fa fa-check"></i><b>5</b> Week 3 Lecture</a>
 <ul>
@@ -239,8 +245,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10" data-path="week-5-lab.html"><a href="week-5-lab.html"><i class="fa fa-check"></i><b>10</b> Week 5 Lab</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="week-5-lab.html"><a href="week-5-lab.html#f-test"><i class="fa fa-check"></i><b>10.1</b> F-test</a></li>
-<li class="chapter" data-level="10.2" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-proportions"><i class="fa fa-check"></i><b>10.2</b> Comparing two proportions</a></li>
-<li class="chapter" data-level="10.3" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-distributions"><i class="fa fa-check"></i><b>10.3</b> Comparing two distributions</a></li>
+<li class="chapter" data-level="10.2" data-path="week-5-lab.html"><a href="week-5-lab.html#comparing-two-proportions-1"><i class="fa fa-check"></i><b>10.2</b> Comparing two proportions</a></li>
+<li class="chapter" data-level="10.3" data-path="week-5-lab.html"><a href="week-5-lab.html#comparing-two-distributions-1"><i class="fa fa-check"></i><b>10.3</b> Comparing two distributions</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="week-6-lecture.html"><a href="week-6-lecture.html"><i class="fa fa-check"></i><b>11</b> Week 6 Lecture</a>
 <ul>
@@ -298,10 +304,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="17" data-path="week-9-lab.html"><a href="week-9-lab.html"><i class="fa fa-check"></i><b>17</b> Week 9 Lab</a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="week-9-lecture.html"><a href="week-9-lecture.html#correlation"><i class="fa fa-check"></i><b>17.1</b> Correlation</a></li>
+<li class="chapter" data-level="17.1" data-path="week-9-lab.html"><a href="week-9-lab.html#correlation-1"><i class="fa fa-check"></i><b>17.1</b> Correlation</a></li>
 <li class="chapter" data-level="17.2" data-path="week-9-lab.html"><a href="week-9-lab.html#linear-modelling"><i class="fa fa-check"></i><b>17.2</b> Linear modelling</a></li>
 <li class="chapter" data-level="17.3" data-path="week-9-lab.html"><a href="week-9-lab.html#weighted-regression"><i class="fa fa-check"></i><b>17.3</b> Weighted regression</a></li>
-<li class="chapter" data-level="17.4" data-path="week-9-lecture.html"><a href="week-9-lecture.html#robust-regression"><i class="fa fa-check"></i><b>17.4</b> Robust regression</a></li>
+<li class="chapter" data-level="17.4" data-path="week-9-lab.html"><a href="week-9-lab.html#robust-regression-1"><i class="fa fa-check"></i><b>17.4</b> Robust regression</a></li>
 <li class="chapter" data-level="17.5" data-path="week-9-lab.html"><a href="week-9-lab.html#bootstrapping-standard-errors-for-robust-regression"><i class="fa fa-check"></i><b>17.5</b> Bootstrapping standard errors for robust regression</a></li>
 <li class="chapter" data-level="17.6" data-path="week-9-lab.html"><a href="week-9-lab.html#type-i-vs.-type-ii-regression-the-smatr-package"><i class="fa fa-check"></i><b>17.6</b> Type I vs. Type II regression: The ‘smatr’ package</a></li>
 </ul></li>
@@ -468,14 +474,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-10-lecture" class="section level1" number="18">
-<h1><span class="header-section-number">18</span> Week 10 Lecture</h1>
-<div id="week-10-readings" class="section level2" number="18.1">
-<h2><span class="header-section-number">18.1</span> Week 10 Readings</h2>
+<div id="week-10-lecture" class="section level1 hasAnchor" number="18">
+<h1><span class="header-section-number">18</span> Week 10 Lecture<a href="week-10-lecture.html#week-10-lecture" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="week-10-readings" class="section level2 hasAnchor" number="18.1">
+<h2><span class="header-section-number">18.1</span> Week 10 Readings<a href="week-10-lecture.html#week-10-readings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For this week, I suggest reading Aho Section 9.20, as well as Logan Chapters 9 and 16-17. You will also need to read <a href="https://github.com/hlynch/Biometry2023/tree/master/_data/Siddhartha_etal_1989.pdf">Siddhartha et al. (1989)</a>. This paper is another one that is quite important and should be read carefully. We will also discuss it at length in class. There are two other papers some of you will find worthwhile as well, <a href="https://github.com/hlynch/Biometry2023/tree/master/_data/OHara_etal_2010.pdf">this paper on why not to log-transform count data</a> (please, don’t do it, it you have count data and don’t know what to do, ask me!) and <a href="https://github.com/hlynch/Biometry2023/tree/master/_data/Warton_etal_2016.pdf">another paper laying out when to use GLM and when to use OLS regression</a>.</p>
 </div>
-<div id="week-10-outline" class="section level2" number="18.2">
-<h2><span class="header-section-number">18.2</span> Week 10 outline</h2>
+<div id="week-10-outline" class="section level2 hasAnchor" number="18.2">
+<h2><span class="header-section-number">18.2</span> Week 10 outline<a href="week-10-lecture.html#week-10-outline" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This week we will cover my favorite topic of all: Generalized Linear Regression and Multiple Regression!</p>
 <p>An outline for this week’s materials:</p>
 <ol style="list-style-type: decimal">
@@ -488,36 +494,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Multiple regression</p></li>
 </ol>
 </div>
-<div id="an-example" class="section level2" number="18.3">
-<h2><span class="header-section-number">18.3</span> An example</h2>
+<div id="an-example" class="section level2 hasAnchor" number="18.3">
+<h2><span class="header-section-number">18.3</span> An example<a href="week-10-lecture.html#an-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s start with a model of the presence or absence of a wood-boring beetle as a function of the wood density of decaying aspen trees in Quebec. The data look like this:</p>
 <pre><code>## Loading required package: tcltk</code></pre>
 <p><img src="Week-10-lecture_files/figure-html/unnamed-chunk-2-1.png" width="576" /></p>
 <p>So, let’s do what we know, and we’ll fit a linear regression to the data using <code>lm()</code> (like we did last week). Then we’ll plot the model fit.</p>
-<div class="sourceCode" id="cb597"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb597-1"><a href="week-10-lecture.html#cb597-1" aria-hidden="true" tabindex="-1"></a>beetle.fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="at">formula =</span> ANAT <span class="sc">~</span> Wood.density, <span class="at">data =</span> beetle)</span>
-<span id="cb597-2"><a href="week-10-lecture.html#cb597-2" aria-hidden="true" tabindex="-1"></a>new.predictor <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">Wood.density =</span> <span class="fu">seq</span>(<span class="fu">min</span>(beetle<span class="sc">$</span>Wood.density), <span class="fu">max</span>(beetle<span class="sc">$</span>Wood.density), <span class="at">length.out =</span> <span class="dv">24</span>))</span>
-<span id="cb597-3"><a href="week-10-lecture.html#cb597-3" aria-hidden="true" tabindex="-1"></a>beetle.vals <span class="ot">&lt;-</span> <span class="fu">predict</span>(beetle.fit, <span class="at">newdata =</span> new.predictor)</span>
-<span id="cb597-4"><a href="week-10-lecture.html#cb597-4" aria-hidden="true" tabindex="-1"></a>beetle.predict <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">WoodDensity =</span> new.predictor[[<span class="dv">1</span>]], <span class="at">Presence =</span> beetle.vals)</span>
-<span id="cb597-5"><a href="week-10-lecture.html#cb597-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb597-6"><a href="week-10-lecture.html#cb597-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> beetle, <span class="fu">aes</span>(<span class="at">x =</span> Wood.density, <span class="at">y =</span> ANAT)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray55&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb597-7"><a href="week-10-lecture.html#cb597-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> beetle.predict, <span class="fu">aes</span>(<span class="at">x =</span> WoodDensity, <span class="at">y =</span> Presence)) <span class="sc">+</span></span>
-<span id="cb597-8"><a href="week-10-lecture.html#cb597-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">&quot;Wood density (g cm&quot;</span> <span class="sc">^</span> <span class="st">&quot;-3&quot;</span>, <span class="st">&quot;)&quot;</span>)), <span class="at">y =</span> <span class="st">&quot;Presence of wood-boring beetle&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> </span>
-<span id="cb597-9"><a href="week-10-lecture.html#cb597-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb598"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb598-1"><a href="week-10-lecture.html#cb598-1" tabindex="-1"></a>beetle.fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="at">formula =</span> ANAT <span class="sc">~</span> Wood.density, <span class="at">data =</span> beetle)</span>
+<span id="cb598-2"><a href="week-10-lecture.html#cb598-2" tabindex="-1"></a>new.predictor <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">Wood.density =</span> <span class="fu">seq</span>(<span class="fu">min</span>(beetle<span class="sc">$</span>Wood.density), <span class="fu">max</span>(beetle<span class="sc">$</span>Wood.density), <span class="at">length.out =</span> <span class="dv">24</span>))</span>
+<span id="cb598-3"><a href="week-10-lecture.html#cb598-3" tabindex="-1"></a>beetle.vals <span class="ot">&lt;-</span> <span class="fu">predict</span>(beetle.fit, <span class="at">newdata =</span> new.predictor)</span>
+<span id="cb598-4"><a href="week-10-lecture.html#cb598-4" tabindex="-1"></a>beetle.predict <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">WoodDensity =</span> new.predictor[[<span class="dv">1</span>]], <span class="at">Presence =</span> beetle.vals)</span>
+<span id="cb598-5"><a href="week-10-lecture.html#cb598-5" tabindex="-1"></a></span>
+<span id="cb598-6"><a href="week-10-lecture.html#cb598-6" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> beetle, <span class="fu">aes</span>(<span class="at">x =</span> Wood.density, <span class="at">y =</span> ANAT)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray55&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb598-7"><a href="week-10-lecture.html#cb598-7" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> beetle.predict, <span class="fu">aes</span>(<span class="at">x =</span> WoodDensity, <span class="at">y =</span> Presence)) <span class="sc">+</span></span>
+<span id="cb598-8"><a href="week-10-lecture.html#cb598-8" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">&quot;Wood density (g cm&quot;</span> <span class="sc">^</span> <span class="st">&quot;-3&quot;</span>, <span class="st">&quot;)&quot;</span>)), <span class="at">y =</span> <span class="st">&quot;Presence of wood-boring beetle&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> </span>
+<span id="cb598-9"><a href="week-10-lecture.html#cb598-9" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>))</span></code></pre></div>
 <p><img src="Week-10-lecture_files/figure-html/unnamed-chunk-3-1.png" width="384" /></p>
 <p>How well does this model fit, and how well does it represent the data? Let’s predict beetle presence for woody density of 0.1 g/cm<sup>3</sup> and then 0.4 g/cm<sup>3</sup>.</p>
-<div class="sourceCode" id="cb598"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb598-1"><a href="week-10-lecture.html#cb598-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unname</span>(beetle.fit<span class="sc">$</span>coefficients[<span class="dv">1</span>] <span class="sc">+</span> beetle.fit<span class="sc">$</span>coefficients[<span class="dv">2</span>] <span class="sc">*</span> <span class="fl">0.1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb599"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb599-1"><a href="week-10-lecture.html#cb599-1" tabindex="-1"></a><span class="fu">unname</span>(beetle.fit<span class="sc">$</span>coefficients[<span class="dv">1</span>] <span class="sc">+</span> beetle.fit<span class="sc">$</span>coefficients[<span class="dv">2</span>] <span class="sc">*</span> <span class="fl">0.1</span>)</span></code></pre></div>
 <pre><code>## [1] 1.622327</code></pre>
-<div class="sourceCode" id="cb600"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb600-1"><a href="week-10-lecture.html#cb600-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unname</span>(beetle.fit<span class="sc">$</span>coefficients[<span class="dv">1</span>] <span class="sc">+</span> beetle.fit<span class="sc">$</span>coefficients[<span class="dv">2</span>] <span class="sc">*</span> <span class="fl">0.4</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb601"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb601-1"><a href="week-10-lecture.html#cb601-1" tabindex="-1"></a><span class="fu">unname</span>(beetle.fit<span class="sc">$</span>coefficients[<span class="dv">1</span>] <span class="sc">+</span> beetle.fit<span class="sc">$</span>coefficients[<span class="dv">2</span>] <span class="sc">*</span> <span class="fl">0.4</span>)</span></code></pre></div>
 <pre><code>## [1] -0.03375074</code></pre>
 <p>Last, we’ll look at the residuals for our model fit.</p>
-<div class="sourceCode" id="cb602"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb602-1"><a href="week-10-lecture.html#cb602-1" aria-hidden="true" tabindex="-1"></a>beetle.resid <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">PredictedValues =</span> <span class="fu">predict</span>(beetle.fit), <span class="at">Residuals =</span> <span class="fu">residuals</span>(beetle.fit))</span>
-<span id="cb602-2"><a href="week-10-lecture.html#cb602-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> beetle.resid, <span class="fu">aes</span>(<span class="at">x =</span> PredictedValues, <span class="at">y =</span> Residuals)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray55&quot;</span>) <span class="sc">+</span></span>
-<span id="cb602-3"><a href="week-10-lecture.html#cb602-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Predicted values from linear regression&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Residuals&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> </span>
-<span id="cb602-4"><a href="week-10-lecture.html#cb602-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
+<div class="sourceCode" id="cb603"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb603-1"><a href="week-10-lecture.html#cb603-1" tabindex="-1"></a>beetle.resid <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">PredictedValues =</span> <span class="fu">predict</span>(beetle.fit), <span class="at">Residuals =</span> <span class="fu">residuals</span>(beetle.fit))</span>
+<span id="cb603-2"><a href="week-10-lecture.html#cb603-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> beetle.resid, <span class="fu">aes</span>(<span class="at">x =</span> PredictedValues, <span class="at">y =</span> Residuals)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray55&quot;</span>) <span class="sc">+</span></span>
+<span id="cb603-3"><a href="week-10-lecture.html#cb603-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Predicted values from linear regression&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Residuals&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> </span>
+<span id="cb603-4"><a href="week-10-lecture.html#cb603-4" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
 <p><img src="Week-10-lecture_files/figure-html/unnamed-chunk-5-1.png" width="480" /></p>
 </div>
-<div id="generalized-linear-models" class="section level2" number="18.4">
-<h2><span class="header-section-number">18.4</span> Generalized linear models</h2>
+<div id="generalized-linear-models" class="section level2 hasAnchor" number="18.4">
+<h2><span class="header-section-number">18.4</span> Generalized linear models<a href="week-10-lecture.html#generalized-linear-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The regression models that we have been introduced to thus far all assume two things:</p>
 <ol style="list-style-type: decimal">
 <li><p>A <strong>linear</strong> relationship between the independent variable and the dependent variables</p></li>
@@ -539,7 +545,7 @@ and the second being a model for the variance</p>
 <p><span class="math display">\[
 \epsilon_i \sim \mathrm{N}(0, \sigma^2)
 \]</span></p>
-<p>The Normal distribution is “special.” The mean (<span class="math inline">\(\mathrm{E}(X)\)</span>) and the variance (<span class="math inline">\(\mathrm{Var}(X)\)</span>) of the distribution are directly related to the two parameters of the distribution (<span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^2\)</span>, respectively). This means the mean and variance are decoupled.</p>
+<p>The Normal distribution is “special”. The mean (<span class="math inline">\(\mathrm{E}(X)\)</span>) and the variance (<span class="math inline">\(\mathrm{Var}(X)\)</span>) of the distribution are directly related to the two parameters of the distribution (<span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^2\)</span>, respectively). This means the mean and variance are decoupled.</p>
 <p>For other distributions, the parameters of the distribution often do not map uniquely to the mean and variance. GLMs allow us to model the response as some distribution (no longer has to be a Normal), and to model the parameters of that distribution (or a function of those parameters) using a linear model. In other words,</p>
 <p><span style="color: orangered;">
 <span class="math display">\[
@@ -564,8 +570,8 @@ g(\text{parameters}) = \beta_0 + \beta_1 X_i
 <p>The order of complexity (and flexibility) of the models we will be discussing is:</p>
 <p>Standard linear regression <span class="math inline">\(&lt;\)</span> Generalized linear models (GLMs) <span class="math inline">\(&lt;\)</span> Generalized Additive Models (GAMs).</p>
 </div>
-<div id="logistic-regression" class="section level2" number="18.5">
-<h2><span class="header-section-number">18.5</span> Logistic regression</h2>
+<div id="logistic-regression" class="section level2 hasAnchor" number="18.5">
+<h2><span class="header-section-number">18.5</span> Logistic regression<a href="week-10-lecture.html#logistic-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Logistic regression is used to model Bernoulli or binomial response variables. Bernoulli data includes:</p>
 <ul>
 <li><p>Survival for individual organisms</p></li>
@@ -590,15 +596,15 @@ The response is either 0 or 1, with probability <span class="math inline">\(p\)<
 \mathrm{Var}(Y_i) = p_i (1 - p_i)
 \]</span></p>
 <p>While for a normal linear regression we need errors to be the same (homoscedasctic), with a logistic regression, variation is largest around <span class="math inline">\(p = 0.5\)</span> and shrinks to zero at the end points of <span class="math inline">\(p=0\)</span> and <span class="math inline">\(p=1\)</span>.</p>
-<div class="sourceCode" id="cb603"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb603-1"><a href="week-10-lecture.html#cb603-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="fl">0.1</span>)</span>
-<span id="cb603-2"><a href="week-10-lecture.html#cb603-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> p, <span class="at">y =</span> p <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p), <span class="at">type =</span> <span class="st">&quot;l&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb604"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb604-1"><a href="week-10-lecture.html#cb604-1" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="fl">0.1</span>)</span>
+<span id="cb604-2"><a href="week-10-lecture.html#cb604-2" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> p, <span class="at">y =</span> p <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p), <span class="at">type =</span> <span class="st">&quot;l&quot;</span>)</span></code></pre></div>
 <p><img src="Week-10-lecture_files/figure-html/unnamed-chunk-6-1.png" width="480" /></p>
 <p>The complete model for a logistic regression with Bernouilli data <span class="math inline">\(Y_i\)</span> and covariate <span class="math inline">\(X_i\)</span> is:</p>
 <p><span class="math display">\[
 Y_i \sim \mathrm{Bernoulli}(p_i) \text{, where } \log \left( \frac{p_i}{1 - p_i} \right) = \beta_0 + \beta_1 X_i
 \]</span></p>
 <p>Keep in mind that for Bernoulli data, each data point is either a 0 or a 1 (a “success” or a “fail”). The probability <span class="math inline">\(p_{i}\)</span> for each data point <span class="math inline">\(Y_{i}\)</span> is a continuous variable from [0,1]. The value of the covariate <span class="math inline">\(X_{i}\)</span> determines the probability <span class="math inline">\(p_{i}\)</span>, which in turn “weights the coin” and controls the probability that the outcome <span class="math inline">\(Y_{i}\)</span> will be 0 or 1.</p>
-<p>The binomial is closely related to a Bernoulli. Whereas the Bernoulli represents a single “coin flip,” the bimomial represents a collection of coin flips. To model a binomial response variable:</p>
+<p>The binomial is closely related to a Bernoulli. Whereas the Bernoulli represents a single “coin flip”, the bimomial represents a collection of coin flips. To model a binomial response variable:</p>
 <p><span class="math display">\[
 Y_i \sim \mathrm{Binomial}(n_i, p_i) \text{, where } \log \left( \frac{p_i}{1 - p_i} \right) = \beta_0 + \beta_1 X_i
 \]</span></p>
@@ -608,12 +614,12 @@ Y_i \sim \mathrm{Binomial}(n_i, p_i) \text{, where } \log \left( \frac{p_i}{1 - 
 \]</span></p>
 <p>Some examples of data that are best modelled as either Bernoulli or Binomial are:</p>
 <p>Evidence for joint damage in a rocket (this is a dataset we will tackle in the lab):</p>
-<div class="sourceCode" id="cb604"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb604-1"><a href="week-10-lecture.html#cb604-1" aria-hidden="true" tabindex="-1"></a>Challenger_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;_data/Challenger_data.csv&quot;</span>)</span>
-<span id="cb604-2"><a href="week-10-lecture.html#cb604-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Challenger_data<span class="sc">$</span>Temp,Challenger_data<span class="sc">$</span>O.ring.failure,<span class="at">pch=</span><span class="dv">16</span>,<span class="at">cex=</span><span class="dv">2</span>,<span class="at">col=</span><span class="fu">rgb</span>(<span class="dv">0</span>,<span class="fl">0.55</span>,<span class="fl">0.4</span>,<span class="fl">0.6</span>),<span class="at">xlab=</span><span class="st">&quot;Temperature&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;Presence of at least one failed O-ring&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb605"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb605-1"><a href="week-10-lecture.html#cb605-1" tabindex="-1"></a>Challenger_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;_data/Challenger_data.csv&quot;</span>)</span>
+<span id="cb605-2"><a href="week-10-lecture.html#cb605-2" tabindex="-1"></a><span class="fu">plot</span>(Challenger_data<span class="sc">$</span>Temp,Challenger_data<span class="sc">$</span>O.ring.failure,<span class="at">pch=</span><span class="dv">16</span>,<span class="at">cex=</span><span class="dv">2</span>,<span class="at">col=</span><span class="fu">rgb</span>(<span class="dv">0</span>,<span class="fl">0.55</span>,<span class="fl">0.4</span>,<span class="fl">0.6</span>),<span class="at">xlab=</span><span class="st">&quot;Temperature&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;Presence of at least one failed O-ring&quot;</span>)</span></code></pre></div>
 <p><img src="Week-10-lecture_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p>or the presence/absence of a species (in this case, a newt) plotted as a function of habitat suitability (data from <a href="https://www.dataanalytics.org.uk/publications/statistics-book-for-ecologists/support/data/">this website</a>):</p>
-<div class="sourceCode" id="cb605"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb605-1"><a href="week-10-lecture.html#cb605-1" aria-hidden="true" tabindex="-1"></a>Newt_HSI <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;_data/Newt HSI.csv&quot;</span>)</span>
-<span id="cb605-2"><a href="week-10-lecture.html#cb605-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Newt_HSI<span class="sc">$</span>HSI,Newt_HSI<span class="sc">$</span>presence,<span class="at">pch=</span><span class="dv">16</span>,<span class="at">cex=</span><span class="dv">2</span>,<span class="at">col=</span><span class="fu">rgb</span>(<span class="dv">0</span>,<span class="fl">0.55</span>,<span class="fl">0.4</span>,<span class="fl">0.3</span>),<span class="at">xlab=</span><span class="st">&quot;Habitat Suitability Index&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;Species presence (1)/Absence (0)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb606"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb606-1"><a href="week-10-lecture.html#cb606-1" tabindex="-1"></a>Newt_HSI <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;_data/Newt HSI.csv&quot;</span>)</span>
+<span id="cb606-2"><a href="week-10-lecture.html#cb606-2" tabindex="-1"></a><span class="fu">plot</span>(Newt_HSI<span class="sc">$</span>HSI,Newt_HSI<span class="sc">$</span>presence,<span class="at">pch=</span><span class="dv">16</span>,<span class="at">cex=</span><span class="dv">2</span>,<span class="at">col=</span><span class="fu">rgb</span>(<span class="dv">0</span>,<span class="fl">0.55</span>,<span class="fl">0.4</span>,<span class="fl">0.3</span>),<span class="at">xlab=</span><span class="st">&quot;Habitat Suitability Index&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;Species presence (1)/Absence (0)&quot;</span>)</span></code></pre></div>
 <p><img src="Week-10-lecture_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <p>By modeling our data as it exists, we have solved four problems</p>
 <ol style="list-style-type: decimal">
@@ -623,13 +629,13 @@ Y_i \sim \mathrm{Binomial}(n_i, p_i) \text{, where } \log \left( \frac{p_i}{1 - 
 <li><p>We have maintained the information on sample size for each data point (only relevant when data are binomial)</p></li>
 </ol>
 <p>An example with the beetle dataset (To be worked out on your own)</p>
-<div class="sourceCode" id="cb606"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb606-1"><a href="week-10-lecture.html#cb606-1" aria-hidden="true" tabindex="-1"></a>beetle.glm.fit <span class="ot">&lt;-</span> <span class="fu">glm</span>(<span class="at">formula =</span> ANAT <span class="sc">~</span> Wood.density, <span class="at">data =</span> beetle, <span class="at">family =</span> <span class="st">&quot;binomial&quot;</span>)</span>
-<span id="cb606-2"><a href="week-10-lecture.html#cb606-2" aria-hidden="true" tabindex="-1"></a>beetle.glm.vals <span class="ot">&lt;-</span> <span class="fu">predict</span>(beetle.glm.fit, <span class="at">newdata =</span> new.predictor, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span>
-<span id="cb606-3"><a href="week-10-lecture.html#cb606-3" aria-hidden="true" tabindex="-1"></a>beetle.glm.predict <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">WoodDensity =</span> new.predictor[[<span class="dv">1</span>]], <span class="at">Presence =</span> beetle.glm.vals)</span>
-<span id="cb606-4"><a href="week-10-lecture.html#cb606-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> beetle, <span class="fu">aes</span>(<span class="at">x =</span> Wood.density, <span class="at">y =</span> ANAT)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray55&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb606-5"><a href="week-10-lecture.html#cb606-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> beetle.glm.predict, <span class="fu">aes</span>(<span class="at">x =</span> WoodDensity, <span class="at">y =</span> Presence)) <span class="sc">+</span></span>
-<span id="cb606-6"><a href="week-10-lecture.html#cb606-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">&quot;Wood density (g cm&quot;</span> <span class="sc">^</span> <span class="st">&quot;-3&quot;</span>, <span class="st">&quot;)&quot;</span>)), <span class="at">y =</span> <span class="st">&quot;Presence of wood-boring beetle&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> </span>
-<span id="cb606-7"><a href="week-10-lecture.html#cb606-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
+<div class="sourceCode" id="cb607"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb607-1"><a href="week-10-lecture.html#cb607-1" tabindex="-1"></a>beetle.glm.fit <span class="ot">&lt;-</span> <span class="fu">glm</span>(<span class="at">formula =</span> ANAT <span class="sc">~</span> Wood.density, <span class="at">data =</span> beetle, <span class="at">family =</span> <span class="st">&quot;binomial&quot;</span>)</span>
+<span id="cb607-2"><a href="week-10-lecture.html#cb607-2" tabindex="-1"></a>beetle.glm.vals <span class="ot">&lt;-</span> <span class="fu">predict</span>(beetle.glm.fit, <span class="at">newdata =</span> new.predictor, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span>
+<span id="cb607-3"><a href="week-10-lecture.html#cb607-3" tabindex="-1"></a>beetle.glm.predict <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">WoodDensity =</span> new.predictor[[<span class="dv">1</span>]], <span class="at">Presence =</span> beetle.glm.vals)</span>
+<span id="cb607-4"><a href="week-10-lecture.html#cb607-4" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> beetle, <span class="fu">aes</span>(<span class="at">x =</span> Wood.density, <span class="at">y =</span> ANAT)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray55&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb607-5"><a href="week-10-lecture.html#cb607-5" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> beetle.glm.predict, <span class="fu">aes</span>(<span class="at">x =</span> WoodDensity, <span class="at">y =</span> Presence)) <span class="sc">+</span></span>
+<span id="cb607-6"><a href="week-10-lecture.html#cb607-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">&quot;Wood density (g cm&quot;</span> <span class="sc">^</span> <span class="st">&quot;-3&quot;</span>, <span class="st">&quot;)&quot;</span>)), <span class="at">y =</span> <span class="st">&quot;Presence of wood-boring beetle&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> </span>
+<span id="cb607-7"><a href="week-10-lecture.html#cb607-7" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
 <p><img src="Week-10-lecture_files/figure-html/unnamed-chunk-9-1.png" width="480" /></p>
 <p><strong>Question: How do we interpret this GLM?</strong></p>
 <details>
@@ -641,17 +647,17 @@ With increasing wood density, the probability of finding wood-boring beetles dec
 </span>
 </details>
 <p>And let’s see our predictions of the response again:</p>
-<div class="sourceCode" id="cb607"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb607-1"><a href="week-10-lecture.html#cb607-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(beetle.glm.fit, <span class="at">newdata =</span> <span class="fu">list</span>(<span class="at">Wood.density =</span> <span class="fl">0.1</span>), <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb608"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb608-1"><a href="week-10-lecture.html#cb608-1" tabindex="-1"></a><span class="fu">predict</span>(beetle.glm.fit, <span class="at">newdata =</span> <span class="fu">list</span>(<span class="at">Wood.density =</span> <span class="fl">0.1</span>), <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span></code></pre></div>
 <pre><code>##         1 
 ## 0.9999694</code></pre>
-<div class="sourceCode" id="cb609"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb609-1"><a href="week-10-lecture.html#cb609-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(beetle.glm.fit, <span class="at">newdata =</span> <span class="fu">list</span>(<span class="at">Wood.density =</span> <span class="fl">0.4</span>), <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb610"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb610-1"><a href="week-10-lecture.html#cb610-1" tabindex="-1"></a><span class="fu">predict</span>(beetle.glm.fit, <span class="at">newdata =</span> <span class="fu">list</span>(<span class="at">Wood.density =</span> <span class="fl">0.4</span>), <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span></code></pre></div>
 <pre><code>##           1 
 ## 0.004522846</code></pre>
 <p>The predictions are <span class="math inline">\(\hat{Y}_i\)</span>, which is equal to the expected value of <span class="math inline">\(Y_i\)</span> given <span class="math inline">\(X_i\)</span> (<span class="math inline">\(\mathrm{E}(Y_i)\)</span>). With a normally distributed regression, <span class="math inline">\(\hat{Y}_i = \mu_i = \beta_0 + \beta_1 X_i\)</span>. With GLMs, we have to consider the link function. Now, <span class="math inline">\(\mathrm{E}(Y_i) = p_i = \hat{Y}_i\)</span>. Thus, <span class="math inline">\(\hat{Y}_i\)</span> are probabilities in logistic regression. This is why <code>predict()</code> doesn’t give us 0’s and 1’s.</p>
-<div class="sourceCode" id="cb611"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb611-1"><a href="week-10-lecture.html#cb611-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(beetle.glm.fit, <span class="at">newdata =</span> <span class="fu">list</span>(<span class="at">Wood.density =</span> <span class="fl">0.1</span>), <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb612"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb612-1"><a href="week-10-lecture.html#cb612-1" tabindex="-1"></a><span class="fu">predict</span>(beetle.glm.fit, <span class="at">newdata =</span> <span class="fu">list</span>(<span class="at">Wood.density =</span> <span class="fl">0.1</span>), <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span></code></pre></div>
 <pre><code>##         1 
 ## 0.9999694</code></pre>
-<div class="sourceCode" id="cb613"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb613-1"><a href="week-10-lecture.html#cb613-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(beetle.glm.fit, <span class="at">newdata =</span> <span class="fu">list</span>(<span class="at">Wood.density =</span> <span class="fl">0.4</span>), <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb614"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb614-1"><a href="week-10-lecture.html#cb614-1" tabindex="-1"></a><span class="fu">predict</span>(beetle.glm.fit, <span class="at">newdata =</span> <span class="fu">list</span>(<span class="at">Wood.density =</span> <span class="fl">0.4</span>), <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span></code></pre></div>
 <pre><code>##           1 
 ## 0.004522846</code></pre>
 <p>The argument <code>type = "response"</code> in <code>predict()</code> back-transforms the predicted response using the inverse logit function.</p>
@@ -662,7 +668,7 @@ With increasing wood density, the probability of finding wood-boring beetles dec
 <p>The probability of the event (which we already knew) can be obtained using the logit using the inverse logit: <span class="math inline">\(\frac{\exp(\text{log odds})}{1 + \exp(\text{log odds})}\)</span></p>
 <p><img src="Week-10-lecture_files/figure-html/unnamed-chunk-12-1.png" width="384" /></p>
 <p>Adapted from <a href="http://www.montana.edu/rotella/documents/502/Prob_odds_log-odds.pdf">this website</a>.</p>
-<div class="sourceCode" id="cb615"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb615-1"><a href="week-10-lecture.html#cb615-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(beetle.glm.fit)</span></code></pre></div>
+<div class="sourceCode" id="cb616"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb616-1"><a href="week-10-lecture.html#cb616-1" tabindex="-1"></a><span class="fu">summary</span>(beetle.glm.fit)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## glm(formula = ANAT ~ Wood.density, family = &quot;binomial&quot;, data = beetle)
@@ -687,23 +693,23 @@ With increasing wood density, the probability of finding wood-boring beetles dec
 ## Number of Fisher Scoring iterations: 6</code></pre>
 <p>The relationship between the link function and the predictor, <span class="math inline">\(\log \left( \frac{p_i}{1 - p_i} \right) = \beta_0 + \beta_1 X_i\)</span>, is <strong>linear</strong> on the scale of <strong>logit units</strong> (see Aho example 9.28).</p>
 <p>If the logistic model is fit without an intercept, the best fit line predicts <span class="math inline">\(p = 0.5\)</span> when <span class="math inline">\(X = 0\)</span>. The intercept <span class="math inline">\(\hat{\beta_0}\)</span> shifts the probability for <span class="math inline">\(X = 0\)</span> up or down relative to 0.5. In logit units, the probability is shifted up (approximating 1) when <span class="math inline">\(X = 0\)</span>.</p>
-<div class="sourceCode" id="cb617"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb617-1"><a href="week-10-lecture.html#cb617-1" aria-hidden="true" tabindex="-1"></a>beetle.glm.fit<span class="sc">$</span>coefficients[<span class="dv">1</span>]  <span class="co"># logit units</span></span></code></pre></div>
+<div class="sourceCode" id="cb618"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb618-1"><a href="week-10-lecture.html#cb618-1" tabindex="-1"></a>beetle.glm.fit<span class="sc">$</span>coefficients[<span class="dv">1</span>]  <span class="co"># logit units</span></span></code></pre></div>
 <pre><code>## (Intercept) 
 ##     15.6586</code></pre>
-<div class="sourceCode" id="cb619"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb619-1"><a href="week-10-lecture.html#cb619-1" aria-hidden="true" tabindex="-1"></a>inv.logit <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb619-2"><a href="week-10-lecture.html#cb619-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">exp</span>(x) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(x))</span>
-<span id="cb619-3"><a href="week-10-lecture.html#cb619-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb619-4"><a href="week-10-lecture.html#cb619-4" aria-hidden="true" tabindex="-1"></a><span class="fu">inv.logit</span>(beetle.glm.fit<span class="sc">$</span>coefficients[<span class="dv">1</span>])  <span class="co"># units of probability (but no longer linear)</span></span></code></pre></div>
+<div class="sourceCode" id="cb620"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb620-1"><a href="week-10-lecture.html#cb620-1" tabindex="-1"></a>inv.logit <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb620-2"><a href="week-10-lecture.html#cb620-2" tabindex="-1"></a>  <span class="fu">exp</span>(x) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(x))</span>
+<span id="cb620-3"><a href="week-10-lecture.html#cb620-3" tabindex="-1"></a>}</span>
+<span id="cb620-4"><a href="week-10-lecture.html#cb620-4" tabindex="-1"></a><span class="fu">inv.logit</span>(beetle.glm.fit<span class="sc">$</span>coefficients[<span class="dv">1</span>])  <span class="co"># units of probability (but no longer linear)</span></span></code></pre></div>
 <pre><code>## (Intercept) 
 ##   0.9999998</code></pre>
 <p>Since the parameters are linear on the scale of logit units, the logit (log odds) of beetle presence decreases by 52.6 given a 1 g/cm<sup>3</sup> increase in wood density (decreases to almost 0 probability).</p>
-<div class="sourceCode" id="cb621"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb621-1"><a href="week-10-lecture.html#cb621-1" aria-hidden="true" tabindex="-1"></a>beetle.glm.fit<span class="sc">$</span>coefficients[<span class="dv">2</span>]  <span class="co"># logit units</span></span></code></pre></div>
+<div class="sourceCode" id="cb622"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb622-1"><a href="week-10-lecture.html#cb622-1" tabindex="-1"></a>beetle.glm.fit<span class="sc">$</span>coefficients[<span class="dv">2</span>]  <span class="co"># logit units</span></span></code></pre></div>
 <pre><code>## Wood.density 
 ##     -52.6317</code></pre>
 <p>Be aware that the significance of coefficients fit for GLMs is done using a Wald test, which relies on asymptotic (large-sample) estimates of standard errors of the coefficients. The Wald test uses a test statistic, <span class="math inline">\(z\)</span>, that is the parameter estimate divided by the estimated standard error of the parameter estimate, which is asymptotically standard normal under <span class="math inline">\(H_0 = 0\)</span>.</p>
 </div>
-<div id="fitting-a-glm" class="section level2" number="18.6">
-<h2><span class="header-section-number">18.6</span> Fitting a GLM</h2>
+<div id="fitting-a-glm" class="section level2 hasAnchor" number="18.6">
+<h2><span class="header-section-number">18.6</span> Fitting a GLM<a href="week-10-lecture.html#fitting-a-glm" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To fit GLMs, we need another method besides ordinary least squares (which assumes data are normally distributed). We need to fit the parameters using maximum likelihood.</p>
 <p>We’ll use binomial data as an example. The likelihood for binomial data, where we have <span class="math inline">\(N\)</span> data points <span class="math inline">\(Y = \{ Y_1, Y_2, ...,Y_N \}\)</span>, each a draw from <span class="math inline">\(\mathrm{Binomial}(n_i, p_i)\)</span>:</p>
 <p><span class="math display">\[
@@ -726,15 +732,15 @@ So, we can substitute this expression for <span class="math inline">\(p_i\)</spa
 \]</span></p>
 <p>These equations cannot be solved algebraically. They must be solved numerically, for example, using iteratively weighted least squares with optimizing algorithms. When you think about the computing power needed to fit GLMs (which is no big deal today), it makes sense why it was traditional to transform your data to become normally distributed rather than model your data as it exists using GLM.</p>
 <p><strong>How do we interpret the coefficients?</strong></p>
-<p>If we fit a logistic model without an intercept, the best fit line must predict p=0.5 when X=0. So the intercept in this case shifts the probability for X=0 up or down relative to 0.5, and it does so by shifting the entire curve left and right along the x axis. This is illustrated in the figure that follows, where I have added "some amount <span class="math inline">\(i\)</span> to the intercept for <span class="math inline">\(i=1\)</span> to <span class="math inline">\(i=12\)</span> and plotted the colors using the rainbow color set.</p>
-<div class="sourceCode" id="cb623"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb623-1"><a href="week-10-lecture.html#cb623-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>),<span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span><span class="dv">1</span><span class="sc">*</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span><span class="dv">1</span><span class="sc">*</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))),<span class="at">col=</span><span class="st">&quot;black&quot;</span>,<span class="at">typ=</span><span class="st">&quot;l&quot;</span>,<span class="at">xlab=</span><span class="st">&quot;X value&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;Logistic probability&quot;</span>)</span>
-<span id="cb623-2"><a href="week-10-lecture.html#cb623-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>)</span>
-<span id="cb623-3"><a href="week-10-lecture.html#cb623-3" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb623-4"><a href="week-10-lecture.html#cb623-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lines</span>(<span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>),<span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span>i<span class="sc">+</span><span class="dv">1</span><span class="sc">*</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span>i<span class="sc">+</span><span class="dv">1</span><span class="sc">*</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))),<span class="at">col=</span><span class="fu">rainbow</span>(<span class="dv">15</span>)[i])</span>
-<span id="cb623-5"><a href="week-10-lecture.html#cb623-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb623-6"><a href="week-10-lecture.html#cb623-6" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="dv">0</span>,<span class="at">col=</span><span class="st">&quot;black&quot;</span>,<span class="at">lty=</span><span class="dv">3</span>)</span>
-<span id="cb623-7"><a href="week-10-lecture.html#cb623-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span>)<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span>)),<span class="at">col=</span><span class="st">&quot;black&quot;</span>,<span class="at">lty=</span><span class="dv">3</span>)</span>
-<span id="cb623-8"><a href="week-10-lecture.html#cb623-8" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span><span class="dv">5</span>)<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span><span class="dv">5</span>)),<span class="at">col=</span><span class="fu">rainbow</span>(<span class="dv">15</span>)[<span class="dv">5</span>],<span class="at">lty=</span><span class="dv">3</span>)</span></code></pre></div>
+<p>If we fit a logistic model without an intercept, the best fit line must predict p=0.5 when X=0. So the intercept in this case shifts the probability for X=0 up or down relative to 0.5, and it does so by shifting the entire curve left and right along the x axis. This is illustrated in the figure that follows, where I have added “some amount <span class="math inline">\(i\)</span> to the intercept for <span class="math inline">\(i=1\)</span> to <span class="math inline">\(i=12\)</span> and plotted the colors using the rainbow color set.</p>
+<div class="sourceCode" id="cb624"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb624-1"><a href="week-10-lecture.html#cb624-1" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>),<span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span><span class="dv">1</span><span class="sc">*</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span><span class="dv">1</span><span class="sc">*</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))),<span class="at">col=</span><span class="st">&quot;black&quot;</span>,<span class="at">typ=</span><span class="st">&quot;l&quot;</span>,<span class="at">xlab=</span><span class="st">&quot;X value&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;Logistic probability&quot;</span>)</span>
+<span id="cb624-2"><a href="week-10-lecture.html#cb624-2" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb624-3"><a href="week-10-lecture.html#cb624-3" tabindex="-1"></a>{</span>
+<span id="cb624-4"><a href="week-10-lecture.html#cb624-4" tabindex="-1"></a>  <span class="fu">lines</span>(<span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>),<span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span>i<span class="sc">+</span><span class="dv">1</span><span class="sc">*</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span>i<span class="sc">+</span><span class="dv">1</span><span class="sc">*</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))),<span class="at">col=</span><span class="fu">rainbow</span>(<span class="dv">15</span>)[i])</span>
+<span id="cb624-5"><a href="week-10-lecture.html#cb624-5" tabindex="-1"></a>}</span>
+<span id="cb624-6"><a href="week-10-lecture.html#cb624-6" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="dv">0</span>,<span class="at">col=</span><span class="st">&quot;black&quot;</span>,<span class="at">lty=</span><span class="dv">3</span>)</span>
+<span id="cb624-7"><a href="week-10-lecture.html#cb624-7" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span>)<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span>)),<span class="at">col=</span><span class="st">&quot;black&quot;</span>,<span class="at">lty=</span><span class="dv">3</span>)</span>
+<span id="cb624-8"><a href="week-10-lecture.html#cb624-8" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span><span class="dv">5</span>)<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span><span class="dv">5</span>)),<span class="at">col=</span><span class="fu">rainbow</span>(<span class="dv">15</span>)[<span class="dv">5</span>],<span class="at">lty=</span><span class="dv">3</span>)</span></code></pre></div>
 <p><img src="Week-10-lecture_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 <p>Note how the change of intercept from <span class="math inline">\(\beta_{0}=-3\)</span> to <span class="math inline">\(\beta_{0}=5\)</span> shifts the distribution to the left and as a result increases the value where the curve crosses the y-axis. (If the slope were negative, a shift to the left would have the opposite effect.)</p>
 <p>The “slope” (<span class="math inline">\(\widehat{\beta_{1}}\)</span>)̂ can be interpreted as follows:</p>
@@ -742,21 +748,21 @@ So, we can substitute this expression for <span class="math inline">\(p_i\)</spa
 e^{\widehat{\beta_{1}}}=\mbox{=&quot;change in the odds for a 1 unit change in X&quot;}
 \]</span>
 Another way to think about the slope term in logistic regression is that is controls how steeply the curve shifts between 0 and 1. Consider the following figure, where I reduce the slope from <span class="math inline">\(\beta_{1}=1\)</span> to <span class="math inline">\(\beta_{1}=0.077\)</span>, Notice how the lines get flatter as the slope decreases (but without changing the intercept).</p>
-<div class="sourceCode" id="cb624"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb624-1"><a href="week-10-lecture.html#cb624-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>),<span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span><span class="dv">1</span><span class="sc">*</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span><span class="dv">1</span><span class="sc">*</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))),<span class="at">col=</span><span class="st">&quot;black&quot;</span>,<span class="at">typ=</span><span class="st">&quot;l&quot;</span>,<span class="at">xlab=</span><span class="st">&quot;X value&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;Logistic probability&quot;</span>)</span>
-<span id="cb624-2"><a href="week-10-lecture.html#cb624-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>)</span>
-<span id="cb624-3"><a href="week-10-lecture.html#cb624-3" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb624-4"><a href="week-10-lecture.html#cb624-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lines</span>(<span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>),<span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span>(<span class="dv">1</span><span class="sc">-</span>(i<span class="sc">/</span><span class="dv">13</span>))<span class="sc">*</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span>(<span class="dv">1</span><span class="sc">-</span>(i<span class="sc">/</span><span class="dv">13</span>))<span class="sc">*</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))),<span class="at">col=</span><span class="fu">rainbow</span>(<span class="dv">15</span>)[i])</span>
-<span id="cb624-5"><a href="week-10-lecture.html#cb624-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb624-6"><a href="week-10-lecture.html#cb624-6" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="dv">0</span>,<span class="at">col=</span><span class="st">&quot;black&quot;</span>,<span class="at">lty=</span><span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb625"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb625-1"><a href="week-10-lecture.html#cb625-1" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>),<span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span><span class="dv">1</span><span class="sc">*</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span><span class="dv">1</span><span class="sc">*</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))),<span class="at">col=</span><span class="st">&quot;black&quot;</span>,<span class="at">typ=</span><span class="st">&quot;l&quot;</span>,<span class="at">xlab=</span><span class="st">&quot;X value&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;Logistic probability&quot;</span>)</span>
+<span id="cb625-2"><a href="week-10-lecture.html#cb625-2" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb625-3"><a href="week-10-lecture.html#cb625-3" tabindex="-1"></a>{</span>
+<span id="cb625-4"><a href="week-10-lecture.html#cb625-4" tabindex="-1"></a>  <span class="fu">lines</span>(<span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>),<span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span>(<span class="dv">1</span><span class="sc">-</span>(i<span class="sc">/</span><span class="dv">13</span>))<span class="sc">*</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">+</span>(<span class="dv">1</span><span class="sc">-</span>(i<span class="sc">/</span><span class="dv">13</span>))<span class="sc">*</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))),<span class="at">col=</span><span class="fu">rainbow</span>(<span class="dv">15</span>)[i])</span>
+<span id="cb625-5"><a href="week-10-lecture.html#cb625-5" tabindex="-1"></a>}</span>
+<span id="cb625-6"><a href="week-10-lecture.html#cb625-6" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="dv">0</span>,<span class="at">col=</span><span class="st">&quot;black&quot;</span>,<span class="at">lty=</span><span class="dv">3</span>)</span></code></pre></div>
 <p><img src="Week-10-lecture_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p><strong>Important note</strong> Note that the sampling variability is fully prescribed by the model used to describe the response</p>
 <p><span class="math display">\[
 Y_i \sim Binomial(n_i,p_i)
 \]</span></p>
-<p>In other words, by using a logistic model, we have implicitly stated that the variability in the response that is due to sampling variation (‘residual error’) is entirely driven by the variation that would be expected by a Binomial distribution. We do not have a separate “error model.” We have one model that contains information both on the expected (mean) value of the response for each value of the covariate, and on the amount of random noise in that response that we would expect from one data point to the next (for the same value of the covariate).</p>
+<p>In other words, by using a logistic model, we have implicitly stated that the variability in the response that is due to sampling variation (‘residual error’) is entirely driven by the variation that would be expected by a Binomial distribution. We do not have a separate “error model”. We have one model that contains information both on the expected (mean) value of the response for each value of the covariate, and on the amount of random noise in that response that we would expect from one data point to the next (for the same value of the covariate).</p>
 </div>
-<div id="poisson-regression" class="section level2" number="18.7">
-<h2><span class="header-section-number">18.7</span> Poisson regression</h2>
+<div id="poisson-regression" class="section level2 hasAnchor" number="18.7">
+<h2><span class="header-section-number">18.7</span> Poisson regression<a href="week-10-lecture.html#poisson-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Poisson regression is used to model response variables that are counts. Poisson data includes:</p>
 <ul>
 <li><p>Number of plants is a given area</p></li>
@@ -807,8 +813,8 @@ As before, we solve for the parameters <span class="math inline">\(\beta_{0}\)</
 </ol>
 <p>These types of Poisson regressions are common in ecology and evolution!</p>
 </div>
-<div id="deviance" class="section level2" number="18.8">
-<h2><span class="header-section-number">18.8</span> Deviance</h2>
+<div id="deviance" class="section level2 hasAnchor" number="18.8">
+<h2><span class="header-section-number">18.8</span> Deviance<a href="week-10-lecture.html#deviance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When we were fitting linear regression models, we assessed model fit using the coefficient of determination <span class="math inline">\(R^{2}\)</span>. To measure fit of GLMs we use the <strong>deviance</strong>. Conceptually, it is not all that different from other fit metrics, and is analogous to the residual sum of squares for a linear model (actually it is equal to the residual sum of squares, see table 9.3 in Aho).</p>
 <p>The deviance compares the NLL of the proposed model with the NLL of the “saturated” model. The saturated model is a model in which the predicted mean response matches each data point exactly, with one parameter for each observation. Note that the saturated model is a theoretical construct used to calculate deviance, not a model that you actually fit yourself.</p>
 <p>Deviance is calculated as:</p>
@@ -832,7 +838,7 @@ Under the null hypothesis that the smaller model is the true model:</p>
 Models with more parameters have higher likelihood, because any additional parameters allow the model more “freedom” to fit the data. This means that the difference in log likelihoods (<span class="math inline">\(\ell_{\text{larger model}} - \ell_{\text{smaller model}}\)</span>) will be positive and therefore the deviance difference will be negative.</p>
 <p>Adding additional parameters <strong>always</strong> improves model fit. BUT, we want to know whether the fit improves above and beyond what would be expected purely by adding additional parameters to the model? We calculate the <em>P</em>-value as <span class="math inline">\(P(\Delta D | H_0 \ge \Delta D_{\text{observed}})\)</span> (notice that this is a one-tailed test). If deviance (observed test statistic) is larger than predicted by the chi-square distribution (our distribution of the test statistic under the null hypothesis), the larger model fits the data above and beyond what we would expect.</p>
 <p>We already used this concept of deviance to construct 95% confidence intervals on a maximum likelihood estimate!</p>
-<p>From Week 4’s Problem Set, "Using your function for the negative log-likelihood, calculate the MLE for <span class="math inline">\(\lambda\)</span> and the 95th percentile confidence interval. What would the 99th percentile confidence interval be? (4 pts) [Hint: The 95th percentile cut-off is <span class="math inline">\(0.5 \times \chi^2_{df = 1}(0.95)\)</span> or <code>0.5 * qchisq(0.95, df = 1) = 1.92</code> in R; in other words, the NLL would have to be &gt;1.92 higher than the minimum to fall outside the 95th percentile confidence interval. Likewise, the 99th percentile cut-off is <span class="math inline">\(0.5 \times \chi^2_{df = 1}(0.99) = 3.32\)</span>.]</p>
+<p>From Week 4’s Problem Set, “Using your function for the negative log-likelihood, calculate the MLE for <span class="math inline">\(\lambda\)</span> and the 95th percentile confidence interval. What would the 99th percentile confidence interval be? (4 pts) [Hint: The 95th percentile cut-off is <span class="math inline">\(0.5 \times \chi^2_{df = 1}(0.95)\)</span> or <code>0.5 * qchisq(0.95, df = 1) = 1.92</code> in R; in other words, the NLL would have to be &gt;1.92 higher than the minimum to fall outside the 95th percentile confidence interval. Likewise, the 99th percentile cut-off is <span class="math inline">\(0.5 \times \chi^2_{df = 1}(0.99) = 3.32\)</span>.]</p>
 <p>So, you used the difference in NLL required to find the 95% CIs, but now you can see where that comes from.</p>
 <p>An alternative approach to assessing the “importance” of a variable is to look at the test statistic for the model parameters the same way that we did for ordinary linear regression.</p>
 <p><span class="math display">\[
@@ -840,8 +846,8 @@ z=\frac{\mbox{parameter estimate}}{\mbox{s.e. of parameter estimate}}
 \]</span></p>
 <p>The test statistic z is approximately normal for large sample sizes.</p>
 </div>
-<div id="other-methods-loess-splines-gams" class="section level2" number="18.9">
-<h2><span class="header-section-number">18.9</span> Other methods – LOESS, splines, GAMs</h2>
+<div id="other-methods-loess-splines-gams" class="section level2 hasAnchor" number="18.9">
+<h2><span class="header-section-number">18.9</span> Other methods – LOESS, splines, GAMs<a href="week-10-lecture.html#other-methods-loess-splines-gams" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Traditional regression methods are incredibly useful for predicting or explaining empirical data. However, in some situations, these methods are not flexible enough. For these cases, there are non-parametric approaches to curve fitting.</p>
 <p>These methods may be useful for:</p>
 <ul>
@@ -859,27 +865,27 @@ Y_i = g(X_i) + \epsilon_i \text{, where } \epsilon_i \sim \mathrm{N} (0, \sigma^
 <p><span class="math display">\[
 Y_i = \beta_0 + w_1(X_i - X_0) + w_2 (X_i - X_0)^2 + ... + w_p (X_i - X_0)^p + \epsilon_i
 \]</span></p>
-<div class="sourceCode" id="cb625"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb625-1"><a href="week-10-lecture.html#cb625-1" aria-hidden="true" tabindex="-1"></a>bomregions2012<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">&quot;~/Dropbox/Biometry/Week 10 Multiple regression and GLMs/Week 10 Lecture/bomregions2012.csv&quot;</span>)</span>
-<span id="cb625-2"><a href="week-10-lecture.html#cb625-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bomregions2012, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> northRain)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;loess&quot;</span>) <span class="sc">+</span></span>
-<span id="cb625-3"><a href="week-10-lecture.html#cb625-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Northern rainfall&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> </span>
-<span id="cb625-4"><a href="week-10-lecture.html#cb625-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size)) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb626"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb626-1"><a href="week-10-lecture.html#cb626-1" tabindex="-1"></a>bomregions2012<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">&quot;~/Dropbox/Biometry/Week 10 Multiple regression and GLMs/Week 10 Lecture/bomregions2012.csv&quot;</span>)</span>
+<span id="cb626-2"><a href="week-10-lecture.html#cb626-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bomregions2012, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> northRain)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;loess&quot;</span>) <span class="sc">+</span></span>
+<span id="cb626-3"><a href="week-10-lecture.html#cb626-3" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Northern rainfall&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> </span>
+<span id="cb626-4"><a href="week-10-lecture.html#cb626-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size)) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="Week-10-lecture_files/figure-html/unnamed-chunk-18-1.png" width="384" /></p>
 <p>A smoothing spline is a model whose metric of fit is the sum of a measure of residuals, as well as a measure of roughness:</p>
 <p><span class="math display">\[\sum^n_{i = 1} (Y_i - f(X_i))^2 + h \int^{x_{\text{max}}}_{x_{\text{min}}} f&#39;&#39;(X_i)^2 dx\]</span></p>
 <p>The first term is the residual sum of squares, and the second term is a roughness penalty. <span class="math inline">\(h\)</span> is a smoothing parameter. A larger <span class="math inline">\(h\)</span> means a smoother line, because curves are more heavily penalized. A curve with <span class="math inline">\(h = 0\)</span> will just interpolate the data and a curve with a very large <span class="math inline">\(h\)</span> will fit a linear regression. The endpoints of the integral enclose the data.</p>
-<div class="sourceCode" id="cb627"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb627-1"><a href="week-10-lecture.html#cb627-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bomregions2012, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> northRain)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb627-2"><a href="week-10-lecture.html#cb627-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> lm, <span class="at">formula =</span> y <span class="sc">~</span> splines<span class="sc">::</span><span class="fu">bs</span>(x, <span class="dv">10</span>), <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb627-3"><a href="week-10-lecture.html#cb627-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Northern rainfall&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> </span>
-<span id="cb627-4"><a href="week-10-lecture.html#cb627-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size)) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb628"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb628-1"><a href="week-10-lecture.html#cb628-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bomregions2012, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> northRain)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb628-2"><a href="week-10-lecture.html#cb628-2" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> lm, <span class="at">formula =</span> y <span class="sc">~</span> splines<span class="sc">::</span><span class="fu">bs</span>(x, <span class="dv">10</span>), <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb628-3"><a href="week-10-lecture.html#cb628-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Northern rainfall&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> </span>
+<span id="cb628-4"><a href="week-10-lecture.html#cb628-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size)) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code></pre></div>
 <p><img src="Week-10-lecture_files/figure-html/unnamed-chunk-19-1.png" width="384" /></p>
 <p>Generalized additive models (GAMs) allow us specify both smoothing and conventional parametric terms for models. GAMs are compatible with nonlinearity and nonnormal errors by using link functions (like with GLMs). With one covariate:</p>
 <p><span class="math display">\[Y = \beta_0 + g(X)\]</span></p>
 <p>This function, <span class="math inline">\(g()\)</span>, could be smoothing splines, LOESS smoothers, kernel smoothers, etc.</p>
-<div class="sourceCode" id="cb628"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb628-1"><a href="week-10-lecture.html#cb628-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bomregions2012, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> northRain)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb628-2"><a href="week-10-lecture.html#cb628-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;gam&quot;</span>, <span class="at">formula =</span> y <span class="sc">~</span> <span class="fu">s</span>(x, <span class="at">bs =</span> <span class="st">&quot;cs&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb628-3"><a href="week-10-lecture.html#cb628-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Northern rainfall&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> </span>
-<span id="cb628-4"><a href="week-10-lecture.html#cb628-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size)) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb629"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb629-1"><a href="week-10-lecture.html#cb629-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bomregions2012, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> northRain)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb629-2"><a href="week-10-lecture.html#cb629-2" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;gam&quot;</span>, <span class="at">formula =</span> y <span class="sc">~</span> <span class="fu">s</span>(x, <span class="at">bs =</span> <span class="st">&quot;cs&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb629-3"><a href="week-10-lecture.html#cb629-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Northern rainfall&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> </span>
+<span id="cb629-4"><a href="week-10-lecture.html#cb629-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size)) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code></pre></div>
 <p><img src="Week-10-lecture_files/figure-html/unnamed-chunk-20-1.png" width="384" /></p>
 <p>Personally, I really dislike GAMs and would discourage their use. GAMs rarely if ever provide information that you couldn’t see with the naked eye, and their use lends an air of statistical rigor to an analysis that is usually unjustified. I often see GAMs used as a crutch to avoid thinking seriously about the statistical model, and it tends to produce features that are artifacts of the data rather than meaningful information about the underlying process.</p>
 <p>Multiple regression is <strong>not</strong> fundamentally different from what we have discussed in the past three weeks. The major differences are that we need to be careful about what covariates we include, as well as our interpretations of linear model coefficients. <em>Note that covariates, predictors, and explanatory variables all refer to the same thing, what I’ve referred to in linear regression as <span class="math inline">\(X_i\)</span>.</em></p>
@@ -893,7 +899,7 @@ Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + ... + \beta_{p - 1} X_{(p - 1)
 \]</span></p>
 <p>Where <span class="math inline">\(Y_i\)</span> is the response for the <span class="math inline">\(i^{\text{th}}\)</span> data point, <span class="math inline">\(X_{(p - 1)i}\)</span> is the covariate <span class="math inline">\(p - 1\)</span> for the <span class="math inline">\(i^{\text{th}}\)</span> data point. There are <span class="math inline">\(p\)</span> parameters in the model (<span class="math inline">\(p - 1\)</span> partial regression slopes and one intercept).</p>
 <p>Note that we could write this is matrix form like we did with the linear models in Week 8:</p>
-<p><span class="math display">\[\mathbf{Y} = 
+<p><span class="math display">\[\mathbf{Y} =
 \begin{bmatrix}
   Y_1 \\
   Y_2 \\
@@ -907,14 +913,14 @@ Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + ... + \beta_{p - 1} X_{(p - 1)
   1 &amp; \vdots &amp; \ddots &amp; \vdots \\
   1 &amp; X_{1n} &amp; ... &amp; X_{(p - 1)n}
 \end{bmatrix}
-\mathbf{b} = 
+\mathbf{b} =
 \begin{bmatrix}
   \beta_0 \\
   \beta_1 \\
   \vdots \\
   \beta_{p - 1}
 \end{bmatrix}
-\mathbf{e} = 
+\mathbf{e} =
 \begin{bmatrix}
   \epsilon_1 \\
   \epsilon_2 \\
@@ -953,14 +959,14 @@ The population error variance (the expected value of squared errors). In practic
 \]</span></p>
 <p>where <span class="math inline">\(R^2_1\)</span> is the multiple coefficient of determination, or the fraction of variance in the covariate 1 explained by all other covariates, <span class="math inline">\(X_1 \sim X_2 + X_3 + ... + X_{p - 1}\)</span>.</p>
 <p>The bigger that <span class="math inline">\(R^2_1\)</span> is, the larger the standard error of <span class="math inline">\(\hat{\beta_1}\)</span>:</p>
-<div class="sourceCode" id="cb629"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb629-1"><a href="week-10-lecture.html#cb629-1" aria-hidden="true" tabindex="-1"></a>Var.inflation <span class="ot">&lt;-</span> <span class="cf">function</span>(R2<span class="fl">.1</span>) {</span>
-<span id="cb629-2"><a href="week-10-lecture.html#cb629-2" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span> <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">-</span> R2<span class="fl">.1</span>)</span>
-<span id="cb629-3"><a href="week-10-lecture.html#cb629-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb629-4"><a href="week-10-lecture.html#cb629-4" aria-hidden="true" tabindex="-1"></a><span class="fu">Var.inflation</span>(<span class="fl">0.1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb630"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb630-1"><a href="week-10-lecture.html#cb630-1" tabindex="-1"></a>Var.inflation <span class="ot">&lt;-</span> <span class="cf">function</span>(R2<span class="fl">.1</span>) {</span>
+<span id="cb630-2"><a href="week-10-lecture.html#cb630-2" tabindex="-1"></a>  <span class="dv">1</span> <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">-</span> R2<span class="fl">.1</span>)</span>
+<span id="cb630-3"><a href="week-10-lecture.html#cb630-3" tabindex="-1"></a>}</span>
+<span id="cb630-4"><a href="week-10-lecture.html#cb630-4" tabindex="-1"></a><span class="fu">Var.inflation</span>(<span class="fl">0.1</span>)</span></code></pre></div>
 <pre><code>## [1] 1.111111</code></pre>
-<div class="sourceCode" id="cb631"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb631-1"><a href="week-10-lecture.html#cb631-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Var.inflation</span>(<span class="fl">0.6</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb632"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb632-1"><a href="week-10-lecture.html#cb632-1" tabindex="-1"></a><span class="fu">Var.inflation</span>(<span class="fl">0.6</span>)</span></code></pre></div>
 <pre><code>## [1] 2.5</code></pre>
-<div class="sourceCode" id="cb633"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb633-1"><a href="week-10-lecture.html#cb633-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Var.inflation</span>(<span class="fl">0.9</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb634"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb634-1"><a href="week-10-lecture.html#cb634-1" tabindex="-1"></a><span class="fu">Var.inflation</span>(<span class="fl">0.9</span>)</span></code></pre></div>
 <pre><code>## [1] 10</code></pre>
 <p>How do we diagnose multicollinearity?</p>
 <ol style="list-style-type: decimal">
@@ -1020,7 +1026,6 @@ Since the models are nested, we can use the deviance difference.
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1039,6 +1044,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -1059,6 +1065,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -1072,7 +1082,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

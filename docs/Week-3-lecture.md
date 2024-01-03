@@ -60,7 +60,7 @@ The shape of the Normal distribution can be illustrated by a few examples
 
 <img src="Week-3-lecture_files/figure-html/unnamed-chunk-1-1.png" width="672" />
 
-<iframe src="https://hlynch.shinyapps.io/normaldistribution/?showcase=0" width="672" height="1000px"></iframe>
+<iframe src="https://hlynch.shinyapps.io/normaldistribution/?showcase=0" width="672" height="1000px" data-external="1"></iframe>
 
 The expected value of the Normal distribution is given by
 
@@ -262,7 +262,7 @@ The shape of the Beta distribution is illustrated by the following examples
 
 <img src="Week-3-lecture_files/figure-html/unnamed-chunk-6-1.png" width="672" />
 
-<iframe src="https://hlynch.shinyapps.io/betadistribution/?showcase=0" width="672" height="1000px"></iframe>
+<iframe src="https://hlynch.shinyapps.io/betadistribution/?showcase=0" width="672" height="1000px" data-external="1"></iframe>
 
 The expected value and variance of the Beta distribution is given by
 

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>20 Week 11 Lecture | Biometry Lecture and Lab Notes</title>
   <meta name="description" content="20 Week 11 Lecture | Biometry Lecture and Lab Notes" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="20 Week 11 Lecture | Biometry Lecture and Lab Notes" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-05-15" />
+<meta name="date" content="2024-01-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="week-10-lab.html"/>
 <link rel="next" href="week-11-lab.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -91,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -104,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -116,6 +117,11 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -170,7 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="week-2-lecture.html"><a href="week-2-lecture.html"><i class="fa fa-check"></i><b>3</b> Week 2 Lecture</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="week-2-lecture.html"><a href="week-2-lecture.html#week-2-readings"><i class="fa fa-check"></i><b>3.1</b> Week 2 Readings</a></li>
-<li class="chapter" data-level="3.2" data-path="week-1-lecture.html"><a href="week-1-lecture.html#todays-agenda"><i class="fa fa-check"></i><b>3.2</b> Today’s Agenda</a></li>
+<li class="chapter" data-level="3.2" data-path="week-2-lecture.html"><a href="week-2-lecture.html#todays-agenda-1"><i class="fa fa-check"></i><b>3.2</b> Today’s Agenda</a></li>
 <li class="chapter" data-level="3.3" data-path="week-2-lecture.html"><a href="week-2-lecture.html#hypothesis-testing"><i class="fa fa-check"></i><b>3.3</b> Hypothesis testing</a></li>
 <li class="chapter" data-level="3.4" data-path="week-2-lecture.html"><a href="week-2-lecture.html#permutation-tests"><i class="fa fa-check"></i><b>3.4</b> Permutation tests</a></li>
 <li class="chapter" data-level="3.5" data-path="week-2-lecture.html"><a href="week-2-lecture.html#parameter-estimation"><i class="fa fa-check"></i><b>3.5</b> Parameter estimation</a></li>
@@ -186,7 +192,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2" data-path="week-2-lab.html"><a href="week-2-lab.html#testing-hypotheses-through-permutation"><i class="fa fa-check"></i><b>4.2</b> Testing hypotheses through permutation</a></li>
 <li class="chapter" data-level="4.3" data-path="week-2-lab.html"><a href="week-2-lab.html#basics-of-bootstrap-and-jackknife"><i class="fa fa-check"></i><b>4.3</b> Basics of bootstrap and jackknife</a></li>
 <li class="chapter" data-level="4.4" data-path="week-2-lab.html"><a href="week-2-lab.html#calculating-bias-and-standard-error"><i class="fa fa-check"></i><b>4.4</b> Calculating bias and standard error</a></li>
-<li class="chapter" data-level="4.5" data-path="week-2-lecture.html"><a href="week-2-lecture.html#parametric-bootstrap"><i class="fa fa-check"></i><b>4.5</b> Parametric bootstrap</a></li>
+<li class="chapter" data-level="4.5" data-path="week-2-lab.html"><a href="week-2-lab.html#parametric-bootstrap-1"><i class="fa fa-check"></i><b>4.5</b> Parametric bootstrap</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="week-3-lecture.html"><a href="week-3-lecture.html"><i class="fa fa-check"></i><b>5</b> Week 3 Lecture</a>
 <ul>
@@ -239,8 +245,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10" data-path="week-5-lab.html"><a href="week-5-lab.html"><i class="fa fa-check"></i><b>10</b> Week 5 Lab</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="week-5-lab.html"><a href="week-5-lab.html#f-test"><i class="fa fa-check"></i><b>10.1</b> F-test</a></li>
-<li class="chapter" data-level="10.2" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-proportions"><i class="fa fa-check"></i><b>10.2</b> Comparing two proportions</a></li>
-<li class="chapter" data-level="10.3" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-distributions"><i class="fa fa-check"></i><b>10.3</b> Comparing two distributions</a></li>
+<li class="chapter" data-level="10.2" data-path="week-5-lab.html"><a href="week-5-lab.html#comparing-two-proportions-1"><i class="fa fa-check"></i><b>10.2</b> Comparing two proportions</a></li>
+<li class="chapter" data-level="10.3" data-path="week-5-lab.html"><a href="week-5-lab.html#comparing-two-distributions-1"><i class="fa fa-check"></i><b>10.3</b> Comparing two distributions</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="week-6-lecture.html"><a href="week-6-lecture.html"><i class="fa fa-check"></i><b>11</b> Week 6 Lecture</a>
 <ul>
@@ -298,10 +304,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="17" data-path="week-9-lab.html"><a href="week-9-lab.html"><i class="fa fa-check"></i><b>17</b> Week 9 Lab</a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="week-9-lecture.html"><a href="week-9-lecture.html#correlation"><i class="fa fa-check"></i><b>17.1</b> Correlation</a></li>
+<li class="chapter" data-level="17.1" data-path="week-9-lab.html"><a href="week-9-lab.html#correlation-1"><i class="fa fa-check"></i><b>17.1</b> Correlation</a></li>
 <li class="chapter" data-level="17.2" data-path="week-9-lab.html"><a href="week-9-lab.html#linear-modelling"><i class="fa fa-check"></i><b>17.2</b> Linear modelling</a></li>
 <li class="chapter" data-level="17.3" data-path="week-9-lab.html"><a href="week-9-lab.html#weighted-regression"><i class="fa fa-check"></i><b>17.3</b> Weighted regression</a></li>
-<li class="chapter" data-level="17.4" data-path="week-9-lecture.html"><a href="week-9-lecture.html#robust-regression"><i class="fa fa-check"></i><b>17.4</b> Robust regression</a></li>
+<li class="chapter" data-level="17.4" data-path="week-9-lab.html"><a href="week-9-lab.html#robust-regression-1"><i class="fa fa-check"></i><b>17.4</b> Robust regression</a></li>
 <li class="chapter" data-level="17.5" data-path="week-9-lab.html"><a href="week-9-lab.html#bootstrapping-standard-errors-for-robust-regression"><i class="fa fa-check"></i><b>17.5</b> Bootstrapping standard errors for robust regression</a></li>
 <li class="chapter" data-level="17.6" data-path="week-9-lab.html"><a href="week-9-lab.html#type-i-vs.-type-ii-regression-the-smatr-package"><i class="fa fa-check"></i><b>17.6</b> Type I vs. Type II regression: The ‘smatr’ package</a></li>
 </ul></li>
@@ -468,14 +474,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-11-lecture" class="section level1" number="20">
-<h1><span class="header-section-number">20</span> Week 11 Lecture</h1>
-<div id="week-11-readings" class="section level2" number="20.1">
-<h2><span class="header-section-number">20.1</span> Week 11 Readings</h2>
+<div id="week-11-lecture" class="section level1 hasAnchor" number="20">
+<h1><span class="header-section-number">20</span> Week 11 Lecture<a href="week-11-lecture.html#week-11-lecture" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="week-11-readings" class="section level2 hasAnchor" number="20.1">
+<h2><span class="header-section-number">20.1</span> Week 11 Readings<a href="week-11-lecture.html#week-11-readings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For this week, I suggest reading Aho Sections 10.1-10.7, as well as Logan Chapter 10.</p>
 </div>
-<div id="week-11-outline" class="section level2" number="20.2">
-<h2><span class="header-section-number">20.2</span> Week 11 outline</h2>
+<div id="week-11-outline" class="section level2 hasAnchor" number="20.2">
+<h2><span class="header-section-number">20.2</span> Week 11 outline<a href="week-11-lecture.html#week-11-outline" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p>Basic idea behind ANOVA</p></li>
 <li><p>Single-factor ANOVA</p></li>
@@ -520,18 +526,18 @@ Multiple comparisons will inflate the familywise error rate.
 <p><img src="Week-11-lecture_files/figure-html/unnamed-chunk-1-1.png" width="384" /></p>
 <p>How do we test our hypothesis? First let’s relate the figure back to the equation: <span class="math inline">\(Y_{ij}\)</span> are each of the individual data points (e.g., <span class="math inline">\(Y_{21}\)</span> is the first individual in treatment 2, Tumostat). The horizonal line is equal to <span class="math inline">\(\mu\)</span>, and <span class="math inline">\(A_i\)</span> is equal to the difference between <span class="math inline">\(\mu\)</span> and the treatment means (narrow horizontal lines).</p>
 <p>Notice that there is variation at two levels: 1) variation among individuals within a given treatment group, and 2) variation among the three treatment group means. <strong>We can partition the variance into these two components.</strong></p>
-<div id="variation-within-treatment-group" class="section level3" number="20.2.1">
-<h3><span class="header-section-number">20.2.1</span> Variation within treatment group</h3>
+<div id="variation-within-treatment-group" class="section level3 hasAnchor" number="20.2.1">
+<h3><span class="header-section-number">20.2.1</span> Variation within treatment group<a href="week-11-lecture.html#variation-within-treatment-group" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Variation among individuals within a treatment group is residual variation. This variation exists because of any number of factors we weren’t able to measure.</p>
 <p><img src="Week-11-lecture_files/figure-html/unnamed-chunk-2-1.png" width="576" /></p>
 </div>
-<div id="variation-among-treatment-group-means" class="section level3" number="20.2.2">
-<h3><span class="header-section-number">20.2.2</span> Variation among treatment group means</h3>
+<div id="variation-among-treatment-group-means" class="section level3 hasAnchor" number="20.2.2">
+<h3><span class="header-section-number">20.2.2</span> Variation among treatment group means<a href="week-11-lecture.html#variation-among-treatment-group-means" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Variation among treatment means is variation due to the effect of the treatment (if there is an effect) <em>in addition to the individual variation</em>.</p>
 <p><img src="Week-11-lecture_files/figure-html/unnamed-chunk-3-1.png" width="576" /></p>
 </div>
-<div id="comparing-variance-components" class="section level3" number="20.2.3">
-<h3><span class="header-section-number">20.2.3</span> Comparing variance components</h3>
+<div id="comparing-variance-components" class="section level3 hasAnchor" number="20.2.3">
+<h3><span class="header-section-number">20.2.3</span> Comparing variance components<a href="week-11-lecture.html#comparing-variance-components" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We can relate these two components of variation to one another, and this is our test statistic. Informally (we will get into the mathematical formulas soon) we can write this as:</p>
 <p><span class="math display">\[
 \frac{\text{Among group variance (group effect + error)}}{\text{Within group variance (error)}}
@@ -553,8 +559,8 @@ Under the null hypothesis, we assume there is no group effect. So, the ratio is 
 <p>How much variation is there among groups relative to within groups? Without knowing the details yet, do you think there is a significant difference among groups?</p>
 </div>
 </div>
-<div id="comparing-variance-components-1" class="section level2" number="20.3">
-<h2><span class="header-section-number">20.3</span> Comparing variance components</h2>
+<div id="comparing-variance-components-1" class="section level2 hasAnchor" number="20.3">
+<h2><span class="header-section-number">20.3</span> Comparing variance components<a href="week-11-lecture.html#comparing-variance-components-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Question: Given that we are using null hypothesis significance testing methods, what do you think the next step is after we estimate the test statistic?</strong></p>
 <details>
 <summary>
@@ -581,8 +587,8 @@ The F distribution (see Week 5 lecture)
 </p>
 <p>Another way we can phrase the statistical question is to ask whether the differences among group means are significantly different from the differences seen within groups. <em>In ANOVA, we compare variances in order to compare means.</em></p>
 </div>
-<div id="two-ways-to-estimate-variance" class="section level2" number="20.4">
-<h2><span class="header-section-number">20.4</span> Two ways to estimate variance</h2>
+<div id="two-ways-to-estimate-variance" class="section level2 hasAnchor" number="20.4">
+<h2><span class="header-section-number">20.4</span> Two ways to estimate variance<a href="week-11-lecture.html#two-ways-to-estimate-variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li>Variation within groups</li>
 </ol>
@@ -598,7 +604,7 @@ There is actually a second way we can calculate the within-group variance:</p>
 <ol start="2" style="list-style-type: decimal">
 <li>Variation among groups</li>
 </ol>
-<p>Under <span class="math inline">\(H_0\)</span>, the data in each group are an independent sample from the same underlying population. We can calculate a mean for each of the <span class="math inline">\(a\)</span> groups. Here we are assuming that each group has the same number (<span class="math inline">\(n\)</span>) of data points. (This is called a “balanced design.” More on this in a bit.)</p>
+<p>Under <span class="math inline">\(H_0\)</span>, the data in each group are an independent sample from the same underlying population. We can calculate a mean for each of the <span class="math inline">\(a\)</span> groups. Here we are assuming that each group has the same number (<span class="math inline">\(n\)</span>) of data points. (This is called a “balanced design”. More on this in a bit.)</p>
 <p>We can use the Central Limit Theorem to estimate the variance. We calculate the variation in means as: <span class="math inline">\(\sigma^2_{\bar{Y}} = \frac{\sigma^2}{n}\)</span>, where <span class="math inline">\(\sigma^2_{\bar{Y}}\)</span> is our estimated variance of the group means and <span class="math inline">\(\frac{\sigma^2}{n}\)</span> is our overall uncertainty divided by <span class="math inline">\(n\)</span> (thus, our ability to estimate <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\bar{Y}\)</span> improves with increasing sample size).</p>
 <p>We can rearrange this to get a second formula for the within-group variance:</p>
 <p><span class="math display">\[
@@ -610,29 +616,29 @@ There is actually a second way we can calculate the within-group variance:</p>
 \]</span></p>
 <p><strong>However, if there are true group differences, the variation among groups will be large compared to the variation within groups.</strong></p>
 <p>Now we’ll use our example of the tumor diameter data with <strong>no true treatment differences</strong> and run simulations of the experiment with 100 samples in each treatment in order to estimate and compare variance within groups and variance among groups.</p>
-<div class="sourceCode" id="cb677"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb677-1"><a href="week-11-lecture.html#cb677-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3467</span>)</span>
-<span id="cb677-2"><a href="week-11-lecture.html#cb677-2" aria-hidden="true" tabindex="-1"></a>replicates <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb677-3"><a href="week-11-lecture.html#cb677-3" aria-hidden="true" tabindex="-1"></a>var.among <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
-<span id="cb677-4"><a href="week-11-lecture.html#cb677-4" aria-hidden="true" tabindex="-1"></a>var.within <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
-<span id="cb677-5"><a href="week-11-lecture.html#cb677-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) {</span>
-<span id="cb677-6"><a href="week-11-lecture.html#cb677-6" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(replicates <span class="sc">*</span> <span class="fu">length</span>(treatment.names))</span>
-<span id="cb677-7"><a href="week-11-lecture.html#cb677-7" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">rep</span>(treatment.names, <span class="at">each =</span> replicates)</span>
-<span id="cb677-8"><a href="week-11-lecture.html#cb677-8" aria-hidden="true" tabindex="-1"></a>  dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Treatment =</span> x, <span class="at">TumorDiameter =</span> y)</span>
-<span id="cb677-9"><a href="week-11-lecture.html#cb677-9" aria-hidden="true" tabindex="-1"></a>  dat<span class="sc">$</span>GroupMeans <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="fu">mean</span>(dat<span class="sc">$</span>TumorDiameter[dat<span class="sc">$</span>Treatment <span class="sc">==</span> <span class="st">&quot;Control&quot;</span>]), <span class="fu">mean</span>(dat<span class="sc">$</span>TumorDiameter[dat<span class="sc">$</span>Treatment <span class="sc">==</span> <span class="st">&quot;Tumostat&quot;</span>]), <span class="fu">mean</span>(dat<span class="sc">$</span>TumorDiameter[dat<span class="sc">$</span>Treatment <span class="sc">==</span> <span class="st">&quot;Inhibin 4&quot;</span>])), <span class="at">each =</span> replicates)</span>
-<span id="cb677-10"><a href="week-11-lecture.html#cb677-10" aria-hidden="true" tabindex="-1"></a>  dat<span class="sc">$</span>Treatment <span class="ot">&lt;-</span> <span class="fu">factor</span>(dat<span class="sc">$</span>Treatment, <span class="at">levels =</span> treatment.names)</span>
-<span id="cb677-11"><a href="week-11-lecture.html#cb677-11" aria-hidden="true" tabindex="-1"></a>  var.among[i] <span class="ot">&lt;-</span> replicates <span class="sc">*</span> <span class="fu">var</span>(<span class="fu">unique</span>(dat<span class="sc">$</span>GroupMeans))</span>
-<span id="cb677-12"><a href="week-11-lecture.html#cb677-12" aria-hidden="true" tabindex="-1"></a>  v1 <span class="ot">&lt;-</span> <span class="fu">var</span>(dat<span class="sc">$</span>TumorDiameter[<span class="fu">which</span>(dat<span class="sc">$</span>Treatment <span class="sc">==</span> <span class="st">&quot;Control&quot;</span>)])</span>
-<span id="cb677-13"><a href="week-11-lecture.html#cb677-13" aria-hidden="true" tabindex="-1"></a>  v2 <span class="ot">&lt;-</span> <span class="fu">var</span>(dat<span class="sc">$</span>TumorDiameter[<span class="fu">which</span>(dat<span class="sc">$</span>Treatment <span class="sc">==</span> <span class="st">&quot;Tumostat&quot;</span>)])</span>
-<span id="cb677-14"><a href="week-11-lecture.html#cb677-14" aria-hidden="true" tabindex="-1"></a>  v3 <span class="ot">&lt;-</span> <span class="fu">var</span>(dat<span class="sc">$</span>TumorDiameter[<span class="fu">which</span>(dat<span class="sc">$</span>Treatment <span class="sc">==</span> <span class="st">&quot;Inhibin 4&quot;</span>)])</span>
-<span id="cb677-15"><a href="week-11-lecture.html#cb677-15" aria-hidden="true" tabindex="-1"></a>  var.within[i] <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">/</span> <span class="dv">3</span>) <span class="sc">*</span> <span class="fu">sum</span>(<span class="fu">c</span>(v1, v2, v3))</span>
-<span id="cb677-16"><a href="week-11-lecture.html#cb677-16" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb677-17"><a href="week-11-lecture.html#cb677-17" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(var.among)</span></code></pre></div>
+<div class="sourceCode" id="cb678"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb678-1"><a href="week-11-lecture.html#cb678-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3467</span>)</span>
+<span id="cb678-2"><a href="week-11-lecture.html#cb678-2" tabindex="-1"></a>replicates <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb678-3"><a href="week-11-lecture.html#cb678-3" tabindex="-1"></a>var.among <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb678-4"><a href="week-11-lecture.html#cb678-4" tabindex="-1"></a>var.within <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb678-5"><a href="week-11-lecture.html#cb678-5" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) {</span>
+<span id="cb678-6"><a href="week-11-lecture.html#cb678-6" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(replicates <span class="sc">*</span> <span class="fu">length</span>(treatment.names))</span>
+<span id="cb678-7"><a href="week-11-lecture.html#cb678-7" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">rep</span>(treatment.names, <span class="at">each =</span> replicates)</span>
+<span id="cb678-8"><a href="week-11-lecture.html#cb678-8" tabindex="-1"></a>  dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Treatment =</span> x, <span class="at">TumorDiameter =</span> y)</span>
+<span id="cb678-9"><a href="week-11-lecture.html#cb678-9" tabindex="-1"></a>  dat<span class="sc">$</span>GroupMeans <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="fu">mean</span>(dat<span class="sc">$</span>TumorDiameter[dat<span class="sc">$</span>Treatment <span class="sc">==</span> <span class="st">&quot;Control&quot;</span>]), <span class="fu">mean</span>(dat<span class="sc">$</span>TumorDiameter[dat<span class="sc">$</span>Treatment <span class="sc">==</span> <span class="st">&quot;Tumostat&quot;</span>]), <span class="fu">mean</span>(dat<span class="sc">$</span>TumorDiameter[dat<span class="sc">$</span>Treatment <span class="sc">==</span> <span class="st">&quot;Inhibin 4&quot;</span>])), <span class="at">each =</span> replicates)</span>
+<span id="cb678-10"><a href="week-11-lecture.html#cb678-10" tabindex="-1"></a>  dat<span class="sc">$</span>Treatment <span class="ot">&lt;-</span> <span class="fu">factor</span>(dat<span class="sc">$</span>Treatment, <span class="at">levels =</span> treatment.names)</span>
+<span id="cb678-11"><a href="week-11-lecture.html#cb678-11" tabindex="-1"></a>  var.among[i] <span class="ot">&lt;-</span> replicates <span class="sc">*</span> <span class="fu">var</span>(<span class="fu">unique</span>(dat<span class="sc">$</span>GroupMeans))</span>
+<span id="cb678-12"><a href="week-11-lecture.html#cb678-12" tabindex="-1"></a>  v1 <span class="ot">&lt;-</span> <span class="fu">var</span>(dat<span class="sc">$</span>TumorDiameter[<span class="fu">which</span>(dat<span class="sc">$</span>Treatment <span class="sc">==</span> <span class="st">&quot;Control&quot;</span>)])</span>
+<span id="cb678-13"><a href="week-11-lecture.html#cb678-13" tabindex="-1"></a>  v2 <span class="ot">&lt;-</span> <span class="fu">var</span>(dat<span class="sc">$</span>TumorDiameter[<span class="fu">which</span>(dat<span class="sc">$</span>Treatment <span class="sc">==</span> <span class="st">&quot;Tumostat&quot;</span>)])</span>
+<span id="cb678-14"><a href="week-11-lecture.html#cb678-14" tabindex="-1"></a>  v3 <span class="ot">&lt;-</span> <span class="fu">var</span>(dat<span class="sc">$</span>TumorDiameter[<span class="fu">which</span>(dat<span class="sc">$</span>Treatment <span class="sc">==</span> <span class="st">&quot;Inhibin 4&quot;</span>)])</span>
+<span id="cb678-15"><a href="week-11-lecture.html#cb678-15" tabindex="-1"></a>  var.within[i] <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">/</span> <span class="dv">3</span>) <span class="sc">*</span> <span class="fu">sum</span>(<span class="fu">c</span>(v1, v2, v3))</span>
+<span id="cb678-16"><a href="week-11-lecture.html#cb678-16" tabindex="-1"></a>}</span>
+<span id="cb678-17"><a href="week-11-lecture.html#cb678-17" tabindex="-1"></a><span class="fu">mean</span>(var.among)</span></code></pre></div>
 <pre><code>## [1] 0.991662</code></pre>
-<div class="sourceCode" id="cb679"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb679-1"><a href="week-11-lecture.html#cb679-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(var.within)</span></code></pre></div>
+<div class="sourceCode" id="cb680"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb680-1"><a href="week-11-lecture.html#cb680-1" tabindex="-1"></a><span class="fu">mean</span>(var.within)</span></code></pre></div>
 <pre><code>## [1] 0.9948506</code></pre>
 </div>
-<div id="single-factor-anova" class="section level2" number="20.5">
-<h2><span class="header-section-number">20.5</span> Single-factor ANOVA</h2>
+<div id="single-factor-anova" class="section level2 hasAnchor" number="20.5">
+<h2><span class="header-section-number">20.5</span> Single-factor ANOVA<a href="week-11-lecture.html#single-factor-anova" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>First we will start will the simplest ANOVA type, where we have a single factor (discrete covariate). We will work through an example involving the heights of plants, <span class="math inline">\(Y\)</span>, under three different experimental treatments (<span class="math inline">\(i\)</span>), low nitrogen (N), ambient N, and high N. We have four replicates in each treatment. We index the heights as <span class="math inline">\(Y_{ij}\)</span>, where <span class="math inline">\(i\)</span> is treatment <span class="math inline">\(i = (1, ..., a)\)</span> and <span class="math inline">\(j\)</span> is the individual plant <span class="math inline">\(j = (1, ..., n)\)</span>. There will be a lot of variation in plant heights for a million reasons we can’t measure. But, we want to partition the variance into 1) the variance due to individual fluctuations (“error”), and 2) the variance due to the treatment (nitrogen level).</p>
 <p>This is a single-factor (one-way) ANOVA because we have one grouping category, nitrogen treatment, with three mutually exclusive levels (low N, ambient N, high N).</p>
 <p>Our data is as follows:</p>
@@ -708,6 +714,14 @@ There is actually a second way we can calculate the within-group variance:</p>
 <p>Both this week and next week, we will be working through different ANOVA tables for each model we review. ANOVAs can be expressed in a table where each row is a category of variation that we are estimating. As we go from the leftmost column to the rightmost column, we estimate the partitioned variation and then conduct our hypothesis test.</p>
 <p>I suggest you try to fill out the ANOVA tables in your notes during lecture as we go through them, and practice filling out ANOVA tables on your own as well.</p>
 <table>
+<colgroup>
+<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Source of variation</th>
@@ -773,7 +787,7 @@ Click for Answer
 \]</span></p>
 <p>Does this remind you of linear regression?</p>
 <p><span class="math display">\[
-\text{SS}_{\text{among groups}} = \sum^a_{i = 1} \sum^n_{j = 1} (\bar{Y}_{i} - \bar{Y})^2 ; \quad \text{SSR} = \sum_{i = 1}^n{(\hat{Y}_i - \bar{Y})^2} \\ 
+\text{SS}_{\text{among groups}} = \sum^a_{i = 1} \sum^n_{j = 1} (\bar{Y}_{i} - \bar{Y})^2 ; \quad \text{SSR} = \sum_{i = 1}^n{(\hat{Y}_i - \bar{Y})^2} \\
 \text{SS}_{\text{within groups}} = \sum^a_{i = 1} \sum^n_{j = 1} (Y_{ij} - \bar{Y}_i)^2 ; \quad \text{SSE} = \sum_{i = 1}^n{(Y_i - \hat{Y}_i)^2}
 \]</span></p>
 <p>The estimated <span class="math inline">\(\hat{Y}_i\)</span> from the regression is comparable to the group means</p>
@@ -781,6 +795,14 @@ Click for Answer
 <p><img src="Week-11-lecture_files/figure-html/unnamed-chunk-7-1.png" width="384" /></p>
 <p>Now we have the first column to fill in our ANOVA table:</p>
 <table>
+<colgroup>
+<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Source of variation</th>
@@ -992,28 +1014,28 @@ We estimated the group means (“uses up” <span class="math inline">\(a\)</spa
 </tbody>
 </table>
 <p>Because doing this in R (especially when we get to multi-way ANOVA next week) can be tricky, I show you here how this can be done in Excel so the underlying logic is clear</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
 <img src="One-way_ANOVA_example_in_Excel.png" alt="Example of how Excel can be used to work out the sums-of-squares for one way ANOVA" width="100%" />
 <p class="caption">
 Figure 20.1: Example of how Excel can be used to work out the sums-of-squares for one way ANOVA
 </p>
 </div>
 <p>We now test whether the F ratio (our test statistic) is significant given its distribution under the null hypothesis. The distribution of test statistic <span class="math inline">\(F\)</span> under the null hypothesis is <span class="math inline">\(F | H_0 \sim F_{\text{DOF}_{\text{among}}, \text{DOF}_{\text{within}}}\)</span>.</p>
-<div class="sourceCode" id="cb682"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb682-1"><a href="week-11-lecture.html#cb682-1" aria-hidden="true" tabindex="-1"></a>x.values <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">100</span>, <span class="fl">0.001</span>)</span>
-<span id="cb682-2"><a href="week-11-lecture.html#cb682-2" aria-hidden="true" tabindex="-1"></a>y.values <span class="ot">&lt;-</span> <span class="fu">df</span>(<span class="at">x =</span> x.values, <span class="at">df1 =</span> <span class="dv">2</span>, <span class="at">df2 =</span> <span class="dv">9</span>)</span>
-<span id="cb682-3"><a href="week-11-lecture.html#cb682-3" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FStatistic =</span> x.values, <span class="at">Density =</span> y.values)</span>
-<span id="cb682-4"><a href="week-11-lecture.html#cb682-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x =</span> FStatistic, <span class="at">y =</span> Density)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb682-5"><a href="week-11-lecture.html#cb682-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fl">5.11</span>, <span class="at">col =</span> <span class="st">&quot;dodgerblue3&quot;</span>, <span class="at">size =</span> <span class="fl">1.5</span>) <span class="sc">+</span> </span>
-<span id="cb682-6"><a href="week-11-lecture.html#cb682-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">&quot;text&quot;</span>, <span class="at">col =</span> <span class="st">&quot;dodgerblue3&quot;</span>, <span class="at">label =</span> <span class="st">&quot;F*&quot;</span>, <span class="at">x =</span> <span class="fl">5.6</span>, <span class="at">y =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">8</span>) <span class="sc">+</span></span>
-<span id="cb682-7"><a href="week-11-lecture.html#cb682-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">8</span>)) <span class="sc">+</span></span>
-<span id="cb682-8"><a href="week-11-lecture.html#cb682-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;Probability&quot;</span>, <span class="at">x =</span> <span class="st">&quot;Quantiles of the F dist.&quot;</span>) <span class="sc">+</span></span>
-<span id="cb682-9"><a href="week-11-lecture.html#cb682-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
+<div class="sourceCode" id="cb683"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb683-1"><a href="week-11-lecture.html#cb683-1" tabindex="-1"></a>x.values <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">100</span>, <span class="fl">0.001</span>)</span>
+<span id="cb683-2"><a href="week-11-lecture.html#cb683-2" tabindex="-1"></a>y.values <span class="ot">&lt;-</span> <span class="fu">df</span>(<span class="at">x =</span> x.values, <span class="at">df1 =</span> <span class="dv">2</span>, <span class="at">df2 =</span> <span class="dv">9</span>)</span>
+<span id="cb683-3"><a href="week-11-lecture.html#cb683-3" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FStatistic =</span> x.values, <span class="at">Density =</span> y.values)</span>
+<span id="cb683-4"><a href="week-11-lecture.html#cb683-4" tabindex="-1"></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x =</span> FStatistic, <span class="at">y =</span> Density)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb683-5"><a href="week-11-lecture.html#cb683-5" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fl">5.11</span>, <span class="at">col =</span> <span class="st">&quot;dodgerblue3&quot;</span>, <span class="at">size =</span> <span class="fl">1.5</span>) <span class="sc">+</span> </span>
+<span id="cb683-6"><a href="week-11-lecture.html#cb683-6" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">&quot;text&quot;</span>, <span class="at">col =</span> <span class="st">&quot;dodgerblue3&quot;</span>, <span class="at">label =</span> <span class="st">&quot;F*&quot;</span>, <span class="at">x =</span> <span class="fl">5.6</span>, <span class="at">y =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">8</span>) <span class="sc">+</span></span>
+<span id="cb683-7"><a href="week-11-lecture.html#cb683-7" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">8</span>)) <span class="sc">+</span></span>
+<span id="cb683-8"><a href="week-11-lecture.html#cb683-8" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;Probability&quot;</span>, <span class="at">x =</span> <span class="st">&quot;Quantiles of the F dist.&quot;</span>) <span class="sc">+</span></span>
+<span id="cb683-9"><a href="week-11-lecture.html#cb683-9" tabindex="-1"></a>    <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
 <p><img src="Week-11-lecture_files/figure-html/unnamed-chunk-9-1.png" width="384" /></p>
 <p>Note that the F distribution has a different shape when <code>df1</code> has higher values.</p>
 <p>How would you calculate <em>P</em> here?</p>
-<div class="sourceCode" id="cb683"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb683-1"><a href="week-11-lecture.html#cb683-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(dat<span class="sc">$</span>Density[dat<span class="sc">$</span>FStatistic <span class="sc">&gt;=</span> <span class="fl">5.11</span>] <span class="sc">*</span> <span class="fl">0.001</span>)  <span class="co"># Riemann sums integration</span></span></code></pre></div>
+<div class="sourceCode" id="cb684"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb684-1"><a href="week-11-lecture.html#cb684-1" tabindex="-1"></a><span class="fu">sum</span>(dat<span class="sc">$</span>Density[dat<span class="sc">$</span>FStatistic <span class="sc">&gt;=</span> <span class="fl">5.11</span>] <span class="sc">*</span> <span class="fl">0.001</span>)  <span class="co"># Riemann sums integration</span></span></code></pre></div>
 <pre><code>## [1] 0.03290738</code></pre>
-<div class="sourceCode" id="cb685"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb685-1"><a href="week-11-lecture.html#cb685-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pf</span>(<span class="fl">5.11</span>, <span class="at">df1 =</span> <span class="dv">2</span>, <span class="at">df2 =</span> <span class="dv">9</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb686"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb686-1"><a href="week-11-lecture.html#cb686-1" tabindex="-1"></a><span class="fu">pf</span>(<span class="fl">5.11</span>, <span class="at">df1 =</span> <span class="dv">2</span>, <span class="at">df2 =</span> <span class="dv">9</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <pre><code>## [1] 0.03290039</code></pre>
 <table>
 <colgroup>
@@ -1074,7 +1096,7 @@ n\sum_{i=1}^{a}(\bar{Y_{i}}-\bar{Y})^{2}
 \]</span>
 because the former can be used even if the ANOVA design is not balanced. (A balanced design is one in which the sample size in each cell is the same (n).) Many other texts use the latter notation, so do not let this confuse you.</p>
 <p>This figure from Logan (2010) does a nice job of summarizing the steps of one-way ANOVA:</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
 <img src="One-way-ANOVA%20figure%20from%20Logan.png" alt="Source: Logan (2010) Biostatistical Design and Analysis Using R" width="80%" />
 <p class="caption">
 Figure 20.2: Source: Logan (2010) Biostatistical Design and Analysis Using R
@@ -1099,8 +1121,8 @@ The difference between the data points <span class="math inline">\(Y_{ij}\)</spa
  
 </p>
 </div>
-<div id="fixed-effects-vs.-random-effects" class="section level2" number="20.6">
-<h2><span class="header-section-number">20.6</span> Fixed effects vs. random effects</h2>
+<div id="fixed-effects-vs.-random-effects" class="section level2 hasAnchor" number="20.6">
+<h2><span class="header-section-number">20.6</span> Fixed effects vs. random effects<a href="week-11-lecture.html#fixed-effects-vs.-random-effects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We have so far assumed that factors are fixed effects. <strong>Fixed effects</strong> represent all the states in the system you would ever be interested in. Our null hypothesis for a fixed effects factor is <span class="math inline">\(H_0: \text{all treatment effects, } A_i = 0\)</span> (e.g., the three experimental, pre-planned nitrogen treatments as in our plant example). ANOVA models with only fixed effects are sometimes called Model I ANOVAs.</p>
 <p><strong>Random effects</strong> represent a random sample of some larger population about which you want to make inference. For example, you are studying literacy in a human population, and in your sample you have English, French, Spanish, and Russian speakers. You are not interested in the specific effect of Russian vs. English, you just want to be able to include in your model variability that may come from the fact that different languages are represented. Random effects are also useful to extrapolate your findings to other languages that were not included in your sample. Our null hypothesis for a random effects factor is <span class="math inline">\(H_0: \mathrm{Var}(\text{All treatment effects, } A_i) = 0\)</span>. ANOVA models with only random effects are sometimes called Model II ANOVAs.</p>
 <p>Models with both fixed and random effects are called <strong>mixed models</strong></p>
@@ -1153,15 +1175,15 @@ Y_{ij} = \mu + A_i + \epsilon_{ij}
 <li><p>Growth rates of plants as a function of nutrient level (What if this was a study in the field, sampling across a gradient of nutrient levels?)</p></li>
 </ol>
 <p>Again, ANOVA is an omnibus test, so if we get a significant result, we only know that at least one group is different.</p>
-<p>What do we do to find out which group(s) is/are different? This brings us to the subject of “post hoc tests.”</p>
+<p>What do we do to find out which group(s) is/are different? This brings us to the subject of “post hoc tests”.</p>
 </div>
-<div id="post-hoc-tests" class="section level2" number="20.7">
-<h2><span class="header-section-number">20.7</span> Post-hoc tests</h2>
+<div id="post-hoc-tests" class="section level2 hasAnchor" number="20.7">
+<h2><span class="header-section-number">20.7</span> Post-hoc tests<a href="week-11-lecture.html#post-hoc-tests" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To follow up on a significant ANOVA result, we can conduct <em>post hoc</em> (or <em>a posteriori</em>) tests. These only make sense for fixed effects, because with random effects, the factors belong to the same population, so differences between pairs has no interpretation.</p>
 <p>In general, these are similar to pairwise <em>t</em>-tests assuming equal variance while accounting for familywise error rate and using a pooled estimate of standard error. * Remember that we assume equal variance as one of the assumptions of ANOVA*</p>
 <p>There are a huge number of <em>post hoc</em> tests: Fishers Least Significant Difference (LSD), Tukey’s Honest Significant Difference (HSD), Dunnett’s test, Bonferroni’s test, Holm’s test, Scheffe’s test (see Day and Quinn 1989 in “Additional readings” for descriptions).</p>
-<div id="tukeys-hsd" class="section level3" number="20.7.1">
-<h3><span class="header-section-number">20.7.1</span> Tukey’s HSD</h3>
+<div id="tukeys-hsd" class="section level3 hasAnchor" number="20.7.1">
+<h3><span class="header-section-number">20.7.1</span> Tukey’s HSD<a href="week-11-lecture.html#tukeys-hsd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Tukey’s HSD is one of the most common <em>post hoc</em> tests. It is very similar to an unpaired two-sample <em>t</em>-test assuming equal variances.</p>
 <p>With the <em>t</em>-test, we use a <strong>null distribution for the difference between two means</strong>, <span class="math inline">\(T | H_0 \sim t_{n_A + n_B - 2}\)</span>.</p>
 <p>With Tukey’s HSD, we use the <strong>null distribution for the range of an arbitrary number of means</strong>, or the distribution for the largest pairwise differences to be expected under the null model for a given number of comparisons, <span class="math inline">\(q^* | H_0 \sim q_{n_{\text{groups}}, \text{DOF}}\)</span>.</p>
@@ -1196,7 +1218,6 @@ where now <span class="math inline">\(q_{(0.05)[a, \text{DOF_within=an-a}]}\)</s
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1215,6 +1236,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -1235,6 +1257,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -1248,7 +1274,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

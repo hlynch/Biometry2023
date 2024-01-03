@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>16 Week 9 Lecture | Biometry Lecture and Lab Notes</title>
   <meta name="description" content="16 Week 9 Lecture | Biometry Lecture and Lab Notes" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="16 Week 9 Lecture | Biometry Lecture and Lab Notes" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-05-15" />
+<meta name="date" content="2024-01-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="week-8-lab.html"/>
 <link rel="next" href="week-9-lab.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -91,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -104,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -116,6 +117,11 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -170,7 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="week-2-lecture.html"><a href="week-2-lecture.html"><i class="fa fa-check"></i><b>3</b> Week 2 Lecture</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="week-2-lecture.html"><a href="week-2-lecture.html#week-2-readings"><i class="fa fa-check"></i><b>3.1</b> Week 2 Readings</a></li>
-<li class="chapter" data-level="3.2" data-path="week-1-lecture.html"><a href="week-1-lecture.html#todays-agenda"><i class="fa fa-check"></i><b>3.2</b> Today’s Agenda</a></li>
+<li class="chapter" data-level="3.2" data-path="week-2-lecture.html"><a href="week-2-lecture.html#todays-agenda-1"><i class="fa fa-check"></i><b>3.2</b> Today’s Agenda</a></li>
 <li class="chapter" data-level="3.3" data-path="week-2-lecture.html"><a href="week-2-lecture.html#hypothesis-testing"><i class="fa fa-check"></i><b>3.3</b> Hypothesis testing</a></li>
 <li class="chapter" data-level="3.4" data-path="week-2-lecture.html"><a href="week-2-lecture.html#permutation-tests"><i class="fa fa-check"></i><b>3.4</b> Permutation tests</a></li>
 <li class="chapter" data-level="3.5" data-path="week-2-lecture.html"><a href="week-2-lecture.html#parameter-estimation"><i class="fa fa-check"></i><b>3.5</b> Parameter estimation</a></li>
@@ -186,7 +192,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2" data-path="week-2-lab.html"><a href="week-2-lab.html#testing-hypotheses-through-permutation"><i class="fa fa-check"></i><b>4.2</b> Testing hypotheses through permutation</a></li>
 <li class="chapter" data-level="4.3" data-path="week-2-lab.html"><a href="week-2-lab.html#basics-of-bootstrap-and-jackknife"><i class="fa fa-check"></i><b>4.3</b> Basics of bootstrap and jackknife</a></li>
 <li class="chapter" data-level="4.4" data-path="week-2-lab.html"><a href="week-2-lab.html#calculating-bias-and-standard-error"><i class="fa fa-check"></i><b>4.4</b> Calculating bias and standard error</a></li>
-<li class="chapter" data-level="4.5" data-path="week-2-lecture.html"><a href="week-2-lecture.html#parametric-bootstrap"><i class="fa fa-check"></i><b>4.5</b> Parametric bootstrap</a></li>
+<li class="chapter" data-level="4.5" data-path="week-2-lab.html"><a href="week-2-lab.html#parametric-bootstrap-1"><i class="fa fa-check"></i><b>4.5</b> Parametric bootstrap</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="week-3-lecture.html"><a href="week-3-lecture.html"><i class="fa fa-check"></i><b>5</b> Week 3 Lecture</a>
 <ul>
@@ -239,8 +245,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10" data-path="week-5-lab.html"><a href="week-5-lab.html"><i class="fa fa-check"></i><b>10</b> Week 5 Lab</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="week-5-lab.html"><a href="week-5-lab.html#f-test"><i class="fa fa-check"></i><b>10.1</b> F-test</a></li>
-<li class="chapter" data-level="10.2" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-proportions"><i class="fa fa-check"></i><b>10.2</b> Comparing two proportions</a></li>
-<li class="chapter" data-level="10.3" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-distributions"><i class="fa fa-check"></i><b>10.3</b> Comparing two distributions</a></li>
+<li class="chapter" data-level="10.2" data-path="week-5-lab.html"><a href="week-5-lab.html#comparing-two-proportions-1"><i class="fa fa-check"></i><b>10.2</b> Comparing two proportions</a></li>
+<li class="chapter" data-level="10.3" data-path="week-5-lab.html"><a href="week-5-lab.html#comparing-two-distributions-1"><i class="fa fa-check"></i><b>10.3</b> Comparing two distributions</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="week-6-lecture.html"><a href="week-6-lecture.html"><i class="fa fa-check"></i><b>11</b> Week 6 Lecture</a>
 <ul>
@@ -298,10 +304,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="17" data-path="week-9-lab.html"><a href="week-9-lab.html"><i class="fa fa-check"></i><b>17</b> Week 9 Lab</a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="week-9-lecture.html"><a href="week-9-lecture.html#correlation"><i class="fa fa-check"></i><b>17.1</b> Correlation</a></li>
+<li class="chapter" data-level="17.1" data-path="week-9-lab.html"><a href="week-9-lab.html#correlation-1"><i class="fa fa-check"></i><b>17.1</b> Correlation</a></li>
 <li class="chapter" data-level="17.2" data-path="week-9-lab.html"><a href="week-9-lab.html#linear-modelling"><i class="fa fa-check"></i><b>17.2</b> Linear modelling</a></li>
 <li class="chapter" data-level="17.3" data-path="week-9-lab.html"><a href="week-9-lab.html#weighted-regression"><i class="fa fa-check"></i><b>17.3</b> Weighted regression</a></li>
-<li class="chapter" data-level="17.4" data-path="week-9-lecture.html"><a href="week-9-lecture.html#robust-regression"><i class="fa fa-check"></i><b>17.4</b> Robust regression</a></li>
+<li class="chapter" data-level="17.4" data-path="week-9-lab.html"><a href="week-9-lab.html#robust-regression-1"><i class="fa fa-check"></i><b>17.4</b> Robust regression</a></li>
 <li class="chapter" data-level="17.5" data-path="week-9-lab.html"><a href="week-9-lab.html#bootstrapping-standard-errors-for-robust-regression"><i class="fa fa-check"></i><b>17.5</b> Bootstrapping standard errors for robust regression</a></li>
 <li class="chapter" data-level="17.6" data-path="week-9-lab.html"><a href="week-9-lab.html#type-i-vs.-type-ii-regression-the-smatr-package"><i class="fa fa-check"></i><b>17.6</b> Type I vs. Type II regression: The ‘smatr’ package</a></li>
 </ul></li>
@@ -468,21 +474,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-9-lecture" class="section level1" number="16">
-<h1><span class="header-section-number">16</span> Week 9 Lecture</h1>
-<div id="week-9-readings" class="section level2" number="16.1">
-<h2><span class="header-section-number">16.1</span> Week 9 Readings</h2>
+<div id="week-9-lecture" class="section level1 hasAnchor" number="16">
+<h1><span class="header-section-number">16</span> Week 9 Lecture<a href="week-9-lecture.html#week-9-lecture" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="week-9-readings" class="section level2 hasAnchor" number="16.1">
+<h2><span class="header-section-number">16.1</span> Week 9 Readings<a href="week-9-lecture.html#week-9-readings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For this week, I suggest reading Aho Chapters 8 and 9 up to and including Section 9.16, as well as Logan Chapter 8. I also want to share <a href="https://github.com/hlynch/Biometry2023/tree/master/_data/Warton_etal_2006.pdf">a classic paper on how to model “scaling-type” relationships - I’m looking at you morphometrics folks!</a>, though this is just a recommended reading and not something we will cover in Biometry.</p>
 </div>
-<div id="correlation" class="section level2" number="16.2">
-<h2><span class="header-section-number">16.2</span> Correlation</h2>
+<div id="correlation" class="section level2 hasAnchor" number="16.2">
+<h2><span class="header-section-number">16.2</span> Correlation<a href="week-9-lecture.html#correlation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Correlation and regression are two ways of looking at the relationship between two continuous variables. Correlation is testing the null hypothesis that the two variables are uncorrelated, and there is complete symmetry between the two variables. On the other hand, regression is concerned with using one variable to PREDICT another, and there is an asymmetry between the predictor and the response variable. A regression model for <span class="math inline">\(Y \sim X\)</span> is different than <span class="math inline">\(X \sim Y\)</span>.</p>
 <p>Regression and correlation are not the same.</p>
 <p>Let’s take two paired samples A and B and introduce a quantity called the correlation coefficient r:</p>
 <p><span class="math display">\[
 r = \frac{Cov(A,B)}{\sqrt{Var(A) \times Var(B)}}
 \]</span></p>
-<p>More precisely, this is called “Pearson’s product moment correlation.”</p>
+<p>More precisely, this is called “Pearson’s product moment correlation”.</p>
 <p>We know from before that the sample variance of A (a.k.a. Var(A)) is given by</p>
 <p><span class="math display">\[
 Var(A) = \frac{1}{n-1}\sum_{i=1}^{n}(A_{i}-\bar{A})(A_{i}-\bar{A})
@@ -495,19 +501,19 @@ Cov(A,B) = \frac{1}{n-1}\sum_{i=1}^{n}(A_{i}-\bar{A})(B_{i}-\bar{B})
 \]</span>
 Why do we only lose 1 degree of freedom when we have to estimate the mean of both the A group and the B group? So as not to distract from the main thread here, I have answered that below in the <a href="week-9-lecture.html#W9FAQ">FAQ</a>.</p>
 <p>Why does this expression make sense? The covariance measures how much two things go up and down together.</p>
-<div class="sourceCode" id="cb473"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb473-1"><a href="week-9-lecture.html#cb473-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>)</span>
-<span id="cb473-2"><a href="week-9-lecture.html#cb473-2" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>)</span>
-<span id="cb473-3"><a href="week-9-lecture.html#cb473-3" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span> <span class="sc">/</span> (<span class="fu">length</span>(A) <span class="sc">-</span> <span class="dv">1</span>)) <span class="sc">*</span> <span class="fu">sum</span>((A <span class="sc">-</span> <span class="fu">mean</span>(A)) <span class="sc">*</span> (B <span class="sc">-</span> <span class="fu">mean</span>(B))) </span></code></pre></div>
+<div class="sourceCode" id="cb474"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb474-1"><a href="week-9-lecture.html#cb474-1" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>)</span>
+<span id="cb474-2"><a href="week-9-lecture.html#cb474-2" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>)</span>
+<span id="cb474-3"><a href="week-9-lecture.html#cb474-3" tabindex="-1"></a>(<span class="dv">1</span> <span class="sc">/</span> (<span class="fu">length</span>(A) <span class="sc">-</span> <span class="dv">1</span>)) <span class="sc">*</span> <span class="fu">sum</span>((A <span class="sc">-</span> <span class="fu">mean</span>(A)) <span class="sc">*</span> (B <span class="sc">-</span> <span class="fu">mean</span>(B))) </span></code></pre></div>
 <pre><code>## [1] 1.666667</code></pre>
-<div class="sourceCode" id="cb475"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb475-1"><a href="week-9-lecture.html#cb475-1" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>)</span>
-<span id="cb475-2"><a href="week-9-lecture.html#cb475-2" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span> <span class="sc">/</span> (<span class="fu">length</span>(A) <span class="sc">-</span> <span class="dv">1</span>)) <span class="sc">*</span> <span class="fu">sum</span>((A <span class="sc">-</span> <span class="fu">mean</span>(A)) <span class="sc">*</span> (B <span class="sc">-</span> <span class="fu">mean</span>(B)))</span></code></pre></div>
+<div class="sourceCode" id="cb476"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb476-1"><a href="week-9-lecture.html#cb476-1" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>)</span>
+<span id="cb476-2"><a href="week-9-lecture.html#cb476-2" tabindex="-1"></a>(<span class="dv">1</span> <span class="sc">/</span> (<span class="fu">length</span>(A) <span class="sc">-</span> <span class="dv">1</span>)) <span class="sc">*</span> <span class="fu">sum</span>((A <span class="sc">-</span> <span class="fu">mean</span>(A)) <span class="sc">*</span> (B <span class="sc">-</span> <span class="fu">mean</span>(B)))</span></code></pre></div>
 <pre><code>## [1] -1.666667</code></pre>
 <p>However, the covariance isn’t meaningful by itself because it depends on the absolute scale of variability in A and B, so it has to be divided by some aggregate measure of variability in the two samples (i.e. the geometric mean). We can see this by scaling everything by a factor of 10 and recalculating Covariance:</p>
-<div class="sourceCode" id="cb477"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb477-1"><a href="week-9-lecture.html#cb477-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span> <span class="sc">/</span> (<span class="fu">length</span>(A) <span class="sc">-</span> <span class="dv">1</span>)) <span class="sc">*</span> <span class="fu">sum</span>((A <span class="sc">-</span> <span class="fu">mean</span>(A)) <span class="sc">*</span> (B <span class="sc">-</span> <span class="fu">mean</span>(B)))</span></code></pre></div>
+<div class="sourceCode" id="cb478"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb478-1"><a href="week-9-lecture.html#cb478-1" tabindex="-1"></a>(<span class="dv">1</span> <span class="sc">/</span> (<span class="fu">length</span>(A) <span class="sc">-</span> <span class="dv">1</span>)) <span class="sc">*</span> <span class="fu">sum</span>((A <span class="sc">-</span> <span class="fu">mean</span>(A)) <span class="sc">*</span> (B <span class="sc">-</span> <span class="fu">mean</span>(B)))</span></code></pre></div>
 <pre><code>## [1] -1.666667</code></pre>
-<div class="sourceCode" id="cb479"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb479-1"><a href="week-9-lecture.html#cb479-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> A <span class="sc">*</span> <span class="dv">10</span></span>
-<span id="cb479-2"><a href="week-9-lecture.html#cb479-2" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> B <span class="sc">*</span> <span class="dv">10</span></span>
-<span id="cb479-3"><a href="week-9-lecture.html#cb479-3" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span> <span class="sc">/</span> (<span class="fu">length</span>(A) <span class="sc">-</span> <span class="dv">1</span>)) <span class="sc">*</span> <span class="fu">sum</span>((A <span class="sc">-</span> <span class="fu">mean</span>(A)) <span class="sc">*</span> (B <span class="sc">-</span> <span class="fu">mean</span>(B))) </span></code></pre></div>
+<div class="sourceCode" id="cb480"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb480-1"><a href="week-9-lecture.html#cb480-1" tabindex="-1"></a>A <span class="ot">&lt;-</span> A <span class="sc">*</span> <span class="dv">10</span></span>
+<span id="cb480-2"><a href="week-9-lecture.html#cb480-2" tabindex="-1"></a>B <span class="ot">&lt;-</span> B <span class="sc">*</span> <span class="dv">10</span></span>
+<span id="cb480-3"><a href="week-9-lecture.html#cb480-3" tabindex="-1"></a>(<span class="dv">1</span> <span class="sc">/</span> (<span class="fu">length</span>(A) <span class="sc">-</span> <span class="dv">1</span>)) <span class="sc">*</span> <span class="fu">sum</span>((A <span class="sc">-</span> <span class="fu">mean</span>(A)) <span class="sc">*</span> (B <span class="sc">-</span> <span class="fu">mean</span>(B))) </span></code></pre></div>
 <pre><code>## [1] -166.6667</code></pre>
 <p>This is why to calculate <span class="math inline">\(r\)</span> we scale the covariance by the geometric mean of the product of the variances for the two samples.</p>
 <p><span class="math display">\[
@@ -516,12 +522,12 @@ r = \frac{Cov(A,B)}{\sqrt{Var(A) \times Var(B)}}
 Pearson’s product moment correlation is bounded between -1 and 1. Correlation coefficients of 1 or -1 occur when you set deviations in sample <span class="math inline">\(B\)</span> to be exactly matched in sample <span class="math inline">\(A\)</span>. These measures are unitless.</p>
 <p>Let’s look at a few examples…</p>
 <p><img src="Week-9-lecture_files/figure-html/unnamed-chunk-4-1.png" width="240" /></p>
-<pre><code>## [1] 0.03078083</code></pre>
+<pre><code>## [1] 0.1503474</code></pre>
 <p><img src="Week-9-lecture_files/figure-html/unnamed-chunk-4-2.png" width="240" /></p>
-<pre><code>## [1] 0.9360879</code></pre>
+<pre><code>## [1] 0.9381838</code></pre>
 </div>
-<div id="hypothesis-testing---pearsons-r" class="section level2" number="16.3">
-<h2><span class="header-section-number">16.3</span> Hypothesis testing - Pearson’s <em>r</em></h2>
+<div id="hypothesis-testing---pearsons-r" class="section level2 hasAnchor" number="16.3">
+<h2><span class="header-section-number">16.3</span> Hypothesis testing - Pearson’s <em>r</em><a href="week-9-lecture.html#hypothesis-testing---pearsons-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Before getting into hypothesis testing, some terminology:</p>
 <p><span class="math inline">\(\rho\)</span>=true (population) correlation coefficient of A and B</p>
 <p><span class="math inline">\(r\)</span>=empirical (sample) correlation coefficient of A and B</p>
@@ -579,14 +585,14 @@ To estimate <em>r</em>, we calculated the mean of sample A and sample B
 <li><p>The relationship between <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is linear (always necessary)</p></li>
 <li><p>Data are independent samples from the joint distribution.</p></li>
 </ol>
-<div class="sourceCode" id="cb483"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb483-1"><a href="week-9-lecture.html#cb483-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb483-2"><a href="week-9-lecture.html#cb483-2" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span>
-<span id="cb483-3"><a href="week-9-lecture.html#cb483-3" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> A[<span class="fu">order</span>(A)]</span>
-<span id="cb483-4"><a href="week-9-lecture.html#cb483-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">A =</span> A, <span class="at">B =</span> (A <span class="sc">-</span> <span class="dv">5</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>))</span>
-<span id="cb483-5"><a href="week-9-lecture.html#cb483-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">x =</span> A, <span class="at">y =</span> B)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
+<div class="sourceCode" id="cb484"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb484-1"><a href="week-9-lecture.html#cb484-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb484-2"><a href="week-9-lecture.html#cb484-2" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span>
+<span id="cb484-3"><a href="week-9-lecture.html#cb484-3" tabindex="-1"></a>A <span class="ot">&lt;-</span> A[<span class="fu">order</span>(A)]</span>
+<span id="cb484-4"><a href="week-9-lecture.html#cb484-4" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">A =</span> A, <span class="at">B =</span> (A <span class="sc">-</span> <span class="dv">5</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>))</span>
+<span id="cb484-5"><a href="week-9-lecture.html#cb484-5" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">x =</span> A, <span class="at">y =</span> B)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
 <p><img src="Week-9-lecture_files/figure-html/unnamed-chunk-5-1.png" width="288" /></p>
-<div class="sourceCode" id="cb484"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb484-1"><a href="week-9-lecture.html#cb484-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(df<span class="sc">$</span>A, df<span class="sc">$</span>B)</span></code></pre></div>
-<pre><code>## [1] -0.4986959</code></pre>
+<div class="sourceCode" id="cb485"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb485-1"><a href="week-9-lecture.html#cb485-1" tabindex="-1"></a><span class="fu">cor</span>(df<span class="sc">$</span>A, df<span class="sc">$</span>B)</span></code></pre></div>
+<pre><code>## [1] 0.08297455</code></pre>
 <p>Even though <em>A</em> and <em>B</em> clearly have a strong relationship, correlation is only effective if the relationship is <strong>linear</strong>.</p>
 <p>Other considerations:</p>
 <p>What if the data are not bivariate normal? If sample size is large, you’re probably okay.</p>
@@ -597,19 +603,19 @@ To estimate <em>r</em>, we calculated the mean of sample A and sample B
 Click for Answer
 </summary>
 <p><span style="color: blueviolet;">You need to sample (with replacement) A-B pairs. This will preserve the correlated structure of the data while allowing you to resample a “new” dataset with which to calculate a confidence interval. In other words, sample with replacement from the <strong>row indices</strong>, preserving the relationship between the two samples</p>
-<div class="sourceCode" id="cb486"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb486-1"><a href="week-9-lecture.html#cb486-1" aria-hidden="true" tabindex="-1"></a>iterations <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
-<span id="cb486-2"><a href="week-9-lecture.html#cb486-2" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span>
-<span id="cb486-3"><a href="week-9-lecture.html#cb486-3" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> A <span class="sc">-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span>
-<span id="cb486-4"><a href="week-9-lecture.html#cb486-4" aria-hidden="true" tabindex="-1"></a>cor.obs <span class="ot">&lt;-</span> <span class="fu">cor</span>(A, B)</span>
-<span id="cb486-5"><a href="week-9-lecture.html#cb486-5" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(A, B)</span>
-<span id="cb486-6"><a href="week-9-lecture.html#cb486-6" aria-hidden="true" tabindex="-1"></a>cor.boot <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
-<span id="cb486-7"><a href="week-9-lecture.html#cb486-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>iterations) {</span>
-<span id="cb486-8"><a href="week-9-lecture.html#cb486-8" aria-hidden="true" tabindex="-1"></a>  index.boot <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(dat), <span class="at">size =</span> <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb486-9"><a href="week-9-lecture.html#cb486-9" aria-hidden="true" tabindex="-1"></a>  dat.boot <span class="ot">&lt;-</span> dat[index.boot, ]</span>
-<span id="cb486-10"><a href="week-9-lecture.html#cb486-10" aria-hidden="true" tabindex="-1"></a>  cor.boot[i] <span class="ot">&lt;-</span> <span class="fu">cor</span>(<span class="at">x =</span> dat.boot<span class="sc">$</span>A, <span class="at">y =</span> dat.boot<span class="sc">$</span>B)</span>
-<span id="cb486-11"><a href="week-9-lecture.html#cb486-11" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb486-12"><a href="week-9-lecture.html#cb486-12" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">&quot;The 95% confidence interval for the estimated correlation coefficient, &quot;</span>, <span class="fu">round</span>(cor.obs, <span class="at">digits =</span> <span class="dv">3</span>), <span class="st">&quot; is (&quot;</span>, <span class="fu">round</span>(<span class="fu">quantile</span>(cor.boot, <span class="fl">0.025</span>), <span class="at">digits =</span> <span class="dv">3</span>), <span class="st">&quot;, &quot;</span>, <span class="fu">round</span>(<span class="fu">quantile</span>(cor.boot, <span class="fl">0.975</span>), <span class="at">digits =</span> <span class="dv">3</span>), <span class="st">&quot;)&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;The 95% confidence interval for the estimated correlation coefficient, 0.904 is (0.856, 0.937)&quot;</code></pre>
+<div class="sourceCode" id="cb487"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb487-1"><a href="week-9-lecture.html#cb487-1" tabindex="-1"></a>iterations <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb487-2"><a href="week-9-lecture.html#cb487-2" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span>
+<span id="cb487-3"><a href="week-9-lecture.html#cb487-3" tabindex="-1"></a>B <span class="ot">&lt;-</span> A <span class="sc">-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span>
+<span id="cb487-4"><a href="week-9-lecture.html#cb487-4" tabindex="-1"></a>cor.obs <span class="ot">&lt;-</span> <span class="fu">cor</span>(A, B)</span>
+<span id="cb487-5"><a href="week-9-lecture.html#cb487-5" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(A, B)</span>
+<span id="cb487-6"><a href="week-9-lecture.html#cb487-6" tabindex="-1"></a>cor.boot <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb487-7"><a href="week-9-lecture.html#cb487-7" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>iterations) {</span>
+<span id="cb487-8"><a href="week-9-lecture.html#cb487-8" tabindex="-1"></a>  index.boot <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(dat), <span class="at">size =</span> <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb487-9"><a href="week-9-lecture.html#cb487-9" tabindex="-1"></a>  dat.boot <span class="ot">&lt;-</span> dat[index.boot, ]</span>
+<span id="cb487-10"><a href="week-9-lecture.html#cb487-10" tabindex="-1"></a>  cor.boot[i] <span class="ot">&lt;-</span> <span class="fu">cor</span>(<span class="at">x =</span> dat.boot<span class="sc">$</span>A, <span class="at">y =</span> dat.boot<span class="sc">$</span>B)</span>
+<span id="cb487-11"><a href="week-9-lecture.html#cb487-11" tabindex="-1"></a>}</span>
+<span id="cb487-12"><a href="week-9-lecture.html#cb487-12" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">&quot;The 95% confidence interval for the estimated correlation coefficient, &quot;</span>, <span class="fu">round</span>(cor.obs, <span class="at">digits =</span> <span class="dv">3</span>), <span class="st">&quot; is (&quot;</span>, <span class="fu">round</span>(<span class="fu">quantile</span>(cor.boot, <span class="fl">0.025</span>), <span class="at">digits =</span> <span class="dv">3</span>), <span class="st">&quot;, &quot;</span>, <span class="fu">round</span>(<span class="fu">quantile</span>(cor.boot, <span class="fl">0.975</span>), <span class="at">digits =</span> <span class="dv">3</span>), <span class="st">&quot;)&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;The 95% confidence interval for the estimated correlation coefficient, 0.889 is (0.844, 0.923)&quot;</code></pre>
 </span>
 </details>
 <p><strong>Question: How would we conduct a permutation test for the correlation coefficient (with <span class="math inline">\(H_0: \rho = 0\)</span>)?</strong></p>
@@ -622,9 +628,9 @@ Shuffle <em>A</em> independently of <em>B</em> and calculate the correlation of 
 </span>
 </details>
 </div>
-<div id="fishers-z" class="section level2" number="16.4">
-<h2><span class="header-section-number">16.4</span> Fisher’s <span class="math inline">\(z\)</span></h2>
-<p>If you have large sample sizes, you can test other null hypotheses (i.e. <span class="math inline">\(H_{0}: \rho=\rho_{0}\)</span>) and put confidence intervals on <span class="math inline">\(\rho\)</span> using what is called “Fisher’s transformation.” Using Fisher’s <span class="math inline">\(z\)</span> transformation, we convert a statistic with a bounded distribution to an unbounded (normal) distribution. This is useful for calculating confidence intervals. Also with this method, we can test hypotheses other than <span class="math inline">\(\rho = 0\)</span>. We can transform <span class="math inline">\(r\)</span> to <span class="math inline">\(z\)</span> using the the inverse hyperbolic tangent:</p>
+<div id="fishers-z" class="section level2 hasAnchor" number="16.4">
+<h2><span class="header-section-number">16.4</span> Fisher’s <span class="math inline">\(z\)</span><a href="week-9-lecture.html#fishers-z" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If you have large sample sizes, you can test other null hypotheses (i.e. <span class="math inline">\(H_{0}: \rho=\rho_{0}\)</span>) and put confidence intervals on <span class="math inline">\(\rho\)</span> using what is called “Fisher’s transformation”. Using Fisher’s <span class="math inline">\(z\)</span> transformation, we convert a statistic with a bounded distribution to an unbounded (normal) distribution. This is useful for calculating confidence intervals. Also with this method, we can test hypotheses other than <span class="math inline">\(\rho = 0\)</span>. We can transform <span class="math inline">\(r\)</span> to <span class="math inline">\(z\)</span> using the the inverse hyperbolic tangent:</p>
 <p><span class="math display">\[
 z = 0.5 \ln \left( \frac{1 + r}{1 - r} \right) = \tanh^{-1} (r)
 \]</span></p>
@@ -637,17 +643,17 @@ Now, the test statistic that we can use to test the null hypothesis <span class=
 T^* = \frac{z - 0.5 \ln \left( \frac{1 + \rho_0}{1 - \rho_0} \right)}{\sqrt{1 / (n - 3)}} \approx \mathrm{N}(0, 1)
 \]</span></p>
 <p>Why did we rewrite a new test statistic (what was wrong with <span class="math inline">\(z\)</span>)? The null distribution for <span class="math inline">\(z\)</span> is more difficult to reference (compared to the quantiles of the standard normal, for example). For a bit of evidence showing that both ways of writing the test statistic are fine, see the following code:</p>
-<div class="sourceCode" id="cb488"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb488-1"><a href="week-9-lecture.html#cb488-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span>
-<span id="cb488-2"><a href="week-9-lecture.html#cb488-2" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> A <span class="sc">-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span>
-<span id="cb488-3"><a href="week-9-lecture.html#cb488-3" aria-hidden="true" tabindex="-1"></a>r.obs <span class="ot">&lt;-</span> <span class="fu">cor</span>(A, B)</span>
-<span id="cb488-4"><a href="week-9-lecture.html#cb488-4" aria-hidden="true" tabindex="-1"></a><span class="co"># using z as test statistic</span></span>
-<span id="cb488-5"><a href="week-9-lecture.html#cb488-5" aria-hidden="true" tabindex="-1"></a>z.obs <span class="ot">&lt;-</span> <span class="fl">0.5</span> <span class="sc">*</span> <span class="fu">log</span>((<span class="dv">1</span> <span class="sc">+</span> r.obs) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">-</span> r.obs)) <span class="co"># note that z under the null distribution is 0</span></span>
-<span id="cb488-6"><a href="week-9-lecture.html#cb488-6" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> z.obs, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="dv">1</span> <span class="sc">/</span> (<span class="dv">100</span> <span class="sc">-</span> <span class="dv">3</span>)), <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## [1] 9.874159e-37</code></pre>
-<div class="sourceCode" id="cb490"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb490-1"><a href="week-9-lecture.html#cb490-1" aria-hidden="true" tabindex="-1"></a><span class="co"># using transformed test statistic, T*</span></span>
-<span id="cb490-2"><a href="week-9-lecture.html#cb490-2" aria-hidden="true" tabindex="-1"></a>test.stat <span class="ot">&lt;-</span> z.obs <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">1</span> <span class="sc">/</span> (<span class="dv">100</span> <span class="sc">-</span> <span class="dv">3</span>))</span>
-<span id="cb490-3"><a href="week-9-lecture.html#cb490-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> test.stat, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## [1] 9.874159e-37</code></pre>
+<div class="sourceCode" id="cb489"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb489-1"><a href="week-9-lecture.html#cb489-1" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span>
+<span id="cb489-2"><a href="week-9-lecture.html#cb489-2" tabindex="-1"></a>B <span class="ot">&lt;-</span> A <span class="sc">-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span>
+<span id="cb489-3"><a href="week-9-lecture.html#cb489-3" tabindex="-1"></a>r.obs <span class="ot">&lt;-</span> <span class="fu">cor</span>(A, B)</span>
+<span id="cb489-4"><a href="week-9-lecture.html#cb489-4" tabindex="-1"></a><span class="co"># using z as test statistic</span></span>
+<span id="cb489-5"><a href="week-9-lecture.html#cb489-5" tabindex="-1"></a>z.obs <span class="ot">&lt;-</span> <span class="fl">0.5</span> <span class="sc">*</span> <span class="fu">log</span>((<span class="dv">1</span> <span class="sc">+</span> r.obs) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">-</span> r.obs)) <span class="co"># note that z under the null distribution is 0</span></span>
+<span id="cb489-6"><a href="week-9-lecture.html#cb489-6" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> z.obs, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="dv">1</span> <span class="sc">/</span> (<span class="dv">100</span> <span class="sc">-</span> <span class="dv">3</span>)), <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## [1] 7.726284e-44</code></pre>
+<div class="sourceCode" id="cb491"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb491-1"><a href="week-9-lecture.html#cb491-1" tabindex="-1"></a><span class="co"># using transformed test statistic, T*</span></span>
+<span id="cb491-2"><a href="week-9-lecture.html#cb491-2" tabindex="-1"></a>test.stat <span class="ot">&lt;-</span> z.obs <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">1</span> <span class="sc">/</span> (<span class="dv">100</span> <span class="sc">-</span> <span class="dv">3</span>))</span>
+<span id="cb491-3"><a href="week-9-lecture.html#cb491-3" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> test.stat, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## [1] 7.726284e-44</code></pre>
 <p>To simply the notation, let us define</p>
 <p><span class="math display">\[
 \zeta_{0} = \frac{1}{2}ln\left(\frac{1+\rho_{0}}{1-\rho_{0}}\right)
@@ -669,13 +675,13 @@ r_{s} = \frac{Cov(ranks_A,ranks_B)}{\sqrt{Var(ranks_A) \times Var(ranks_B)}}
 r_s | H_0 \sim \sqrt{\frac{1}{n - 1}} \mathrm{N} (0, 1)
 \]</span>
 Ties are dealt with in a different way (see Aho 8.3.1.1 for more detail).</p>
-<div class="sourceCode" id="cb492"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb492-1"><a href="week-9-lecture.html#cb492-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">4</span>)</span>
-<span id="cb492-2"><a href="week-9-lecture.html#cb492-2" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb492-3"><a href="week-9-lecture.html#cb492-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cov</span>(<span class="fu">rank</span>(A), <span class="fu">rank</span>(B)) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">var</span>(<span class="fu">rank</span>(A)) <span class="sc">*</span> <span class="fu">var</span>(<span class="fu">rank</span>(B)))</span></code></pre></div>
+<div class="sourceCode" id="cb493"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb493-1"><a href="week-9-lecture.html#cb493-1" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">4</span>)</span>
+<span id="cb493-2"><a href="week-9-lecture.html#cb493-2" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb493-3"><a href="week-9-lecture.html#cb493-3" tabindex="-1"></a><span class="fu">cov</span>(<span class="fu">rank</span>(A), <span class="fu">rank</span>(B)) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">var</span>(<span class="fu">rank</span>(A)) <span class="sc">*</span> <span class="fu">var</span>(<span class="fu">rank</span>(B)))</span></code></pre></div>
 <pre><code>## [1] -0.8</code></pre>
-<div class="sourceCode" id="cb494"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb494-1"><a href="week-9-lecture.html#cb494-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(A, B, <span class="at">method =</span> <span class="st">&quot;spearman&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb495"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb495-1"><a href="week-9-lecture.html#cb495-1" tabindex="-1"></a><span class="fu">cor.test</span>(A, B, <span class="at">method =</span> <span class="st">&quot;spearman&quot;</span>)</span></code></pre></div>
 <pre><code>## 
-## 	Spearman&#39;s rank correlation rho
+##  Spearman&#39;s rank correlation rho
 ## 
 ## data:  A and B
 ## S = 18, p-value = 0.3333
@@ -689,10 +695,10 @@ Ties are dealt with in a different way (see Aho 8.3.1.1 for more detail).</p>
 </ol>
 <p>The basic idea is that for sample X, you can compare all possible combinations of <span class="math inline">\(X_{i}\)</span> to see which values are larger. For a second sample Y, you can do the same. Kendall’s tau tallies how many pairs share the same relationship. If (<span class="math inline">\(X_{i}\)</span>&gt; <span class="math inline">\(X_{j}\)</span> and <span class="math inline">\(Y_{i} &gt; Y_{j}\)</span>) OR (<span class="math inline">\(X_{i}&lt; X_{j}\)</span> and <span class="math inline">\(Y_{i}&lt; Y_{j}\)</span>), then X and Y are considered concordant for that combination. If (<span class="math inline">\(X_{i}&gt; X_{j}\)</span> and <span class="math inline">\(Y_{i}&lt; Y_{j}\)</span>) OR (<span class="math inline">\(X_{i}&lt; X_{j}\)</span> and <span class="math inline">\(Y_{i}&gt; Y_{j}\)</span>), then X and Y are considered disconcordant for that combination.</p>
 <p>This is easier to describe in practice:</p>
-<div class="sourceCode" id="cb496"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb496-1"><a href="week-9-lecture.html#cb496-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">4306</span>)</span>
-<span id="cb496-2"><a href="week-9-lecture.html#cb496-2" aria-hidden="true" tabindex="-1"></a>total <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>, <span class="at">size =</span> <span class="dv">8</span>)</span>
-<span id="cb496-3"><a href="week-9-lecture.html#cb496-3" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">A =</span> total[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="at">B =</span> total[<span class="dv">5</span><span class="sc">:</span><span class="dv">8</span>])</span>
-<span id="cb496-4"><a href="week-9-lecture.html#cb496-4" aria-hidden="true" tabindex="-1"></a>dat</span></code></pre></div>
+<div class="sourceCode" id="cb497"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb497-1"><a href="week-9-lecture.html#cb497-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">4306</span>)</span>
+<span id="cb497-2"><a href="week-9-lecture.html#cb497-2" tabindex="-1"></a>total <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>, <span class="at">size =</span> <span class="dv">8</span>)</span>
+<span id="cb497-3"><a href="week-9-lecture.html#cb497-3" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">A =</span> total[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="at">B =</span> total[<span class="dv">5</span><span class="sc">:</span><span class="dv">8</span>])</span>
+<span id="cb497-4"><a href="week-9-lecture.html#cb497-4" tabindex="-1"></a>dat</span></code></pre></div>
 <pre><code>##    A B
 ## 1 10 8
 ## 2 15 6
@@ -712,8 +718,8 @@ In other words,</p>
 \]</span>
 so we can use the quantiles of the standard normal we are so familiar with. In practice, Pearson’s and Kendall’s rank correlation tests often give very very similar results (if not in the actual value, certainly in the inference derived from them).</p>
 </div>
-<div id="regression" class="section level2" number="16.5">
-<h2><span class="header-section-number">16.5</span> Regression</h2>
+<div id="regression" class="section level2 hasAnchor" number="16.5">
+<h2><span class="header-section-number">16.5</span> Regression<a href="week-9-lecture.html#regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Regression is a linear model (in the vein of those we introduced last week) in which a continuous response is modeled by one or more continuous predictors. (If we have only discrete predictors we call this ANOVA…the names are silly since they are all just linear models.)</p>
 <p>Linear regression simply finds the straight line that “best fits” a scatterplot of (x,y) data.
 We will note at the outset that there are two distinct kinds of regression.</p>
@@ -728,8 +734,8 @@ Y_{i} = \beta_{0}+\beta_{1}X_{i} + \epsilon_{i} \mbox{, where } \epsilon_{i} \si
 <p>where <span class="math inline">\(\beta_{0}\)</span> is the <strong>intercept</strong> and <span class="math inline">\(\beta_{1}\)</span> is the <strong>slope</strong>. Note that each data point <span class="math inline">\(Y_{i}\)</span> is associated with its own value of the corresponding covariate predictor (<span class="math inline">\(X_{i}\)</span>) and its own sample for the residual <span class="math inline">\(\epsilon_{i}\)</span>. Before we get into some more math, let’s just draw some data and visualize what the slope and intercept represent. Note that we are usually just interested in the line (<span class="math inline">\(\beta_{0}+\beta_{1}X\)</span>) that represents the effect of the covariate on the response variable and therefore our focus is on estimating the parameters <span class="math inline">\(\beta_{0}\)</span> and <span class="math inline">\(\beta_{1}\)</span>. We are often less interested in the variance associated with <span class="math inline">\(\epsilon\)</span> but keep in mind that <span class="math inline">\(\sigma\)</span> is a third parameter of this model and also must be estimated from the data.</p>
 <p>How do we find the line that best fits the data? Maximum likelihood!</p>
 </div>
-<div id="estimating-the-slope-and-intercept-in-linear-regression" class="section level2" number="16.6">
-<h2><span class="header-section-number">16.6</span> Estimating the slope and intercept in linear regression</h2>
+<div id="estimating-the-slope-and-intercept-in-linear-regression" class="section level2 hasAnchor" number="16.6">
+<h2><span class="header-section-number">16.6</span> Estimating the slope and intercept in linear regression<a href="week-9-lecture.html#estimating-the-slope-and-intercept-in-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The traditional “no calculus” explanation for estimating regression slope and intercept is included below for completeness, but I will bypass this more convoluted approach for now in favor of using maximum likelihood, which we already know how to do.</p>
 <p>Remember back to the Week 4 lab, the joint likelihood for <span class="math inline">\(n\)</span> i.i.d. Normally distributed data <span class="math inline">\(Y \sim N(\mu,\sigma^{2})\)</span> was given by:</p>
 <p><span class="math display">\[
@@ -812,8 +818,8 @@ The standard deviation of an estimated parameter (here, <span class="math inline
 </span>
 </details>
 </div>
-<div id="ok-now-the-other-derivation-for-slope-and-intercept" class="section level2" number="16.7">
-<h2><span class="header-section-number">16.7</span> OK, now the “other” derivation for slope and intercept</h2>
+<div id="ok-now-the-other-derivation-for-slope-and-intercept" class="section level2 hasAnchor" number="16.7">
+<h2><span class="header-section-number">16.7</span> OK, now the “other” derivation for slope and intercept<a href="week-9-lecture.html#ok-now-the-other-derivation-for-slope-and-intercept" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Here I present an alternative method for estimating the slope and intercept values that does not require knowing about maximum likelihood. As you will see, it is a little convoluted, but it does define some key vocabulary along the way, so here goes…</p>
 <p>It probably makes intuitive sense that the mean value of X should be associated with the mean value of Y and this is in fact true. The best fit line passes through (<span class="math inline">\(\bar{X}\)</span>,<span class="math inline">\(\bar{Y}\)</span>). </p>
 <p>First, we will go over the notation for linear models (and regression specifically) we’ll be using for the next couple of weeks.</p>
@@ -847,48 +853,48 @@ The standard deviation of an estimated parameter (here, <span class="math inline
 </tr>
 </tbody>
 </table>
-<p>To make any further progress with this question, we need to “partition the variance.” We will not tackle this seriously until we get to ANOVA next week, but the basic idea is fairly straightforward.</p>
+<p>To make any further progress with this question, we need to “partition the variance”. We will not tackle this seriously until we get to ANOVA next week, but the basic idea is fairly straightforward.</p>
 <p><img src="Regression.png" /></p>
 <p>To determine how to specifically fit slope and intercept parameters, we need to talk about partitioning variance (a goal of modeling in general, and a major part of ANOVA). When modeling, variation is either explained or unexplained.
 Let’s start from the beginning with this dataset of the relative length of spider webs. Of course, our data are not all exactly the same value, there is some variation:</p>
-<div class="sourceCode" id="cb498"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb498-1"><a href="week-9-lecture.html#cb498-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(webs)</span>
-<span id="cb498-2"><a href="week-9-lecture.html#cb498-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> webs, <span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> length)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray37&quot;</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Relative length of spider webs&quot;</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span>  <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.ticks.x =</span> <span class="fu">element_blank</span>(), <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
+<div class="sourceCode" id="cb499"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb499-1"><a href="week-9-lecture.html#cb499-1" tabindex="-1"></a><span class="fu">data</span>(webs)</span>
+<span id="cb499-2"><a href="week-9-lecture.html#cb499-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> webs, <span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> length)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray37&quot;</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Relative length of spider webs&quot;</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span>  <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.ticks.x =</span> <span class="fu">element_blank</span>(), <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
 <p><img src="Week-9-lecture_files/figure-html/unnamed-chunk-11-1.png" width="288" /></p>
 <p>Next, we fit a model with two parameters, one parameter to describe the mean behavior of the system and one parameter to describe the amount of variation around that mean, e.g., <span class="math inline">\(Y \sim \mathrm{N}(\mu, \sigma^2)\)</span>, where we estimate <span class="math inline">\(\mu\)</span> using <span class="math inline">\(\overline{Y}\)</span> (there are two parameters, but only <span class="math inline">\(\mu\)</span> describes the mean). Using this parameter <span class="math inline">\(\mu\)</span>, we have explained some of that variation in our data.</p>
-<div class="sourceCode" id="cb499"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb499-1"><a href="week-9-lecture.html#cb499-1" aria-hidden="true" tabindex="-1"></a>y.bar <span class="ot">&lt;-</span> <span class="fu">mean</span>(webs[, <span class="dv">2</span>])</span>
-<span id="cb499-2"><a href="week-9-lecture.html#cb499-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> webs, <span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> length)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray37&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb499-3"><a href="week-9-lecture.html#cb499-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(length)), <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb499-4"><a href="week-9-lecture.html#cb499-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&#39;text&#39;</span>, <span class="at">x =</span> <span class="fl">0.01</span>, <span class="at">y =</span> y.bar<span class="fl">+0.0001</span>, <span class="at">label =</span> <span class="st">&quot;bar(Y)&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">col =</span><span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb499-5"><a href="week-9-lecture.html#cb499-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Relative length of spider webs&quot;</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
-<span id="cb499-6"><a href="week-9-lecture.html#cb499-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.ticks.x =</span> <span class="fu">element_blank</span>(), <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
+<div class="sourceCode" id="cb500"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb500-1"><a href="week-9-lecture.html#cb500-1" tabindex="-1"></a>y.bar <span class="ot">&lt;-</span> <span class="fu">mean</span>(webs[, <span class="dv">2</span>])</span>
+<span id="cb500-2"><a href="week-9-lecture.html#cb500-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> webs, <span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> length)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray37&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb500-3"><a href="week-9-lecture.html#cb500-3" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(length)), <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb500-4"><a href="week-9-lecture.html#cb500-4" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&#39;text&#39;</span>, <span class="at">x =</span> <span class="fl">0.01</span>, <span class="at">y =</span> y.bar<span class="fl">+0.0001</span>, <span class="at">label =</span> <span class="st">&quot;bar(Y)&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">col =</span><span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb500-5"><a href="week-9-lecture.html#cb500-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Relative length of spider webs&quot;</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb500-6"><a href="week-9-lecture.html#cb500-6" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.ticks.x =</span> <span class="fu">element_blank</span>(), <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
 <p><img src="Week-9-lecture_files/figure-html/unnamed-chunk-12-1.png" width="288" /></p>
 <p>Now, we might be able to explain more of this variation in the data if we add a covariate to the mean, so as to allow the mean to vary. This will “capture” some of the variability in the data and will leave less unexplained variation to be assigned to <span class="math inline">\(\sigma\)</span>. There are three total parameters in this more complicated model, two that describe the mean and one to describe the <strong>residual variation</strong>. (The parameter <span class="math inline">\(\sigma^2\)</span> is playing the same role in the model as before, but because we hope that at least some of the variation is explained by the covariate, we now refer to whats left as <strong>residual variation</strong>.)</p>
-<div class="sourceCode" id="cb500"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb500-1"><a href="week-9-lecture.html#cb500-1" aria-hidden="true" tabindex="-1"></a>web.fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="at">formula =</span> length <span class="sc">~</span> temp.C, <span class="at">data =</span> webs)</span>
-<span id="cb500-2"><a href="week-9-lecture.html#cb500-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> webs, <span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> length)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray37&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb500-3"><a href="week-9-lecture.html#cb500-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(length)), <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb500-4"><a href="week-9-lecture.html#cb500-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> web.fit<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">slope =</span> web.fit<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">col =</span> <span class="st">&quot;palegreen1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb500-5"><a href="week-9-lecture.html#cb500-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&#39;text&#39;</span>, <span class="at">x =</span> <span class="dv">12</span>, <span class="at">y =</span> y.bar, <span class="at">label =</span> <span class="st">&quot;bar(Y)&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">col =</span><span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb500-6"><a href="week-9-lecture.html#cb500-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Temperature (in C)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Relative length of spider webs&quot;</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
+<div class="sourceCode" id="cb501"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb501-1"><a href="week-9-lecture.html#cb501-1" tabindex="-1"></a>web.fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="at">formula =</span> length <span class="sc">~</span> temp.C, <span class="at">data =</span> webs)</span>
+<span id="cb501-2"><a href="week-9-lecture.html#cb501-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> webs, <span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> length)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray37&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb501-3"><a href="week-9-lecture.html#cb501-3" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(length)), <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb501-4"><a href="week-9-lecture.html#cb501-4" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> web.fit<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">slope =</span> web.fit<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">col =</span> <span class="st">&quot;palegreen1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb501-5"><a href="week-9-lecture.html#cb501-5" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&#39;text&#39;</span>, <span class="at">x =</span> <span class="dv">12</span>, <span class="at">y =</span> y.bar, <span class="at">label =</span> <span class="st">&quot;bar(Y)&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">col =</span><span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb501-6"><a href="week-9-lecture.html#cb501-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Temperature (in C)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Relative length of spider webs&quot;</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
 <p><img src="Week-9-lecture_files/figure-html/unnamed-chunk-13-1.png" width="480" /></p>
-<p>The total amount of variation to be explained is called the “SST” for “sums of squares total.”</p>
+<p>The total amount of variation to be explained is called the “SST” for “sums of squares total”.</p>
 <p><span class="math display">\[
 \text{Sums of squares total} = \sum_{i = 1}^n (Y_i - \bar{Y})^2
 \]</span></p>
 <p>(<span class="math inline">\(n\)</span> is the total number of data points.)</p>
-<p>We can partition this total sums of squares into the component explain by the regression model and that which is left over as unexplained variation (which we often refer to as “error,” but it is “error” in the sense that it is not explained in the model and not “error” in the sense that we have done something wrong). Note that different sources/books will use different acronyms for partitioning variation and you should not be too invested in the notation I am presenting here. The important thing is to remember the equations and the idea behind partitioning variation. The <strong>sum of squares regression</strong> is the amount of variation expained by the regression line, or the squared deviations from the points estimated in the regression <span class="math inline">\(\hat{Y}_i\)</span>, which is described by <span class="math inline">\(\hat{Y}_i = \hat{\beta_0} + \hat{\beta_1} X_i\)</span>, and the estimated mean <span class="math inline">\(\bar{Y}\)</span>:</p>
+<p>We can partition this total sums of squares into the component explain by the regression model and that which is left over as unexplained variation (which we often refer to as “error”, but it is “error” in the sense that it is not explained in the model and not “error” in the sense that we have done something wrong). Note that different sources/books will use different acronyms for partitioning variation and you should not be too invested in the notation I am presenting here. The important thing is to remember the equations and the idea behind partitioning variation. The <strong>sum of squares regression</strong> is the amount of variation expained by the regression line, or the squared deviations from the points estimated in the regression <span class="math inline">\(\hat{Y}_i\)</span>, which is described by <span class="math inline">\(\hat{Y}_i = \hat{\beta_0} + \hat{\beta_1} X_i\)</span>, and the estimated mean <span class="math inline">\(\bar{Y}\)</span>:</p>
 <p><span class="math display">\[
 \text{SSR} = \sum_{i = 1}^n{(\hat{Y}_i - \bar{Y})^2}
 \]</span></p>
 <p>You can think of the sum of squares regression as the amount of variation explained when going from a one parameter model describing the mean behavior (<span class="math inline">\(\mu\)</span> only) to the regression model (here, two parameters describing the mean behavior of the model, <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span>).</p>
-<div class="sourceCode" id="cb501"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb501-1"><a href="week-9-lecture.html#cb501-1" aria-hidden="true" tabindex="-1"></a>x.i <span class="ot">&lt;-</span> webs[<span class="dv">36</span>, <span class="dv">3</span>]</span>
-<span id="cb501-2"><a href="week-9-lecture.html#cb501-2" aria-hidden="true" tabindex="-1"></a>y.i.hat <span class="ot">&lt;-</span> web.fit<span class="sc">$</span>coefficients[<span class="dv">1</span>] <span class="sc">+</span> web.fit<span class="sc">$</span>coefficients[<span class="dv">2</span>] <span class="sc">*</span> x.i</span>
-<span id="cb501-3"><a href="week-9-lecture.html#cb501-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> webs, <span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> length)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray37&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb501-4"><a href="week-9-lecture.html#cb501-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">x =</span> x.i, <span class="at">y =</span> y.i.hat, <span class="at">col =</span> <span class="st">&quot;palegreen3&quot;</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span> </span>
-<span id="cb501-5"><a href="week-9-lecture.html#cb501-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">&quot;text&quot;</span>, <span class="at">x =</span> x.i <span class="sc">+</span> <span class="fl">1.5</span>, <span class="at">y =</span> y.i.hat, <span class="at">label =</span> <span class="st">&quot;hat(Y[i])&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">&quot;palegreen3&quot;</span>, <span class="at">size =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb501-6"><a href="week-9-lecture.html#cb501-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(length)), <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb501-7"><a href="week-9-lecture.html#cb501-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> web.fit<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">slope =</span> web.fit<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">col =</span> <span class="st">&quot;palegreen1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb501-8"><a href="week-9-lecture.html#cb501-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">12</span>, <span class="at">y =</span> <span class="fl">0.9987</span>, <span class="at">label =</span> <span class="st">&quot;bar(Y)&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">col =</span><span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb501-9"><a href="week-9-lecture.html#cb501-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Temperature (in C)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Relative length of spider webs&quot;</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
+<div class="sourceCode" id="cb502"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb502-1"><a href="week-9-lecture.html#cb502-1" tabindex="-1"></a>x.i <span class="ot">&lt;-</span> webs[<span class="dv">36</span>, <span class="dv">3</span>]</span>
+<span id="cb502-2"><a href="week-9-lecture.html#cb502-2" tabindex="-1"></a>y.i.hat <span class="ot">&lt;-</span> web.fit<span class="sc">$</span>coefficients[<span class="dv">1</span>] <span class="sc">+</span> web.fit<span class="sc">$</span>coefficients[<span class="dv">2</span>] <span class="sc">*</span> x.i</span>
+<span id="cb502-3"><a href="week-9-lecture.html#cb502-3" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> webs, <span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> length)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray37&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb502-4"><a href="week-9-lecture.html#cb502-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">x =</span> x.i, <span class="at">y =</span> y.i.hat, <span class="at">col =</span> <span class="st">&quot;palegreen3&quot;</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span> </span>
+<span id="cb502-5"><a href="week-9-lecture.html#cb502-5" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">&quot;text&quot;</span>, <span class="at">x =</span> x.i <span class="sc">+</span> <span class="fl">1.5</span>, <span class="at">y =</span> y.i.hat, <span class="at">label =</span> <span class="st">&quot;hat(Y[i])&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">&quot;palegreen3&quot;</span>, <span class="at">size =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb502-6"><a href="week-9-lecture.html#cb502-6" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(length)), <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb502-7"><a href="week-9-lecture.html#cb502-7" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> web.fit<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">slope =</span> web.fit<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">col =</span> <span class="st">&quot;palegreen1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb502-8"><a href="week-9-lecture.html#cb502-8" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">12</span>, <span class="at">y =</span> <span class="fl">0.9987</span>, <span class="at">label =</span> <span class="st">&quot;bar(Y)&quot;</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">col =</span><span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb502-9"><a href="week-9-lecture.html#cb502-9" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Temperature (in C)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Relative length of spider webs&quot;</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
 <p><img src="Week-9-lecture_files/figure-html/unnamed-chunk-14-1.png" width="480" /></p>
 <p>The <strong>sum of squares error</strong> is the amount of variation <em>not</em> expained by the regression line, or the squared deviations from the actual data points themselves, <span class="math inline">\(Y_i\)</span>, and the points estimated by the regression <span class="math inline">\(\hat{Y}_i\)</span>:</p>
 <p><span class="math display">\[
@@ -919,8 +925,8 @@ Let’s start from the beginning with this dataset of the relative length of spi
 \]</span></p>
 <p>Try this derivation yourself and then check your work <a href="http://seismo.berkeley.edu/~kirchner/eps_120/Toolkits/Toolkit_10.pdf">here</a>.</p>
 </div>
-<div id="assumptions-of-regression" class="section level2" number="16.8">
-<h2><span class="header-section-number">16.8</span> Assumptions of regression</h2>
+<div id="assumptions-of-regression" class="section level2 hasAnchor" number="16.8">
+<h2><span class="header-section-number">16.8</span> Assumptions of regression<a href="week-9-lecture.html#assumptions-of-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><span class="math display">\[
 Y_{i} = \beta_{0}+\beta_{1}X_{i} + \epsilon_{i} \mbox{, where } \epsilon_{i} \sim N(0,\sigma^{2})
 \]</span></p>
@@ -936,11 +942,11 @@ We can express this assumption as follows:</li>
 <li>Variances are constant along the regression line. (Non-constant variances are an example of heteroskedacity. More on this in a second.)</li>
 <li>An implicit assumption is that the regression fit is only valid over the range of X represented in the original data. It is very dangerous to extrapolate outside the range over which the regression line was originally fit.</li>
 </ol>
-<p>Our model allows us to make a prediction about the response expected for any given value of X, which may be a value of X in the original dataset or it may be a value of X <strong>not</strong> in the original dataset. (The model is only valid for X values contained within the range of the original data; more on this later.) We will refer to a new X value as <span class="math inline">\(X^{*}\)</span> and the corresponding estimates for Y as <span class="math inline">\(\hat{Y}\)</span>. Don’t forget that the fitted <span class="math inline">\(\hat{Y}\)</span> values are also estimated quantities, and as such come with uncertainty (i.e. standard errors and confidence intervals). It turns out there are really two ways to express “confidence”: one of which we call a “confidence interval,” the other we call a “prediction interval.”</p>
+<p>Our model allows us to make a prediction about the response expected for any given value of X, which may be a value of X in the original dataset or it may be a value of X <strong>not</strong> in the original dataset. (The model is only valid for X values contained within the range of the original data; more on this later.) We will refer to a new X value as <span class="math inline">\(X^{*}\)</span> and the corresponding estimates for Y as <span class="math inline">\(\hat{Y}\)</span>. Don’t forget that the fitted <span class="math inline">\(\hat{Y}\)</span> values are also estimated quantities, and as such come with uncertainty (i.e. standard errors and confidence intervals). It turns out there are really two ways to express “confidence”: one of which we call a “confidence interval”, the other we call a “prediction interval”.</p>
 </div>
-<div id="confidence-vs.-prediction-intervals" class="section level2" number="16.9">
-<h2><span class="header-section-number">16.9</span> Confidence vs. Prediction intervals</h2>
-<p>One way is to ask about variability in our predicted values is: “What are the 1-<span class="math inline">\(\alpha\)</span> confidence intervals on the <strong>mean</strong> value of Y given <span class="math inline">\(X^{*}\)</span>?” Equivalently, confidence intervals for <span class="math inline">\(\hat{Y}\)</span> mean, “there is a 95% chance that my 95th percentile CIs include the true underlying population parameter value, which is the <strong>mean value</strong> of <span class="math inline">\(\hat{Y}\)</span> (<span class="math inline">\(\mathrm{E}[Y|X^{*}]\)</span>).”</p>
+<div id="confidence-vs.-prediction-intervals" class="section level2 hasAnchor" number="16.9">
+<h2><span class="header-section-number">16.9</span> Confidence vs. Prediction intervals<a href="week-9-lecture.html#confidence-vs.-prediction-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>One way is to ask about variability in our predicted values is: “What are the 1-<span class="math inline">\(\alpha\)</span> confidence intervals on the <strong>mean</strong> value of Y given <span class="math inline">\(X^{*}\)</span>”? Equivalently, confidence intervals for <span class="math inline">\(\hat{Y}\)</span> mean, “there is a 95% chance that my 95th percentile CIs include the true underlying population parameter value, which is the <strong>mean value</strong> of <span class="math inline">\(\hat{Y}\)</span> (<span class="math inline">\(\mathrm{E}[Y|X^{*}]\)</span>).”</p>
 <p>We calculate the CIs using</p>
 <p><span class="math display">\[
 \hat{Y^*} \pm t_{(1 - \frac{\alpha}{2}) [n - p]} \sqrt{s_\epsilon^2 {\left(\frac{1}{n} + \frac{(X^* - \bar{X})^2}{\sum_{i = 1}^n (X_i - \bar{X})^2}\right)}}
@@ -960,44 +966,44 @@ Click for Answer
 The formula for the prediction interval has a 1 in the parenthesis, which is associated with the addition of <span class="math inline">\(s^{2}_{\epsilon}\)</span>. This should make sense because it is the residual uncertianty that is being added to the uncertainty in the best fitting line itself. Prediction intervals are always wider than confidence intervals.
 </span>
 </details>
-<div class="sourceCode" id="cb502"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb502-1"><a href="week-9-lecture.html#cb502-1" aria-hidden="true" tabindex="-1"></a>webs<span class="sc">$</span>CIl <span class="ot">&lt;-</span> <span class="fu">predict</span>(web.fit, <span class="at">interval =</span> <span class="st">&quot;confidence&quot;</span>)[, <span class="dv">2</span>]</span>
-<span id="cb502-2"><a href="week-9-lecture.html#cb502-2" aria-hidden="true" tabindex="-1"></a>webs<span class="sc">$</span>CIu <span class="ot">&lt;-</span> <span class="fu">predict</span>(web.fit, <span class="at">interval =</span> <span class="st">&quot;confidence&quot;</span>)[, <span class="dv">3</span>]</span>
-<span id="cb502-3"><a href="week-9-lecture.html#cb502-3" aria-hidden="true" tabindex="-1"></a>webs<span class="sc">$</span>PIl <span class="ot">&lt;-</span> <span class="fu">predict</span>(web.fit, <span class="at">interval =</span> <span class="st">&quot;prediction&quot;</span>)[, <span class="dv">2</span>]</span>
-<span id="cb502-4"><a href="week-9-lecture.html#cb502-4" aria-hidden="true" tabindex="-1"></a>webs<span class="sc">$</span>PIu <span class="ot">&lt;-</span> <span class="fu">predict</span>(web.fit, <span class="at">interval =</span> <span class="st">&quot;prediction&quot;</span>)[, <span class="dv">3</span>]</span>
-<span id="cb502-5"><a href="week-9-lecture.html#cb502-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> webs, <span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> length)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray37&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb502-6"><a href="week-9-lecture.html#cb502-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> CIl), <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb502-7"><a href="week-9-lecture.html#cb502-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> CIu), <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb502-8"><a href="week-9-lecture.html#cb502-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> PIl), <span class="at">linetype =</span> <span class="st">&quot;dotted&quot;</span>, <span class="at">col =</span> <span class="st">&quot;slateblue1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb502-9"><a href="week-9-lecture.html#cb502-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> PIu), <span class="at">linetype =</span> <span class="st">&quot;dotted&quot;</span>, <span class="at">col =</span> <span class="st">&quot;slateblue1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb502-10"><a href="week-9-lecture.html#cb502-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> web.fit<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">slope =</span> web.fit<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">col =</span> <span class="st">&quot;palegreen1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb502-11"><a href="week-9-lecture.html#cb502-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Temperature (in C)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Relative length of spider webs&quot;</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
+<div class="sourceCode" id="cb503"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb503-1"><a href="week-9-lecture.html#cb503-1" tabindex="-1"></a>webs<span class="sc">$</span>CIl <span class="ot">&lt;-</span> <span class="fu">predict</span>(web.fit, <span class="at">interval =</span> <span class="st">&quot;confidence&quot;</span>)[, <span class="dv">2</span>]</span>
+<span id="cb503-2"><a href="week-9-lecture.html#cb503-2" tabindex="-1"></a>webs<span class="sc">$</span>CIu <span class="ot">&lt;-</span> <span class="fu">predict</span>(web.fit, <span class="at">interval =</span> <span class="st">&quot;confidence&quot;</span>)[, <span class="dv">3</span>]</span>
+<span id="cb503-3"><a href="week-9-lecture.html#cb503-3" tabindex="-1"></a>webs<span class="sc">$</span>PIl <span class="ot">&lt;-</span> <span class="fu">predict</span>(web.fit, <span class="at">interval =</span> <span class="st">&quot;prediction&quot;</span>)[, <span class="dv">2</span>]</span>
+<span id="cb503-4"><a href="week-9-lecture.html#cb503-4" tabindex="-1"></a>webs<span class="sc">$</span>PIu <span class="ot">&lt;-</span> <span class="fu">predict</span>(web.fit, <span class="at">interval =</span> <span class="st">&quot;prediction&quot;</span>)[, <span class="dv">3</span>]</span>
+<span id="cb503-5"><a href="week-9-lecture.html#cb503-5" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> webs, <span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> length)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray37&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb503-6"><a href="week-9-lecture.html#cb503-6" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> CIl), <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb503-7"><a href="week-9-lecture.html#cb503-7" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> CIu), <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb503-8"><a href="week-9-lecture.html#cb503-8" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> PIl), <span class="at">linetype =</span> <span class="st">&quot;dotted&quot;</span>, <span class="at">col =</span> <span class="st">&quot;slateblue1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb503-9"><a href="week-9-lecture.html#cb503-9" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> PIu), <span class="at">linetype =</span> <span class="st">&quot;dotted&quot;</span>, <span class="at">col =</span> <span class="st">&quot;slateblue1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb503-10"><a href="week-9-lecture.html#cb503-10" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> web.fit<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">slope =</span> web.fit<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">col =</span> <span class="st">&quot;palegreen1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb503-11"><a href="week-9-lecture.html#cb503-11" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Temperature (in C)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Relative length of spider webs&quot;</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span></code></pre></div>
 <p><img src="Week-9-lecture_files/figure-html/unnamed-chunk-16-1.png" width="576" /></p>
 <p>Remember: Confidence intervals represent our uncertainty about where the line should be (the mean behavior). Prediction intervals represent our certainty about the predicted values you could expect (the mean behavior + the variance).</p>
 <p>We can confirm the interpretation of the confidence interval by bootstrapping our data and refitting a line each time.</p>
-<div class="sourceCode" id="cb503"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb503-1"><a href="week-9-lecture.html#cb503-1" aria-hidden="true" tabindex="-1"></a>webs<span class="sc">$</span>CIl <span class="ot">&lt;-</span> <span class="fu">predict</span>(web.fit, <span class="at">interval =</span> <span class="st">&quot;confidence&quot;</span>)[, <span class="dv">2</span>]</span>
-<span id="cb503-2"><a href="week-9-lecture.html#cb503-2" aria-hidden="true" tabindex="-1"></a>webs<span class="sc">$</span>CIu <span class="ot">&lt;-</span> <span class="fu">predict</span>(web.fit, <span class="at">interval =</span> <span class="st">&quot;confidence&quot;</span>)[, <span class="dv">3</span>]</span>
-<span id="cb503-3"><a href="week-9-lecture.html#cb503-3" aria-hidden="true" tabindex="-1"></a>webs<span class="sc">$</span>PIl <span class="ot">&lt;-</span> <span class="fu">predict</span>(web.fit, <span class="at">interval =</span> <span class="st">&quot;prediction&quot;</span>)[, <span class="dv">2</span>]</span>
-<span id="cb503-4"><a href="week-9-lecture.html#cb503-4" aria-hidden="true" tabindex="-1"></a>webs<span class="sc">$</span>PIu <span class="ot">&lt;-</span> <span class="fu">predict</span>(web.fit, <span class="at">interval =</span> <span class="st">&quot;prediction&quot;</span>)[, <span class="dv">3</span>]</span>
-<span id="cb503-5"><a href="week-9-lecture.html#cb503-5" aria-hidden="true" tabindex="-1"></a>p<span class="ot">&lt;-</span><span class="fu">ggplot</span>(<span class="at">data =</span> webs, <span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> length)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray37&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb503-6"><a href="week-9-lecture.html#cb503-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> CIl), <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb503-7"><a href="week-9-lecture.html#cb503-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> CIu), <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb503-8"><a href="week-9-lecture.html#cb503-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> PIl), <span class="at">linetype =</span> <span class="st">&quot;dotted&quot;</span>, <span class="at">col =</span> <span class="st">&quot;slateblue1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb503-9"><a href="week-9-lecture.html#cb503-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> PIu), <span class="at">linetype =</span> <span class="st">&quot;dotted&quot;</span>, <span class="at">col =</span> <span class="st">&quot;slateblue1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb503-10"><a href="week-9-lecture.html#cb503-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Temperature (in C)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Relative length of spider webs&quot;</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span>
-<span id="cb503-11"><a href="week-9-lecture.html#cb503-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)</span>
-<span id="cb503-12"><a href="week-9-lecture.html#cb503-12" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb503-13"><a href="week-9-lecture.html#cb503-13" aria-hidden="true" tabindex="-1"></a>  selection<span class="ot">&lt;-</span><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(webs),<span class="at">replace=</span>T)</span>
-<span id="cb503-14"><a href="week-9-lecture.html#cb503-14" aria-hidden="true" tabindex="-1"></a>  webs.bootstrapped<span class="ot">&lt;-</span>webs[selection,]</span>
-<span id="cb503-15"><a href="week-9-lecture.html#cb503-15" aria-hidden="true" tabindex="-1"></a>  web.fit.new <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="at">formula =</span> length <span class="sc">~</span> temp.C, <span class="at">data =</span> webs.bootstrapped)</span>
-<span id="cb503-16"><a href="week-9-lecture.html#cb503-16" aria-hidden="true" tabindex="-1"></a>  p<span class="ot">&lt;-</span>p<span class="sc">+</span><span class="fu">geom_abline</span>(<span class="at">intercept =</span> web.fit.new<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">slope =</span> web.fit.new<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">col =</span> <span class="st">&quot;palegreen1&quot;</span>)</span>
-<span id="cb503-17"><a href="week-9-lecture.html#cb503-17" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb503-18"><a href="week-9-lecture.html#cb503-18" aria-hidden="true" tabindex="-1"></a>p<span class="ot">&lt;-</span>p<span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> CIl), <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb503-19"><a href="week-9-lecture.html#cb503-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> CIu), <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>)  <span class="sc">+</span></span>
-<span id="cb503-20"><a href="week-9-lecture.html#cb503-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> PIl), <span class="at">linetype =</span> <span class="st">&quot;dotted&quot;</span>, <span class="at">col =</span> <span class="st">&quot;slateblue1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb503-21"><a href="week-9-lecture.html#cb503-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> PIu), <span class="at">linetype =</span> <span class="st">&quot;dotted&quot;</span>, <span class="at">col =</span> <span class="st">&quot;slateblue1&quot;</span>) </span>
-<span id="cb503-22"><a href="week-9-lecture.html#cb503-22" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p)</span></code></pre></div>
+<div class="sourceCode" id="cb504"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb504-1"><a href="week-9-lecture.html#cb504-1" tabindex="-1"></a>webs<span class="sc">$</span>CIl <span class="ot">&lt;-</span> <span class="fu">predict</span>(web.fit, <span class="at">interval =</span> <span class="st">&quot;confidence&quot;</span>)[, <span class="dv">2</span>]</span>
+<span id="cb504-2"><a href="week-9-lecture.html#cb504-2" tabindex="-1"></a>webs<span class="sc">$</span>CIu <span class="ot">&lt;-</span> <span class="fu">predict</span>(web.fit, <span class="at">interval =</span> <span class="st">&quot;confidence&quot;</span>)[, <span class="dv">3</span>]</span>
+<span id="cb504-3"><a href="week-9-lecture.html#cb504-3" tabindex="-1"></a>webs<span class="sc">$</span>PIl <span class="ot">&lt;-</span> <span class="fu">predict</span>(web.fit, <span class="at">interval =</span> <span class="st">&quot;prediction&quot;</span>)[, <span class="dv">2</span>]</span>
+<span id="cb504-4"><a href="week-9-lecture.html#cb504-4" tabindex="-1"></a>webs<span class="sc">$</span>PIu <span class="ot">&lt;-</span> <span class="fu">predict</span>(web.fit, <span class="at">interval =</span> <span class="st">&quot;prediction&quot;</span>)[, <span class="dv">3</span>]</span>
+<span id="cb504-5"><a href="week-9-lecture.html#cb504-5" tabindex="-1"></a>p<span class="ot">&lt;-</span><span class="fu">ggplot</span>(<span class="at">data =</span> webs, <span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> length)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">&quot;gray37&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb504-6"><a href="week-9-lecture.html#cb504-6" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> CIl), <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb504-7"><a href="week-9-lecture.html#cb504-7" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> CIu), <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb504-8"><a href="week-9-lecture.html#cb504-8" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> PIl), <span class="at">linetype =</span> <span class="st">&quot;dotted&quot;</span>, <span class="at">col =</span> <span class="st">&quot;slateblue1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb504-9"><a href="week-9-lecture.html#cb504-9" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> PIu), <span class="at">linetype =</span> <span class="st">&quot;dotted&quot;</span>, <span class="at">col =</span> <span class="st">&quot;slateblue1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb504-10"><a href="week-9-lecture.html#cb504-10" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Temperature (in C)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Relative length of spider webs&quot;</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> text.size))</span>
+<span id="cb504-11"><a href="week-9-lecture.html#cb504-11" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)</span>
+<span id="cb504-12"><a href="week-9-lecture.html#cb504-12" tabindex="-1"></a>{</span>
+<span id="cb504-13"><a href="week-9-lecture.html#cb504-13" tabindex="-1"></a>  selection<span class="ot">&lt;-</span><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(webs),<span class="at">replace=</span>T)</span>
+<span id="cb504-14"><a href="week-9-lecture.html#cb504-14" tabindex="-1"></a>  webs.bootstrapped<span class="ot">&lt;-</span>webs[selection,]</span>
+<span id="cb504-15"><a href="week-9-lecture.html#cb504-15" tabindex="-1"></a>  web.fit.new <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="at">formula =</span> length <span class="sc">~</span> temp.C, <span class="at">data =</span> webs.bootstrapped)</span>
+<span id="cb504-16"><a href="week-9-lecture.html#cb504-16" tabindex="-1"></a>  p<span class="ot">&lt;-</span>p<span class="sc">+</span><span class="fu">geom_abline</span>(<span class="at">intercept =</span> web.fit.new<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">slope =</span> web.fit.new<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">col =</span> <span class="st">&quot;palegreen1&quot;</span>)</span>
+<span id="cb504-17"><a href="week-9-lecture.html#cb504-17" tabindex="-1"></a>}</span>
+<span id="cb504-18"><a href="week-9-lecture.html#cb504-18" tabindex="-1"></a>p<span class="ot">&lt;-</span>p<span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> CIl), <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb504-19"><a href="week-9-lecture.html#cb504-19" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> CIu), <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">col =</span> <span class="st">&quot;dodgerblue1&quot;</span>)  <span class="sc">+</span></span>
+<span id="cb504-20"><a href="week-9-lecture.html#cb504-20" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> PIl), <span class="at">linetype =</span> <span class="st">&quot;dotted&quot;</span>, <span class="at">col =</span> <span class="st">&quot;slateblue1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb504-21"><a href="week-9-lecture.html#cb504-21" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp.C, <span class="at">y =</span> PIu), <span class="at">linetype =</span> <span class="st">&quot;dotted&quot;</span>, <span class="at">col =</span> <span class="st">&quot;slateblue1&quot;</span>) </span>
+<span id="cb504-22"><a href="week-9-lecture.html#cb504-22" tabindex="-1"></a><span class="fu">plot</span>(p)</span></code></pre></div>
 <p><img src="Week-9-lecture_files/figure-html/unnamed-chunk-17-1.png" width="576" /></p>
-<p>Notice that the confidence intervals “capture” the range of possible regression lines created by fitting a linear model to the bootstrapped datasets (each “playing the role”" of a re-do of the original data collection.)</p>
+<p>Notice that the confidence intervals “capture” the range of possible regression lines created by fitting a linear model to the bootstrapped datasets (each “playing the role”” of a re-do of the original data collection.)</p>
 <p><strong>Question: Why are confidence and prediction intervals “bow-tie” shaped, i.e. wider further away from the middle of the line?</strong></p>
 <details>
 <summary>
@@ -1008,8 +1014,8 @@ Mathematically, the squared deviation from <span class="math inline">\(\bar{X}\)
 </span>
 </details>
 </div>
-<div id="how-do-we-know-if-our-model-is-any-good" class="section level2" number="16.10">
-<h2><span class="header-section-number">16.10</span> How do we know if our model is any good?</h2>
+<div id="how-do-we-know-if-our-model-is-any-good" class="section level2 hasAnchor" number="16.10">
+<h2><span class="header-section-number">16.10</span> How do we know if our model is any good?<a href="week-9-lecture.html#how-do-we-know-if-our-model-is-any-good" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Earlier we determined that we fit our regression by minimizing the sum of squares error (SSE). However, SSE depends on the units of the dependent variable, so that doesn’t help us decide if the model fits “well” (e.g., the model could be a best fit line, but still not very good). However, we can use the total variation, partitioned into 1) the explained variation in the regression, SSR, and 2) the unexplained residual variance, SSE, to create a useful metric of model fit.</p>
 <p><span class="math display">\[
 \sum_{i = 1}^n (Y_i - \bar{Y})^2 = \sum_{i = 1}^n (\hat{Y_i} - \bar{Y})^2 + \sum_{i = 1}^n (Y_i - \hat{Y}_i)^2
@@ -1031,14 +1037,14 @@ R^2 = \frac{\text{SSR}}{\text{SST}}
 <p><span class="math display">\[
 SSE = \sum_{i=1}^{n}(Y_{i}-\hat{Y_{i}})^{2}
 \]</span>
-Because we square the residuals, points that are far off the regression line have more influence on the estimates of intercept and slope than points that are much closer to the best fit line. There are several methods that are more robust against outliers. Not surprisingly, these fall under the heading of “robust regression.”</p>
+Because we square the residuals, points that are far off the regression line have more influence on the estimates of intercept and slope than points that are much closer to the best fit line. There are several methods that are more robust against outliers. Not surprisingly, these fall under the heading of “robust regression”.</p>
 <p>The most common robust regression approach is called M-estimation. <strong>M-estimation</strong> minimizes any monotonic function of the error, allowing for methods other than squared error. These functions may associate less of a “cost” with having a large residual, or they may even have a saturation point which defines the maximum influence any point can have.</p>
 <p>In other words, the metric that is being minimized can be any function f() of the difference between each point and the best-fit line:</p>
 <p><span class="math display">\[
 \sum_{i = 1}^n f(Y_i - \hat{Y_i})
 \]</span>
 Visualizing M-estimation (these are four functions, <span class="math inline">\(\rho\)</span>, that can be used to model the error, <span class="math inline">\(x\)</span>):</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-18"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-18"></span>
 <img src="RhoFunctions.png" alt="Possible shapes for the weighting function in robust regression. Source: Wikimedia Commons" width="50%" />
 <p class="caption">
 Figure 16.1: Possible shapes for the weighting function in robust regression. Source: Wikimedia Commons
@@ -1046,8 +1052,8 @@ Figure 16.1: Possible shapes for the weighting function in robust regression. So
 </div>
 <p>We won’t get into the mathematics, because they are complex (another benefit of least squares is simpler math) but it’s an avenue you may use in the future and is good to know about.</p>
 </div>
-<div id="robust-regression" class="section level2" number="16.11">
-<h2><span class="header-section-number">16.11</span> Robust regression</h2>
+<div id="robust-regression" class="section level2 hasAnchor" number="16.11">
+<h2><span class="header-section-number">16.11</span> Robust regression<a href="week-9-lecture.html#robust-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Sometimes the relationship between X and Y is not linear and cannot be made linear using a transformation of the variables. In this case, you can carry out a non-parametric test for regression. Here we will discuss Kendall’s robust line fitting method.</p>
 <p>Step 1 – Order the x and y values in order of increasing <span class="math inline">\(X\)</span> value
 Step 2 – Compute the slope between every pair of <span class="math inline">\(X\)</span> values</p>
@@ -1070,16 +1076,16 @@ Click for Answer
 </span>
 </details>
 </div>
-<div id="type-i-and-type-ii-regression" class="section level2" number="16.12">
-<h2><span class="header-section-number">16.12</span> Type I and Type II Regression</h2>
+<div id="type-i-and-type-ii-regression" class="section level2 hasAnchor" number="16.12">
+<h2><span class="header-section-number">16.12</span> Type I and Type II Regression<a href="week-9-lecture.html#type-i-and-type-ii-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We have only discussed Type I regression up to this point. With Type I regression, we use <span class="math inline">\(X\)</span> to predict <span class="math inline">\(Y\)</span>, and have only minimized the error in <span class="math inline">\(Y\)</span>. This means that we have assumed that there is no error in <span class="math inline">\(X\)</span> (<span class="math inline">\(X\)</span> is fixed and not random).</p>
 <p>However, in many cases there could be error in <span class="math inline">\(X\)</span>. <strong>Major axis regression</strong> and <strong>standardized major axis regression</strong> (Type II or Model II regressions) model variance in both the explanatory and response variables. Importantly, however, these methods to not strictly predict <span class="math inline">\(Y\)</span> from <span class="math inline">\(X\)</span>, but rather calculate the major axis of variation in the bivariate dataset <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. This means Type II regression models are not suggested for prediction.</p>
 <p>Major axis regression places equal weight on deviations in the <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> directions and minimizes the sum of squared <strong>perpendicular distances</strong> to the best fit line. The major axis regression line is the first principal component from PCA (stay tuned). This requires that <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are measured on the same scale, using the same units.</p>
 <p>Standardized major axis regression standardizes each variable by its own variance and then fits a best fit line, so that deviations in <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are weighted accordingly.</p>
 <p>When is MA and SMA used? (1) In tests of isometry, allometry, stoichiometry (is the relationship between X and Y 1? Is the ratio of C:N 1?), (2) Testing if two methods of measurement agree.</p>
 </div>
-<div id="W9FAQ" class="section level2" number="16.13">
-<h2><span class="header-section-number">16.13</span> Week 9 FAQ</h2>
+<div id="W9FAQ" class="section level2 hasAnchor" number="16.13">
+<h2><span class="header-section-number">16.13</span> Week 9 FAQ<a href="week-9-lecture.html#W9FAQ" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Question: Why do we divide by n-1 in the denominator of the sample covariance?</strong></p>
 <p>The sample covariance is given by</p>
 <p><span class="math display">\[
@@ -1103,7 +1109,6 @@ The best way of thinking about this is as follows: We start with 2n degrees of f
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1122,6 +1127,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -1142,6 +1148,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -1155,7 +1165,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

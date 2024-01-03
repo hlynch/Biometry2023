@@ -135,6 +135,11 @@ library(rms)  #the function "summary" uses the rms package
 ##     backsolve
 ```
 
+```
+## Warning in .recacheSubclasses(def@className, def, env): undefined subclass
+## "numericVector" of class "Mnumeric"; definition not updated
+```
+
 ```r
 summary(Salary~Education+Gender,data=salaries,method="cross",fun=meansd)
 ```

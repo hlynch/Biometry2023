@@ -642,7 +642,7 @@ ggplot(data = bomregions2012, aes(x = Year, y = northRain)) + geom_point() + geo
 ```
 
 ```
-## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula = 'y ~ x'
 ```
 
 <img src="Week-10-lecture_files/figure-html/unnamed-chunk-18-1.png" width="384" />

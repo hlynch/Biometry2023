@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>1 Week 1 Lecture | Biometry Lecture and Lab Notes</title>
   <meta name="description" content="1 Week 1 Lecture | Biometry Lecture and Lab Notes" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="1 Week 1 Lecture | Biometry Lecture and Lab Notes" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-05-15" />
+<meta name="date" content="2024-01-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="week-1-lab.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -91,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -104,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -116,6 +117,11 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -170,7 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="week-2-lecture.html"><a href="week-2-lecture.html"><i class="fa fa-check"></i><b>3</b> Week 2 Lecture</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="week-2-lecture.html"><a href="week-2-lecture.html#week-2-readings"><i class="fa fa-check"></i><b>3.1</b> Week 2 Readings</a></li>
-<li class="chapter" data-level="3.2" data-path="week-1-lecture.html"><a href="week-1-lecture.html#todays-agenda"><i class="fa fa-check"></i><b>3.2</b> Today’s Agenda</a></li>
+<li class="chapter" data-level="3.2" data-path="week-2-lecture.html"><a href="week-2-lecture.html#todays-agenda-1"><i class="fa fa-check"></i><b>3.2</b> Today’s Agenda</a></li>
 <li class="chapter" data-level="3.3" data-path="week-2-lecture.html"><a href="week-2-lecture.html#hypothesis-testing"><i class="fa fa-check"></i><b>3.3</b> Hypothesis testing</a></li>
 <li class="chapter" data-level="3.4" data-path="week-2-lecture.html"><a href="week-2-lecture.html#permutation-tests"><i class="fa fa-check"></i><b>3.4</b> Permutation tests</a></li>
 <li class="chapter" data-level="3.5" data-path="week-2-lecture.html"><a href="week-2-lecture.html#parameter-estimation"><i class="fa fa-check"></i><b>3.5</b> Parameter estimation</a></li>
@@ -186,7 +192,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2" data-path="week-2-lab.html"><a href="week-2-lab.html#testing-hypotheses-through-permutation"><i class="fa fa-check"></i><b>4.2</b> Testing hypotheses through permutation</a></li>
 <li class="chapter" data-level="4.3" data-path="week-2-lab.html"><a href="week-2-lab.html#basics-of-bootstrap-and-jackknife"><i class="fa fa-check"></i><b>4.3</b> Basics of bootstrap and jackknife</a></li>
 <li class="chapter" data-level="4.4" data-path="week-2-lab.html"><a href="week-2-lab.html#calculating-bias-and-standard-error"><i class="fa fa-check"></i><b>4.4</b> Calculating bias and standard error</a></li>
-<li class="chapter" data-level="4.5" data-path="week-2-lecture.html"><a href="week-2-lecture.html#parametric-bootstrap"><i class="fa fa-check"></i><b>4.5</b> Parametric bootstrap</a></li>
+<li class="chapter" data-level="4.5" data-path="week-2-lab.html"><a href="week-2-lab.html#parametric-bootstrap-1"><i class="fa fa-check"></i><b>4.5</b> Parametric bootstrap</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="week-3-lecture.html"><a href="week-3-lecture.html"><i class="fa fa-check"></i><b>5</b> Week 3 Lecture</a>
 <ul>
@@ -239,8 +245,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10" data-path="week-5-lab.html"><a href="week-5-lab.html"><i class="fa fa-check"></i><b>10</b> Week 5 Lab</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="week-5-lab.html"><a href="week-5-lab.html#f-test"><i class="fa fa-check"></i><b>10.1</b> F-test</a></li>
-<li class="chapter" data-level="10.2" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-proportions"><i class="fa fa-check"></i><b>10.2</b> Comparing two proportions</a></li>
-<li class="chapter" data-level="10.3" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-distributions"><i class="fa fa-check"></i><b>10.3</b> Comparing two distributions</a></li>
+<li class="chapter" data-level="10.2" data-path="week-5-lab.html"><a href="week-5-lab.html#comparing-two-proportions-1"><i class="fa fa-check"></i><b>10.2</b> Comparing two proportions</a></li>
+<li class="chapter" data-level="10.3" data-path="week-5-lab.html"><a href="week-5-lab.html#comparing-two-distributions-1"><i class="fa fa-check"></i><b>10.3</b> Comparing two distributions</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="week-6-lecture.html"><a href="week-6-lecture.html"><i class="fa fa-check"></i><b>11</b> Week 6 Lecture</a>
 <ul>
@@ -298,10 +304,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="17" data-path="week-9-lab.html"><a href="week-9-lab.html"><i class="fa fa-check"></i><b>17</b> Week 9 Lab</a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="week-9-lecture.html"><a href="week-9-lecture.html#correlation"><i class="fa fa-check"></i><b>17.1</b> Correlation</a></li>
+<li class="chapter" data-level="17.1" data-path="week-9-lab.html"><a href="week-9-lab.html#correlation-1"><i class="fa fa-check"></i><b>17.1</b> Correlation</a></li>
 <li class="chapter" data-level="17.2" data-path="week-9-lab.html"><a href="week-9-lab.html#linear-modelling"><i class="fa fa-check"></i><b>17.2</b> Linear modelling</a></li>
 <li class="chapter" data-level="17.3" data-path="week-9-lab.html"><a href="week-9-lab.html#weighted-regression"><i class="fa fa-check"></i><b>17.3</b> Weighted regression</a></li>
-<li class="chapter" data-level="17.4" data-path="week-9-lecture.html"><a href="week-9-lecture.html#robust-regression"><i class="fa fa-check"></i><b>17.4</b> Robust regression</a></li>
+<li class="chapter" data-level="17.4" data-path="week-9-lab.html"><a href="week-9-lab.html#robust-regression-1"><i class="fa fa-check"></i><b>17.4</b> Robust regression</a></li>
 <li class="chapter" data-level="17.5" data-path="week-9-lab.html"><a href="week-9-lab.html#bootstrapping-standard-errors-for-robust-regression"><i class="fa fa-check"></i><b>17.5</b> Bootstrapping standard errors for robust regression</a></li>
 <li class="chapter" data-level="17.6" data-path="week-9-lab.html"><a href="week-9-lab.html#type-i-vs.-type-ii-regression-the-smatr-package"><i class="fa fa-check"></i><b>17.6</b> Type I vs. Type II regression: The ‘smatr’ package</a></li>
 </ul></li>
@@ -468,15 +474,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-1-lecture" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Week 1 Lecture</h1>
-<div id="week-1-readings" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Week 1 Readings</h2>
+<div id="week-1-lecture" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Week 1 Lecture<a href="week-1-lecture.html#week-1-lecture" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="week-1-readings" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Week 1 Readings<a href="week-1-lecture.html#week-1-readings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For this week, I suggest Aho Chapter 2, and Sections 4.1, 4.2, 4.3.1, 4.3.2, 4.3.3, 4.3.4, 4.3.7, and 4.5. Logan Chapter 1 will help you get started in R if you are not already familiar with it.</p>
 <p>I also recommend reviewing the <a href="https://github.com/hlynch/Biometry2023/tree/master/_data/Algebra_rules.pdf">Algebra Rules sheet</a>.</p>
 </div>
-<div id="basic-outline" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Basic Outline</h2>
+<div id="basic-outline" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Basic Outline<a href="week-1-lecture.html#basic-outline" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>First half:
 - R
 - bootstrap, jackknife, and other randomization techniques
@@ -495,7 +501,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Class Structure</p>
 <ul>
 <li><p>Lecture on Tuesday</p></li>
-<li><p>“Lab”" on Thursday</p></li>
+<li><p>“Lab”” on Thursday</p></li>
 <li><p>Problem sets are posted on Wednesdays (feel free to remind me via Slack if I forget), and are due <em>before lecture</em> the following Tuesday. This deadline is very strict, no exceptions. Turn in what you have before 8:00 am on Tuesday, even if its not complete.</p></li>
 </ul>
 <p>Communication</p>
@@ -505,8 +511,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>I have instituted a new participation component to Biometry’s grading, see syllabus.</p></li>
 </ul>
 </div>
-<div id="todays-agenda" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Today’s Agenda</h2>
+<div id="todays-agenda" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Today’s Agenda<a href="week-1-lecture.html#todays-agenda" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li>Basic probability theory</li>
 <li>An overview of univariate distributions</li>
@@ -515,23 +521,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Introduction to statistical inference</li>
 </ol>
 </div>
-<div id="basic-probability-theory" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> Basic Probability Theory</h2>
+<div id="basic-probability-theory" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Basic Probability Theory<a href="week-1-lecture.html#basic-probability-theory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s imagine that we have a bag with a mix of regular and peanut M&amp;Ms. Each M&amp;M has two traits: Color and Type.</p>
 <p><span class="math display">\[ \sum_{all \: colors} P(color) = 1 \]</span>
 <span class="math display">\[ \sum_{all \: types} P(types) = ? \]</span>
 Note that the probabilities have to sum to 1.0 and that the probabilities also have to be non-negative. It turns out these are the only two requirements for a “legal” probability function. (Here we have discrete categories and so the probabilities add to one through a straightforward summation. The distribution of probabilities across categories is called the probability <em>mass</em> function. If these were continuous probabilities, like the distribution describing the weight of each M&amp;M, the distribution would be called a probability <em>density</em> function and we would have to integrate [the continuous version of a sum] over all possible weights. Either way, the sum [or integral] over all possible values of the variable has to equal 1.0.)</p>
 <p>The complement (indicated by a superscript C) of a trait represents every object that does <em>not</em> have that trait, so the probability of the complement to Green is the probability of getting an M&amp;M that is <em>anything but green</em>.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
 <img src="comp.png" alt="Red shading represents the complement. Source: Wikimedia Commons" width="25%" />
 <p class="caption">
 Figure 0.1: Red shading represents the complement. Source: Wikimedia Commons
 </p>
 </div>
 <p><span class="math display">\[ P(Green^c) = 1 - P(Green)  \]</span></p>
-<div id="intersection" class="section level3" number="1.4.1">
-<h3><span class="header-section-number">1.4.1</span> Intersection</h3>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<div id="intersection" class="section level3 hasAnchor" number="1.4.1">
+<h3><span class="header-section-number">1.4.1</span> Intersection<a href="week-1-lecture.html#intersection" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
 <img src="inter.png" alt="Red shading represents the intersection. Source: Wikimedia Commons" width="25%" />
 <p class="caption">
 Figure 1.1: Red shading represents the intersection. Source: Wikimedia Commons
@@ -543,23 +549,23 @@ Figure 1.1: Red shading represents the intersection. Source: Wikimedia Commons
 <p>Note that</p>
 <p><span class="math display">\[ P(Green \: AND \:  Blue) = P(Green \cap Blue) = 0\]</span>
 because an M&amp;M cannot be Green and Blue at the same time. in this case,</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
 <img src="EmptySet.png" alt="In the case of two different colors, the intersection is empty." width="25%" />
 <p class="caption">
 Figure 1.2: In the case of two different colors, the intersection is empty.
 </p>
 </div>
 </div>
-<div id="union" class="section level3" number="1.4.2">
-<h3><span class="header-section-number">1.4.2</span> Union</h3>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<div id="union" class="section level3 hasAnchor" number="1.4.2">
+<h3><span class="header-section-number">1.4.2</span> Union<a href="week-1-lecture.html#union" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
 <img src="union.png" alt="Red shading represents the union. Source: Wikimedia Commons" width="25%" />
 <p class="caption">
 Figure 1.3: Red shading represents the union. Source: Wikimedia Commons
 </p>
 </div>
-<p><span class="math display">\[ \begin{align*} 
-P(Green \: OR \: Peanut) &amp;= P(Green \cup Peanut) \\ 
+<p><span class="math display">\[ \begin{align*}
+P(Green \: OR \: Peanut) &amp;= P(Green \cup Peanut) \\
 &amp;= P(Green) + P(Peanut) - P(Green \cap Peanut) \end{align*} \]</span></p>
 <p><strong>Question: Why do we have to subtract off the intersection?</strong></p>
 <details>
@@ -572,8 +578,8 @@ If we do not subtract off the intersection, then the probability of Green AND Pe
 </details>
 </div>
 </div>
-<div id="multiple-events" class="section level2" number="1.5">
-<h2><span class="header-section-number">1.5</span> Multiple events</h2>
+<div id="multiple-events" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Multiple events<a href="week-1-lecture.html#multiple-events" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s consider what happens when we pull 2 M&amp;Ms out of the bag</p>
 <p><span class="math display">\[ P (Green \: AND \: THEN \: Blue) = P(Green) \cdot P(Blue) \]</span></p>
 <p><strong>Question: What if we didn’t care about the order?</strong></p>
@@ -586,8 +592,8 @@ If we do not care about the order, then the combination of one Green M&amp;M and
 </span>
 </details>
 </div>
-<div id="conditionals" class="section level2" number="1.6">
-<h2><span class="header-section-number">1.6</span> Conditionals</h2>
+<div id="conditionals" class="section level2 hasAnchor" number="1.6">
+<h2><span class="header-section-number">1.6</span> Conditionals<a href="week-1-lecture.html#conditionals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now we will introduce the ideal of a conditional probability.</p>
 <p><span class="math display">\[ P(A \mid B) = P(A \: conditional \: on \: B) \]</span>
 Let’s say we have a bivariate distribution (that just means we have two traits being discussed, similar to M&amp;M color and M&amp;M type above) for discrete quantities such as hair color and eye color (which we will use because they are intuitive but <em>not</em> independent traits), and we survey a number (n=20 in this case) of students.</p>
@@ -680,8 +686,8 @@ Ta da! We’ve arrived at Bayes Theorem, using nothing more than some basic defi
 <p><span class="math display">\[ P(parameters \mid data) \cdot P(data) = P(data \mid parameters) \cdot P(parameters) \]</span></p>
 <p><span class="math display">\[ P(parameters \mid data) = \frac{P(data \mid parameters) \cdot P(parameters)}{P(data)}\]</span></p>
 </div>
-<div id="a-few-foundational-ideas" class="section level2" number="1.7">
-<h2><span class="header-section-number">1.7</span> A few foundational ideas</h2>
+<div id="a-few-foundational-ideas" class="section level2 hasAnchor" number="1.7">
+<h2><span class="header-section-number">1.7</span> A few foundational ideas<a href="week-1-lecture.html#a-few-foundational-ideas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There are a few statistics (a <em>statistic</em> is just something calculated from data) that we will need to know right at the beginning.</p>
 <p>For illustration purposes, lets assume we have the following (sorted) series of data points: (1,3,3,4,7,8,13)</p>
 <p>There are three statistics relating the “central tendency”: the <em>mean</em> (the average value; 5.57), the <em>mode</em> (the most common value; 3), and the <em>median</em> (the “middle” value; 4). We often denote the mean of a variable with a bar, as in <span class="math inline">\(\bar{x}\)</span>. There are also two statistics relating to how much variation there is in the data. The <em>variance</em> measures the average squared distance between each point and the mean. For reasons that we will discuss in lab, we estimate the variance using the following formula</p>
@@ -700,8 +706,8 @@ rather than the more intuitive</p>
 <p>If you were handed a distribution and you were asked to measure a characteristic “fatness” for the distribution, your estimate would be approximately <span class="math inline">\(\sigma\)</span>. Note that <span class="math inline">\(\sigma\)</span> has the same units as the original data, so if your data were in meters, <span class="math inline">\(\sigma\)</span> would also be in meters.</p>
 <p>We won’t get to Normal distributions properly until Week 3, but we will need one fact about the “Standard Normal Distribution” now. The Standard Normal distribution is a Normal (or Gaussian, bell-shaped) distribution with mean equal to zero and standard deviation equal to 1. 68<span class="math inline">\(\%\)</span> of the probability is contained within 1 standard deviation of the mean (so from -<span class="math inline">\(\sigma\)</span> to +<span class="math inline">\(\sigma\)</span>), and 95<span class="math inline">\(\%\)</span> of the probability is contained within 2 standard deviations of the mean (so from -2<span class="math inline">\(\sigma\)</span> to +2<span class="math inline">\(\sigma\)</span>). (Actually, 95<span class="math inline">\(\%\)</span> is contained with 1.96 standard deviations, so sometimes we will use the more precise 1.96 and sometimes you will see this rounded to 2.)</p>
 </div>
-<div id="overview-of-univariate-distributions" class="section level2" number="1.8">
-<h2><span class="header-section-number">1.8</span> Overview of Univariate Distributions</h2>
+<div id="overview-of-univariate-distributions" class="section level2 hasAnchor" number="1.8">
+<h2><span class="header-section-number">1.8</span> Overview of Univariate Distributions<a href="week-1-lecture.html#overview-of-univariate-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Discrete Distributions</p>
 <ul>
 <li><p>Binomial</p></li>
@@ -718,8 +724,8 @@ rather than the more intuitive</p>
 <li><p><span class="math inline">\(\chi^2\)</span></p></li>
 </ul>
 </div>
-<div id="what-can-you-ask-of-a-distribution" class="section level2" number="1.9">
-<h2><span class="header-section-number">1.9</span> What can you ask of a distribution?</h2>
+<div id="what-can-you-ask-of-a-distribution" class="section level2 hasAnchor" number="1.9">
+<h2><span class="header-section-number">1.9</span> What can you ask of a distribution?<a href="week-1-lecture.html#what-can-you-ask-of-a-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><strong>Probability Density Function</strong>: <span class="math inline">\(P(x_1&lt;X&lt;x_2)\)</span> (continuous distributions)</li>
 </ul>
@@ -733,12 +739,12 @@ rather than the more intuitive</p>
 <li><p><strong>Sample from the distribution</strong>: With a large enough sample, the histogram will come very close to the underlying PDF.</p></li>
 </ul>
 <p>Note that the CDF is the integration of the PDF, and the PDF is the derivative of the CDF, so if you have one of these you can always get the other. Likewise, you can always get from the quantiles to the CDF (and then to the PDF). These three things are all equally informative about the shape of the distribution.</p>
-<div id="expected-value-of-a-random-variable" class="section level3" number="1.9.1">
-<h3><span class="header-section-number">1.9.1</span> Expected Value of a Random Variable</h3>
+<div id="expected-value-of-a-random-variable" class="section level3 hasAnchor" number="1.9.1">
+<h3><span class="header-section-number">1.9.1</span> Expected Value of a Random Variable<a href="week-1-lecture.html#expected-value-of-a-random-variable" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In probability theory the expected value of a random variable is the weighted average of all possible values that this random variable can take on. The weights used in computing this average correspond to the probabilities in case of a discrete random variable, or densities in case of continious random variable.</p>
 </div>
-<div id="discrete-case" class="section level3" number="1.9.2">
-<h3><span class="header-section-number">1.9.2</span> Discrete Case</h3>
+<div id="discrete-case" class="section level3 hasAnchor" number="1.9.2">
+<h3><span class="header-section-number">1.9.2</span> Discrete Case<a href="week-1-lecture.html#discrete-case" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math display">\[ X = \{X_1, X_2,...,X_k\} \\
 E[X] = \sum_{i=1}^n{X_i \cdot P(X_i)}\]</span></p>
 <ul>
@@ -746,14 +752,14 @@ E[X] = \sum_{i=1}^n{X_i \cdot P(X_i)}\]</span></p>
 </ul>
 <p><span class="math display">\[ \begin{align*} E[X] &amp;= (0.1 \cdot 1) + (0.1 \cdot 2) + (0.1 \cdot 3) + (0.1 \cdot 4) + (0.6 \cdot 5) \\ &amp;=4 \end{align*}\]</span></p>
 </div>
-<div id="continuous-case" class="section level3" number="1.9.3">
-<h3><span class="header-section-number">1.9.3</span> Continuous Case</h3>
+<div id="continuous-case" class="section level3 hasAnchor" number="1.9.3">
+<h3><span class="header-section-number">1.9.3</span> Continuous Case<a href="week-1-lecture.html#continuous-case" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math display">\[ E[X] = \int_{-\infty}^{\infty}{X \cdot f(X)dX}\]</span></p>
 <p>Note that the function <span class="math inline">\(f(x)\)</span> in the above equation is the probability density function.</p>
 </div>
 </div>
-<div id="a-brief-introduction-to-inference-logic-and-reasoning" class="section level2" number="1.10">
-<h2><span class="header-section-number">1.10</span> A brief introduction to inference, logic, and reasoning</h2>
+<div id="a-brief-introduction-to-inference-logic-and-reasoning" class="section level2 hasAnchor" number="1.10">
+<h2><span class="header-section-number">1.10</span> A brief introduction to inference, logic, and reasoning<a href="week-1-lecture.html#a-brief-introduction-to-inference-logic-and-reasoning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>INDUCTIVE reasoning:</p>
 <p>A set of specific observations <span class="math inline">\(\rightarrow\)</span> A general principle</p>
 <p>Example: I observe a number of elephants and they were all gray. Therefore, all elephants are gray.</p>
@@ -763,13 +769,13 @@ E[X] = \sum_{i=1}^n{X_i \cdot P(X_i)}\]</span></p>
 <p>QUESTION: If this new species of elephant is green, what does this do to our hypothesis that all elephants are gray?</p>
 <p>Some terminology:</p>
 <p><strong>Null Hypothesis</strong>: A statement encapsulating “no effect”</p>
-<p><strong>Alternative Hypothesis</strong>: A statement encapsulating “an effect”"</p>
+<p><strong>Alternative Hypothesis</strong>: A statement encapsulating “an effect””</p>
 <ul>
 <li><p>Fisher: Null hypothesis only</p></li>
 <li><p>Neyman and Pearson: H0 and H1, Weigh risk of of false positive against the false negative</p></li>
 <li><p>We use a hyprid approach</p></li>
 </ul>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
 <img src="popper.png" alt="Hypothetico-deductive view of the scientific method. Photo Source: LSE Library" width="75%" />
 <p class="caption">
 Figure 1.4: Hypothetico-deductive view of the scientific method. Photo Source: LSE Library
@@ -815,7 +821,6 @@ Figure 1.4: Hypothetico-deductive view of the scientific method. Photo Source: L
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -834,6 +839,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -854,6 +860,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -867,7 +877,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

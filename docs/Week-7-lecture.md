@@ -357,6 +357,13 @@ For complex plots which require a suite of colors, I highly recommend using the 
 
 ```r
 library(RColorBrewer)
+```
+
+```
+## Warning: package 'RColorBrewer' was built under R version 4.0.5
+```
+
+```r
 mypalette<-brewer.pal(7,"Greens")
 image(1:7,1,as.matrix(1:7),col=mypalette,xlab="Greens (sequential)",
       ylab="",xaxt="n",yaxt="n",bty="n")
@@ -432,8 +439,8 @@ jitter(rep(0, 7))
 ```
 
 ```
-## [1]  0.011095767 -0.013248655 -0.017195866 -0.002962006  0.016913812
-## [6] -0.014042651  0.003650718
+## [1]  0.0110954850 -0.0189259249 -0.0026252042 -0.0120318713  0.0073170161
+## [6]  0.0005740389 -0.0054234066
 ```
 
 Before we launch into three-dimensional plotting, we should introduce 'ggplot2' which is quickly becoming "industry standard" for making plots in R. There is *so* much that can be done with ggplot2 that we will only scratch the surface today, but at least this introduction will illustrate some of the things that ggplot2 can do.
@@ -444,6 +451,13 @@ The basic function to make plots using ggplot2 is 'qplot'. We can recreate the s
 ```r
 library(ggplot2)
 qplot(wt, mpg, main="Milage vs. Car Weight",xlab="Weight", ylab="Mileage", data=mtcars)
+```
+
+```
+## Warning: `qplot()` was deprecated in ggplot2 3.4.0.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
 ```
 
 <img src="Week-7-lecture_files/figure-html/unnamed-chunk-17-1.png" width="672" />
@@ -505,8 +519,8 @@ hist2d(x,y, same.scale=TRUE)
 ## 
 ## Number of data points:  2000 
 ## Number of grid bins:  200 x 200 
-## X range: ( -14.68762 , 11.4448 )
-## Y range: ( -14.68762 , 11.4448 )
+## X range: ( -12.80471 , 14.06004 )
+## Y range: ( -12.80471 , 14.06004 )
 ```
 
 Notice that we had to use "same.scale=T" to make sure that distances along the x and y axes were comparable.

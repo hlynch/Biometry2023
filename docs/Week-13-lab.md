@@ -1478,8 +1478,8 @@ avPlots(fit,id.n=2)
 ```
 
 ```
-## Warning in plot.xy(xy.coords(x, y), type = type, ...): "id.n" is not a graphical
-## parameter
+## Warning in plot.xy(xy.coords(x, y), type = type, ...): "id.n" is not a
+## graphical parameter
 ```
 
 ```
@@ -1507,8 +1507,8 @@ avPlots(fit,id.n=2)
 ```
 
 ```
-## Warning in plot.xy(xy.coords(x, y), type = type, ...): "id.n" is not a graphical
-## parameter
+## Warning in plot.xy(xy.coords(x, y), type = type, ...): "id.n" is not a
+## graphical parameter
 ```
 
 ```
@@ -1536,8 +1536,8 @@ avPlots(fit,id.n=2)
 ```
 
 ```
-## Warning in plot.xy(xy.coords(x, y), type = type, ...): "id.n" is not a graphical
-## parameter
+## Warning in plot.xy(xy.coords(x, y), type = type, ...): "id.n" is not a
+## graphical parameter
 ```
 
 <img src="Week-13-lab_files/figure-html/unnamed-chunk-35-1.png" width="672" />

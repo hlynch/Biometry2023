@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Week 2 Lab | Biometry Lecture and Lab Notes</title>
   <meta name="description" content="4 Week 2 Lab | Biometry Lecture and Lab Notes" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Week 2 Lab | Biometry Lecture and Lab Notes" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-05-15" />
+<meta name="date" content="2024-01-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="week-2-lecture.html"/>
 <link rel="next" href="week-3-lecture.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -91,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -104,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -116,6 +117,11 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -170,7 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="week-2-lecture.html"><a href="week-2-lecture.html"><i class="fa fa-check"></i><b>3</b> Week 2 Lecture</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="week-2-lecture.html"><a href="week-2-lecture.html#week-2-readings"><i class="fa fa-check"></i><b>3.1</b> Week 2 Readings</a></li>
-<li class="chapter" data-level="3.2" data-path="week-1-lecture.html"><a href="week-1-lecture.html#todays-agenda"><i class="fa fa-check"></i><b>3.2</b> Today’s Agenda</a></li>
+<li class="chapter" data-level="3.2" data-path="week-2-lecture.html"><a href="week-2-lecture.html#todays-agenda-1"><i class="fa fa-check"></i><b>3.2</b> Today’s Agenda</a></li>
 <li class="chapter" data-level="3.3" data-path="week-2-lecture.html"><a href="week-2-lecture.html#hypothesis-testing"><i class="fa fa-check"></i><b>3.3</b> Hypothesis testing</a></li>
 <li class="chapter" data-level="3.4" data-path="week-2-lecture.html"><a href="week-2-lecture.html#permutation-tests"><i class="fa fa-check"></i><b>3.4</b> Permutation tests</a></li>
 <li class="chapter" data-level="3.5" data-path="week-2-lecture.html"><a href="week-2-lecture.html#parameter-estimation"><i class="fa fa-check"></i><b>3.5</b> Parameter estimation</a></li>
@@ -186,7 +192,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2" data-path="week-2-lab.html"><a href="week-2-lab.html#testing-hypotheses-through-permutation"><i class="fa fa-check"></i><b>4.2</b> Testing hypotheses through permutation</a></li>
 <li class="chapter" data-level="4.3" data-path="week-2-lab.html"><a href="week-2-lab.html#basics-of-bootstrap-and-jackknife"><i class="fa fa-check"></i><b>4.3</b> Basics of bootstrap and jackknife</a></li>
 <li class="chapter" data-level="4.4" data-path="week-2-lab.html"><a href="week-2-lab.html#calculating-bias-and-standard-error"><i class="fa fa-check"></i><b>4.4</b> Calculating bias and standard error</a></li>
-<li class="chapter" data-level="4.5" data-path="week-2-lecture.html"><a href="week-2-lecture.html#parametric-bootstrap"><i class="fa fa-check"></i><b>4.5</b> Parametric bootstrap</a></li>
+<li class="chapter" data-level="4.5" data-path="week-2-lab.html"><a href="week-2-lab.html#parametric-bootstrap-1"><i class="fa fa-check"></i><b>4.5</b> Parametric bootstrap</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="week-3-lecture.html"><a href="week-3-lecture.html"><i class="fa fa-check"></i><b>5</b> Week 3 Lecture</a>
 <ul>
@@ -239,8 +245,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10" data-path="week-5-lab.html"><a href="week-5-lab.html"><i class="fa fa-check"></i><b>10</b> Week 5 Lab</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="week-5-lab.html"><a href="week-5-lab.html#f-test"><i class="fa fa-check"></i><b>10.1</b> F-test</a></li>
-<li class="chapter" data-level="10.2" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-proportions"><i class="fa fa-check"></i><b>10.2</b> Comparing two proportions</a></li>
-<li class="chapter" data-level="10.3" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-distributions"><i class="fa fa-check"></i><b>10.3</b> Comparing two distributions</a></li>
+<li class="chapter" data-level="10.2" data-path="week-5-lab.html"><a href="week-5-lab.html#comparing-two-proportions-1"><i class="fa fa-check"></i><b>10.2</b> Comparing two proportions</a></li>
+<li class="chapter" data-level="10.3" data-path="week-5-lab.html"><a href="week-5-lab.html#comparing-two-distributions-1"><i class="fa fa-check"></i><b>10.3</b> Comparing two distributions</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="week-6-lecture.html"><a href="week-6-lecture.html"><i class="fa fa-check"></i><b>11</b> Week 6 Lecture</a>
 <ul>
@@ -298,10 +304,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="17" data-path="week-9-lab.html"><a href="week-9-lab.html"><i class="fa fa-check"></i><b>17</b> Week 9 Lab</a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="week-9-lecture.html"><a href="week-9-lecture.html#correlation"><i class="fa fa-check"></i><b>17.1</b> Correlation</a></li>
+<li class="chapter" data-level="17.1" data-path="week-9-lab.html"><a href="week-9-lab.html#correlation-1"><i class="fa fa-check"></i><b>17.1</b> Correlation</a></li>
 <li class="chapter" data-level="17.2" data-path="week-9-lab.html"><a href="week-9-lab.html#linear-modelling"><i class="fa fa-check"></i><b>17.2</b> Linear modelling</a></li>
 <li class="chapter" data-level="17.3" data-path="week-9-lab.html"><a href="week-9-lab.html#weighted-regression"><i class="fa fa-check"></i><b>17.3</b> Weighted regression</a></li>
-<li class="chapter" data-level="17.4" data-path="week-9-lecture.html"><a href="week-9-lecture.html#robust-regression"><i class="fa fa-check"></i><b>17.4</b> Robust regression</a></li>
+<li class="chapter" data-level="17.4" data-path="week-9-lab.html"><a href="week-9-lab.html#robust-regression-1"><i class="fa fa-check"></i><b>17.4</b> Robust regression</a></li>
 <li class="chapter" data-level="17.5" data-path="week-9-lab.html"><a href="week-9-lab.html#bootstrapping-standard-errors-for-robust-regression"><i class="fa fa-check"></i><b>17.5</b> Bootstrapping standard errors for robust regression</a></li>
 <li class="chapter" data-level="17.6" data-path="week-9-lab.html"><a href="week-9-lab.html#type-i-vs.-type-ii-regression-the-smatr-package"><i class="fa fa-check"></i><b>17.6</b> Type I vs. Type II regression: The ‘smatr’ package</a></li>
 </ul></li>
@@ -468,12 +474,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-2-lab" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Week 2 Lab</h1>
-<div id="confidence-intervals" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Confidence intervals</h2>
+<div id="week-2-lab" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Week 2 Lab<a href="week-2-lab.html#week-2-lab" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="confidence-intervals" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Confidence intervals<a href="week-2-lab.html#confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Before getting too far, we need to formally define a confidence interval.</p>
-<p>A 95th percentile confidence interval say “If I repeat this procedure 100 times using 100 different datasets, 95% of the time my confidence intervals will capture the true parameter.” It does NOT say that there is a 95% chance that the parameter is in the interval.</p>
+<p>A 95th percentile confidence interval say “If I repeat this procedure 100 times using 100 different datasets, 95% of the time my confidence intervals will capture the true parameter”. It does NOT say that there is a 95% chance that the parameter is in the interval.</p>
 <p><strong>Quiz time! (Don’t worry, not a real quiz)</strong></p>
 <p><em>Important note</em>: This is an area where Aho is <strong>WRONG</strong>. Aho is correct on only one point. It is true that <em>once the 95th CI has been constructed</em>, it is no longer possible to assign a <span class="math inline">\(\%\)</span> to the probability that that CI contains the true value or not. Because that CI, once created, either DOES or DOES NOT contain the true value. However, we often talk about the interval in the abstract. <strong><span style="color: orangered;">When we say “There is a 95<span class="math inline">\(\%\)</span> chance that the interval contains the true value” what we mean is that there is a 95<span class="math inline">\(\%\)</span> probability that a CI created using that methodology would contain the true value.</span></strong></p>
 <p>Do not let Week 2 pass by without fundamentally understanding the interpretation of a confidence interval.</p>
@@ -515,8 +521,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>NB: If you are going to go through the trouble of doing the bootstrap sampling, I don’t know why you would make a Normal approximation at the very end to construct the CIs. I recommend Method #1.</p>
 <p><strong><span style="color: green;">Checkpoint #1: Use your penny data to calculate the 95th percentile confidence interval using Method #1 and Method #2. What did you get?</span></strong></p>
 </div>
-<div id="testing-hypotheses-through-permutation" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Testing hypotheses through permutation</h2>
+<div id="testing-hypotheses-through-permutation" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Testing hypotheses through permutation<a href="week-2-lab.html#testing-hypotheses-through-permutation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>These examples use data on the speeds of the top 20 racing pigeons from a race in Alma, GA on February 7,2021.</p>
 <p><strong>Example #1</strong>: Use permutation methods to test whether Cock or Hen birds fly at different speeds (speeds are in meters-per-minute) (in other word: <span class="math inline">\(H_{0}\)</span>: No difference in speeds between the C and H groups):</p>
 <p>C=<span class="math inline">\(\{1359.8,1355.3,1355.1,1353.0,1349.8,1348.8,1345.2\}\)</span></p>
@@ -526,147 +532,147 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Example #2</strong>: Using the same data, provide a 95% confidence interval for the difference in mean speed based on 1000 bootstrap samples</p>
 <p>Note that these two approaches are very closely related. Do you see why either approach can be used to test the null hypothesis? <strong><span style="color: green;">Checkpoint #3: What is the null hypothesis here?</span></strong></p>
 <p><strong>Example #3</strong>: Now we will do one slightly more complicated example from Phillip Good’s book “Permutation tests: A practical guide to resampling methods and testing hypotheses”:</p>
-<p>Holmes and Williams (1954) studied tonsil size in children to verify a possible association with the virus . Test for an association between  status and tonsil size. (Note that you will need to come up with a reasonable test statistic.)</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<p>Holmes and Williams (1954) studied tonsil size in children to verify a possible association with the virus . Test for an association between status and tonsil size. (Note that you will need to come up with a reasonable test statistic.)</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
 <img src="Table2categories.png" alt="Data on tonsil size and S. pyrogenes status. Source: Good (1994)" width="40%" />
 <p class="caption">
 Figure 0.1: Data on tonsil size and S. pyrogenes status. Source: Good (1994)
 </p>
 </div>
 <p>Now lets consider the full dataset, where tonsil size is divided into three categories. How would we do the test now? <strong><span style="color: green;">Checkpoint #4: What is the new test statistic? (There are many options.)</span></strong> What ‘labels’ do you permute?</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
 <img src="Table3categories.png" alt="Fill dataset on tonsil size and S. pyrogenes status. Source: Good (1994)" width="50%" />
 <p class="caption">
 Figure 1.1: Fill dataset on tonsil size and S. pyrogenes status. Source: Good (1994)
 </p>
 </div>
 </div>
-<div id="basics-of-bootstrap-and-jackknife" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Basics of bootstrap and jackknife</h2>
+<div id="basics-of-bootstrap-and-jackknife" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Basics of bootstrap and jackknife<a href="week-2-lab.html#basics-of-bootstrap-and-jackknife" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To get started with bootstrap and jackknife techniques, we start by working through a very simple example. First we simulate some data</p>
-<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="week-2-lab.html#cb120-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">9</span>,<span class="at">by=</span><span class="dv">1</span>)</span></code></pre></div>
-<p>This will constutute our “data.” Let’s print the result of sampling with replacement to get a sense for it…</p>
-<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="week-2-lab.html#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">sample</span>(x,<span class="at">size=</span><span class="fu">length</span>(x),<span class="at">replace=</span>T))</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="week-2-lab.html#cb120-1" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">9</span>,<span class="at">by=</span><span class="dv">1</span>)</span></code></pre></div>
+<p>This will constutute our “data”. Let’s print the result of sampling with replacement to get a sense for it…</p>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="week-2-lab.html#cb121-1" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">sample</span>(x,<span class="at">size=</span><span class="fu">length</span>(x),<span class="at">replace=</span>T))</span></code></pre></div>
 <pre><code>## 
-## 0 1 6 7 8 9 
-## 3 1 2 1 1 2</code></pre>
+## 0 1 2 4 8 
+## 2 2 2 1 3</code></pre>
 <p>Now we will write a little script to take bootstrap samples and calculate the means of each of these bootstrap samples</p>
-<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="week-2-lab.html#cb123-1" aria-hidden="true" tabindex="-1"></a>xmeans<span class="ot">&lt;-</span><span class="fu">vector</span>(<span class="at">length=</span><span class="dv">1000</span>)</span>
-<span id="cb123-2"><a href="week-2-lab.html#cb123-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>)</span>
-<span id="cb123-3"><a href="week-2-lab.html#cb123-3" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb123-4"><a href="week-2-lab.html#cb123-4" aria-hidden="true" tabindex="-1"></a>  xmeans[i]<span class="ot">&lt;-</span><span class="fu">mean</span>(<span class="fu">sample</span>(x,<span class="at">replace=</span>T))</span>
-<span id="cb123-5"><a href="week-2-lab.html#cb123-5" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="week-2-lab.html#cb123-1" tabindex="-1"></a>xmeans<span class="ot">&lt;-</span><span class="fu">vector</span>(<span class="at">length=</span><span class="dv">1000</span>)</span>
+<span id="cb123-2"><a href="week-2-lab.html#cb123-2" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>)</span>
+<span id="cb123-3"><a href="week-2-lab.html#cb123-3" tabindex="-1"></a>  {</span>
+<span id="cb123-4"><a href="week-2-lab.html#cb123-4" tabindex="-1"></a>  xmeans[i]<span class="ot">&lt;-</span><span class="fu">mean</span>(<span class="fu">sample</span>(x,<span class="at">replace=</span>T))</span>
+<span id="cb123-5"><a href="week-2-lab.html#cb123-5" tabindex="-1"></a>  }</span></code></pre></div>
 <p>The actual number of bootstrapped samples is arbitrary <em>at this point</em> but there are ways of characterizing the precision of the bootstrap (jackknife-after-bootstrap) which might inform the number of bootstrap samples needed. <em>In practice</em>, people tend to pick some arbitrary but large number of bootstrap samples because computers are so fast that it is often easy to draw far more samples than are actually needed. When calculation of the statistic is slow (as might be the case if you are using the samples to construct a phylogeny, for example), then you would need to be more concerned with the number of bootstrap samples.</p>
 <p>First, lets just look at a histogram of the bootstrapped means and plot the actual sample mean on the histogram for comparison</p>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="week-2-lab.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(xmeans,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">col=</span><span class="st">&quot;pink&quot;</span>)</span>
-<span id="cb124-2"><a href="week-2-lab.html#cb124-2" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">mean</span>(x),<span class="at">lwd=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="week-2-lab.html#cb124-1" tabindex="-1"></a><span class="fu">hist</span>(xmeans,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">col=</span><span class="st">&quot;pink&quot;</span>)</span>
+<span id="cb124-2"><a href="week-2-lab.html#cb124-2" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">mean</span>(x),<span class="at">lwd=</span><span class="dv">2</span>)</span></code></pre></div>
 <p><img src="Week-2-Lab_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 </div>
-<div id="calculating-bias-and-standard-error" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> Calculating bias and standard error</h2>
+<div id="calculating-bias-and-standard-error" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Calculating bias and standard error<a href="week-2-lab.html#calculating-bias-and-standard-error" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>From these we can calculate the bias and standard deviation for the mean (which is the “statistic”):</p>
 <p><span class="math display">\[
 \widehat{Bias_{boot}} = \left(\frac{1}{k}\sum^{k}_{i=1}\theta^{*}_{i}\right)-\hat{\theta}
 \]</span></p>
-<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="week-2-lab.html#cb125-1" aria-hidden="true" tabindex="-1"></a>bias.boot<span class="ot">&lt;-</span><span class="fu">mean</span>(xmeans)<span class="sc">-</span><span class="fu">mean</span>(x)</span>
-<span id="cb125-2"><a href="week-2-lab.html#cb125-2" aria-hidden="true" tabindex="-1"></a>bias.boot</span></code></pre></div>
-<pre><code>## [1] 0.0503</code></pre>
-<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="week-2-lab.html#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(xmeans,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">col=</span><span class="st">&quot;pink&quot;</span>)</span>
-<span id="cb127-2"><a href="week-2-lab.html#cb127-2" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">mean</span>(x),<span class="at">lwd=</span><span class="dv">5</span>,<span class="at">col=</span><span class="st">&quot;black&quot;</span>)</span>
-<span id="cb127-3"><a href="week-2-lab.html#cb127-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">mean</span>(xmeans),<span class="at">lwd=</span><span class="dv">2</span>,<span class="at">col=</span><span class="st">&quot;yellow&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="week-2-lab.html#cb125-1" tabindex="-1"></a>bias.boot<span class="ot">&lt;-</span><span class="fu">mean</span>(xmeans)<span class="sc">-</span><span class="fu">mean</span>(x)</span>
+<span id="cb125-2"><a href="week-2-lab.html#cb125-2" tabindex="-1"></a>bias.boot</span></code></pre></div>
+<pre><code>## [1] -0.0409</code></pre>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="week-2-lab.html#cb127-1" tabindex="-1"></a><span class="fu">hist</span>(xmeans,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">col=</span><span class="st">&quot;pink&quot;</span>)</span>
+<span id="cb127-2"><a href="week-2-lab.html#cb127-2" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">mean</span>(x),<span class="at">lwd=</span><span class="dv">5</span>,<span class="at">col=</span><span class="st">&quot;black&quot;</span>)</span>
+<span id="cb127-3"><a href="week-2-lab.html#cb127-3" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">mean</span>(xmeans),<span class="at">lwd=</span><span class="dv">2</span>,<span class="at">col=</span><span class="st">&quot;yellow&quot;</span>)</span></code></pre></div>
 <p><img src="Week-2-Lab_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p><span class="math display">\[
 \widehat{s.e._{boot}} = \sqrt{\frac{1}{k-1}\sum^{k}_{i=1}(\theta^{*}_{i}-\bar{\theta^{*}})^{2}}
 \]</span></p>
-<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="week-2-lab.html#cb128-1" aria-hidden="true" tabindex="-1"></a>se.boot<span class="ot">&lt;-</span><span class="fu">sd</span>(xmeans)</span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="week-2-lab.html#cb128-1" tabindex="-1"></a>se.boot<span class="ot">&lt;-</span><span class="fu">sd</span>(xmeans)</span></code></pre></div>
 <p>We can find the confidence intervals in two ways:</p>
 <p>Method #1: Assume the bootstrap statistics are normally distributed</p>
-<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="week-2-lab.html#cb129-1" aria-hidden="true" tabindex="-1"></a>LL.boot<span class="ot">&lt;-</span><span class="fu">mean</span>(xmeans)<span class="sc">-</span><span class="fl">1.96</span><span class="sc">*</span>se.boot <span class="co">#where did 1.96 come from?</span></span>
-<span id="cb129-2"><a href="week-2-lab.html#cb129-2" aria-hidden="true" tabindex="-1"></a>UL.boot<span class="ot">&lt;-</span><span class="fu">mean</span>(xmeans)<span class="sc">+</span><span class="fl">1.96</span><span class="sc">*</span>se.boot</span>
-<span id="cb129-3"><a href="week-2-lab.html#cb129-3" aria-hidden="true" tabindex="-1"></a>LL.boot</span></code></pre></div>
-<pre><code>## [1] 2.820342</code></pre>
-<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="week-2-lab.html#cb131-1" aria-hidden="true" tabindex="-1"></a>UL.boot</span></code></pre></div>
-<pre><code>## [1] 6.280258</code></pre>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="week-2-lab.html#cb129-1" tabindex="-1"></a>LL.boot<span class="ot">&lt;-</span><span class="fu">mean</span>(xmeans)<span class="sc">-</span><span class="fl">1.96</span><span class="sc">*</span>se.boot <span class="co">#where did 1.96 come from?</span></span>
+<span id="cb129-2"><a href="week-2-lab.html#cb129-2" tabindex="-1"></a>UL.boot<span class="ot">&lt;-</span><span class="fu">mean</span>(xmeans)<span class="sc">+</span><span class="fl">1.96</span><span class="sc">*</span>se.boot</span>
+<span id="cb129-3"><a href="week-2-lab.html#cb129-3" tabindex="-1"></a>LL.boot</span></code></pre></div>
+<pre><code>## [1] 2.657496</code></pre>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="week-2-lab.html#cb131-1" tabindex="-1"></a>UL.boot</span></code></pre></div>
+<pre><code>## [1] 6.260704</code></pre>
 <p>Method #2: Simply take the quantiles of the bootstrap statistics</p>
-<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="week-2-lab.html#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(xmeans,<span class="fu">c</span>(<span class="fl">0.025</span>,<span class="fl">0.975</span>))</span></code></pre></div>
-<pre><code>##  2.5% 97.5% 
-##   2.8   6.3</code></pre>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="week-2-lab.html#cb133-1" tabindex="-1"></a><span class="fu">quantile</span>(xmeans,<span class="fu">c</span>(<span class="fl">0.025</span>,<span class="fl">0.975</span>))</span></code></pre></div>
+<pre><code>##   2.5%  97.5% 
+## 2.6975 6.2000</code></pre>
 <p>Let’s compare this to what we would have gotten if we had used normal distribution theory. First we have to calculate the standard error:</p>
-<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="week-2-lab.html#cb135-1" aria-hidden="true" tabindex="-1"></a>se.normal<span class="ot">&lt;-</span><span class="fu">sqrt</span>(<span class="fu">var</span>(x)<span class="sc">/</span><span class="fu">length</span>(x))</span>
-<span id="cb135-2"><a href="week-2-lab.html#cb135-2" aria-hidden="true" tabindex="-1"></a>LL.normal<span class="ot">&lt;-</span><span class="fu">mean</span>(x)<span class="sc">-</span><span class="fu">qt</span>(<span class="fl">0.975</span>,<span class="fu">length</span>(x)<span class="sc">-</span><span class="dv">1</span>)<span class="sc">*</span>se.normal</span>
-<span id="cb135-3"><a href="week-2-lab.html#cb135-3" aria-hidden="true" tabindex="-1"></a>UL.normal<span class="ot">&lt;-</span><span class="fu">mean</span>(x)<span class="sc">+</span><span class="fu">qt</span>(<span class="fl">0.975</span>,<span class="fu">length</span>(x)<span class="sc">-</span><span class="dv">1</span>)<span class="sc">*</span>se.normal</span>
-<span id="cb135-4"><a href="week-2-lab.html#cb135-4" aria-hidden="true" tabindex="-1"></a>LL.normal</span></code></pre></div>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="week-2-lab.html#cb135-1" tabindex="-1"></a>se.normal<span class="ot">&lt;-</span><span class="fu">sqrt</span>(<span class="fu">var</span>(x)<span class="sc">/</span><span class="fu">length</span>(x))</span>
+<span id="cb135-2"><a href="week-2-lab.html#cb135-2" tabindex="-1"></a>LL.normal<span class="ot">&lt;-</span><span class="fu">mean</span>(x)<span class="sc">-</span><span class="fu">qt</span>(<span class="fl">0.975</span>,<span class="fu">length</span>(x)<span class="sc">-</span><span class="dv">1</span>)<span class="sc">*</span>se.normal</span>
+<span id="cb135-3"><a href="week-2-lab.html#cb135-3" tabindex="-1"></a>UL.normal<span class="ot">&lt;-</span><span class="fu">mean</span>(x)<span class="sc">+</span><span class="fu">qt</span>(<span class="fl">0.975</span>,<span class="fu">length</span>(x)<span class="sc">-</span><span class="dv">1</span>)<span class="sc">*</span>se.normal</span>
+<span id="cb135-4"><a href="week-2-lab.html#cb135-4" tabindex="-1"></a>LL.normal</span></code></pre></div>
 <pre><code>## [1] 2.334149</code></pre>
-<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="week-2-lab.html#cb137-1" aria-hidden="true" tabindex="-1"></a>UL.normal</span></code></pre></div>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="week-2-lab.html#cb137-1" tabindex="-1"></a>UL.normal</span></code></pre></div>
 <pre><code>## [1] 6.665851</code></pre>
 <p>In this case, the confidence intervals we got from the normal distribution theory are too wide.</p>
 <p><strong><span style="color: green;">Checkpoint #6: Does it make sense why the normal distribution theory intervals are too wide?</span></strong> Because the original were were uniformly distributed, the data has higher variance than would be expected and therefore the standard error is higher than would be expected.</p>
-<p>There are two packages that provide functions for bootstrapping, ‘boot’ and ‘boostrap.’ We will start by using the ‘bootstrap’ package, which was originally designed for Efron and Tibshirani’s monograph on the bootstrap.</p>
+<p>There are two packages that provide functions for bootstrapping, ‘boot’ and ‘boostrap’. We will start by using the ‘bootstrap’ package, which was originally designed for Efron and Tibshirani’s monograph on the bootstrap.</p>
 <p>To test the main functionality of the ‘bootstrap’ package, we will use the data we already have. The ‘bootstrap’ function requires the input of a user-defined function to calculate the statistic of interest. Here I will write a function that calculates the mean of the input values.</p>
-<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="week-2-lab.html#cb139-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(bootstrap)</span>
-<span id="cb139-2"><a href="week-2-lab.html#cb139-2" aria-hidden="true" tabindex="-1"></a>theta<span class="ot">&lt;-</span><span class="cf">function</span>(x)</span>
-<span id="cb139-3"><a href="week-2-lab.html#cb139-3" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb139-4"><a href="week-2-lab.html#cb139-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mean</span>(x)</span>
-<span id="cb139-5"><a href="week-2-lab.html#cb139-5" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb139-6"><a href="week-2-lab.html#cb139-6" aria-hidden="true" tabindex="-1"></a>results<span class="ot">&lt;-</span><span class="fu">bootstrap</span>(<span class="at">x=</span>x,<span class="at">nboot=</span><span class="dv">1000</span>,<span class="at">theta=</span>theta)</span>
-<span id="cb139-7"><a href="week-2-lab.html#cb139-7" aria-hidden="true" tabindex="-1"></a>results</span></code></pre></div>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="week-2-lab.html#cb139-1" tabindex="-1"></a><span class="fu">library</span>(bootstrap)</span>
+<span id="cb139-2"><a href="week-2-lab.html#cb139-2" tabindex="-1"></a>theta<span class="ot">&lt;-</span><span class="cf">function</span>(x)</span>
+<span id="cb139-3"><a href="week-2-lab.html#cb139-3" tabindex="-1"></a>  {</span>
+<span id="cb139-4"><a href="week-2-lab.html#cb139-4" tabindex="-1"></a>    <span class="fu">mean</span>(x)</span>
+<span id="cb139-5"><a href="week-2-lab.html#cb139-5" tabindex="-1"></a>  }</span>
+<span id="cb139-6"><a href="week-2-lab.html#cb139-6" tabindex="-1"></a>results<span class="ot">&lt;-</span><span class="fu">bootstrap</span>(<span class="at">x=</span>x,<span class="at">nboot=</span><span class="dv">1000</span>,<span class="at">theta=</span>theta)</span>
+<span id="cb139-7"><a href="week-2-lab.html#cb139-7" tabindex="-1"></a>results</span></code></pre></div>
 <pre><code>## $thetastar
-##    [1] 6.6 4.3 5.1 5.5 5.0 4.9 4.9 5.7 4.1 5.3 3.8 5.5 4.5 6.2 2.4 2.3 5.3 5.5
-##   [19] 5.4 3.5 4.4 4.6 3.8 6.0 5.5 6.1 6.2 4.4 3.7 3.2 4.6 5.1 5.1 3.3 5.8 3.8
-##   [37] 4.5 4.4 5.0 4.5 4.5 4.6 4.7 4.9 4.6 5.0 3.9 4.5 5.7 4.5 4.6 5.4 4.7 4.9
-##   [55] 3.6 4.2 5.9 4.3 3.2 4.9 4.0 4.9 4.6 3.7 4.9 3.2 3.4 5.1 6.3 3.7 6.0 3.0
-##   [73] 5.3 3.3 3.9 4.7 6.7 3.3 3.4 4.5 3.0 5.4 3.7 4.5 4.3 3.7 5.6 5.7 3.2 2.4
-##   [91] 4.2 4.5 5.0 5.5 3.9 4.7 3.7 4.1 4.5 5.8 4.8 3.5 4.9 4.7 4.8 4.3 4.0 3.9
-##  [109] 5.6 4.3 5.6 2.9 5.2 4.1 4.7 3.8 6.3 5.7 4.2 4.9 4.2 5.3 3.7 4.5 4.4 4.7
-##  [127] 5.4 5.4 5.6 3.2 4.2 4.8 5.5 3.1 5.4 5.5 5.5 4.0 4.1 4.2 5.4 6.0 5.0 5.9
-##  [145] 6.0 5.6 2.8 4.5 4.6 5.7 5.4 2.7 5.8 5.9 4.6 3.7 3.7 3.2 4.2 4.7 4.1 4.7
-##  [163] 3.3 5.0 4.6 6.0 4.4 5.6 5.6 5.2 4.9 3.2 4.8 6.4 5.0 3.9 4.9 5.6 6.3 4.5
-##  [181] 4.0 2.5 3.6 6.3 2.8 6.1 4.2 3.5 4.6 5.4 4.2 3.8 5.2 4.2 4.1 5.7 5.7 5.1
-##  [199] 4.5 5.9 4.5 4.0 5.3 4.6 6.0 6.4 5.9 4.2 4.2 1.9 5.3 4.0 4.2 4.0 4.3 4.5
-##  [217] 4.2 5.6 4.4 5.0 5.4 4.6 3.2 4.4 5.6 5.0 4.9 3.8 5.1 5.8 5.3 5.7 4.9 4.6
-##  [235] 6.2 5.6 5.0 5.0 5.0 4.0 5.2 4.6 3.9 3.9 5.9 4.7 4.2 5.3 4.5 5.0 5.4 3.7
-##  [253] 4.2 5.7 3.5 3.0 5.5 4.7 6.2 4.5 4.2 5.5 4.5 4.4 4.5 3.4 4.8 3.6 4.9 6.7
-##  [271] 4.9 3.4 5.1 4.2 5.5 3.9 3.9 3.9 4.2 4.8 5.2 3.1 5.3 5.0 4.0 3.7 4.4 3.5
-##  [289] 5.1 3.9 4.7 5.2 2.2 4.4 4.1 4.6 6.8 4.9 5.3 4.1 4.6 3.3 5.0 5.1 4.9 4.0
-##  [307] 4.5 4.2 3.2 3.8 3.8 5.8 5.2 4.4 2.8 5.0 5.5 3.1 5.0 4.6 4.2 6.0 3.8 3.0
-##  [325] 3.2 6.0 3.6 5.2 4.8 3.9 4.6 4.5 6.3 5.6 4.8 3.6 2.8 4.7 2.6 5.4 4.6 4.0
-##  [343] 3.8 3.6 4.7 4.0 3.7 4.3 4.2 3.5 5.1 6.9 4.3 3.6 3.5 4.7 4.8 4.5 4.6 4.4
-##  [361] 5.4 4.5 4.6 3.7 5.1 4.5 4.2 4.4 2.8 6.1 5.2 4.5 3.9 4.5 4.7 5.2 4.2 3.8
-##  [379] 3.9 5.4 3.9 3.1 4.7 3.8 3.8 4.9 4.6 4.0 4.2 3.0 4.9 2.9 3.2 5.1 5.6 3.9
-##  [397] 3.8 5.4 5.3 5.3 3.7 4.6 5.8 4.5 4.1 4.8 5.7 4.6 3.8 6.2 4.2 5.7 4.1 4.8
-##  [415] 4.2 5.4 3.8 4.2 3.5 3.7 4.1 4.5 5.2 2.2 3.5 3.9 2.7 4.2 5.3 3.5 2.6 4.9
-##  [433] 5.2 5.0 5.8 5.2 5.4 5.2 3.9 3.7 4.5 4.0 4.5 3.6 5.3 3.3 5.7 3.7 3.7 5.2
-##  [451] 5.3 4.0 3.7 4.4 3.8 4.2 5.3 5.1 4.7 3.8 4.6 5.0 3.8 5.5 4.4 4.8 5.7 4.2
-##  [469] 4.8 5.0 5.5 4.5 3.7 4.0 4.3 4.4 3.2 4.7 4.4 4.8 4.3 3.9 4.9 3.7 4.2 3.6
-##  [487] 4.5 4.8 3.7 3.5 4.0 2.9 3.8 4.4 3.4 5.2 4.3 3.4 4.6 3.1 4.9 3.3 5.4 3.6
-##  [505] 6.0 3.9 4.4 6.4 3.7 4.3 3.9 3.1 4.1 4.6 4.8 5.5 4.0 3.1 5.1 4.7 4.5 4.5
-##  [523] 4.5 5.0 5.1 3.3 3.8 5.5 5.0 4.4 4.9 6.3 5.6 5.0 4.9 2.7 3.5 5.4 4.5 5.4
-##  [541] 4.3 5.0 4.3 4.8 4.5 3.7 6.3 5.4 2.8 4.7 5.1 4.8 3.9 5.3 4.8 6.3 5.3 3.8
-##  [559] 2.3 5.8 5.1 5.9 3.9 4.2 4.3 3.8 4.7 3.3 4.7 3.1 4.5 4.5 5.0 5.0 4.7 2.0
-##  [577] 5.1 1.6 3.9 3.5 4.1 3.5 4.1 4.4 5.3 3.9 5.1 3.3 3.3 4.1 3.4 4.4 3.1 3.8
-##  [595] 4.7 3.8 5.2 5.0 5.2 4.1 3.4 5.2 4.4 3.8 3.9 4.2 4.1 5.8 5.1 3.9 4.6 3.4
-##  [613] 4.5 4.5 5.1 5.8 4.6 3.4 6.7 4.3 4.4 5.3 4.8 5.7 3.3 7.2 3.8 5.0 4.2 4.1
-##  [631] 4.7 5.7 4.6 4.8 3.8 6.1 3.3 3.8 4.5 4.9 3.8 4.2 4.1 3.8 5.4 4.8 3.8 4.8
-##  [649] 6.3 2.4 4.7 4.8 5.2 5.9 3.6 4.2 2.8 5.5 4.2 5.5 4.2 3.8 5.3 4.7 5.8 3.4
-##  [667] 4.9 3.5 4.4 3.0 2.7 5.1 4.5 5.3 4.5 4.6 4.0 4.2 4.2 3.7 3.8 3.4 5.7 4.5
-##  [685] 5.6 5.3 4.2 5.0 3.4 4.3 4.3 4.5 3.5 6.0 4.3 3.1 5.6 3.9 4.5 4.7 3.5 4.6
-##  [703] 4.2 4.4 4.4 5.2 5.3 5.7 5.7 5.0 3.9 6.3 5.7 2.6 4.9 3.7 6.1 4.7 4.2 3.5
-##  [721] 3.3 5.4 2.3 5.0 4.7 4.2 5.9 3.5 5.4 4.3 4.5 4.9 4.6 2.7 5.1 4.7 5.1 4.3
-##  [739] 6.8 4.3 4.9 3.8 4.6 4.2 4.5 4.3 4.6 5.4 5.0 3.7 3.1 4.0 3.4 5.1 4.2 4.0
-##  [757] 5.0 4.5 4.0 4.3 5.0 4.9 4.3 5.3 3.2 5.1 3.9 5.4 4.7 4.8 5.9 4.0 5.2 4.3
-##  [775] 4.4 4.9 3.7 5.5 4.2 4.4 5.9 5.5 4.2 3.9 5.1 6.3 4.9 4.6 4.1 4.0 3.7 4.9
-##  [793] 4.3 4.0 4.3 3.8 4.5 4.0 5.3 4.3 6.6 3.1 4.4 3.3 5.4 5.3 3.5 5.4 5.7 5.2
-##  [811] 5.2 6.4 4.8 4.4 3.7 5.1 4.1 3.7 6.7 5.0 5.2 5.9 3.8 4.1 3.0 5.0 4.5 4.1
-##  [829] 5.9 4.3 5.1 4.3 4.0 3.6 3.9 5.3 3.7 4.1 2.7 4.8 6.4 4.4 4.2 4.1 3.5 5.2
-##  [847] 4.3 5.0 4.7 4.0 4.8 2.9 3.5 5.6 3.5 4.8 5.2 4.8 4.8 4.5 3.5 4.3 4.5 4.2
-##  [865] 4.4 4.5 3.4 3.9 4.3 3.9 4.0 3.8 4.8 4.6 5.9 3.5 4.8 3.4 4.2 6.2 3.9 3.9
-##  [883] 2.0 3.7 4.0 4.5 4.3 4.8 4.3 5.1 4.7 3.2 4.4 5.0 4.0 4.0 4.0 5.0 5.5 2.1
-##  [901] 3.3 2.9 2.7 5.4 4.1 5.0 4.5 5.1 3.9 3.3 4.6 3.8 3.8 4.3 5.2 4.6 3.8 4.6
-##  [919] 4.5 4.6 4.5 4.7 5.0 5.6 3.6 5.6 5.1 4.6 4.8 2.9 3.8 4.6 3.9 2.8 3.6 4.5
-##  [937] 2.9 3.6 5.0 3.2 5.6 4.7 4.4 3.4 4.7 4.7 5.7 3.4 5.2 5.2 4.0 4.8 6.2 4.5
-##  [955] 4.8 5.1 4.6 3.7 4.8 4.3 4.5 5.1 4.0 6.5 4.1 6.0 4.6 4.8 5.9 5.2 5.0 5.8
-##  [973] 3.5 4.7 4.4 5.5 5.1 5.2 3.5 4.5 5.1 4.1 2.8 3.2 3.7 4.4 3.9 3.9 4.6 4.5
-##  [991] 5.2 6.3 3.2 2.9 5.0 5.1 2.6 5.7 3.5 4.2
+##    [1] 5.6 3.9 4.7 2.9 4.3 4.2 5.1 5.4 4.0 4.0 4.6 3.1 4.4 2.9 4.4 4.6 5.0 5.5
+##   [19] 5.2 6.0 3.9 4.4 5.2 3.8 4.1 3.4 3.7 3.2 5.5 4.1 6.0 5.0 5.1 3.2 4.1 4.6
+##   [37] 4.6 5.5 3.3 3.7 5.3 5.0 4.5 4.6 3.5 5.0 3.8 5.4 5.7 5.8 5.5 3.4 5.2 5.1
+##   [55] 3.9 3.6 3.9 4.5 4.3 4.5 4.1 3.9 4.2 3.2 5.2 5.8 4.1 5.2 4.3 3.5 5.1 2.0
+##   [73] 4.2 3.5 5.5 3.3 5.8 4.6 5.9 4.0 5.0 5.1 3.2 4.1 4.0 5.3 3.5 4.0 3.6 5.0
+##   [91] 3.7 4.8 4.6 2.6 6.5 4.4 3.9 5.4 4.1 3.0 4.1 3.7 4.5 3.8 4.3 5.3 6.4 3.5
+##  [109] 5.0 5.7 4.3 4.1 4.6 4.0 4.7 3.0 4.2 5.7 3.7 3.8 4.2 5.7 5.2 4.3 5.0 6.4
+##  [127] 4.9 4.2 6.2 5.3 6.3 5.2 4.1 4.9 4.0 4.7 5.2 5.2 5.5 4.2 5.1 4.0 3.4 4.3
+##  [145] 4.7 4.7 4.1 5.0 4.7 5.3 3.7 5.4 5.5 5.3 3.7 2.1 4.3 4.6 6.2 3.7 4.3 3.9
+##  [163] 5.1 5.0 5.7 5.4 4.2 4.3 3.4 5.0 5.1 4.7 4.5 6.1 5.2 4.8 5.6 3.6 4.9 5.6
+##  [181] 4.1 4.5 5.0 4.8 3.9 4.6 4.9 5.4 4.8 2.7 4.4 5.2 4.9 4.5 3.2 2.7 6.3 3.5
+##  [199] 3.3 5.4 4.3 5.1 4.0 6.1 2.6 3.5 5.1 3.8 5.8 5.8 5.0 6.2 4.7 4.2 3.6 4.5
+##  [217] 3.9 3.6 3.4 5.5 2.8 4.4 6.1 6.6 3.9 3.1 3.4 3.5 5.1 3.7 3.7 5.3 5.3 6.3
+##  [235] 4.7 5.4 4.2 4.0 4.0 4.8 5.3 3.0 3.8 3.7 3.9 5.9 5.7 4.5 3.8 4.2 3.7 5.4
+##  [253] 5.0 4.8 3.0 3.9 5.1 3.8 2.7 4.5 4.5 4.4 3.9 4.4 4.1 4.0 5.0 6.3 4.5 3.5
+##  [271] 2.7 5.9 5.6 4.2 3.6 5.0 5.3 4.3 5.8 4.8 4.8 4.5 3.7 6.0 4.2 5.1 4.1 2.7
+##  [289] 5.4 3.5 4.0 3.8 4.9 5.5 2.9 2.3 4.2 4.4 4.4 5.4 4.2 4.4 4.2 5.6 4.4 4.3
+##  [307] 4.7 3.7 5.6 3.2 4.3 4.7 3.6 4.3 4.8 5.5 5.2 4.3 4.6 3.8 4.9 5.3 5.4 5.1
+##  [325] 3.9 3.9 4.6 3.1 3.9 4.9 3.8 3.7 4.9 6.1 4.0 4.7 3.4 4.5 5.0 4.2 4.7 4.1
+##  [343] 4.5 4.7 4.9 4.2 2.8 6.0 5.5 4.7 4.9 5.4 4.8 3.5 4.3 6.3 2.6 4.6 3.8 3.7
+##  [361] 5.7 4.8 5.3 4.1 4.8 4.0 4.9 5.1 3.6 4.9 4.0 4.5 4.7 4.5 4.6 3.7 5.9 5.9
+##  [379] 3.5 2.9 3.6 4.8 4.9 4.8 3.6 3.7 5.1 3.5 5.0 4.8 3.5 4.7 3.9 4.4 4.7 4.8
+##  [397] 3.4 5.6 3.7 4.6 4.1 3.8 4.1 4.8 4.7 3.4 4.9 5.0 5.0 5.0 3.0 4.7 4.6 5.0
+##  [415] 3.3 4.6 6.5 5.6 3.4 6.5 4.0 4.9 5.4 6.1 4.4 5.8 6.0 5.4 2.9 2.8 5.0 4.5
+##  [433] 6.0 4.8 4.2 4.7 5.6 5.9 5.1 3.9 6.4 3.3 6.1 4.1 4.1 5.0 3.2 5.5 4.6 5.1
+##  [451] 3.7 3.2 3.8 5.3 6.5 3.5 3.6 5.0 5.3 3.6 4.1 3.2 5.8 4.1 4.8 3.8 4.2 5.2
+##  [469] 3.9 3.6 5.1 5.2 5.5 3.8 5.5 3.6 3.4 4.0 5.6 7.2 6.0 5.0 4.7 4.4 5.7 5.1
+##  [487] 4.9 5.8 4.4 4.8 4.7 5.8 4.8 3.7 4.5 5.3 4.5 4.8 3.8 4.9 5.1 3.8 4.9 5.3
+##  [505] 3.7 3.9 4.5 4.4 5.3 5.5 5.5 4.5 5.7 4.9 3.4 3.9 4.6 4.5 3.4 4.8 5.9 5.8
+##  [523] 4.3 4.8 4.3 5.4 5.6 3.5 4.3 3.6 4.1 6.2 5.7 5.9 5.1 4.7 5.9 3.8 4.6 4.7
+##  [541] 5.2 3.4 4.1 5.4 5.7 4.1 3.8 4.5 5.3 3.7 6.0 5.2 4.3 5.8 3.0 4.3 6.0 3.9
+##  [559] 4.0 3.6 4.8 4.2 4.7 4.6 3.9 3.9 4.5 4.5 3.0 4.2 4.6 4.7 5.3 4.9 5.6 2.4
+##  [577] 3.6 2.5 3.0 4.6 5.3 5.9 5.5 5.0 4.4 4.2 5.0 4.8 4.7 3.1 2.9 4.8 5.4 5.2
+##  [595] 4.3 4.8 3.4 4.7 5.7 5.6 3.6 3.1 3.9 2.6 4.6 4.1 3.1 3.3 2.8 5.1 4.9 3.8
+##  [613] 5.1 6.0 6.0 4.4 3.9 4.7 5.8 4.6 5.5 5.9 5.3 3.9 4.3 4.3 3.0 4.6 3.7 4.2
+##  [631] 4.6 4.1 4.8 5.5 3.4 4.4 4.1 5.4 4.9 4.2 5.0 5.1 3.7 3.0 4.7 4.6 4.9 4.0
+##  [649] 4.7 5.0 5.4 6.6 3.6 6.3 5.1 4.3 4.9 5.4 6.4 4.5 4.8 4.3 4.6 5.1 4.2 3.9
+##  [667] 5.4 4.9 5.2 4.3 4.5 5.5 3.4 6.1 4.3 4.7 4.2 5.0 6.0 3.8 4.5 4.8 3.6 4.9
+##  [685] 4.5 3.5 4.3 4.1 4.1 5.0 4.6 4.0 3.7 2.5 3.3 5.0 2.2 5.1 5.7 4.0 4.0 4.9
+##  [703] 5.4 5.5 4.4 4.0 4.9 5.5 3.9 4.8 3.6 4.2 3.5 2.9 4.4 5.0 3.7 5.2 6.3 5.1
+##  [721] 5.3 4.7 4.6 5.3 5.3 4.7 4.8 6.1 5.8 5.7 5.0 5.7 2.9 3.6 4.2 3.6 4.4 4.8
+##  [739] 4.6 4.6 6.8 3.9 4.5 3.4 5.6 4.0 4.0 5.3 4.0 3.4 4.1 5.0 6.3 2.9 4.5 4.8
+##  [757] 7.6 4.2 3.1 2.1 4.6 5.8 4.0 6.3 3.5 1.8 3.8 4.6 4.2 6.3 5.4 5.2 4.4 4.6
+##  [775] 3.5 5.5 3.6 4.0 5.2 5.4 5.4 4.2 5.2 3.3 4.7 4.4 5.4 5.8 2.7 4.9 4.1 5.9
+##  [793] 5.3 3.4 4.7 3.0 5.3 4.3 3.8 3.5 3.7 4.8 4.3 4.0 4.5 5.3 5.1 3.8 5.0 4.5
+##  [811] 6.4 5.1 4.2 4.4 4.6 3.7 4.5 3.3 6.1 5.5 3.2 4.6 5.1 4.3 6.0 5.4 4.4 3.7
+##  [829] 2.5 4.3 2.6 4.1 2.8 2.8 4.0 4.6 6.1 5.9 4.1 3.5 5.2 5.3 5.9 5.6 3.8 5.4
+##  [847] 6.2 4.1 5.7 3.4 5.9 4.8 4.4 4.4 4.3 3.4 4.5 4.7 3.5 5.7 5.3 3.8 3.4 4.8
+##  [865] 4.9 5.4 3.4 3.9 3.8 5.1 4.3 3.5 4.9 6.0 4.9 5.8 5.6 6.4 4.0 4.7 5.7 4.4
+##  [883] 3.2 3.4 4.6 4.7 4.7 6.7 4.6 4.6 3.1 4.2 2.7 4.2 4.7 3.5 5.4 4.1 5.0 5.6
+##  [901] 2.9 5.3 3.8 4.2 4.4 3.0 5.1 4.9 5.0 5.0 5.7 4.4 5.0 5.3 4.4 4.7 3.0 4.0
+##  [919] 1.9 2.7 4.1 2.8 3.6 3.5 4.8 5.5 4.2 4.5 4.2 3.2 4.7 5.1 3.4 3.7 5.0 4.8
+##  [937] 4.3 4.3 4.7 2.9 4.5 3.5 4.8 4.9 4.0 4.6 5.1 3.8 4.8 4.7 5.1 5.7 5.1 4.9
+##  [955] 4.9 3.7 5.2 5.2 5.5 3.6 5.0 5.4 4.8 3.3 4.2 3.8 3.5 5.3 5.8 4.3 4.4 4.3
+##  [973] 6.6 6.0 6.1 3.7 4.9 4.4 3.8 4.8 5.4 5.2 4.4 4.2 2.8 5.4 5.8 3.4 4.7 4.7
+##  [991] 4.3 5.3 3.1 4.9 5.8 4.8 1.9 3.9 4.6 5.4
 ## 
 ## $func.thetastar
 ## NULL
@@ -679,420 +685,419 @@ Figure 1.1: Fill dataset on tonsil size and S. pyrogenes status. Source: Good (1
 ## 
 ## $call
 ## bootstrap(x = x, nboot = 1000, theta = theta)</code></pre>
-<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="week-2-lab.html#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(results<span class="sc">$</span>thetastar,<span class="fu">c</span>(<span class="fl">0.025</span>,<span class="fl">0.975</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="week-2-lab.html#cb141-1" tabindex="-1"></a><span class="fu">quantile</span>(results<span class="sc">$</span>thetastar,<span class="fu">c</span>(<span class="fl">0.025</span>,<span class="fl">0.975</span>))</span></code></pre></div>
 <pre><code>##   2.5%  97.5% 
 ## 2.7975 6.3000</code></pre>
 <p>Notice that we get exactly what we got last time. This illustrates an important point, which is that the bootstrap functions are often no easier to use than something you could write yourself.</p>
 <p>You can also define a function of the bootstrapped statistics (we have been calling this theta) to pull out immediately any summary statistics you are interested in from the bootstrapped thetas.</p>
 <p>Here I will write a function that calculates the bias of my estimate of the mean (which is 4.5 [i.e. the mean of the number 0,1,2,3,4,5,6,7,8,9])</p>
-<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="week-2-lab.html#cb143-1" aria-hidden="true" tabindex="-1"></a>bias<span class="ot">&lt;-</span><span class="cf">function</span>(x)</span>
-<span id="cb143-2"><a href="week-2-lab.html#cb143-2" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb143-3"><a href="week-2-lab.html#cb143-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>(x)<span class="sc">-</span><span class="fl">4.5</span></span>
-<span id="cb143-4"><a href="week-2-lab.html#cb143-4" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb143-5"><a href="week-2-lab.html#cb143-5" aria-hidden="true" tabindex="-1"></a>results<span class="ot">&lt;-</span><span class="fu">bootstrap</span>(<span class="at">x=</span>x,<span class="at">nboot=</span><span class="dv">1000</span>,<span class="at">theta=</span>theta,<span class="at">func=</span>bias)</span>
-<span id="cb143-6"><a href="week-2-lab.html#cb143-6" aria-hidden="true" tabindex="-1"></a>results</span></code></pre></div>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="week-2-lab.html#cb143-1" tabindex="-1"></a>bias<span class="ot">&lt;-</span><span class="cf">function</span>(x)</span>
+<span id="cb143-2"><a href="week-2-lab.html#cb143-2" tabindex="-1"></a>  {</span>
+<span id="cb143-3"><a href="week-2-lab.html#cb143-3" tabindex="-1"></a>  <span class="fu">mean</span>(x)<span class="sc">-</span><span class="fl">4.5</span></span>
+<span id="cb143-4"><a href="week-2-lab.html#cb143-4" tabindex="-1"></a>  }</span>
+<span id="cb143-5"><a href="week-2-lab.html#cb143-5" tabindex="-1"></a>results<span class="ot">&lt;-</span><span class="fu">bootstrap</span>(<span class="at">x=</span>x,<span class="at">nboot=</span><span class="dv">1000</span>,<span class="at">theta=</span>theta,<span class="at">func=</span>bias)</span>
+<span id="cb143-6"><a href="week-2-lab.html#cb143-6" tabindex="-1"></a>results</span></code></pre></div>
 <pre><code>## $thetastar
-##    [1] 5.1 4.5 3.0 3.9 4.8 4.1 4.6 3.6 5.7 4.4 5.0 6.2 5.1 3.6 5.1 4.2 5.3 4.4
-##   [19] 4.2 4.7 4.8 6.9 4.8 4.4 4.3 4.3 2.9 4.1 5.5 5.5 5.6 3.8 4.0 4.1 4.5 4.2
-##   [37] 5.8 4.2 4.2 4.0 5.0 4.1 3.6 4.4 3.3 4.5 4.3 4.9 5.9 3.7 3.2 4.0 4.9 2.8
-##   [55] 4.6 5.5 4.7 4.6 6.2 3.8 4.1 4.5 5.6 5.3 1.9 5.1 4.0 5.1 4.0 3.9 3.8 3.8
-##   [73] 4.9 3.6 6.1 3.8 3.0 6.5 5.7 2.9 5.4 3.9 6.4 5.0 5.5 5.9 5.1 4.5 4.7 4.4
-##   [91] 3.3 5.4 4.2 3.8 4.7 5.0 4.1 4.6 4.2 3.9 5.0 4.3 4.4 4.4 4.7 6.7 4.3 3.5
-##  [109] 7.2 3.8 5.2 4.9 4.5 3.6 4.6 4.3 6.1 2.9 3.9 3.5 4.0 3.9 3.6 6.0 3.8 2.1
-##  [127] 3.3 4.3 4.4 4.7 4.1 3.8 3.1 4.0 5.4 5.7 4.3 3.6 5.0 3.4 5.0 5.8 4.6 3.9
-##  [145] 3.2 3.5 4.0 3.9 3.7 3.7 3.5 4.1 4.4 6.2 3.8 3.0 4.2 5.2 5.9 3.4 3.5 4.1
-##  [163] 4.4 4.6 4.6 4.2 4.7 3.7 4.0 4.9 5.2 4.8 3.8 4.7 5.4 4.3 4.7 5.6 4.9 2.6
-##  [181] 6.0 3.1 4.8 5.9 5.1 4.8 5.3 4.4 4.8 4.6 5.1 4.7 5.5 4.1 5.6 4.3 4.2 3.7
-##  [199] 5.7 5.1 6.0 5.8 3.8 6.2 4.1 3.4 3.7 5.7 6.2 3.5 4.0 4.7 4.2 5.4 3.7 4.7
-##  [217] 4.4 5.2 3.6 3.6 6.7 4.3 4.8 3.9 3.1 4.7 5.1 4.5 6.3 3.0 4.8 4.3 4.1 4.3
-##  [235] 3.1 3.7 3.9 3.9 4.5 5.3 5.9 3.2 3.6 5.4 4.0 5.7 3.7 3.6 3.3 4.0 3.9 5.1
-##  [253] 3.8 5.8 3.5 2.3 3.2 3.9 4.9 6.1 2.7 4.9 5.6 5.6 4.2 4.9 5.3 4.3 3.6 5.5
-##  [271] 5.0 4.2 4.4 4.9 4.0 5.1 3.3 5.5 4.0 4.1 4.8 4.5 5.2 5.2 4.9 5.3 5.0 5.7
-##  [289] 3.5 4.9 4.5 3.0 5.1 4.0 2.7 5.2 3.6 5.8 4.8 4.5 2.6 6.2 5.4 5.7 5.0 4.8
-##  [307] 2.4 5.9 5.0 4.4 5.1 5.5 4.9 5.5 6.1 5.7 5.2 5.2 6.3 5.4 5.3 4.1 5.6 3.9
-##  [325] 4.2 4.5 4.3 4.3 3.6 4.7 6.7 5.9 5.3 5.8 3.7 5.4 3.6 5.5 4.0 3.1 5.1 4.9
-##  [343] 4.4 6.0 2.4 4.3 5.5 4.4 4.7 3.9 4.8 4.2 3.8 5.4 4.1 5.2 4.0 5.2 4.1 5.5
-##  [361] 6.7 4.6 3.6 6.3 5.2 4.7 4.6 4.2 3.8 3.7 5.2 2.8 4.0 3.3 4.1 5.4 5.5 2.5
-##  [379] 5.1 5.5 5.6 5.0 5.2 5.7 4.9 3.4 3.9 4.3 4.4 5.3 4.8 3.6 5.8 5.0 3.3 5.2
-##  [397] 3.7 6.9 5.3 4.7 4.2 3.6 5.6 5.1 3.8 3.6 4.2 4.7 4.2 5.7 3.7 4.9 5.4 3.5
-##  [415] 4.1 5.0 3.4 4.0 4.5 6.6 3.7 4.1 4.5 4.5 5.7 4.4 4.2 3.4 5.5 4.2 3.1 3.0
-##  [433] 4.6 3.0 5.1 3.0 4.9 3.9 2.0 4.2 5.2 5.7 4.7 4.8 5.6 3.4 5.2 4.6 3.6 3.5
-##  [451] 5.2 4.9 4.6 4.2 3.5 4.2 4.8 4.7 5.7 4.3 4.8 3.8 3.3 5.1 5.7 3.3 5.0 3.2
-##  [469] 3.7 5.9 4.3 6.1 3.8 4.5 2.5 5.0 5.3 4.3 2.9 2.7 7.1 3.4 6.6 3.9 3.8 4.5
-##  [487] 6.0 3.9 5.8 5.1 4.4 3.0 4.6 5.0 4.5 5.1 4.6 5.5 3.9 5.3 6.1 5.2 4.7 4.9
-##  [505] 4.5 4.3 3.7 4.9 3.9 4.8 4.9 5.4 3.9 5.5 4.2 4.4 4.4 5.2 4.4 4.6 3.1 6.1
-##  [523] 5.0 3.5 3.9 4.3 4.0 5.8 4.9 3.7 6.2 5.7 4.5 5.8 3.3 4.5 4.4 3.2 3.5 4.3
-##  [541] 4.0 4.2 4.2 5.9 4.3 5.0 4.7 4.9 3.9 5.6 4.8 5.6 4.5 4.2 3.6 5.5 4.3 5.6
-##  [559] 4.7 5.6 5.7 5.9 3.1 4.5 6.2 6.0 4.7 3.2 5.3 4.2 3.7 3.8 4.7 4.3 4.8 4.3
-##  [577] 4.5 5.3 4.9 4.7 4.6 4.7 5.4 5.4 2.5 4.0 4.3 5.4 4.0 4.0 4.3 4.0 4.6 4.9
-##  [595] 5.2 4.3 5.5 4.9 4.9 5.8 5.6 4.4 3.7 4.4 6.3 3.4 4.4 5.1 4.8 2.9 4.1 4.9
-##  [613] 4.9 5.6 5.8 5.6 4.1 5.1 3.2 4.8 4.6 3.7 3.7 3.8 3.9 5.4 4.1 3.3 5.2 4.5
-##  [631] 5.3 3.3 4.5 3.8 5.5 3.8 3.1 5.1 3.5 4.5 3.8 4.1 5.8 5.8 4.4 3.7 4.1 5.3
-##  [649] 5.1 5.0 4.2 3.6 2.2 4.2 5.2 4.3 4.9 4.7 3.1 4.5 4.1 4.5 4.4 4.3 4.5 4.6
-##  [667] 3.6 4.4 6.1 4.0 3.0 4.2 5.7 3.6 5.7 4.9 4.4 4.8 5.8 3.4 3.1 3.4 4.0 4.1
-##  [685] 5.4 4.9 4.4 4.9 5.8 6.7 4.0 5.6 3.3 5.1 4.6 4.9 3.4 5.6 5.6 4.9 4.6 5.1
-##  [703] 4.1 4.7 4.4 4.9 4.9 4.7 4.7 4.3 5.0 4.0 5.5 6.5 4.9 5.3 3.3 4.1 3.6 3.4
-##  [721] 4.7 4.6 4.6 5.9 3.7 4.8 4.3 4.1 4.2 4.9 5.4 4.5 4.2 2.6 4.6 4.9 4.4 5.2
-##  [739] 5.0 5.4 4.2 3.5 4.4 6.3 4.7 3.2 4.2 5.0 5.5 5.8 5.2 3.5 4.0 4.6 6.2 5.3
-##  [757] 5.0 3.8 6.3 3.4 3.4 3.3 4.2 5.6 3.2 3.3 3.2 3.8 4.5 6.7 4.4 3.2 6.0 4.4
-##  [775] 4.0 5.1 4.4 5.0 5.8 5.5 3.9 4.9 3.9 5.3 4.0 4.4 4.7 5.2 4.4 4.3 5.5 4.8
-##  [793] 5.3 3.6 6.1 4.7 5.0 4.8 3.9 4.8 3.6 4.4 6.3 3.8 4.9 3.3 5.6 5.4 5.0 3.3
-##  [811] 4.2 4.5 4.1 4.6 3.4 5.8 2.6 6.1 4.8 5.9 5.8 5.2 5.4 2.3 5.4 5.1 4.5 3.2
-##  [829] 3.4 4.9 3.6 4.3 5.5 4.7 2.6 4.2 2.6 4.3 3.7 4.8 5.2 3.9 5.3 4.5 4.8 6.1
-##  [847] 5.7 5.5 5.1 5.2 4.0 3.2 3.6 5.0 3.5 4.2 4.1 5.2 3.1 2.7 4.0 3.4 3.2 4.4
-##  [865] 4.1 6.1 4.8 6.7 5.5 6.2 5.2 3.3 3.4 3.3 3.0 4.4 4.6 5.4 4.3 3.6 4.3 5.9
-##  [883] 4.0 3.8 4.8 4.2 5.5 5.2 5.1 3.1 2.6 5.1 5.4 5.4 4.2 7.0 5.8 5.9 4.9 4.2
-##  [901] 4.9 4.1 2.8 3.8 5.1 3.8 5.0 3.9 3.9 4.3 4.3 5.7 3.9 5.5 5.2 4.4 5.0 5.7
-##  [919] 5.0 2.6 4.7 5.3 3.7 4.7 5.3 6.6 4.0 5.2 5.3 3.3 4.1 4.8 4.4 4.5 5.9 4.7
-##  [937] 3.3 5.5 4.0 5.0 2.4 4.0 3.9 5.3 3.3 3.8 6.8 5.8 4.7 4.3 4.3 4.3 5.6 3.1
-##  [955] 6.7 3.8 4.2 3.5 5.5 2.8 4.6 4.1 3.2 5.9 5.5 6.0 3.6 4.7 5.1 4.6 5.0 3.3
-##  [973] 3.6 6.2 5.2 4.5 4.3 5.1 5.1 5.2 3.8 3.5 4.1 5.9 3.5 5.1 4.5 4.3 4.8 3.6
-##  [991] 4.7 5.0 4.4 3.8 3.3 4.3 4.9 6.0 6.1 4.8
+##    [1] 4.3 3.5 4.7 4.3 5.5 4.5 3.9 4.0 4.7 3.9 4.9 6.7 4.0 4.2 3.9 3.2 4.5 3.5
+##   [19] 3.1 4.3 5.0 4.3 3.9 5.6 4.9 2.9 4.9 4.7 5.3 4.8 3.6 4.1 3.5 4.7 5.0 6.2
+##   [37] 4.7 4.5 5.5 5.9 4.5 5.2 6.3 5.0 3.4 5.0 3.3 5.2 5.0 4.3 4.5 5.1 7.1 2.3
+##   [55] 5.1 7.3 3.6 3.5 5.3 5.0 5.4 4.9 3.7 1.9 5.7 5.0 3.7 4.6 2.9 2.9 5.4 4.7
+##   [73] 3.1 4.7 6.7 5.3 3.6 6.6 4.5 5.3 3.7 4.4 4.5 4.3 5.5 4.4 3.3 5.1 4.2 5.5
+##   [91] 3.9 3.9 5.2 5.5 4.0 4.1 3.5 4.0 4.2 4.2 3.5 3.6 5.4 4.0 5.2 3.7 3.1 3.5
+##  [109] 5.7 4.7 4.6 3.6 4.1 4.9 5.5 3.1 5.2 3.5 4.3 5.5 5.1 3.9 5.2 4.8 4.0 6.7
+##  [127] 3.4 4.5 4.5 5.7 4.5 4.5 4.8 4.0 3.9 4.3 5.5 5.9 5.8 4.4 3.8 4.4 3.6 4.3
+##  [145] 5.4 3.4 6.5 5.3 4.0 2.6 5.4 3.8 3.5 5.8 4.3 5.2 4.3 4.5 4.5 5.7 3.2 4.8
+##  [163] 4.0 5.4 3.8 5.5 4.2 4.7 4.1 5.2 4.5 4.1 4.3 5.0 5.2 4.8 5.8 4.8 2.6 5.7
+##  [181] 4.8 4.9 5.1 4.5 4.8 3.5 5.8 4.4 4.5 5.2 5.4 3.6 6.3 5.8 5.7 4.9 2.4 3.3
+##  [199] 4.0 4.2 5.5 4.7 3.6 2.9 5.1 5.0 5.0 5.4 3.1 5.5 6.4 4.4 1.6 3.5 4.4 5.0
+##  [217] 6.0 3.2 4.5 4.8 4.6 3.5 6.3 4.3 3.6 2.9 4.3 5.5 3.2 5.3 5.4 4.3 4.6 5.3
+##  [235] 2.6 5.9 2.9 5.1 4.5 4.5 4.6 4.1 5.6 3.9 4.4 4.0 4.3 4.3 6.5 4.9 3.9 3.7
+##  [253] 3.9 2.7 3.2 4.0 3.7 5.5 3.3 4.7 2.9 5.5 5.5 4.3 4.2 3.1 4.8 4.5 3.8 5.6
+##  [271] 5.9 4.9 4.7 2.6 5.5 4.8 4.7 4.7 6.0 4.2 2.9 5.5 3.8 3.0 5.2 4.3 4.5 4.4
+##  [289] 4.6 3.5 3.3 4.2 5.2 4.5 5.1 4.3 4.2 3.7 4.1 6.0 4.9 5.3 4.9 3.2 4.8 4.6
+##  [307] 4.9 4.2 3.5 2.8 4.4 4.9 5.6 4.0 5.7 4.5 5.8 3.6 4.9 4.8 4.2 4.7 6.5 5.1
+##  [325] 4.1 6.1 5.0 3.6 3.6 5.6 2.2 4.7 4.7 3.0 4.7 3.3 5.1 4.0 4.1 5.6 4.6 4.9
+##  [343] 4.4 5.6 5.0 5.6 4.8 4.5 3.3 3.6 4.9 4.2 4.0 5.3 4.8 3.1 4.6 5.5 5.0 5.3
+##  [361] 3.8 4.9 3.8 5.8 3.1 5.3 4.6 5.1 3.8 5.4 5.4 4.5 2.9 2.8 2.7 5.5 4.6 3.5
+##  [379] 2.7 4.7 4.8 6.2 5.0 4.7 4.1 3.0 3.5 3.0 5.4 2.4 4.4 4.4 4.1 3.9 3.3 2.7
+##  [397] 4.4 4.1 3.7 4.2 4.5 5.0 3.6 5.1 5.6 5.1 3.9 3.9 3.2 5.0 3.8 4.5 5.0 4.8
+##  [415] 2.6 4.8 3.7 4.6 3.8 4.2 3.4 5.0 5.3 3.5 3.0 4.2 4.0 6.1 5.7 4.5 5.6 5.0
+##  [433] 3.5 2.4 3.9 5.3 5.5 4.4 5.3 4.4 5.9 4.3 5.5 4.9 5.5 6.8 5.0 4.2 6.8 5.2
+##  [451] 3.3 2.9 4.7 3.6 5.5 4.6 6.3 5.6 5.2 3.9 3.1 4.6 3.6 3.9 4.6 4.7 3.5 2.8
+##  [469] 3.9 5.3 4.6 4.4 4.1 5.8 4.0 5.7 4.8 2.9 5.6 4.6 2.9 6.3 5.6 5.7 3.7 3.6
+##  [487] 5.3 4.3 4.2 4.5 4.4 4.2 5.7 4.0 4.0 4.4 5.0 4.3 3.9 4.2 4.2 3.6 3.4 5.5
+##  [505] 4.3 3.4 5.3 5.6 4.7 4.8 5.1 4.9 5.7 4.9 5.3 4.6 5.0 3.0 4.4 4.5 4.2 6.7
+##  [523] 5.4 4.1 5.3 5.2 5.3 3.6 4.8 5.2 4.9 3.5 2.9 2.9 5.5 5.6 3.8 4.6 4.0 4.2
+##  [541] 3.9 4.1 5.7 5.2 3.8 5.6 4.5 5.1 3.9 4.6 3.7 3.9 5.3 4.2 3.8 2.6 3.0 4.4
+##  [559] 5.0 5.3 4.6 4.5 5.8 3.3 4.8 4.0 5.6 4.4 3.5 3.8 5.2 4.1 5.1 3.6 4.6 2.7
+##  [577] 5.7 4.2 4.5 4.0 3.8 4.7 3.0 4.3 5.8 4.4 4.6 5.5 4.7 5.0 4.1 4.7 5.5 4.7
+##  [595] 5.8 3.6 3.3 4.6 4.2 5.9 3.6 4.4 3.5 4.6 4.1 4.3 4.3 3.2 4.2 3.7 5.4 3.9
+##  [613] 5.1 4.6 4.2 3.2 5.3 5.0 4.7 5.5 3.3 3.6 4.5 5.7 4.7 6.4 5.3 3.7 3.3 5.0
+##  [631] 4.4 4.4 4.4 3.9 6.2 3.7 4.4 3.8 5.2 5.2 6.0 3.9 5.4 5.7 4.1 4.8 3.9 5.8
+##  [649] 4.2 3.8 5.7 5.4 2.7 5.0 3.5 4.4 5.2 4.7 4.8 4.6 3.6 5.5 4.9 3.0 5.9 4.7
+##  [667] 4.6 4.0 2.8 4.2 4.4 3.4 3.9 3.9 3.5 4.2 3.5 5.0 4.0 5.2 5.0 4.0 5.4 3.8
+##  [685] 5.8 5.4 3.9 3.7 4.7 3.8 5.5 3.2 2.9 4.9 3.2 5.7 5.1 3.6 5.9 5.5 3.5 4.3
+##  [703] 6.0 5.5 4.2 4.3 4.2 4.3 4.8 5.0 4.7 4.4 4.0 5.0 3.8 4.7 3.9 5.2 4.6 6.0
+##  [721] 3.3 4.3 4.2 4.9 5.9 5.1 4.4 4.6 5.0 6.5 3.7 5.1 5.5 5.2 3.1 5.6 4.4 4.8
+##  [739] 6.3 4.1 3.1 4.5 4.4 4.2 5.6 5.8 2.8 4.8 5.2 5.5 5.4 5.5 4.8 4.7 4.4 4.6
+##  [757] 4.4 3.7 5.9 4.9 2.0 4.3 2.8 4.3 5.4 6.3 4.2 4.6 5.1 6.1 5.5 5.4 3.9 3.7
+##  [775] 3.6 4.4 4.5 5.3 3.5 5.3 3.9 5.2 2.5 3.8 4.3 4.1 4.7 4.1 5.5 4.7 4.7 4.0
+##  [793] 5.7 3.8 5.3 5.3 6.0 5.2 3.4 6.4 3.2 5.5 5.4 5.2 3.4 4.7 4.8 4.5 3.3 5.3
+##  [811] 4.2 3.1 3.9 3.9 2.4 5.3 5.2 4.4 4.9 5.2 5.0 5.1 4.0 5.5 2.4 3.6 4.9 4.6
+##  [829] 4.0 4.6 4.8 4.8 4.7 4.5 4.2 5.4 5.2 4.7 4.0 5.1 5.6 4.4 4.7 4.9 5.4 5.2
+##  [847] 4.3 3.4 3.6 6.0 3.3 4.3 6.1 4.4 3.8 4.6 5.1 3.8 4.2 4.3 3.9 3.1 4.6 3.9
+##  [865] 3.2 5.3 5.7 5.3 5.8 5.2 5.8 2.5 3.9 3.0 6.3 5.0 4.8 6.9 3.0 3.2 4.8 5.8
+##  [883] 5.5 5.5 4.3 4.3 4.4 5.4 5.6 3.5 4.6 5.3 3.8 4.9 6.0 4.0 4.4 2.2 3.7 5.0
+##  [901] 3.6 4.8 2.5 3.8 4.3 3.5 3.7 5.1 5.0 3.9 4.9 6.1 4.8 3.8 4.2 5.9 3.1 5.6
+##  [919] 5.4 3.6 4.8 5.9 3.6 3.4 5.0 5.4 4.8 3.4 4.2 5.4 5.9 4.6 4.9 3.4 4.3 3.6
+##  [937] 5.3 3.6 3.3 4.3 5.9 3.0 4.5 5.2 4.9 4.4 3.8 3.6 4.2 4.6 4.6 3.1 5.0 4.9
+##  [955] 3.9 3.7 3.3 5.3 4.1 4.3 4.6 5.6 5.6 6.1 4.8 3.9 5.7 3.9 5.0 5.3 3.8 6.2
+##  [973] 5.5 4.5 4.5 3.6 3.5 5.2 5.7 4.5 5.6 4.4 5.7 2.8 4.6 6.3 6.5 4.3 4.6 4.4
+##  [991] 6.2 5.0 4.9 4.0 3.7 5.6 4.2 6.4 5.5 6.9
 ## 
 ## $func.thetastar
-## [1] 0.0491
+## [1] 0.0258
 ## 
 ## $jack.boot.val
-##  [1]  0.54915730  0.50872093  0.29495798  0.20554017  0.12671958  0.01170213
-##  [7] -0.11752874 -0.23455657 -0.38731988 -0.42809668
+##  [1]  0.49858757  0.38925620  0.30724638  0.19039548  0.09556213 -0.02164384
+##  [7] -0.12631579 -0.25273775 -0.39296188 -0.53993902
 ## 
 ## $jack.boot.se
-## [1] 0.9858597
+## [1] 0.9785577
 ## 
 ## $call
 ## bootstrap(x = x, nboot = 1000, theta = theta, func = bias)</code></pre>
 <p>Compare this to ‘bias.boot’ (our result from above). Why might it not be the same? Try running the same section of code several times. See how the value of the bias ($func.thetastar) jumps around? We should not be surprised by this because we can look at the jackknife-after-bootstrap estimate of the standard error of the function (in this case, that function is the bias) and we can see that it is not so small that we wouldn’t expect some variation in these values.</p>
 <p>Remember, everything we have discussed today are estimates. The statistic as applied to your data will change with new data, as will the standard error, the confidence intervals - everything! All of these values have sampling distributions and are subject to change if you repeated the procedure with new data.</p>
 <p>Note that we can calculate any function of <span class="math inline">\(\theta^{*}\)</span>. A simple example would be the 72nd percentile:</p>
-<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="week-2-lab.html#cb145-1" aria-hidden="true" tabindex="-1"></a>perc72<span class="ot">&lt;-</span><span class="cf">function</span>(x)</span>
-<span id="cb145-2"><a href="week-2-lab.html#cb145-2" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb145-3"><a href="week-2-lab.html#cb145-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">quantile</span>(x,<span class="at">probs=</span><span class="fu">c</span>(<span class="fl">0.72</span>))</span>
-<span id="cb145-4"><a href="week-2-lab.html#cb145-4" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb145-5"><a href="week-2-lab.html#cb145-5" aria-hidden="true" tabindex="-1"></a>results<span class="ot">&lt;-</span><span class="fu">bootstrap</span>(<span class="at">x=</span>x,<span class="at">nboot=</span><span class="dv">1000</span>,<span class="at">theta=</span>theta,<span class="at">func=</span>perc72)</span>
-<span id="cb145-6"><a href="week-2-lab.html#cb145-6" aria-hidden="true" tabindex="-1"></a>results</span></code></pre></div>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="week-2-lab.html#cb145-1" tabindex="-1"></a>perc72<span class="ot">&lt;-</span><span class="cf">function</span>(x)</span>
+<span id="cb145-2"><a href="week-2-lab.html#cb145-2" tabindex="-1"></a>  {</span>
+<span id="cb145-3"><a href="week-2-lab.html#cb145-3" tabindex="-1"></a>  <span class="fu">quantile</span>(x,<span class="at">probs=</span><span class="fu">c</span>(<span class="fl">0.72</span>))</span>
+<span id="cb145-4"><a href="week-2-lab.html#cb145-4" tabindex="-1"></a>  }</span>
+<span id="cb145-5"><a href="week-2-lab.html#cb145-5" tabindex="-1"></a>results<span class="ot">&lt;-</span><span class="fu">bootstrap</span>(<span class="at">x=</span>x,<span class="at">nboot=</span><span class="dv">1000</span>,<span class="at">theta=</span>theta,<span class="at">func=</span>perc72)</span>
+<span id="cb145-6"><a href="week-2-lab.html#cb145-6" tabindex="-1"></a>results</span></code></pre></div>
 <pre><code>## $thetastar
-##    [1] 3.8 4.8 5.4 4.0 5.0 4.8 4.3 5.1 5.1 4.0 4.7 3.5 4.7 4.7 5.3 5.2 4.0 5.7
-##   [19] 2.8 4.8 7.6 3.6 5.5 6.4 3.3 5.2 3.8 6.1 4.9 4.8 3.7 4.9 4.2 5.2 4.6 5.0
-##   [37] 4.8 5.1 3.1 4.6 2.8 3.7 3.0 3.5 4.3 5.2 4.0 6.2 4.2 6.4 4.8 4.8 4.6 4.4
-##   [55] 3.9 4.2 4.1 4.2 5.9 3.8 3.9 4.7 4.3 3.7 3.2 4.2 4.7 5.9 3.8 3.7 3.7 3.4
-##   [73] 4.7 2.5 4.3 2.8 4.7 5.6 6.5 4.9 5.1 4.8 4.8 4.6 6.0 4.2 5.9 3.8 3.8 4.2
-##   [91] 5.4 5.7 3.8 4.2 4.2 3.7 6.8 5.3 5.6 2.5 5.9 3.6 5.1 4.1 3.7 5.1 2.4 5.0
-##  [109] 5.2 3.8 4.5 4.9 5.6 6.3 4.0 3.8 4.2 4.2 5.1 4.1 4.7 5.0 3.3 3.8 4.8 2.8
-##  [127] 3.1 4.6 4.7 4.9 4.2 4.5 4.1 4.4 3.9 4.0 3.6 4.6 3.2 4.7 5.0 5.4 4.3 4.4
-##  [145] 3.7 4.1 4.9 4.0 5.5 4.1 3.4 5.3 2.7 5.0 4.3 4.3 3.0 4.0 4.4 4.3 4.3 4.3
-##  [163] 4.3 5.6 4.4 4.9 5.5 4.8 4.4 4.3 5.1 3.1 3.6 4.5 3.9 4.9 3.4 4.5 5.5 3.5
-##  [181] 2.7 4.2 4.7 3.9 3.6 4.1 4.6 5.2 5.3 4.6 4.3 4.3 3.6 4.7 5.1 4.4 4.2 5.3
-##  [199] 4.2 4.0 4.6 3.1 3.9 5.0 4.6 5.2 3.8 4.2 4.4 4.0 4.6 3.4 4.8 2.9 5.7 4.5
-##  [217] 3.7 4.9 5.0 4.3 2.7 5.5 5.3 5.4 5.1 5.1 5.1 5.6 5.7 4.2 3.3 1.4 4.9 5.4
-##  [235] 5.1 4.4 5.1 5.7 4.9 4.1 3.2 4.2 5.4 4.1 4.2 5.5 2.7 3.7 3.2 3.7 4.4 4.4
-##  [253] 3.5 5.4 3.4 4.6 4.8 5.5 3.7 3.4 4.7 5.7 3.0 3.5 4.0 4.3 3.3 6.0 5.3 3.8
-##  [271] 4.5 5.6 5.5 5.0 3.5 5.2 4.8 3.8 4.4 5.0 4.3 5.0 3.7 4.2 4.5 4.7 4.8 2.5
-##  [289] 4.9 4.9 3.0 5.0 4.2 4.9 6.0 4.1 3.3 4.7 5.6 2.8 5.0 5.0 5.2 4.9 4.5 4.0
-##  [307] 5.2 5.1 4.3 2.9 4.3 5.1 5.2 2.9 4.6 4.0 4.4 3.6 5.3 3.7 5.4 4.0 5.5 4.6
-##  [325] 3.9 4.9 5.1 4.5 5.1 4.0 2.3 5.4 5.3 7.1 3.5 5.8 4.3 2.2 3.4 5.0 5.2 2.2
-##  [343] 2.9 4.3 4.1 3.8 4.2 5.8 4.4 4.8 6.3 5.0 4.2 3.3 5.8 3.9 5.0 4.5 4.2 5.8
-##  [361] 3.5 4.6 4.9 5.1 5.5 4.5 4.4 4.2 4.9 4.3 6.5 4.2 5.0 4.5 3.7 3.0 4.0 6.6
-##  [379] 4.4 3.3 4.2 5.1 5.7 5.9 4.0 4.4 4.2 3.5 4.0 4.7 5.2 5.2 4.4 5.1 4.0 5.2
-##  [397] 6.0 5.2 3.5 4.0 3.1 4.5 5.5 4.8 5.9 4.0 3.1 4.1 5.8 5.7 3.1 3.4 4.0 4.5
-##  [415] 5.6 4.4 6.2 6.4 4.4 4.5 4.9 4.3 4.9 4.5 4.8 4.1 5.5 4.4 3.8 5.1 5.0 5.3
-##  [433] 5.8 4.4 5.4 4.8 3.7 6.4 6.2 4.8 6.1 4.1 3.9 4.1 4.9 4.6 4.6 4.2 5.2 3.0
-##  [451] 4.9 5.2 2.9 3.4 3.3 2.7 4.1 5.3 4.1 4.9 4.5 5.7 3.9 6.0 3.8 3.3 3.9 2.1
-##  [469] 4.1 4.7 6.0 5.8 4.3 5.6 4.2 4.5 3.9 5.5 4.8 2.7 5.2 5.0 5.1 5.3 4.6 3.8
-##  [487] 5.3 4.1 3.9 4.6 4.3 5.1 3.1 4.3 2.0 2.5 4.8 2.9 5.2 4.1 5.2 3.6 4.0 4.9
-##  [505] 4.6 4.3 3.5 4.7 7.2 3.8 5.8 4.8 5.8 4.3 5.2 4.5 5.5 5.1 3.7 5.1 3.8 5.7
-##  [523] 4.2 3.6 3.8 4.1 5.6 4.6 3.2 3.7 2.9 4.1 4.4 3.9 3.8 4.8 6.7 3.8 5.1 6.0
-##  [541] 4.5 5.0 3.4 3.9 5.5 6.2 4.0 4.7 5.1 4.6 4.8 6.0 4.1 3.9 4.2 6.2 5.3 5.7
-##  [559] 4.8 4.4 6.0 6.5 3.4 2.4 4.0 4.8 4.8 5.3 4.2 4.8 5.0 5.3 3.9 5.0 3.1 4.2
-##  [577] 5.4 4.6 3.5 4.4 4.2 5.9 4.0 4.7 4.8 4.4 4.6 5.8 4.5 3.8 4.1 4.9 4.2 4.9
-##  [595] 3.7 3.0 5.4 5.0 3.5 3.1 2.6 3.7 3.1 4.0 5.6 5.3 5.5 5.8 2.4 2.8 5.0 4.5
-##  [613] 2.8 5.1 5.0 4.5 3.4 5.2 3.1 5.2 4.5 4.2 4.8 4.0 4.1 4.9 4.9 5.7 3.7 4.5
-##  [631] 5.3 3.8 4.8 4.9 4.8 6.6 5.1 6.2 3.6 3.6 4.9 4.4 4.1 5.0 2.7 4.2 5.6 5.0
-##  [649] 4.3 4.2 4.7 3.6 4.8 5.1 5.1 4.1 5.0 5.5 5.8 5.3 4.7 5.5 4.3 3.3 5.7 4.9
-##  [667] 4.6 4.0 5.0 4.6 5.0 2.3 5.8 3.8 5.3 6.0 4.7 4.7 5.6 5.0 6.1 4.7 4.7 2.5
-##  [685] 4.4 4.3 3.2 3.4 3.0 4.7 4.5 3.5 3.9 4.6 5.9 3.5 3.4 5.0 6.1 4.2 5.2 4.2
-##  [703] 4.9 2.9 7.0 4.4 3.4 4.1 3.8 3.6 5.2 3.9 3.8 3.5 3.9 4.7 4.2 3.8 4.1 3.3
-##  [721] 3.9 5.5 4.0 4.1 3.2 5.4 4.6 4.3 4.3 2.9 5.5 4.2 3.6 5.4 5.4 2.9 3.9 4.6
-##  [739] 4.2 4.0 4.4 5.8 6.5 4.3 5.0 5.3 6.3 4.3 5.3 5.3 4.6 5.7 5.5 4.3 3.4 5.7
-##  [757] 5.5 5.0 3.9 6.7 3.5 5.5 4.4 5.4 3.3 3.4 4.2 5.7 5.3 5.9 4.8 3.5 4.0 4.1
-##  [775] 4.4 5.1 2.8 3.3 4.5 5.8 5.5 4.4 4.5 4.9 5.9 4.6 5.7 4.4 5.0 5.4 4.1 3.5
-##  [793] 5.3 4.3 5.5 6.3 2.9 3.7 6.0 4.4 3.2 4.7 3.6 5.1 4.2 3.8 4.5 4.8 4.8 2.9
-##  [811] 4.5 4.7 4.8 4.3 4.6 4.3 5.2 5.1 4.3 3.9 5.7 3.1 4.0 5.2 3.9 4.4 4.2 5.1
-##  [829] 3.7 3.4 5.6 4.1 4.9 5.7 5.0 5.4 4.4 3.0 4.0 3.6 4.7 5.4 4.0 3.8 5.6 3.2
-##  [847] 4.1 2.7 4.8 2.9 3.8 2.6 5.1 4.9 2.8 4.5 5.0 4.2 4.2 3.9 4.5 5.9 2.4 3.3
-##  [865] 4.0 3.0 3.7 5.1 5.4 5.5 5.0 5.0 5.0 4.7 5.8 2.8 5.0 5.3 4.3 5.0 3.5 3.6
-##  [883] 4.6 5.2 4.3 5.0 4.5 3.5 4.4 5.1 4.5 5.6 5.3 5.6 3.0 4.9 3.4 3.4 4.8 6.4
-##  [901] 4.1 3.5 6.7 4.7 4.1 4.2 3.8 4.5 6.2 4.7 5.5 5.7 3.5 4.2 4.9 3.7 4.9 3.5
-##  [919] 5.2 5.2 4.7 3.5 4.4 5.6 3.7 3.5 5.8 4.8 4.3 4.8 4.7 6.1 4.5 4.5 2.8 5.5
-##  [937] 3.5 6.0 4.8 6.1 5.4 5.3 4.6 4.2 4.7 4.5 4.6 5.1 3.8 4.8 4.2 4.7 4.7 4.4
-##  [955] 4.2 4.2 5.4 4.5 5.4 5.5 6.2 6.1 3.8 4.4 4.5 4.7 3.6 4.9 3.7 4.0 5.1 4.9
-##  [973] 5.7 4.2 5.1 4.8 4.4 4.3 4.8 4.8 3.4 5.9 3.1 4.4 4.7 3.4 3.2 4.5 4.1 3.5
-##  [991] 4.4 4.1 4.8 6.3 4.6 3.4 5.0 4.9 3.2 3.7
+##    [1] 4.4 2.5 4.9 5.1 4.9 2.8 4.6 5.5 4.3 4.2 5.4 4.0 4.7 4.8 3.7 4.7 4.7 5.2
+##   [19] 4.6 5.2 5.5 5.0 4.3 4.7 3.6 4.9 3.3 5.3 5.1 3.8 3.3 4.7 5.4 4.1 5.7 4.4
+##   [37] 4.5 4.8 5.4 4.3 4.9 5.4 5.7 5.5 4.8 3.9 4.7 4.8 2.6 6.2 5.8 7.4 3.6 3.2
+##   [55] 3.6 4.8 5.8 4.5 4.5 4.9 1.6 4.5 3.3 3.8 2.8 5.0 4.9 3.6 5.1 4.4 3.9 3.9
+##   [73] 5.8 5.1 4.9 3.7 4.3 4.6 5.1 4.7 5.4 4.9 4.3 3.5 4.6 5.8 4.4 5.6 5.7 4.8
+##   [91] 3.8 4.7 4.4 4.6 5.4 4.5 4.7 4.3 3.9 3.1 6.1 5.8 4.2 4.6 3.7 4.5 4.1 4.0
+##  [109] 3.8 4.0 3.3 6.2 4.3 3.9 5.8 2.9 4.7 5.5 4.1 4.0 5.8 5.6 2.7 5.2 6.0 4.8
+##  [127] 3.9 4.1 3.0 5.0 3.2 5.3 5.1 6.1 3.4 4.0 5.1 4.4 3.2 6.6 4.2 4.2 6.0 4.9
+##  [145] 5.1 4.4 4.6 5.3 3.4 4.7 4.1 4.2 3.8 3.1 3.6 5.0 4.1 4.7 6.5 4.2 2.9 4.3
+##  [163] 3.8 3.5 4.3 4.4 5.6 4.8 5.4 4.6 2.5 3.5 3.7 4.6 5.1 2.9 4.9 5.5 4.1 5.3
+##  [181] 5.3 5.5 5.9 5.6 5.0 3.8 4.6 3.9 5.3 4.2 2.4 6.1 3.3 4.0 3.1 4.2 3.6 5.3
+##  [199] 4.5 6.9 4.0 3.8 3.6 2.9 5.4 3.5 4.7 5.8 4.5 4.9 4.2 3.3 4.0 5.2 4.6 4.5
+##  [217] 5.2 5.7 4.5 4.1 5.9 3.1 6.0 4.4 5.5 5.1 3.7 4.4 5.1 5.8 3.4 5.7 3.5 4.5
+##  [235] 3.7 5.2 4.7 3.4 2.7 5.2 4.2 5.7 3.8 6.4 3.7 5.3 3.9 4.6 4.8 4.9 5.2 4.4
+##  [253] 5.1 3.8 5.7 2.7 2.8 4.5 3.9 4.1 4.8 5.4 3.6 3.4 5.0 3.4 6.3 3.8 5.4 3.6
+##  [271] 3.7 3.1 6.2 3.2 4.0 3.9 3.4 3.5 4.2 3.4 2.9 3.2 4.7 3.3 6.1 3.7 3.5 3.2
+##  [289] 6.1 4.8 3.1 4.0 4.1 4.4 3.5 4.6 4.9 4.7 5.1 4.9 4.8 4.9 5.2 4.6 3.7 4.2
+##  [307] 4.4 3.2 6.0 5.3 3.9 4.3 4.9 4.4 4.5 4.6 2.7 4.0 6.5 4.2 5.5 4.9 5.4 5.5
+##  [325] 4.2 4.4 6.5 6.8 6.1 5.9 4.0 3.1 3.8 4.8 4.7 3.7 5.4 3.7 5.1 4.6 3.1 4.3
+##  [343] 5.1 3.5 3.3 3.8 3.6 2.6 4.2 4.7 3.0 3.7 2.7 2.6 4.3 5.5 4.4 5.8 4.5 4.0
+##  [361] 3.0 5.4 6.1 3.4 4.1 4.4 5.1 4.7 5.0 4.1 5.3 3.2 4.6 4.4 4.8 4.4 3.9 5.5
+##  [379] 4.0 4.0 6.3 5.4 3.9 4.0 4.6 4.9 3.9 3.9 4.7 4.5 5.0 4.9 4.4 5.5 3.6 2.9
+##  [397] 4.9 3.1 4.8 3.6 4.1 4.0 4.1 4.8 4.2 5.1 3.0 4.2 5.2 3.6 5.0 3.3 4.8 3.6
+##  [415] 3.4 3.8 4.3 4.0 3.3 4.5 7.2 2.6 5.0 4.9 5.9 4.0 3.6 5.3 4.8 5.4 4.9 3.6
+##  [433] 5.2 4.0 5.8 3.8 4.4 6.5 4.5 4.4 5.3 5.3 4.3 2.6 3.2 4.8 4.2 5.9 2.1 4.5
+##  [451] 5.5 4.6 4.6 3.9 3.7 4.7 2.8 4.1 6.9 5.2 5.4 4.3 4.7 4.6 4.1 4.8 4.5 3.5
+##  [469] 6.2 3.9 4.3 4.6 5.9 4.8 4.9 4.3 4.4 4.2 4.0 3.8 2.0 4.6 4.8 4.3 5.6 4.0
+##  [487] 3.6 3.1 4.3 5.1 4.5 4.5 4.6 4.1 5.5 5.8 4.9 2.8 4.8 4.1 5.7 4.4 4.6 3.7
+##  [505] 4.5 5.1 5.1 5.5 3.6 3.3 3.2 4.5 4.1 3.0 3.6 4.9 5.6 4.5 3.4 2.7 6.0 4.6
+##  [523] 5.3 6.0 5.1 4.8 6.4 6.4 2.9 5.6 5.7 4.2 5.1 3.4 5.1 4.7 5.5 3.4 2.7 5.0
+##  [541] 3.6 4.7 5.7 5.2 3.2 5.0 3.6 6.6 4.3 3.3 5.4 5.8 4.6 5.3 4.4 6.6 3.5 3.1
+##  [559] 4.5 4.8 3.1 4.4 4.5 4.1 5.1 3.5 5.2 5.0 3.5 4.3 6.0 6.5 4.8 5.7 3.4 3.1
+##  [577] 5.1 4.0 4.5 3.3 4.3 5.2 4.6 3.7 4.8 4.6 4.7 3.7 4.4 3.0 5.3 4.8 4.0 5.6
+##  [595] 3.0 4.9 5.3 4.0 4.5 5.8 4.5 4.7 3.2 3.6 4.3 4.3 5.3 3.5 4.7 5.2 4.4 4.0
+##  [613] 5.0 7.4 4.1 3.4 4.6 4.5 4.4 5.3 5.6 4.3 6.1 4.9 2.6 5.6 4.9 4.5 3.8 5.4
+##  [631] 4.9 5.1 4.5 5.9 4.9 5.4 6.1 4.5 4.3 5.4 5.1 2.8 3.6 5.2 4.7 2.6 4.6 4.9
+##  [649] 3.7 5.5 5.5 3.2 4.6 3.9 5.0 3.2 4.8 3.7 4.6 4.2 4.1 5.3 4.4 4.6 3.8 3.2
+##  [667] 5.3 5.3 4.4 3.5 4.4 3.6 5.3 4.6 5.7 5.0 5.3 3.8 6.1 4.4 5.0 3.7 5.1 5.2
+##  [685] 6.6 4.9 3.4 6.8 4.4 3.8 4.0 5.6 4.6 5.6 4.2 6.7 4.2 4.8 4.2 2.8 4.3 2.6
+##  [703] 3.5 3.4 6.0 6.0 3.9 5.4 4.1 3.2 5.5 3.7 5.8 6.0 5.2 4.5 5.0 3.5 5.2 4.1
+##  [721] 4.2 4.4 3.2 3.9 4.3 4.4 4.2 5.2 4.6 4.6 6.0 5.0 4.5 3.3 4.2 5.2 6.7 6.3
+##  [739] 3.8 5.2 4.0 4.4 4.5 4.2 4.8 3.9 4.3 5.5 3.7 3.7 4.6 4.1 3.4 4.9 3.6 5.1
+##  [757] 4.7 5.9 4.7 4.7 4.3 5.0 4.1 4.8 6.2 5.6 3.4 3.9 3.9 4.3 5.9 4.7 4.0 4.0
+##  [775] 7.6 3.7 3.7 3.0 5.3 6.3 5.2 4.5 5.0 4.9 4.1 4.5 5.3 5.4 5.4 4.3 5.2 6.5
+##  [793] 4.4 4.0 3.6 2.3 3.7 4.9 5.1 4.4 3.3 4.3 4.0 4.8 4.2 5.3 3.6 6.3 5.4 3.8
+##  [811] 6.2 5.8 4.2 4.9 4.7 6.3 3.2 3.9 5.1 4.9 4.2 5.1 4.5 4.0 4.4 6.2 4.9 5.0
+##  [829] 6.2 3.9 4.8 3.8 4.6 5.3 4.8 4.9 4.5 5.7 4.9 4.3 5.0 4.0 5.1 4.3 4.2 4.7
+##  [847] 5.1 6.2 4.7 4.0 5.9 4.1 3.4 5.6 4.2 4.4 3.1 5.6 3.6 3.8 3.3 5.5 3.6 3.4
+##  [865] 4.3 3.6 4.7 3.3 3.8 3.5 4.7 3.9 4.4 5.6 3.8 5.2 6.2 4.1 6.0 4.8 4.9 5.6
+##  [883] 4.9 4.4 4.8 5.9 4.6 5.1 4.6 3.8 4.6 2.8 4.0 5.7 5.6 3.9 4.7 4.8 5.4 3.6
+##  [901] 4.1 6.8 3.8 4.2 5.4 6.1 4.4 4.2 4.3 3.5 3.7 4.0 4.4 5.2 5.7 5.6 4.8 4.0
+##  [919] 4.1 4.5 6.1 3.4 5.2 3.9 5.6 4.1 6.0 4.0 5.1 3.8 3.3 4.3 4.5 3.8 4.3 2.6
+##  [937] 4.8 2.9 5.4 3.8 4.7 4.2 4.5 5.0 5.0 4.6 4.4 5.7 4.9 4.5 4.8 4.3 6.0 4.7
+##  [955] 4.3 3.3 6.0 3.6 4.3 4.7 4.7 4.5 3.8 5.0 5.3 4.7 4.6 4.6 5.3 4.4 4.8 5.1
+##  [973] 5.9 4.0 3.0 3.3 2.3 5.2 5.3 3.8 3.3 2.7 4.9 4.5 3.5 4.9 4.1 4.1 3.9 4.0
+##  [991] 4.9 5.4 5.8 4.9 5.3 3.9 4.8 5.0 2.6 5.4
 ## 
 ## $func.thetastar
-## 72% 
-##   5 
+##   72% 
+## 5.028 
 ## 
 ## $jack.boot.val
-##  [1] 5.400 5.500 5.300 5.100 5.112 5.000 4.900 4.800 4.700 4.600
+##  [1] 5.500 5.400 5.400 5.200 5.100 4.900 4.900 4.800 4.624 4.420
 ## 
 ## $jack.boot.se
-## [1] 0.8514767
+## [1] 1.018155
 ## 
 ## $call
 ## bootstrap(x = x, nboot = 1000, theta = theta, func = perc72)</code></pre>
 <p>On Tuesday we went over an example in which we bootstrapped the correlation coefficient between LSAT scores and GPA. To do that, we sampled pairs of (LSAT,GPA) data with replacement. Here is a little script that would do something like that using (X,Y) data that are independently drawn from the normal distribution</p>
-<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="week-2-lab.html#cb147-1" aria-hidden="true" tabindex="-1"></a>xdata<span class="ot">&lt;-</span><span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">30</span>),<span class="at">ncol=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="week-2-lab.html#cb147-1" tabindex="-1"></a>xdata<span class="ot">&lt;-</span><span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">30</span>),<span class="at">ncol=</span><span class="dv">2</span>)</span></code></pre></div>
 <p>Everyone’s data is going to be different. With such a small sample size, it would be easy to get a positive or negative correlation by random change, but on average across everyone’s datasets, there should be zero correlation because the two columns are drawn independently.</p>
-<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="week-2-lab.html#cb148-1" aria-hidden="true" tabindex="-1"></a>n<span class="ot">&lt;-</span><span class="dv">15</span></span>
-<span id="cb148-2"><a href="week-2-lab.html#cb148-2" aria-hidden="true" tabindex="-1"></a>theta<span class="ot">&lt;-</span><span class="cf">function</span>(x,xdata)</span>
-<span id="cb148-3"><a href="week-2-lab.html#cb148-3" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb148-4"><a href="week-2-lab.html#cb148-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cor</span>(xdata[x,<span class="dv">1</span>],xdata[x,<span class="dv">2</span>])</span>
-<span id="cb148-5"><a href="week-2-lab.html#cb148-5" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb148-6"><a href="week-2-lab.html#cb148-6" aria-hidden="true" tabindex="-1"></a>results<span class="ot">&lt;-</span><span class="fu">bootstrap</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span>n,<span class="at">nboot=</span><span class="dv">50</span>,<span class="at">theta=</span>theta,<span class="at">xdata=</span>xdata) </span>
-<span id="cb148-7"><a href="week-2-lab.html#cb148-7" aria-hidden="true" tabindex="-1"></a><span class="co">#NB: xdata is passed to the theta function, not needed for bootstrap function itself</span></span></code></pre></div>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="week-2-lab.html#cb148-1" tabindex="-1"></a>n<span class="ot">&lt;-</span><span class="dv">15</span></span>
+<span id="cb148-2"><a href="week-2-lab.html#cb148-2" tabindex="-1"></a>theta<span class="ot">&lt;-</span><span class="cf">function</span>(x,xdata)</span>
+<span id="cb148-3"><a href="week-2-lab.html#cb148-3" tabindex="-1"></a>  {</span>
+<span id="cb148-4"><a href="week-2-lab.html#cb148-4" tabindex="-1"></a>  <span class="fu">cor</span>(xdata[x,<span class="dv">1</span>],xdata[x,<span class="dv">2</span>])</span>
+<span id="cb148-5"><a href="week-2-lab.html#cb148-5" tabindex="-1"></a>  }</span>
+<span id="cb148-6"><a href="week-2-lab.html#cb148-6" tabindex="-1"></a>results<span class="ot">&lt;-</span><span class="fu">bootstrap</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span>n,<span class="at">nboot=</span><span class="dv">50</span>,<span class="at">theta=</span>theta,<span class="at">xdata=</span>xdata) </span>
+<span id="cb148-7"><a href="week-2-lab.html#cb148-7" tabindex="-1"></a><span class="co">#NB: xdata is passed to the theta function, not needed for bootstrap function itself</span></span></code></pre></div>
 <p>Notice the parameters that get passed to the ‘bootstrap’ function are: (1) the indexes which will be sampled with replacement. This is different that the raw data but the end result is the same because both the indices and the raw data get passed to the function ‘theta’ (2) the number of bootrapped samples (in this case 50) (3) the function to calculate the statistic (4) the raw data.</p>
 <p>Lets look at a histogram of the bootstrapped statistics <span class="math inline">\(\theta^{*}\)</span> and draw a vertical line for the statistic as applied to the original data.</p>
-<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="week-2-lab.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(results<span class="sc">$</span>thetastar,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">col=</span><span class="st">&quot;pink&quot;</span>)</span>
-<span id="cb149-2"><a href="week-2-lab.html#cb149-2" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">cor</span>(xdata[,<span class="dv">1</span>],xdata[,<span class="dv">2</span>]),<span class="at">lwd=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="week-2-lab.html#cb149-1" tabindex="-1"></a><span class="fu">hist</span>(results<span class="sc">$</span>thetastar,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">col=</span><span class="st">&quot;pink&quot;</span>)</span>
+<span id="cb149-2"><a href="week-2-lab.html#cb149-2" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">cor</span>(xdata[,<span class="dv">1</span>],xdata[,<span class="dv">2</span>]),<span class="at">lwd=</span><span class="dv">2</span>)</span></code></pre></div>
 <p><img src="Week-2-Lab_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 </div>
-<div id="parametric-bootstrap" class="section level2" number="4.5">
-<h2><span class="header-section-number">4.5</span> Parametric bootstrap</h2>
-<p>Let’s do one quick example of a parametric bootstrap. We haven’t introduced distributions yet (except for the Gaussian, or Normal, distribution, which is the most familiar), so lets spend a few minutes exploring the Gamma distribution, just so we have it to work with for testing out parametric bootstrap. All we need to know is that the Gamma distribution is a continuous, non-negative distribution that takes two parameters, which we call “shape” and “rate.” Lets plot a few examples just to see what a Gamma distribution looks like. (Note that the Gamma distribution can be parameterized by “shape” and “rate” OR by “shape” and “scale,” where “scale” is just 1/“rate.” R will allow you to use either (shape,rate) or (shape,scale) as long as you specify which you are providing.</p>
+<div id="parametric-bootstrap-1" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Parametric bootstrap<a href="week-2-lab.html#parametric-bootstrap-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s do one quick example of a parametric bootstrap. We haven’t introduced distributions yet (except for the Gaussian, or Normal, distribution, which is the most familiar), so lets spend a few minutes exploring the Gamma distribution, just so we have it to work with for testing out parametric bootstrap. All we need to know is that the Gamma distribution is a continuous, non-negative distribution that takes two parameters, which we call “shape” and “rate”. Lets plot a few examples just to see what a Gamma distribution looks like. (Note that the Gamma distribution can be parameterized by “shape” and “rate” OR by “shape” and “scale”, where “scale” is just 1/“rate”. R will allow you to use either (shape,rate) or (shape,scale) as long as you specify which you are providing.</p>
 <p><img src="Week-2-Lab_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 <p>Let’s generate some fairly sparse data from a Gamma distribution</p>
-<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="week-2-lab.html#cb150-1" aria-hidden="true" tabindex="-1"></a>original.data<span class="ot">&lt;-</span><span class="fu">rgamma</span>(<span class="dv">10</span>,<span class="dv">3</span>,<span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="week-2-lab.html#cb150-1" tabindex="-1"></a>original.data<span class="ot">&lt;-</span><span class="fu">rgamma</span>(<span class="dv">10</span>,<span class="dv">3</span>,<span class="dv">5</span>)</span></code></pre></div>
 <p>and calculate the skew of the data using the R function ‘skewness’ from the ‘moments’ package.</p>
-<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="week-2-lab.html#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(moments)</span>
-<span id="cb151-2"><a href="week-2-lab.html#cb151-2" aria-hidden="true" tabindex="-1"></a>theta<span class="ot">&lt;-</span><span class="fu">skewness</span>(original.data)</span>
-<span id="cb151-3"><a href="week-2-lab.html#cb151-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(theta)</span></code></pre></div>
-<pre><code>## [1] 0.5585594</code></pre>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="week-2-lab.html#cb151-1" tabindex="-1"></a><span class="fu">library</span>(moments)</span>
+<span id="cb151-2"><a href="week-2-lab.html#cb151-2" tabindex="-1"></a>theta<span class="ot">&lt;-</span><span class="fu">skewness</span>(original.data)</span>
+<span id="cb151-3"><a href="week-2-lab.html#cb151-3" tabindex="-1"></a><span class="fu">head</span>(theta)</span></code></pre></div>
+<pre><code>## [1] 1.648047</code></pre>
 <p>What is skew? Skew describes how assymetric a distribution is. A distribution with a positive skew is a distribution that is “slumped over” to the right, with a right tail that is longer than the left tail. Alternatively, a distribution with negative skew has a longer left tail. Here we are just using it for illustration, as a property of a distribution that you may want to estimate using your data.</p>
 <p>Lets use ‘fitdistr’ to fit a gamma distribution to these data. This function is an extremely handy function that takes in your data, the name of the distribution you are fitting, and some starting values (for the estimation optimizer under the hood), and it will return the parameter values (and their standard errors). We will learn in a couple weeks how R is doing this, but for now we will just use it out of the box. (Because we generated the data, we happen to know that the data are gamma distributed. In general we wouldn’t know that, and we will see in a second that our assumption about the shape of the data really does make a difference.)</p>
-<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="week-2-lab.html#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
-<span id="cb153-2"><a href="week-2-lab.html#cb153-2" aria-hidden="true" tabindex="-1"></a>fit<span class="ot">&lt;-</span><span class="fu">fitdistr</span>(original.data,dgamma,<span class="fu">list</span>(<span class="at">shape=</span><span class="dv">1</span>,<span class="at">rate=</span><span class="dv">1</span>))</span>
-<span id="cb153-3"><a href="week-2-lab.html#cb153-3" aria-hidden="true" tabindex="-1"></a><span class="co"># fit&lt;-fitdistr(original.data,&quot;gamma&quot;)</span></span>
-<span id="cb153-4"><a href="week-2-lab.html#cb153-4" aria-hidden="true" tabindex="-1"></a><span class="co"># The second version would also work.</span></span>
-<span id="cb153-5"><a href="week-2-lab.html#cb153-5" aria-hidden="true" tabindex="-1"></a>fit</span></code></pre></div>
-<pre><code>##      shape       rate   
-##   1.5923620   2.1378449 
-##  (0.6511639) (1.0253257)</code></pre>
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="week-2-lab.html#cb153-1" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
+<span id="cb153-2"><a href="week-2-lab.html#cb153-2" tabindex="-1"></a>fit<span class="ot">&lt;-</span><span class="fu">fitdistr</span>(original.data,dgamma,<span class="fu">list</span>(<span class="at">shape=</span><span class="dv">1</span>,<span class="at">rate=</span><span class="dv">1</span>))</span>
+<span id="cb153-3"><a href="week-2-lab.html#cb153-3" tabindex="-1"></a><span class="co"># fit&lt;-fitdistr(original.data,&quot;gamma&quot;)</span></span>
+<span id="cb153-4"><a href="week-2-lab.html#cb153-4" tabindex="-1"></a><span class="co"># The second version would also work.</span></span>
+<span id="cb153-5"><a href="week-2-lab.html#cb153-5" tabindex="-1"></a>fit</span></code></pre></div>
+<pre><code>##     shape       rate  
+##   4.338224   6.966585 
+##  (1.870298) (3.184240)</code></pre>
 <p>Now lets sample with replacement from this new distribution and calculate the skewness at each step:</p>
-<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="week-2-lab.html#cb155-1" aria-hidden="true" tabindex="-1"></a>results<span class="ot">&lt;-</span><span class="fu">c</span>()</span>
-<span id="cb155-2"><a href="week-2-lab.html#cb155-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>)</span>
-<span id="cb155-3"><a href="week-2-lab.html#cb155-3" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb155-4"><a href="week-2-lab.html#cb155-4" aria-hidden="true" tabindex="-1"></a>  x.star<span class="ot">&lt;-</span><span class="fu">rgamma</span>(<span class="fu">length</span>(original.data),<span class="at">shape=</span>fit<span class="sc">$</span>estimate[<span class="dv">1</span>],<span class="at">rate=</span>fit<span class="sc">$</span>estimate[<span class="dv">2</span>])</span>
-<span id="cb155-5"><a href="week-2-lab.html#cb155-5" aria-hidden="true" tabindex="-1"></a>  results<span class="ot">&lt;-</span><span class="fu">c</span>(results,<span class="fu">skewness</span>(x.star))</span>
-<span id="cb155-6"><a href="week-2-lab.html#cb155-6" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb155-7"><a href="week-2-lab.html#cb155-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(results)</span></code></pre></div>
-<pre><code>## [1]  0.858518858  0.158605593  1.134333468 -0.427246166  1.843655918
-## [6] -0.006099283</code></pre>
-<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="week-2-lab.html#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(results,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">col=</span><span class="st">&quot;pink&quot;</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">freq=</span>F)</span></code></pre></div>
+<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="week-2-lab.html#cb155-1" tabindex="-1"></a>results<span class="ot">&lt;-</span><span class="fu">c</span>()</span>
+<span id="cb155-2"><a href="week-2-lab.html#cb155-2" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>)</span>
+<span id="cb155-3"><a href="week-2-lab.html#cb155-3" tabindex="-1"></a>  {</span>
+<span id="cb155-4"><a href="week-2-lab.html#cb155-4" tabindex="-1"></a>  x.star<span class="ot">&lt;-</span><span class="fu">rgamma</span>(<span class="fu">length</span>(original.data),<span class="at">shape=</span>fit<span class="sc">$</span>estimate[<span class="dv">1</span>],<span class="at">rate=</span>fit<span class="sc">$</span>estimate[<span class="dv">2</span>])</span>
+<span id="cb155-5"><a href="week-2-lab.html#cb155-5" tabindex="-1"></a>  results<span class="ot">&lt;-</span><span class="fu">c</span>(results,<span class="fu">skewness</span>(x.star))</span>
+<span id="cb155-6"><a href="week-2-lab.html#cb155-6" tabindex="-1"></a>  }</span>
+<span id="cb155-7"><a href="week-2-lab.html#cb155-7" tabindex="-1"></a><span class="fu">head</span>(results)</span></code></pre></div>
+<pre><code>## [1]  1.6350628  0.1618364  0.2263381 -0.7026499 -0.8142039  0.9339388</code></pre>
+<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="week-2-lab.html#cb157-1" tabindex="-1"></a><span class="fu">hist</span>(results,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">col=</span><span class="st">&quot;pink&quot;</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">freq=</span>F)</span></code></pre></div>
 <p><img src="Week-2-Lab_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 <p>Now we have the bootstrap distribution for skewness (the <span class="math inline">\(\theta^{*}\)</span> s), we can compare that to the equivalent non-parametric bootstrap:</p>
-<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="week-2-lab.html#cb158-1" aria-hidden="true" tabindex="-1"></a>results2<span class="ot">&lt;-</span><span class="fu">bootstrap</span>(<span class="at">x=</span>original.data,<span class="at">nboot=</span><span class="dv">1000</span>,<span class="at">theta=</span>skewness)</span>
-<span id="cb158-2"><a href="week-2-lab.html#cb158-2" aria-hidden="true" tabindex="-1"></a>results2</span></code></pre></div>
+<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="week-2-lab.html#cb158-1" tabindex="-1"></a>results2<span class="ot">&lt;-</span><span class="fu">bootstrap</span>(<span class="at">x=</span>original.data,<span class="at">nboot=</span><span class="dv">1000</span>,<span class="at">theta=</span>skewness)</span>
+<span id="cb158-2"><a href="week-2-lab.html#cb158-2" tabindex="-1"></a>results2</span></code></pre></div>
 <pre><code>## $thetastar
-##    [1]  0.627218175  0.086890386  0.869227619  0.428115636  0.637884091
-##    [6]  0.177451238  0.316779516  0.939109391  0.633650437  0.431540382
-##   [11]  0.121356150  0.488112545  1.046171419  1.184365869  0.987131732
-##   [16]  0.611623076  0.811309366  0.421235279  0.116967951 -0.132933967
-##   [21]  0.648274041  0.639491009  0.414652465  1.105637480  0.220872770
-##   [26]  0.814861004  0.612798242  1.263443662 -0.003343424  1.386081066
-##   [31]  0.276108088  0.593275314  0.090173785  0.486898974  1.254836930
-##   [36]  1.118011247  1.088782639  0.053153166  0.538685135  0.320449299
-##   [41]  0.192795868  0.748181711  0.979109067  0.119746654 -0.700985488
-##   [46]  0.593844440  1.666727815 -0.760344721  0.817567531  1.399888283
-##   [51]  0.020869408 -0.320101695  0.485385947  0.038819622  0.968033359
-##   [56] -0.391131989  0.409577841  0.406872048  0.120649142  0.778921792
-##   [61]  0.297054401  0.183079493  1.064033771  0.775733882  0.281495569
-##   [66]  0.121285163  0.434227674  0.174983121  0.767447938  0.946433901
-##   [71]  0.230004181  0.551158518 -0.430808294  0.978475949  1.164059925
-##   [76] -0.086911060  0.085183286  1.324898405  1.048151922  0.188250519
-##   [81] -0.189247865  0.953517425  0.867369009  0.010803848 -0.297751479
-##   [86] -0.043394828  0.227185544  0.391096278  0.780044100  0.519521947
-##   [91] -0.033273749  0.544842225  0.876256321  0.331104482 -0.757890331
-##   [96]  0.349896042  0.402029293  0.724412850  0.189895768 -0.315593043
-##  [101]  1.949293045  0.803865001  0.026663749  0.488535886  0.446637233
-##  [106]  0.461403833  0.692166104  0.565771163  0.002255582  0.914171440
-##  [111]  0.078491105 -0.155813115  0.292977123  0.442583238  0.386191514
-##  [116] -0.159263281  0.146845118  1.408472714  0.015021957  0.561788273
-##  [121]  0.802976586  0.334513439  0.743974856 -0.058573501  0.915553238
-##  [126]  0.260392412  0.631171176  1.106267045  0.565305990  1.324759055
-##  [131] -0.160858716  0.647966387  0.094509033  0.505737270  0.862880694
-##  [136]  0.703469329  0.498018459  0.132724700  0.333589936  1.473046302
-##  [141]  0.312480721  0.349764581 -1.426549331  1.268773313  0.689883476
-##  [146]  0.293239382  0.426902125  0.307931802  0.076300259  0.263128424
-##  [151]  0.291167840  0.879240241 -0.345850508  0.964677421  0.856480755
-##  [156]  0.450045260  0.163527775  0.304207796  0.829339086  0.434254891
-##  [161] -0.310756042  0.927162717  0.073578233  0.257012396  0.520635097
-##  [166]  0.781203095  1.042504108  0.124177785  0.822375927 -0.084919959
-##  [171]  0.739790995 -0.198340069 -0.216301295  1.059761027  0.255285226
-##  [176]  0.845985880 -0.091562188  0.549242625 -0.295343246 -0.039296161
-##  [181]  0.070142146  0.028895165  0.949529076  0.170816777 -0.092257445
-##  [186]  0.040588754 -0.295036066  0.600106124  0.526020676  0.050984746
-##  [191]  0.416222085  0.213115295 -0.248314031  0.107508467  0.489024254
-##  [196] -0.463235303  0.400099079  0.627051737  0.150490559  0.430316481
-##  [201]  0.235479953  1.353609293  0.158817026  0.079567338 -0.235211787
-##  [206] -0.099208457  0.101776377 -0.009741197 -0.410588305  0.149179705
-##  [211]  0.288923435 -0.050772912 -0.216920995  0.315300810  0.273009424
-##  [216]  0.675598605  1.062509744  0.109565987  0.915003090 -0.426775540
-##  [221]  0.200127320  0.370941040  0.668432125  0.426658472  0.979107399
-##  [226]  0.323263426  0.471889036  0.409577841 -0.299379278  0.462736103
-##  [231] -0.041243664  0.290659014 -0.171541456  0.164488496  0.929239508
-##  [236]  0.318523101 -1.197117342  0.392320585 -0.244876560  1.774620376
-##  [241]  0.178116500 -0.123008096  0.985012602  0.546987224 -0.009603696
-##  [246] -0.101215264  0.781199799 -0.202227673  0.420618084 -0.335456188
-##  [251]  0.134405632  0.398491046  0.971962111  0.077300590  0.196784842
-##  [256]  0.172594726  0.438884811  0.275220367 -0.050553067  1.476938141
-##  [261] -0.179128581  0.413261327 -0.282933248 -0.084103769  0.253642283
-##  [266]  0.334892821  1.001320324  1.044908408  1.040187751  0.145826867
-##  [271]  0.497259098  0.301282500  0.350228050  1.104517480  0.220728666
-##  [276]  1.261226873  0.224779824  0.455676395  0.557922524 -0.019743634
-##  [281]  0.541828171  0.847400723  0.693239556 -0.310951223  0.255809556
-##  [286]  0.270193529  1.362348467  0.662712549  0.471554496  0.624631339
-##  [291]  0.103618803  0.704536746  0.164952896  0.344869276  0.721433100
-##  [296] -0.188462270  0.658109764  0.455676395 -1.198242199  0.805031394
-##  [301] -0.785810955 -0.040422492  0.422150574  0.621960910  0.243836989
-##  [306]  0.281396739  0.895292719 -0.370675244  1.116623740 -0.828042027
-##  [311]  0.675124034  0.986930303  0.734724857  0.827709706 -0.107997529
-##  [316]  1.108739597  0.441959872  0.461317187 -0.044677199 -0.886498758
-##  [321]  1.103085756  0.488112545  0.831758363  0.169780374  0.118561911
-##  [326]  0.296473581 -0.537050785 -0.115902968  0.370557081  1.002800798
-##  [331] -0.055289168  0.686485107  1.122352655  0.737705890  0.684333457
-##  [336]  0.195219659 -0.388929404  1.304780260  0.648267743  0.261313866
-##  [341]  0.101813228  0.178775289  0.054689540 -0.243661824  0.071649365
-##  [346]  0.906259620  0.341458690  1.285926691  0.367638652  1.103085756
-##  [351]  0.616426229  0.513698581  0.520309946  0.501177344  0.133752469
-##  [356]  0.428959738  0.640629615  0.095319804  0.500998334 -0.069913375
-##  [361]  0.239945191  0.840330272  0.849488336  0.195747438  0.059781307
-##  [366]  0.511529672  1.408472714  0.287468805 -0.388731629  1.375999595
-##  [371]  0.510623039  0.690018018  0.181724797 -0.512868569 -0.306717742
-##  [376]  0.490107347  0.881712328 -0.233336777  0.417221932  0.028989692
-##  [381]  0.412196400  0.612751261  0.709292724  0.297399120  0.455439277
-##  [386]  0.177489290  0.561559305  0.029126354 -0.416358210  0.106998045
-##  [391]  0.337393491  0.534373947  0.155702518 -0.864053429  0.303923352
-##  [396]  0.423856485  0.627633382  1.271998176  0.731013816  0.690264404
-##  [401]  0.521226839  1.307615271 -0.250388148  0.389014726  0.134195055
-##  [406]  0.834120186  0.623759445  0.633804970  0.302323321  0.597359655
-##  [411]  1.651694098  0.013477005  0.626354223  0.227881653  0.684274480
-##  [416]  1.144787413 -0.045557418  1.043573040  0.500292597  0.767226844
-##  [421]  0.471889036  0.608082350  0.682359077  0.288824651  0.226757998
-##  [426]  0.648148520 -0.175749623  0.253559298  0.072060766  1.143259301
-##  [431]  0.658511681 -0.005782987 -0.113641433 -0.143017685  0.231892088
-##  [436]  0.261484712  0.407066303  0.286303202 -0.656380314  0.598376079
-##  [441]  1.082615711  0.304992747  0.627157384  0.458080857 -0.130411660
-##  [446]  0.385553220  0.727984770 -0.413392589  1.129630116  0.654987746
-##  [451] -0.396200644  0.124751564  0.721791606  0.619329006  0.153706412
-##  [456]  0.421332586  0.401087902 -0.060786732  0.384989316  0.186191650
-##  [461]  0.255260285 -0.219196399  0.304207796  0.656107001  0.642065648
-##  [466]  0.364583747 -0.168381129  0.207849783  1.076249359  0.280858983
-##  [471]  0.516766563  0.547195959  0.153989294  0.835199140  0.184296554
-##  [476]  0.474155751 -0.026434378  0.208681363  0.647517157  0.445872727
-##  [481]  0.262412495  0.843147116 -0.292976309 -0.409761068 -0.388359672
-##  [486]  0.824012089  0.445054380 -0.127745656 -0.229788291  0.909197758
-##  [491]  0.381721085  0.762961908  2.102785173  0.518657409 -0.029944734
-##  [496]  0.192708115  2.426406653  0.198975747  0.460531938  0.664803636
-##  [501]  1.210275760  1.113864444 -0.077712228  0.481514369  0.396062517
-##  [506]  0.900442281  0.113647924  0.557306651  0.140311192 -0.353757148
-##  [511] -0.204961158  0.949617885  0.189823507 -0.174991494  0.709072303
-##  [516] -0.520979335  0.562162363  0.595169999  0.573525565  0.525743778
-##  [521]  1.358247304 -0.082631073  0.572271636 -0.011615747  1.162417831
-##  [526] -0.265682709 -0.369066383  0.188374006 -0.276806936  0.796774682
-##  [531]  0.713196871  0.644899057  0.452163351  0.747245300  0.475158407
-##  [536]  0.733160692  0.193643400  0.805498305 -0.827729268  0.087135565
-##  [541]  0.164224426 -0.270139588  0.348918209  0.432750862  0.920707889
-##  [546]  0.286220539  0.226757998  0.640757001  0.527541648  1.057396867
-##  [551] -0.531357814  0.211835377  0.121259804 -0.158385369  0.422889075
-##  [556] -0.011634110  0.058758436  0.446197682  0.810461468  0.448652062
-##  [561] -0.038655253  0.470701216  0.889482885  0.045461547  0.409661954
-##  [566]  0.668298849 -0.003756536 -1.111225321  1.128792797  0.168681970
-##  [571]  0.488749018  0.497484328  0.207786295  0.112787553  0.428051640
-##  [576]  1.017527186 -0.148949766  0.488998015 -0.029251344  0.214674735
-##  [581]  0.387792713  0.750949543  0.247916857  0.424112862  0.272530119
-##  [586]  1.304510238  0.393561431  0.381552485  0.740173310  0.652781303
-##  [591]  0.698647908  0.274198924  0.496814863 -0.538192875 -0.193048082
-##  [596] -0.423227177  0.623324023 -0.131371106  0.750165768  0.072060766
-##  [601]  0.556476309  0.710660171  0.265297314  0.285771560 -0.289088214
-##  [606]  0.142737020 -0.046515604  0.711512742 -0.440599998  0.516995996
-##  [611]  0.745519257  0.261216907 -0.033722044  1.448252840  1.433427628
-##  [616]  0.627042162  0.614539265  0.667161674  0.294623715  0.146922994
-##  [621]  0.125302434  0.015605502  0.599445960  0.495720357  0.878284346
-##  [626]  0.814528252 -0.022286308  1.143305015  0.331456953  0.527760449
-##  [631]  1.379498436  0.770395240  0.128334693 -0.177299579  0.573039207
-##  [636]  0.315399782  0.669430436 -0.060234600  0.272554875  1.238987480
-##  [641]  0.838339855  0.929941035  1.169443878  0.315497121  0.614539265
-##  [646] -0.826846326 -0.603441838 -0.064201785  0.816316580  1.158529280
-##  [651]  0.163346519  0.157610767  0.751599465 -0.374514994  0.192550667
-##  [656]  0.401443761  0.302125908  0.081448286  0.375831032 -0.017065930
-##  [661]  0.507889216  0.738038643  0.702473595 -0.302216486  0.809369734
-##  [666]  0.498927575  0.127137801  1.006832252  0.951572867  0.126240377
-##  [671] -0.115132966  0.711585863  1.051540241  0.264951863  0.619719625
-##  [676]  0.225114665  0.487838781 -0.673012763  0.114879645  0.267101231
-##  [681] -0.110599745  0.093714255  1.055324786  0.267420622  0.759006043
-##  [686] -0.249846560  0.512416557 -0.008437074 -0.004922382  0.084858818
-##  [691]  0.493478633  0.825888378  1.470047773  0.499596227  0.448942854
-##  [696]  0.071658507 -0.388997100  0.400255881  1.013252433  0.665942390
-##  [701]  1.045208093 -0.022980008  0.247211217  0.494280648  0.679549496
-##  [706]  0.591725311  0.734154850  0.630628269  1.372596563 -0.426912421
-##  [711]  0.052345209  0.214363903  0.461290071  0.224779824  0.208368679
-##  [716]  0.853775410  0.535096373  0.953223720  0.207744722  0.861946432
-##  [721] -0.017794387  0.869479299  0.819498791  1.091948322  0.881032634
-##  [726]  0.918805585  1.271226836  0.152222865  0.100589082  0.101726672
-##  [731]  1.352781649  1.254938404 -0.018178117  0.720752610  0.368749224
-##  [736]  0.632533915 -0.041920396 -0.134325787  0.073106070  0.730743895
-##  [741] -0.322430131  0.103952220  0.215855454 -0.004762626  0.284163417
-##  [746]  0.084815097  0.182962139  0.655082097  0.402834754  0.538985960
-##  [751]  0.462760367  0.389378288  0.376579592 -0.061385678  1.170709941
-##  [756]  0.160349543  0.304174162  0.612282464  0.629320961  0.096407038
-##  [761]  0.642778825 -0.082660188  0.213856977  0.257224859  0.534101700
-##  [766]  0.188205840  0.404022477  0.357976627  0.357485604  0.482676820
-##  [771]  1.129630116  0.159566102  0.581936678  0.678467032  0.118743135
-##  [776]  1.386176045  0.109836731 -0.063466941  0.577998756  0.572568805
-##  [781]  0.174691183 -0.562039487 -0.489473849  0.495570696  0.156135199
-##  [786]  0.943919175  0.700608617 -0.605016943  0.572403754  0.363470497
-##  [791]  0.890181932  1.299408995  0.390547019 -0.182226957  0.638656746
-##  [796]  0.939211240  0.382478046  0.579195470  1.408472714  1.492401724
-##  [801]  0.350410958  0.912282261  0.511479848  0.790579835  0.750727499
-##  [806]  0.084240564 -0.349003015  0.927798890 -0.944419169  0.236378342
-##  [811]  0.210032107  0.359068905 -0.483361193 -0.563781570 -0.253050448
-##  [816]  0.405049196 -0.167150884  0.697783462 -0.092843577  0.546026211
-##  [821]  0.171679463  0.544654640  0.314422437  0.380467968  0.047416039
-##  [826]  0.281964489  0.505801242 -0.191267536  0.116452015 -0.256438526
-##  [831]  0.519103781  0.267274712  0.892998698  0.515786867  0.126098586
-##  [836]  1.909349893 -0.222951232  0.913123082  0.757575552  0.480146823
-##  [841]  0.194092535  1.227504875 -0.175099261 -0.071110330  0.232298030
-##  [846]  0.347174528  0.444573941  0.206039559  0.306179634  0.353407623
-##  [851]  0.281495569 -0.241220356 -0.071138669  0.578148754  0.725156214
-##  [856]  0.829381298  0.347924398  0.037125165  0.268314461  1.645825383
-##  [861]  0.256225807  1.118858458  0.578916878  0.359562851  0.886313210
-##  [866]  0.478065281 -0.035399345  0.434227674 -0.441241519  0.793886081
-##  [871]  0.157911092  0.237162982  1.560003000  0.148602147 -0.030565452
-##  [876]  1.087798671  1.036467274 -0.099164433 -0.007804907 -0.051061950
-##  [881]  0.050315185  0.358943054  0.709847479  0.546596953  0.501039198
-##  [886] -0.008257405 -0.151839134  1.184869138  0.494280648  0.097862433
-##  [891]  0.393041896  1.127703246  0.460703620 -0.208752011  0.469648698
-##  [896] -0.064140221  0.380593544 -0.687069900  0.977390191  0.219032536
-##  [901] -0.008529594  0.332144015 -0.853708218  0.410401406  0.422009826
-##  [906]  0.476363496  0.005215683  0.339142404  0.507889216  0.874209930
-##  [911] -0.292330842  0.094505279 -0.323071638 -0.021372721  0.431394851
-##  [916] -0.299595064  0.732665642 -0.517133029  0.318007051 -0.458073293
-##  [921]  0.054305148  0.814654758  0.385065248  1.048426138 -0.031392170
-##  [926]  0.140992502  1.055865450  0.709064197  0.396003796  0.557272094
-##  [931] -0.075614601  0.359008643  0.677008517  0.286713403  0.832199544
-##  [936]  1.453276325  0.592218761  0.021643541 -0.186205182  0.153989294
-##  [941]  0.606905194  1.054335125  1.014305161 -0.102120083  0.466390753
-##  [946]  0.272393760 -0.208779931  0.311437048 -0.416264462  0.479688077
-##  [951]  0.350001384  0.257516662  0.579243486  0.005081938  0.690594459
-##  [956] -0.018126687  0.008224043  0.201086072  0.454547999 -0.935135278
-##  [961]  0.478953554  0.226390706 -0.178517867  0.702663800  0.338155344
-##  [966]  1.710067338  0.642708695  0.448560855  0.623861974  1.265043170
-##  [971]  1.004900250 -0.718553197  0.625449641  0.687986585  0.577568797
-##  [976]  0.746463800 -0.171861447  0.641954010  0.419454494 -0.512860543
-##  [981]  0.172544413  1.799110082 -0.163611896  0.609240048  0.233340051
-##  [986] -0.076518958  0.580794371 -0.747313549  0.228626721  1.030712558
-##  [991]  0.648344326 -0.093855682 -0.404575594 -0.391796457  0.296582870
-##  [996]  0.477336809  1.003944107  0.420294882  1.478132239 -0.050277480
+##    [1]  2.002137408  0.135016584 -0.845005406 -0.830459179 -0.303714605
+##    [6]  1.265182900 -0.880348575  1.247652854 -0.820821061  1.080524783
+##   [11]  1.586893593  0.077598779  0.799736156  1.627538564  1.383563743
+##   [16]  1.011543294  1.745373381 -0.861648941  1.581847155  1.318128235
+##   [21] -0.354953843  0.286218637 -0.369158993 -0.045502124  1.881374712
+##   [26]  2.277625591  1.197664875  1.067159201  0.210621513 -0.683903082
+##   [31]  0.815820051  1.378329130  1.638706751  2.227289427 -0.341608554
+##   [36] -0.613765691 -0.269408332  0.615026545  0.987110243  1.126679823
+##   [41] -0.160484296  0.789063278  1.755034511  2.395723087  1.680641473
+##   [46]  0.327819577  1.615287124 -0.481970792  2.025867630  1.242889555
+##   [51]  1.875402832  0.431704562  1.640875216 -0.543800416  1.250265114
+##   [56]  0.925468056  1.102828031  1.821607977 -0.220557339  1.161126966
+##   [61] -0.168993947  0.305013946  1.638573187  2.131302413 -0.191602182
+##   [66]  1.170794291 -0.031217265 -0.304853803 -0.102067471  1.302793789
+##   [71]  0.541036851  1.450559392  1.024235457 -1.330117303  2.135465919
+##   [76]  1.601364819  0.960321002  1.141869959  0.149345195  2.343439606
+##   [81]  1.501359960 -0.596131441  0.667415408  0.699027633 -0.415536784
+##   [86]  0.464167855  1.397926936  0.552770051  1.489465707  1.071650891
+##   [91]  1.819815434 -0.204954925  1.492992012  1.249883104  0.198040958
+##   [96] -0.805963013 -0.617797750  0.992729292  1.220191302  1.850753305
+##  [101] -0.854193161  1.078115144 -0.248515209  1.227514340  2.272976828
+##  [106]  1.244496425  1.461510795  1.655731616 -0.351661523  1.212151930
+##  [111]  1.945246678  1.520245063  0.451135513  1.012300234  1.176323534
+##  [116]  0.732132027  1.511303120 -0.828931368  0.506990217  1.669623925
+##  [121]  1.296474852  1.679877661  1.917999299  0.544059053  1.236499285
+##  [126]  1.624369103  0.442245679  2.052633541 -0.211259251 -0.896926783
+##  [131]  1.239645696  1.146924657  0.918259011  0.666591692  0.803697736
+##  [136] -0.632761733  2.344256523  1.405287500  2.016794064  2.422824207
+##  [141]  2.063013044  1.451522195  0.793625000  0.928935214  2.081027447
+##  [146]  1.683937182 -0.242917548  1.532594418  0.749211665  1.250268757
+##  [151] -1.329143164 -0.585372166 -0.557273970  1.484915171  2.238289269
+##  [156]  0.142503369 -0.269161914  2.327425433 -1.061601582  0.932701084
+##  [161]  0.158861091  1.067167830  0.277683713  1.184347314 -0.466164572
+##  [166]  0.687617658  1.255128614 -0.016986310  1.098562433  0.362255404
+##  [171] -1.204790947  0.089570642  1.447817866  1.223649609  0.257769523
+##  [176] -0.232506462  2.297158879  0.613210934  0.665202284 -0.349395388
+##  [181]  0.600922182 -0.044489388  2.101055851  1.970867627  1.012110514
+##  [186]  0.177522518 -0.043898135  1.805139500  1.924843959  0.928173769
+##  [191]  0.151806875 -0.388003535  2.343195590  1.788048287  1.444510578
+##  [196]  1.950165606 -0.578778454  2.256386951  0.733645800 -0.150430693
+##  [201]  0.167396556  0.363079667  2.414179116 -0.748736821  0.606497493
+##  [206]  2.313188108 -1.089660946  1.489505399 -1.444635597  2.272485068
+##  [211]  1.707005368 -0.651273836  1.936282803  2.373804987  0.510766883
+##  [216] -0.112248890  1.486637931  0.986140041  0.290074804 -0.312419316
+##  [221] -1.173617045 -0.100499164  1.462750595  0.858765172  1.063874967
+##  [226]  0.941003634  1.635131594  1.774690132  0.133482324  1.940621785
+##  [231]  0.745321204  2.052861313  0.353948978  1.428069723  2.276036507
+##  [236]  1.909718487  1.174953101 -0.757010437 -1.430670337 -1.454743377
+##  [241]  1.795262802 -0.716638546  1.373842606  1.138006820 -0.563412296
+##  [246]  0.922639712  1.144372761  1.394216384  1.262668348  1.212111389
+##  [251]  1.904204390  1.154976937  2.083539391 -0.315156691  0.447867512
+##  [256]  1.471876221  0.971578813  1.918047760  1.780345240  1.437196291
+##  [261]  1.085708199  0.149981424  2.014579187  2.329323432  0.842821220
+##  [266]  1.572171638  0.751959548  1.512468983  2.125774431 -0.042739778
+##  [271] -0.424250282  1.013512132 -0.876235056  1.158583770  0.030292404
+##  [276]  2.076097129  0.601357543  0.632492374  0.814879450 -0.287984893
+##  [281]  1.945492014  1.054124154  1.776614834  0.051605764  0.649178144
+##  [286] -0.233711090  1.689340966  0.534645811  0.486663083  0.559784533
+##  [291] -0.307742959  2.380861607  1.000193566  0.432818789  1.491999671
+##  [296]  2.147984589  1.222102747  1.662199400  0.703317484  1.319689191
+##  [301] -0.004516744  1.621690263  1.188935731 -0.578715255  1.755034511
+##  [306]  1.589808085  2.338766666  2.048120035 -1.063528154 -0.602987287
+##  [311]  0.202453512  0.991806986  1.076273370 -0.044718392  0.742021502
+##  [316]  1.220191302 -0.887730800  1.359219388  0.206711430 -0.657852497
+##  [321]  0.140199797  1.212745833  1.980011942  1.662829364  2.126700249
+##  [326]  0.545663960  1.613068761  1.615099172  1.103347331  1.410688423
+##  [331] -0.759932663  0.015211644  0.817659869  0.052500903  1.611159001
+##  [336] -0.355995911  1.196975486 -0.817895704 -0.144754601  2.053436399
+##  [341]  1.496763247  0.495682428  1.454718233  2.214722960  0.714072857
+##  [346]  0.938419268  2.261346293  0.375804842  0.805415379 -0.644549532
+##  [351]  1.705248994  1.584821590 -0.223370881  1.134709813  1.188223078
+##  [356] -1.073483965  1.727105646  0.291625538 -0.523401981 -0.517278965
+##  [361]  0.804389005 -0.486142502  0.114821708  2.110207975  0.687357348
+##  [366]  0.822362348 -0.278926484  1.935208556 -0.224001064  0.646807788
+##  [371] -0.225413582 -0.826044929  0.795761264  1.234122080  2.320615328
+##  [376] -0.040985633  1.358749081  1.254287607 -0.700514832  0.432878217
+##  [381]  1.820098938 -0.939602017  0.917101339  1.640036342  1.119343126
+##  [386]  1.631843359 -0.229107364  2.130130950  0.294641904  0.730361470
+##  [391]  2.021950068  1.623037969 -0.596701211  1.776760671  1.838173480
+##  [396]  1.621571902 -0.511997597  0.775641781  1.013129630  2.303503362
+##  [401] -0.706337569 -0.574653584  0.835842758  2.302834251  0.418709569
+##  [406]  1.483905447  1.910754156  1.263369761  1.394216384  0.337120558
+##  [411]  0.729470808 -0.072230870  1.242684762  1.065926253  1.326919614
+##  [416]  2.319250636  0.338800950  1.425534219  1.236499285  0.798674323
+##  [421]  0.995887225  1.008148079  1.227122206 -0.090253143  1.598474664
+##  [426] -0.052186008 -1.181834742  1.431210247 -0.570421775  1.665647598
+##  [431] -0.369126646 -0.587466157  0.507147733  1.144340470 -0.547212280
+##  [436]  0.289851004  0.814955499 -0.018127071  2.102243183  1.984538847
+##  [441]  0.974765930  0.642901737  1.023722557 -0.366318131  1.788586745
+##  [446]  1.498194429 -1.118407371  1.390727461  1.687054838  2.217091076
+##  [451]  0.675889844  2.063258544  2.120840381  1.837845598  2.062374399
+##  [456]  0.699651108  2.210144815  0.273121506 -1.043569486  1.150226532
+##  [461] -0.158830091 -0.366136010 -0.258180499  1.246451738  0.850624438
+##  [466]  0.452523555  2.312013736  0.351187228  0.858776318  2.073040110
+##  [471]  0.053902190  0.871547773  1.328769569 -0.127726608  0.819100334
+##  [476]  0.267512516 -0.151299535  1.927576825 -0.561482198  0.954552177
+##  [481]  1.679882175  2.252593408  1.982819269  0.564226737  1.404129699
+##  [486]  1.325458758  1.427141871  1.914523011 -0.221250610  2.048120035
+##  [491]  2.055701364  0.892104240  0.773328348  1.044452586 -0.461349592
+##  [496]  1.444645570  0.034237682  1.641440185  1.021752049  1.732003615
+##  [501]  1.221836023 -0.631512027  1.428482824  1.773796899  1.304614601
+##  [506]  1.680095943  1.895019842 -0.298820695 -0.713164588  1.472161993
+##  [511]  2.023912321  1.343409246  0.722619393 -0.394737657  1.082903518
+##  [516]  1.155526624  0.196889353 -1.129223036  1.396352859 -1.218799843
+##  [521]  1.671733543  1.898899448  1.304896030  0.803389085  1.396682687
+##  [526]  1.741862608 -0.351114675  1.950829964 -0.845243002  1.476842953
+##  [531] -0.386855602  1.622100110  0.359900104  0.769073712  1.268591551
+##  [536]  1.409142631  2.635077606  1.779754731 -1.980813398  1.250857139
+##  [541]  0.588645255  1.055848737  0.346721349 -0.658579838 -0.207211777
+##  [546] -1.243081885  0.132131794 -0.353354516 -0.846031488  1.116459112
+##  [551]  1.405562123  1.570484070  2.045041121  1.937281122  1.490836246
+##  [556]  1.312421487 -1.156464103 -0.812338430  1.281484535  0.556073408
+##  [561]  1.023999125  1.656726727  1.404256965 -0.307690435 -0.270291782
+##  [566]  1.196843853  2.008362860  2.361334066  1.414032577  1.689392273
+##  [571]  2.304204260  1.611535353  1.649092382  1.403007577  0.875430397
+##  [576] -0.724600734  2.058957000  0.054549774 -0.186941132  1.910000382
+##  [581]  1.535419124  1.868627252  1.045558384 -0.681360131  1.901001227
+##  [586]  1.568030023 -0.609250170  0.916169125  1.368290535  1.484417353
+##  [591]  1.103133487  0.036197510  1.755486011 -0.632263487  0.161122667
+##  [596]  0.871547773 -0.498081714  1.727207290  2.179930003  1.837730593
+##  [601]  2.003504783  1.705704837 -0.744210339  1.236778912  2.075096026
+##  [606]  0.091064225  0.644260886  0.658261559  0.040141559  1.951681772
+##  [611] -1.271112623 -0.506770884  2.248191684  1.299258950  0.519384013
+##  [616] -0.766707195  1.394943418  1.766697654  1.743021886 -0.682202741
+##  [621]  0.788731932 -0.490510465 -0.226986796 -0.588469767 -0.114616289
+##  [626] -0.123503390  0.110713032  1.065696376  1.874089317  1.410920780
+##  [631]  0.175565795  1.895499808  1.621066135  1.796676107  1.028147511
+##  [636]  0.994216863  2.001802539  2.413698002  1.687045868 -1.163110026
+##  [641]  1.488718488  1.127794174  1.260153413  0.272345188 -0.543809697
+##  [646]  1.571379528  0.323727849  0.654474709  0.510526363  1.649526898
+##  [651] -0.261149877 -0.509111288 -0.125169189  1.103987936  0.815513915
+##  [656]  2.402971863  1.703821339  0.939610804  1.142384292  0.182694667
+##  [661]  1.867645593 -0.509344491  1.931601977  0.627534914  1.041841341
+##  [666]  0.701545826  1.402515421 -0.393249459  0.264813887  1.584193019
+##  [671] -0.081731178  1.171912995  1.700853501  1.999928687  0.196586237
+##  [676]  1.000131606  1.774144806  1.255042665  2.124692138  1.678921230
+##  [681]  1.082627567  1.282845121  0.956477738  2.004876116  1.647894365
+##  [686] -1.037875919 -0.765510819  1.752918094  1.445187826  0.295886108
+##  [691]  1.221732374 -0.721441393  1.953522877  2.107091008  1.850245601
+##  [696]  1.975916202  1.561155567  2.246597964  2.030322149  1.092041486
+##  [701]  2.048211785 -0.522789275  1.798549074  1.854374567  1.732533035
+##  [706]  1.588994837 -0.170527878  1.257462004  1.656081329  1.945271059
+##  [711]  1.234905555 -0.143722274  1.211269786  1.281745509  1.386138052
+##  [716] -0.629538393  1.818129949  1.892435831 -0.175667607  1.325661391
+##  [721]  2.265500128 -0.849345930  1.356751212  1.289078299  1.414670756
+##  [726]  1.934799462  0.262456730 -0.078985422  0.901334745  2.394882949
+##  [731] -0.120467710  1.689630277  1.808840808  2.054287249  1.783479520
+##  [736]  1.119782437  0.009347500 -0.366154885  1.252341849  1.584545370
+##  [741]  1.278607827 -0.110711593  1.648046970  2.067616852  0.940632192
+##  [746] -0.822364968 -0.517142281  1.602920988  1.164745517  2.149413114
+##  [751]  1.535948461 -1.063920177  0.595001699  1.114376899  1.772072760
+##  [756]  0.703264918 -1.325951415  1.088557661 -0.172391099 -0.689377247
+##  [761] -0.153863710  1.304426613  1.620573034  2.113092392  1.115820189
+##  [766]  0.899495544  0.808363458  2.346485218 -0.498195880 -0.028997961
+##  [771]  1.041337729  2.012984984  1.561476209  0.177950220  0.150090125
+##  [776]  0.034409201 -0.339004637  0.004122280  0.759758654  1.984939451
+##  [781]  1.690929983  1.887093832  1.466971506 -1.041312778  0.465333965
+##  [786]  0.356852347  1.776204806 -0.200333755  1.826732378  0.720862843
+##  [791]  2.251833679 -0.508069591  1.384338610 -0.589061278  1.674943311
+##  [796] -0.150430693  1.538736154  0.818526633  1.882669135 -0.044534015
+##  [801]  1.213253224 -0.880961861  0.472393324  0.354283682  1.636509029
+##  [806]  1.934652491 -0.808390643 -0.166329973  0.725947848  0.419165052
+##  [811]  1.755800847 -0.825037839 -0.987143638  2.125861554  2.091495759
+##  [816]  2.031060764  1.656113153  0.384353187  1.225202625  1.651028609
+##  [821]  0.292965369  1.054814633  0.200428989 -0.320907173 -0.366998988
+##  [826]  1.450910703  1.450482504  1.690652506  0.942026226  2.012555274
+##  [831]  0.327522197  0.677341887  0.906675854 -0.038115916  1.155543392
+##  [836]  1.253709845  1.064149027  2.345074906  1.525758248  0.993906224
+##  [841]  1.803466825  2.345989807  1.064132121  1.161069857  1.027908828
+##  [846]  1.232470122  1.867389537  2.307313505  1.188318883  1.782669431
+##  [851]  1.679251291  0.291808540  0.460867924  1.016784919 -0.344651424
+##  [856]  2.094724117  1.601406610  1.519358403  1.925660479  2.351423467
+##  [861] -0.796902551  1.070670772 -0.529920282  0.545210446  1.162406726
+##  [866]  1.882098347  1.195113494  2.059428903  1.689843175  0.364084582
+##  [871] -1.566722733  1.233763357  0.623978767 -0.491628659  2.061808020
+##  [876]  0.489022608  0.698536152  0.515300378  0.821503075  2.204035267
+##  [881]  0.528515394  1.079931002  1.823658125  1.048440040  1.295971751
+##  [886]  1.689392273  0.355227933  1.640875216 -0.241956023  1.275195200
+##  [891]  1.793426693  1.343537164  0.106820372  1.272499207  1.846607869
+##  [896]  1.190306777  1.150840356  0.882718717  1.365774062  1.084411145
+##  [901]  1.489600738  1.065433203  1.006478732  1.467455332  2.300266344
+##  [906]  1.066087463  1.670445208 -0.866479192 -0.745692844  1.432537609
+##  [911]  0.518774541  1.278766446  2.086912607  0.589454421  2.006999388
+##  [916]  1.108927911  0.370689320  2.276036507  2.000999842  0.737927253
+##  [921]  1.478331477  1.253823467  1.175724185 -0.538987202 -0.345990188
+##  [926] -0.381120562 -0.551886304  0.296353437  1.268591551  1.343774469
+##  [931]  0.960817771  2.081578281 -0.350021263  0.373516646  0.078210845
+##  [936]  1.822462429  1.064223386  1.178186975  0.194814387 -1.353719255
+##  [941]  1.194453015  2.001802539  2.185253835  0.715457625  2.454389136
+##  [946] -0.089080931  0.955220962  1.126874524  1.898778255  1.012222633
+##  [951]  2.329091783  1.156810265 -0.701239430 -0.610282355  1.673814848
+##  [956] -0.364187056  1.373468543  1.665748799 -0.182216460  1.476196840
+##  [961]  0.281084128  2.310976968  0.944132014  1.438599692 -0.384052791
+##  [966] -0.153733840  1.846071487 -0.183826087  1.730310494  1.976047517
+##  [971]  1.562173448 -0.726870456 -0.639593804  1.839907081 -0.651109968
+##  [976]  1.243148132 -0.032586574  0.833477759 -0.373590073 -0.377838939
+##  [981] -0.762919129  1.324630971  1.220646241 -0.227363856  2.080908417
+##  [986]  0.833037498 -0.116819691  1.984158063 -0.389499102 -0.845017576
+##  [991]  1.081330647  1.360035151 -0.664196634  1.170694422  0.820583361
+##  [996]  2.167945093  1.409957426  1.933835648  0.928667074 -1.156269538
 ## 
 ## $func.thetastar
 ## NULL
@@ -1105,46 +1110,43 @@ Figure 1.1: Fill dataset on tonsil size and S. pyrogenes status. Source: Good (1
 ## 
 ## $call
 ## bootstrap(x = original.data, nboot = 1000, theta = skewness)</code></pre>
-<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="week-2-lab.html#cb160-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(results,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">col=</span><span class="st">&quot;pink&quot;</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">freq=</span>F)</span>
-<span id="cb160-2"><a href="week-2-lab.html#cb160-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(results2<span class="sc">$</span>thetastar,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">border=</span><span class="st">&quot;purple&quot;</span>,<span class="at">add=</span>T,<span class="at">density=</span><span class="dv">20</span>,<span class="at">col=</span><span class="st">&quot;purple&quot;</span>,<span class="at">freq=</span>F)</span></code></pre></div>
+<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="week-2-lab.html#cb160-1" tabindex="-1"></a><span class="fu">hist</span>(results,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">col=</span><span class="st">&quot;pink&quot;</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">freq=</span>F)</span>
+<span id="cb160-2"><a href="week-2-lab.html#cb160-2" tabindex="-1"></a><span class="fu">hist</span>(results2<span class="sc">$</span>thetastar,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">border=</span><span class="st">&quot;purple&quot;</span>,<span class="at">add=</span>T,<span class="at">density=</span><span class="dv">20</span>,<span class="at">col=</span><span class="st">&quot;purple&quot;</span>,<span class="at">freq=</span>F)</span></code></pre></div>
 <p><img src="Week-2-Lab_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
 <p>What would have happened if we would have fit a normal distribution instead of a gamma distribution?</p>
-<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="week-2-lab.html#cb161-1" aria-hidden="true" tabindex="-1"></a>fit2<span class="ot">&lt;-</span><span class="fu">fitdistr</span>(original.data,dnorm,<span class="at">start=</span><span class="fu">list</span>(<span class="at">mean=</span><span class="dv">1</span>,<span class="at">sd=</span><span class="dv">1</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="week-2-lab.html#cb161-1" tabindex="-1"></a>fit2<span class="ot">&lt;-</span><span class="fu">fitdistr</span>(original.data,dnorm,<span class="at">start=</span><span class="fu">list</span>(<span class="at">mean=</span><span class="dv">1</span>,<span class="at">sd=</span><span class="dv">1</span>))</span></code></pre></div>
 <pre><code>## Warning in densfun(x, parm[1], parm[2], ...): NaNs produced
 
 ## Warning in densfun(x, parm[1], parm[2], ...): NaNs produced
 
 ## Warning in densfun(x, parm[1], parm[2], ...): NaNs produced
 
-## Warning in densfun(x, parm[1], parm[2], ...): NaNs produced
-
 ## Warning in densfun(x, parm[1], parm[2], ...): NaNs produced</code></pre>
-<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="week-2-lab.html#cb163-1" aria-hidden="true" tabindex="-1"></a>fit2</span></code></pre></div>
-<pre><code>##      mean         sd    
-##   0.7448442   0.5277087 
-##  (0.1668761) (0.1179975)</code></pre>
-<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="week-2-lab.html#cb165-1" aria-hidden="true" tabindex="-1"></a>results.norm<span class="ot">&lt;-</span><span class="fu">c</span>()</span>
-<span id="cb165-2"><a href="week-2-lab.html#cb165-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>)</span>
-<span id="cb165-3"><a href="week-2-lab.html#cb165-3" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb165-4"><a href="week-2-lab.html#cb165-4" aria-hidden="true" tabindex="-1"></a>  x.star<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="fu">length</span>(original.data),<span class="at">mean=</span>fit2<span class="sc">$</span>estimate[<span class="dv">1</span>],<span class="at">sd=</span>fit2<span class="sc">$</span>estimate[<span class="dv">2</span>])</span>
-<span id="cb165-5"><a href="week-2-lab.html#cb165-5" aria-hidden="true" tabindex="-1"></a>  results.norm<span class="ot">&lt;-</span><span class="fu">c</span>(results.norm,<span class="fu">skewness</span>(x.star))</span>
-<span id="cb165-6"><a href="week-2-lab.html#cb165-6" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb165-7"><a href="week-2-lab.html#cb165-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(results.norm)</span></code></pre></div>
-<pre><code>## [1] -0.325332856 -0.454701303  0.134072520  0.674885575 -0.516149815
-## [6] -0.002406158</code></pre>
-<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="week-2-lab.html#cb167-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(results,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">col=</span><span class="st">&quot;pink&quot;</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">freq=</span>F)</span>
-<span id="cb167-2"><a href="week-2-lab.html#cb167-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(results.norm,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">col=</span><span class="st">&quot;lightgreen&quot;</span>,<span class="at">freq=</span>F,<span class="at">add=</span>T)</span>
-<span id="cb167-3"><a href="week-2-lab.html#cb167-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(results2<span class="sc">$</span>thetastar,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">border=</span><span class="st">&quot;purple&quot;</span>,<span class="at">add=</span>T,<span class="at">density=</span><span class="dv">20</span>,<span class="at">col=</span><span class="st">&quot;purple&quot;</span>,<span class="at">freq=</span>F)</span></code></pre></div>
+<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="week-2-lab.html#cb163-1" tabindex="-1"></a>fit2</span></code></pre></div>
+<pre><code>##       mean          sd    
+##   0.62271488   0.33132460 
+##  (0.10477404) (0.07408276)</code></pre>
+<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="week-2-lab.html#cb165-1" tabindex="-1"></a>results.norm<span class="ot">&lt;-</span><span class="fu">c</span>()</span>
+<span id="cb165-2"><a href="week-2-lab.html#cb165-2" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>)</span>
+<span id="cb165-3"><a href="week-2-lab.html#cb165-3" tabindex="-1"></a>  {</span>
+<span id="cb165-4"><a href="week-2-lab.html#cb165-4" tabindex="-1"></a>  x.star<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="fu">length</span>(original.data),<span class="at">mean=</span>fit2<span class="sc">$</span>estimate[<span class="dv">1</span>],<span class="at">sd=</span>fit2<span class="sc">$</span>estimate[<span class="dv">2</span>])</span>
+<span id="cb165-5"><a href="week-2-lab.html#cb165-5" tabindex="-1"></a>  results.norm<span class="ot">&lt;-</span><span class="fu">c</span>(results.norm,<span class="fu">skewness</span>(x.star))</span>
+<span id="cb165-6"><a href="week-2-lab.html#cb165-6" tabindex="-1"></a>  }</span>
+<span id="cb165-7"><a href="week-2-lab.html#cb165-7" tabindex="-1"></a><span class="fu">head</span>(results.norm)</span></code></pre></div>
+<pre><code>## [1]  0.6974397 -1.9874781 -0.1278136 -0.0016019 -0.3031284  0.3184975</code></pre>
+<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="week-2-lab.html#cb167-1" tabindex="-1"></a><span class="fu">hist</span>(results,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">col=</span><span class="st">&quot;pink&quot;</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">freq=</span>F)</span>
+<span id="cb167-2"><a href="week-2-lab.html#cb167-2" tabindex="-1"></a><span class="fu">hist</span>(results.norm,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">col=</span><span class="st">&quot;lightgreen&quot;</span>,<span class="at">freq=</span>F,<span class="at">add=</span>T)</span>
+<span id="cb167-3"><a href="week-2-lab.html#cb167-3" tabindex="-1"></a><span class="fu">hist</span>(results2<span class="sc">$</span>thetastar,<span class="at">breaks=</span><span class="dv">30</span>,<span class="at">border=</span><span class="st">&quot;purple&quot;</span>,<span class="at">add=</span>T,<span class="at">density=</span><span class="dv">20</span>,<span class="at">col=</span><span class="st">&quot;purple&quot;</span>,<span class="at">freq=</span>F)</span></code></pre></div>
 <p><img src="Week-2-Lab_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
 <p>All three methods (two parametric and one non-parametric) really do give different distributions for the bootstrapped statistic, so the choice of which method is best depends a lot on the situation, how much data you have, and what you might already know about the underlying distribution.</p>
 <p>Jackknifing is just as easy at bootstrapping. Here we will do a trivial example for illustration. We will write a little function for the mean even though you could put the function in directly with ‘jackknife(x,mean)’</p>
-<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="week-2-lab.html#cb168-1" aria-hidden="true" tabindex="-1"></a>theta<span class="ot">&lt;-</span><span class="cf">function</span>(x)</span>
-<span id="cb168-2"><a href="week-2-lab.html#cb168-2" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb168-3"><a href="week-2-lab.html#cb168-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>(x)</span>
-<span id="cb168-4"><a href="week-2-lab.html#cb168-4" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb168-5"><a href="week-2-lab.html#cb168-5" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">9</span>,<span class="at">by=</span><span class="dv">1</span>)</span>
-<span id="cb168-6"><a href="week-2-lab.html#cb168-6" aria-hidden="true" tabindex="-1"></a>results<span class="ot">&lt;-</span><span class="fu">jackknife</span>(<span class="at">x=</span>x,<span class="at">theta=</span>theta)</span>
-<span id="cb168-7"><a href="week-2-lab.html#cb168-7" aria-hidden="true" tabindex="-1"></a>results</span></code></pre></div>
+<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="week-2-lab.html#cb168-1" tabindex="-1"></a>theta<span class="ot">&lt;-</span><span class="cf">function</span>(x)</span>
+<span id="cb168-2"><a href="week-2-lab.html#cb168-2" tabindex="-1"></a>  {</span>
+<span id="cb168-3"><a href="week-2-lab.html#cb168-3" tabindex="-1"></a>  <span class="fu">mean</span>(x)</span>
+<span id="cb168-4"><a href="week-2-lab.html#cb168-4" tabindex="-1"></a>  }</span>
+<span id="cb168-5"><a href="week-2-lab.html#cb168-5" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">9</span>,<span class="at">by=</span><span class="dv">1</span>)</span>
+<span id="cb168-6"><a href="week-2-lab.html#cb168-6" tabindex="-1"></a>results<span class="ot">&lt;-</span><span class="fu">jackknife</span>(<span class="at">x=</span>x,<span class="at">theta=</span>theta)</span>
+<span id="cb168-7"><a href="week-2-lab.html#cb168-7" tabindex="-1"></a>results</span></code></pre></div>
 <pre><code>## $jack.se
 ## [1] 0.9574271
 ## 
@@ -1159,21 +1161,21 @@ Figure 1.1: Fill dataset on tonsil size and S. pyrogenes status. Source: Good (1
 ## jackknife(x = x, theta = theta)</code></pre>
 <p><strong><span style="color: green;">Checkpoint #7: Why do we not have to tell the ‘jackknife’ function how many replicates to do?</span></strong></p>
 <p>Let’s compare this with what we would have obtained from bootstrapping</p>
-<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="week-2-lab.html#cb170-1" aria-hidden="true" tabindex="-1"></a>results2<span class="ot">&lt;-</span><span class="fu">bootstrap</span>(x,<span class="dv">1000</span>,theta)</span>
-<span id="cb170-2"><a href="week-2-lab.html#cb170-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(results2<span class="sc">$</span>thetastar)<span class="sc">-</span><span class="fu">mean</span>(x)  <span class="co">#this is the bias</span></span></code></pre></div>
-<pre><code>## [1] -0.0928</code></pre>
-<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="week-2-lab.html#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(results2<span class="sc">$</span>thetastar)  <span class="co">#the standard deviation of the theta stars is the SE of the statistic (in this case, the mean)</span></span></code></pre></div>
-<pre><code>## [1] 0.9089303</code></pre>
-<p>Everything we have done to this point used the R package ‘bootstrap’ - now lets compare that with the R package ‘boot.’ To avoid any confusion (a.k.a. masking) between the two packages, I recommend detaching the bootstrap package from the workspace with</p>
-<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="week-2-lab.html#cb174-1" aria-hidden="true" tabindex="-1"></a><span class="fu">detach</span>(<span class="st">&quot;package:bootstrap&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="week-2-lab.html#cb170-1" tabindex="-1"></a>results2<span class="ot">&lt;-</span><span class="fu">bootstrap</span>(x,<span class="dv">1000</span>,theta)</span>
+<span id="cb170-2"><a href="week-2-lab.html#cb170-2" tabindex="-1"></a><span class="fu">mean</span>(results2<span class="sc">$</span>thetastar)<span class="sc">-</span><span class="fu">mean</span>(x)  <span class="co">#this is the bias</span></span></code></pre></div>
+<pre><code>## [1] -0.0159</code></pre>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="week-2-lab.html#cb172-1" tabindex="-1"></a><span class="fu">sd</span>(results2<span class="sc">$</span>thetastar)  <span class="co">#the standard deviation of the theta stars is the SE of the statistic (in this case, the mean)</span></span></code></pre></div>
+<pre><code>## [1] 0.9036004</code></pre>
+<p>Everything we have done to this point used the R package ‘bootstrap’ - now lets compare that with the R package ‘boot’. To avoid any confusion (a.k.a. masking) between the two packages, I recommend detaching the bootstrap package from the workspace with</p>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="week-2-lab.html#cb174-1" tabindex="-1"></a><span class="fu">detach</span>(<span class="st">&quot;package:bootstrap&quot;</span>)</span></code></pre></div>
 <p>The ‘boot’ package is now recommended over the ‘bootstrap’ package, but they give the same answers and to some extent it is personal preference which one prefers to use.</p>
 <p>We will still use the mean as the statistic of interest, but we will have to write a new function for it because the syntax of the ‘boot’ package is slightly different:</p>
-<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="week-2-lab.html#cb175-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(boot)</span>
-<span id="cb175-2"><a href="week-2-lab.html#cb175-2" aria-hidden="true" tabindex="-1"></a>theta<span class="ot">&lt;-</span><span class="cf">function</span>(x,index)</span>
-<span id="cb175-3"><a href="week-2-lab.html#cb175-3" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb175-4"><a href="week-2-lab.html#cb175-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>(x[index])</span>
-<span id="cb175-5"><a href="week-2-lab.html#cb175-5" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb175-6"><a href="week-2-lab.html#cb175-6" aria-hidden="true" tabindex="-1"></a><span class="fu">boot</span>(x,theta,<span class="at">R=</span><span class="dv">999</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="week-2-lab.html#cb175-1" tabindex="-1"></a><span class="fu">library</span>(boot)</span>
+<span id="cb175-2"><a href="week-2-lab.html#cb175-2" tabindex="-1"></a>theta<span class="ot">&lt;-</span><span class="cf">function</span>(x,index)</span>
+<span id="cb175-3"><a href="week-2-lab.html#cb175-3" tabindex="-1"></a>  {</span>
+<span id="cb175-4"><a href="week-2-lab.html#cb175-4" tabindex="-1"></a>  <span class="fu">mean</span>(x[index])</span>
+<span id="cb175-5"><a href="week-2-lab.html#cb175-5" tabindex="-1"></a>  }</span>
+<span id="cb175-6"><a href="week-2-lab.html#cb175-6" tabindex="-1"></a><span class="fu">boot</span>(x,theta,<span class="at">R=</span><span class="dv">999</span>)</span></code></pre></div>
 <pre><code>## 
 ## ORDINARY NONPARAMETRIC BOOTSTRAP
 ## 
@@ -1183,27 +1185,27 @@ Figure 1.1: Fill dataset on tonsil size and S. pyrogenes status. Source: Good (1
 ## 
 ## 
 ## Bootstrap Statistics :
-##     original       bias    std. error
-## t1*      4.5 -0.007007007   0.9044152</code></pre>
+##     original     bias    std. error
+## t1*      4.5 0.01491491   0.9264688</code></pre>
 <p>One of the main advantages to the ‘boot’ package over the ‘bootstrap’ package is the nicer formatting of the output.</p>
 <p>Going back to our original code, lets see how we could reproduce all of these numbers:</p>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="week-2-lab.html#cb177-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">sample</span>(x,<span class="at">size=</span><span class="fu">length</span>(x),<span class="at">replace=</span>T))</span></code></pre></div>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="week-2-lab.html#cb177-1" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">sample</span>(x,<span class="at">size=</span><span class="fu">length</span>(x),<span class="at">replace=</span>T))</span></code></pre></div>
 <pre><code>## 
-## 0 2 3 4 6 7 9 
-## 2 1 1 1 2 2 1</code></pre>
-<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="week-2-lab.html#cb179-1" aria-hidden="true" tabindex="-1"></a>xmeans<span class="ot">&lt;-</span><span class="fu">vector</span>(<span class="at">length=</span><span class="dv">1000</span>)</span>
-<span id="cb179-2"><a href="week-2-lab.html#cb179-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>)</span>
-<span id="cb179-3"><a href="week-2-lab.html#cb179-3" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb179-4"><a href="week-2-lab.html#cb179-4" aria-hidden="true" tabindex="-1"></a>  xmeans[i]<span class="ot">&lt;-</span><span class="fu">mean</span>(<span class="fu">sample</span>(x,<span class="at">replace=</span>T))</span>
-<span id="cb179-5"><a href="week-2-lab.html#cb179-5" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb179-6"><a href="week-2-lab.html#cb179-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x)</span></code></pre></div>
+## 0 1 2 3 5 6 7 
+## 2 1 1 3 1 1 1</code></pre>
+<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="week-2-lab.html#cb179-1" tabindex="-1"></a>xmeans<span class="ot">&lt;-</span><span class="fu">vector</span>(<span class="at">length=</span><span class="dv">1000</span>)</span>
+<span id="cb179-2"><a href="week-2-lab.html#cb179-2" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>)</span>
+<span id="cb179-3"><a href="week-2-lab.html#cb179-3" tabindex="-1"></a>  {</span>
+<span id="cb179-4"><a href="week-2-lab.html#cb179-4" tabindex="-1"></a>  xmeans[i]<span class="ot">&lt;-</span><span class="fu">mean</span>(<span class="fu">sample</span>(x,<span class="at">replace=</span>T))</span>
+<span id="cb179-5"><a href="week-2-lab.html#cb179-5" tabindex="-1"></a>  }</span>
+<span id="cb179-6"><a href="week-2-lab.html#cb179-6" tabindex="-1"></a><span class="fu">mean</span>(x)</span></code></pre></div>
 <pre><code>## [1] 4.5</code></pre>
-<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="week-2-lab.html#cb181-1" aria-hidden="true" tabindex="-1"></a>bias<span class="ot">&lt;-</span><span class="fu">mean</span>(xmeans)<span class="sc">-</span><span class="fu">mean</span>(x)</span>
-<span id="cb181-2"><a href="week-2-lab.html#cb181-2" aria-hidden="true" tabindex="-1"></a>se.boot<span class="ot">&lt;-</span><span class="fu">sd</span>(xmeans)</span>
-<span id="cb181-3"><a href="week-2-lab.html#cb181-3" aria-hidden="true" tabindex="-1"></a>bias</span></code></pre></div>
-<pre><code>## [1] 0.001</code></pre>
-<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="week-2-lab.html#cb183-1" aria-hidden="true" tabindex="-1"></a>se.boot</span></code></pre></div>
-<pre><code>## [1] 0.8660306</code></pre>
+<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="week-2-lab.html#cb181-1" tabindex="-1"></a>bias<span class="ot">&lt;-</span><span class="fu">mean</span>(xmeans)<span class="sc">-</span><span class="fu">mean</span>(x)</span>
+<span id="cb181-2"><a href="week-2-lab.html#cb181-2" tabindex="-1"></a>se.boot<span class="ot">&lt;-</span><span class="fu">sd</span>(xmeans)</span>
+<span id="cb181-3"><a href="week-2-lab.html#cb181-3" tabindex="-1"></a>bias</span></code></pre></div>
+<pre><code>## [1] -0.0179</code></pre>
+<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="week-2-lab.html#cb183-1" tabindex="-1"></a>se.boot</span></code></pre></div>
+<pre><code>## [1] 0.8713603</code></pre>
 <p>Why do our numbers not agree exactly with those of the boot package? This is because our estimates of bias and standard error are just estimates, and they carry with them their own uncertainties. That is one of the reasons we might bother doing jackknife-after-bootstrap.</p>
 <p>The ‘boot’ package has a LOT of functionality. If we have time, we will come back to some of these more complex functions later in the semester as we cover topics like regression and glm.</p>
 
@@ -1219,7 +1221,6 @@ Figure 1.1: Fill dataset on tonsil size and S. pyrogenes status. Source: Good (1
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1238,6 +1239,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -1258,6 +1260,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -1271,7 +1277,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

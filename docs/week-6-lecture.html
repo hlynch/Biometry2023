@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>11 Week 6 Lecture | Biometry Lecture and Lab Notes</title>
   <meta name="description" content="11 Week 6 Lecture | Biometry Lecture and Lab Notes" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="11 Week 6 Lecture | Biometry Lecture and Lab Notes" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Heather Lynch" />
 
 
-<meta name="date" content="2023-05-15" />
+<meta name="date" content="2024-01-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="week-5-lab.html"/>
 <link rel="next" href="week-6-lab.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -91,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -104,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -116,6 +117,11 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -170,7 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="week-2-lecture.html"><a href="week-2-lecture.html"><i class="fa fa-check"></i><b>3</b> Week 2 Lecture</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="week-2-lecture.html"><a href="week-2-lecture.html#week-2-readings"><i class="fa fa-check"></i><b>3.1</b> Week 2 Readings</a></li>
-<li class="chapter" data-level="3.2" data-path="week-1-lecture.html"><a href="week-1-lecture.html#todays-agenda"><i class="fa fa-check"></i><b>3.2</b> Today’s Agenda</a></li>
+<li class="chapter" data-level="3.2" data-path="week-2-lecture.html"><a href="week-2-lecture.html#todays-agenda-1"><i class="fa fa-check"></i><b>3.2</b> Today’s Agenda</a></li>
 <li class="chapter" data-level="3.3" data-path="week-2-lecture.html"><a href="week-2-lecture.html#hypothesis-testing"><i class="fa fa-check"></i><b>3.3</b> Hypothesis testing</a></li>
 <li class="chapter" data-level="3.4" data-path="week-2-lecture.html"><a href="week-2-lecture.html#permutation-tests"><i class="fa fa-check"></i><b>3.4</b> Permutation tests</a></li>
 <li class="chapter" data-level="3.5" data-path="week-2-lecture.html"><a href="week-2-lecture.html#parameter-estimation"><i class="fa fa-check"></i><b>3.5</b> Parameter estimation</a></li>
@@ -186,7 +192,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2" data-path="week-2-lab.html"><a href="week-2-lab.html#testing-hypotheses-through-permutation"><i class="fa fa-check"></i><b>4.2</b> Testing hypotheses through permutation</a></li>
 <li class="chapter" data-level="4.3" data-path="week-2-lab.html"><a href="week-2-lab.html#basics-of-bootstrap-and-jackknife"><i class="fa fa-check"></i><b>4.3</b> Basics of bootstrap and jackknife</a></li>
 <li class="chapter" data-level="4.4" data-path="week-2-lab.html"><a href="week-2-lab.html#calculating-bias-and-standard-error"><i class="fa fa-check"></i><b>4.4</b> Calculating bias and standard error</a></li>
-<li class="chapter" data-level="4.5" data-path="week-2-lecture.html"><a href="week-2-lecture.html#parametric-bootstrap"><i class="fa fa-check"></i><b>4.5</b> Parametric bootstrap</a></li>
+<li class="chapter" data-level="4.5" data-path="week-2-lab.html"><a href="week-2-lab.html#parametric-bootstrap-1"><i class="fa fa-check"></i><b>4.5</b> Parametric bootstrap</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="week-3-lecture.html"><a href="week-3-lecture.html"><i class="fa fa-check"></i><b>5</b> Week 3 Lecture</a>
 <ul>
@@ -239,8 +245,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10" data-path="week-5-lab.html"><a href="week-5-lab.html"><i class="fa fa-check"></i><b>10</b> Week 5 Lab</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="week-5-lab.html"><a href="week-5-lab.html#f-test"><i class="fa fa-check"></i><b>10.1</b> F-test</a></li>
-<li class="chapter" data-level="10.2" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-proportions"><i class="fa fa-check"></i><b>10.2</b> Comparing two proportions</a></li>
-<li class="chapter" data-level="10.3" data-path="week-5-lecture.html"><a href="week-5-lecture.html#comparing-two-distributions"><i class="fa fa-check"></i><b>10.3</b> Comparing two distributions</a></li>
+<li class="chapter" data-level="10.2" data-path="week-5-lab.html"><a href="week-5-lab.html#comparing-two-proportions-1"><i class="fa fa-check"></i><b>10.2</b> Comparing two proportions</a></li>
+<li class="chapter" data-level="10.3" data-path="week-5-lab.html"><a href="week-5-lab.html#comparing-two-distributions-1"><i class="fa fa-check"></i><b>10.3</b> Comparing two distributions</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="week-6-lecture.html"><a href="week-6-lecture.html"><i class="fa fa-check"></i><b>11</b> Week 6 Lecture</a>
 <ul>
@@ -298,10 +304,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="17" data-path="week-9-lab.html"><a href="week-9-lab.html"><i class="fa fa-check"></i><b>17</b> Week 9 Lab</a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="week-9-lecture.html"><a href="week-9-lecture.html#correlation"><i class="fa fa-check"></i><b>17.1</b> Correlation</a></li>
+<li class="chapter" data-level="17.1" data-path="week-9-lab.html"><a href="week-9-lab.html#correlation-1"><i class="fa fa-check"></i><b>17.1</b> Correlation</a></li>
 <li class="chapter" data-level="17.2" data-path="week-9-lab.html"><a href="week-9-lab.html#linear-modelling"><i class="fa fa-check"></i><b>17.2</b> Linear modelling</a></li>
 <li class="chapter" data-level="17.3" data-path="week-9-lab.html"><a href="week-9-lab.html#weighted-regression"><i class="fa fa-check"></i><b>17.3</b> Weighted regression</a></li>
-<li class="chapter" data-level="17.4" data-path="week-9-lecture.html"><a href="week-9-lecture.html#robust-regression"><i class="fa fa-check"></i><b>17.4</b> Robust regression</a></li>
+<li class="chapter" data-level="17.4" data-path="week-9-lab.html"><a href="week-9-lab.html#robust-regression-1"><i class="fa fa-check"></i><b>17.4</b> Robust regression</a></li>
 <li class="chapter" data-level="17.5" data-path="week-9-lab.html"><a href="week-9-lab.html#bootstrapping-standard-errors-for-robust-regression"><i class="fa fa-check"></i><b>17.5</b> Bootstrapping standard errors for robust regression</a></li>
 <li class="chapter" data-level="17.6" data-path="week-9-lab.html"><a href="week-9-lab.html#type-i-vs.-type-ii-regression-the-smatr-package"><i class="fa fa-check"></i><b>17.6</b> Type I vs. Type II regression: The ‘smatr’ package</a></li>
 </ul></li>
@@ -468,15 +474,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-6-lecture" class="section level1" number="11">
-<h1><span class="header-section-number">11</span> Week 6 Lecture</h1>
-<div id="week-6-readings" class="section level2" number="11.1">
-<h2><span class="header-section-number">11.1</span> Week 6 Readings</h2>
+<div id="week-6-lecture" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">11</span> Week 6 Lecture<a href="week-6-lecture.html#week-6-lecture" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="week-6-readings" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Week 6 Readings<a href="week-6-lecture.html#week-6-readings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For this week, I suggest reading Aho Sections 6.5. In class this week, we will also discuss <a href="https://github.com/hlynch/Biometry2023/tree/master/_data/Bender_Lange_2001.pdf">Bender and Lange (2001)</a>, <a href="https://github.com/hlynch/Biometry2023/tree/master/_data/Berger_Berry_1988.pdf">Berger and Berry (1988)</a>, <a href="https://github.com/hlynch/Biometry2023/tree/master/_data/Cohen_1994.pdf">Cohen (1994)</a>, <a href="https://github.com/hlynch/Biometry2023/tree/master/_data/Gawande_1999.pdf">Gawande (1999)</a>, <a href="https://github.com/hlynch/Biometry2023/tree/master/_data/Johnson_1999.pdf">Johnson (1999)</a>, and <a href="https://github.com/hlynch/Biometry2023/tree/master/_data/Nuzzo_2014.pdf">Nuzzo (2014)</a>. Yes, there are a lot of papers this week, but I would encourage you to read efficiently - get the gist but don’t get bogged down in the details. There is an overarching theme among these papers I want to make sure you really take to heart.</p>
 <p>There are additional readings that I highlight here because they may be of interest, or may provide additional perspectives on the themes of the week, including <a href="https://github.com/hlynch/Biometry2023/tree/master/_data/Anderson_etal_2000.pdf">this paper on the problems of null hypothesis testing</a>, <a href="https://github.com/hlynch/Biometry2023/tree/master/_data/Austin_etal_2006.pdf">this cheeky analysis of disease and astrological sign</a>, <a href="https://github.com/hlynch/Biometry2023/tree/master/_data/Moran_2003.pdf">this paper on the hazards of sequential Bonferroni</a>, and <a href="https://github.com/hlynch/Biometry2023/tree/master/_data/Robinson_Wainer_2002.pdf">this review of the past, present, and future of null hypothesis testing</a>.</p>
 </div>
-<div id="family-wise-error-rates" class="section level2" number="11.2">
-<h2><span class="header-section-number">11.2</span> Family-wise error rates</h2>
+<div id="family-wise-error-rates" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Family-wise error rates<a href="week-6-lecture.html#family-wise-error-rates" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The ‘’family-wise error rate’’ is</p>
 <p><span class="math display">\[
 \alpha = 1-(1-\alpha^{’})^k
@@ -505,12 +511,12 @@ P_{corrected} = P(min(p) \leq p-observed|H_{0})
 \]</span></p>
 <p>In other words, if you were to simulate data under the null hypothesis, what is the probability that the smallest p-value among the set of comparisons made is smaller than or equal to the p-value that you actually obtained. (In other words, the adjusted p-value asks “how extreme is my most extreme p-value when compared against the most extreme p-values I would expect under the null hypothesis?)</p>
 </div>
-<div id="how-do-we-sort-the-signal-from-the-noise" class="section level2" number="11.3">
-<h2><span class="header-section-number">11.3</span> How do we sort the signal from the noise?</h2>
+<div id="how-do-we-sort-the-signal-from-the-noise" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> How do we sort the signal from the noise?<a href="week-6-lecture.html#how-do-we-sort-the-signal-from-the-noise" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>One of the challenges we address this week is that almost all research programs involve multiple scientific hypotheses or exploratory analyses that are sifting through myriad potential causal drivers for observed phenomena. As a result, by the very structure of null hypothesis significance testing, we end up with a large number of false positive results from which it is often difficult to identify the ones most likely to represent real causal relationships. Though post-hoc studies can establish correlations, we know that correlation does not equal causation, and in fact only careful designed experiments can really confidently establish a causal relationship between a given variable and some observed response.</p>
 <p>That said, there are clues that we can use to help us identify what is likely to be “real” amidst a sea of significant p-values. In 1965, Sir Austin Bradford Hill established a series of criteria in the Proceedings of the Royal Society of Medicine now known as the Bradford Hill criteria (Hill 1965). These criteria are summarized as follows (the attendant commentary is my own and may not hew exactly to Hill’s original argument, which was focused on medical applications):</p>
 <p><strong>Strength</strong> or <strong>Effect Size</strong>: Covariates that have a larger effect on responses are more likely to have a causal relationship.</p>
-<p><strong>Consistency</strong>: Results that are reproducible by other researchers are more likely to be causal, and this is particularly true for results that can be reproduced in different systems and in different locations. (In other words, reproducible in this context also contains the idea of “extensibility.”)</p>
+<p><strong>Consistency</strong>: Results that are reproducible by other researchers are more likely to be causal, and this is particularly true for results that can be reproduced in different systems and in different locations. (In other words, reproducible in this context also contains the idea of “extensibility”.)</p>
 <p><strong>Specificity</strong>: Relationships that are very specific to a system in which no other plausible explanations exist are more likely to be causal.</p>
 <p><strong>Temporality</strong>: The response has to occur after the purported causal driver, and the time scale of the response has to make biological sense.</p>
 <p><strong>Biological gradient</strong>: This captures the idea that causal drivers are usually dose-dependent, so greater exposure to the driver should result in a greater response.</p>
@@ -531,7 +537,6 @@ P_{corrected} = P(min(p) \leq p-observed|H_{0})
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -550,6 +555,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -570,6 +576,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -583,7 +593,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
